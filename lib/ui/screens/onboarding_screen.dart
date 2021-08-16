@@ -17,9 +17,9 @@ class OnboardingScreen extends StatelessWidget {
           showNextButton: false,
           pages: <PageViewModel>[
             PageViewModel(
-              title: 'Find Hundreds of hotels',
+              title: 'Travel with no worry',
               body:
-                  'Discover hundreds of hotels that spread across the world for you',
+                  'You can now experience the next level travel experience for hotel bookings',
               image: Align(
                 alignment: Alignment.topRight,
                 child: Image.asset(
