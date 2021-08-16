@@ -1,3 +1,4 @@
+import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -22,12 +23,14 @@ class OnboardingScreen extends StatelessWidget {
                 child: Text(
                   'Travel with no worry',
                   textAlign: TextAlign.start,
+                  style: semiBold24,
                 ),
               ),
               bodyWidget: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                    'You can now experience the next level travel experience for hotel bookings'),
+                  'You can now experience the next level travel experience for hotel bookings',
+                ),
               ),
               image: Align(
                 alignment: Alignment.topRight,

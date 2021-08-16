@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 const semiBold24 = TextStyle(
   fontSize: 24,
-  height: 34,
+  height: 1.416,
   letterSpacing: 0,
+  fontWeight: FontWeight.w600,
 );
 
 const medium20 = TextStyle(
