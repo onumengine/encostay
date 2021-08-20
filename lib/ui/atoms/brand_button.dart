@@ -5,6 +5,7 @@ class BrandButton extends StatelessWidget {
   final Color color;
   final VoidCallback onTap;
   final double? radius, height, width;
+  final EdgeInsetsGeometry? padding;
 
   BrandButton({
     required this.child,
@@ -13,14 +14,18 @@ class BrandButton extends StatelessWidget {
     this.radius,
     this.height,
     this.width,
-  });
+    this.padding,
+  }) : assert(!((height != null || width != null) && padding != null));
 
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: this.onTap,
       child: Container(
-        height: this.height ?? 58,
-        width: this.width ?? 174,
+        height: this.height,
+        width: this.width,
+        padding: (this.height == null && this.width == null)
+            ? EdgeInsets.symmetric(horizontal: 16, vertical: 8)
+            : EdgeInsets.zero,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(
             Radius.circular(this.radius ?? 28),
