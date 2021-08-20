@@ -24,6 +24,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_bloc: ^7.1.0
   flutter_svg: ^0.22.0
   introduction_screen: ^2.1.0
 
@@ -95,6 +96,5 @@ flutter:
         - asset: fonts/Montserrat-ExtraBoldItalic.ttf
           style: italic
           weight: 800
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
