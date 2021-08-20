@@ -1,3 +1,5 @@
+import 'package:encostay/ui/atoms/brand_button.dart';
+import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -7,7 +9,11 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: LayoutBuilder(
         builder: (_, constraints) => IntroductionScreen(
-          done: Text("Get Started"),
+          done: BrandButton(
+            child: Text('Get Started', style: TextStyle(color: Colors.white)),
+            color: brandBrown,
+            onTap: () {},
+          ),
           onDone: () {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
