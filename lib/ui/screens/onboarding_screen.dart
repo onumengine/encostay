@@ -59,6 +59,9 @@ class OnboardingScreen extends StatelessWidget {
             activeSize: Size(28, 9),
             activeColor: brandOrange,
           ),
+          dotsFlex: 1,
+          isTopSafeArea: false,
+            /*
           pages: <PageViewModel>[
             PageViewModel(
               titleWidget: Align(
@@ -78,9 +81,13 @@ class OnboardingScreen extends StatelessWidget {
               ),
               image: Align(
                 alignment: Alignment.topRight,
-                child: Image.asset(
-                  'lib/assets/images/onboarding_1.png',
-                  width: constraints.widthConstraints().maxWidth * 3 / 4,
+                child: AspectRatio(
+                  aspectRatio: 0.604751,
+                  child: Image.asset(
+                    'lib/assets/images/onboarding_1.png',
+                    height: constraints.heightConstraints().maxHeight * 0.57,
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
@@ -133,6 +140,28 @@ class OnboardingScreen extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),
+            ),
+          ],
+          */
+          rawPages: <Widget>[
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Image(
+                    image: AssetImage('lib/assets/images/onboarding_1.png'),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Travel with no worry'),
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('You can now experience the next level travel experience for hotel bookings'),
+                ),
+              ],
             ),
           ],
         ),
