@@ -1,3 +1,4 @@
+import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
 const semiBold24 = TextStyle(
@@ -47,4 +48,18 @@ const regular11 = TextStyle(
   fontSize: 11,
   height: 1.64,
   letterSpacing: 0,
+);
+
+const splashTitle = TextStyle(
+  fontWeight: FontWeight.w900,
+  fontSize: 30,
+  color: brandBrown,
+  height: 1.63,
+);
+
+const medium15 = TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 15,
+  height: 1.63,
+  color: brandBrown,
 );
