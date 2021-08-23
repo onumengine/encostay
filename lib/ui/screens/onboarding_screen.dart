@@ -26,6 +26,13 @@ class OnboardingScreen extends StatelessWidget {
               ),
             ),
           ),
+          onDone: () {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text("Clicked done"),
+              ),
+            );
+          },
           next: Container(
             height: 41,
             width: 99,
@@ -37,17 +44,21 @@ class OnboardingScreen extends StatelessWidget {
               color: brandBrown,
             ),
             child: Center(
-              child: Text('Next', style: TextStyle(color: Colors.white,),),
+              child: Text(
+                'Next',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
           showNextButton: true,
-          onDone: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Text("Clicked done"),
-              ),
-            );
-          },
+          dotsDecorator: DotsDecorator(
+            size: Size.fromRadius(4.5),
+            activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5),),
+            activeSize: Size(28, 9),
+            activeColor: brandOrange,
+          ),
           pages: <PageViewModel>[
             PageViewModel(
               titleWidget: Align(
