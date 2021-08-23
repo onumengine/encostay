@@ -61,88 +61,6 @@ class OnboardingScreen extends StatelessWidget {
           ),
           dotsFlex: 1,
           isTopSafeArea: false,
-            /*
-          pages: <PageViewModel>[
-            PageViewModel(
-              titleWidget: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Travel with no worry',
-                  textAlign: TextAlign.start,
-                  style: semiBold24,
-                ),
-              ),
-              bodyWidget: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'You can now experience the next level travel experience for hotel bookings',
-                  style: regular14,
-                ),
-              ),
-              image: Align(
-                alignment: Alignment.topRight,
-                child: AspectRatio(
-                  aspectRatio: 0.604751,
-                  child: Image.asset(
-                    'lib/assets/images/onboarding_1.png',
-                    height: constraints.heightConstraints().maxHeight * 0.57,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-            ),
-            PageViewModel(
-              titleWidget: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Find Hundreds of hotels',
-                  textAlign: TextAlign.start,
-                  style: semiBold24,
-                ),
-              ),
-              bodyWidget: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Discover hundreds of hotels that spread across the world for you',
-                  style: regular14,
-                ),
-              ),
-              image: Align(
-                alignment: Alignment.topRight,
-                child: Image.asset(
-                  'lib/assets/images/onboarding_2.png',
-                  width: constraints.widthConstraints().maxWidth * 3 / 4,
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ),
-            PageViewModel(
-              titleWidget: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Let\'s discover the world',
-                  textAlign: TextAlign.start,
-                  style: semiBold24,
-                ),
-              ),
-              bodyWidget: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Book your hotel now for the next level travel experience. Enjoy your trip',
-                  style: regular14,
-                ),
-              ),
-              image: Align(
-                alignment: Alignment.topRight,
-                child: Image.asset(
-                  'lib/assets/images/onboarding_3.png',
-                  width: constraints.widthConstraints().maxWidth * 3 / 4,
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ),
-          ],
-          */
           rawPages: <Widget>[
             Column(
               mainAxisSize: MainAxisSize.max,
@@ -169,6 +87,64 @@ class OnboardingScreen extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 25) + EdgeInsets.only(top: constraints.maxHeight / 42.74),
                     child: Text('You can now experience the next level travel experience for hotel bookings', style: regular14,),
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Container(
+                    width: constraints.maxWidth,
+                    padding: EdgeInsets.only(left: constraints.maxWidth / 4,),
+                    child: Image(
+                      image: AssetImage('lib/assets/images/onboarding_2.png'),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25) + EdgeInsets.only(top: constraints.maxHeight / 12.3),
+                    child: Text('Find Hundreds of hotels', style: semiBold24,),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25) + EdgeInsets.only(top: constraints.maxHeight / 42.74),
+                    child: Text('Discover hundreds of hotels that spread across the world for you', style: regular14,),
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Container(
+                    width: constraints.maxWidth,
+                    padding: EdgeInsets.only(left: constraints.maxWidth / 4,),
+                    child: Image(
+                      image: AssetImage('lib/assets/images/onboarding_3.png'),
+                    ),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25) + EdgeInsets.only(top: constraints.maxHeight / 12.3),
+                    child: Text('Let\'s discover the world', style: semiBold24,),
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25) + EdgeInsets.only(top: constraints.maxHeight / 42.74),
+                    child: Text('Book your hotel now for the next level travel experience. Enjoy your trip', style: regular14,),
                   ),
                 ),
               ],
