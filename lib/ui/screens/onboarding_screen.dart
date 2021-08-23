@@ -155,11 +155,11 @@ class OnboardingScreen extends StatelessWidget {
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Text('Travel with no worry'),
+                  child: Text('Travel with no worry', style: semiBold24,),
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Text('You can now experience the next level travel experience for hotel bookings'),
+                  child: Text('You can now experience the next level travel experience for hotel bookings', style: regular14,),
                 ),
               ],
             ),
