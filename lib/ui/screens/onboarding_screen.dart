@@ -9,10 +9,37 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: LayoutBuilder(
         builder: (_, constraints) => IntroductionScreen(
-          done: BrandButton(
-            child: Text('Get Started', style: TextStyle(color: Colors.white)),
-            color: brandBrown,
-            onTap: () {},
+          done: Container(
+            height: 41,
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                Radius.circular(28),
+              ),
+              color: brandBrown,
+            ),
+            child: Center(
+              child: Text(
+                'Get Started',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          next: Container(
+            height: 41,
+            width: 99,
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                Radius.circular(28),
+              ),
+              color: brandBrown,
+            ),
+            child: Center(
+              child: Text('Next'),
+            ),
           ),
           onDone: () {
             ScaffoldMessenger.of(context).showSnackBar(
@@ -44,7 +71,6 @@ class OnboardingScreen extends StatelessWidget {
                 child: Image.asset(
                   'lib/assets/images/onboarding_1.png',
                   width: constraints.widthConstraints().maxWidth * 3 / 4,
-                  fit: BoxFit.fill,
                 ),
               ),
             ),
