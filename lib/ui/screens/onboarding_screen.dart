@@ -149,8 +149,12 @@ class OnboardingScreen extends StatelessWidget {
               children: <Widget>[
                 Align(
                   alignment: Alignment.topRight,
-                  child: Image(
-                    image: AssetImage('lib/assets/images/onboarding_1.png'),
+                  child: Container(
+                    width: constraints.maxWidth,
+                    padding: EdgeInsets.only(left: constraints.maxWidth / 4,),
+                    child: Image(
+                      image: AssetImage('lib/assets/images/onboarding_1.png'),
+                    ),
                   ),
                 ),
                 Align(
