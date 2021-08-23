@@ -1,4 +1,3 @@
-import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -41,6 +40,7 @@ class OnboardingScreen extends StatelessWidget {
               child: Text('Next'),
             ),
           ),
+          showNextButton: true,
           onDone: () {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
@@ -48,7 +48,6 @@ class OnboardingScreen extends StatelessWidget {
               ),
             );
           },
-          showNextButton: false,
           pages: <PageViewModel>[
             PageViewModel(
               titleWidget: Align(
