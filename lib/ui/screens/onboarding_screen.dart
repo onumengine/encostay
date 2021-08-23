@@ -159,11 +159,17 @@ class OnboardingScreen extends StatelessWidget {
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Text('Travel with no worry', style: semiBold24,),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25) + EdgeInsets.only(top: constraints.maxHeight / 12.3),
+                    child: Text('Travel with no worry', style: semiBold24,),
+                  ),
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Text('You can now experience the next level travel experience for hotel bookings', style: regular14,),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25) + EdgeInsets.only(top: constraints.maxHeight / 42.74),
+                    child: Text('You can now experience the next level travel experience for hotel bookings', style: regular14,),
+                  ),
                 ),
               ],
             ),
