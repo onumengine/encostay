@@ -37,7 +37,7 @@ class OnboardingScreen extends StatelessWidget {
               color: brandBrown,
             ),
             child: Center(
-              child: Text('Next'),
+              child: Text('Next', style: TextStyle(color: Colors.white,),),
             ),
           ),
           showNextButton: true,
