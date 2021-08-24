@@ -1,3 +1,4 @@
+import 'package:encostay/ui/screens/auth_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -27,9 +28,9 @@ class OnboardingScreen extends StatelessWidget {
             ),
           ),
           onDone: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                content: Text("Clicked done"),
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (context) => AuthScreen(),
               ),
             );
           },
