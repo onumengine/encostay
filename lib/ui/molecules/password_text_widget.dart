@@ -24,7 +24,7 @@ class _PasswordTextWidgetState extends State<PasswordTextWidget> {
       decoration: BoxDecoration(
         color: Colors.black12,
         borderRadius: BorderRadius.all(
-          Radius.circular(16.0),
+          Radius.circular(27.5),
         ),
       ),
       child: Row(
