@@ -1,3 +1,5 @@
+import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -27,7 +29,14 @@ class _AuthScreenState extends State<AuthScreen> {
                   Tab(
                     child: Text('Sign Up'),
                   ),
-                ],),
+                ],
+                  indicator: BoxDecoration(
+                    color: brandBrown,
+                    borderRadius: BorderRadius.circular(27.5),
+                  ),
+                  labelStyle: regular14,
+                  labelColor: brandWhite,
+                ),
               ],
             ),
           ),
