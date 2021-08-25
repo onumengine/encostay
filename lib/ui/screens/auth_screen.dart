@@ -36,6 +36,8 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                   labelStyle: regular14,
                   labelColor: brandWhite,
+                  unselectedLabelStyle: regular14,
+                  unselectedLabelColor: brandGrey,
                 ),
               ],
             ),
