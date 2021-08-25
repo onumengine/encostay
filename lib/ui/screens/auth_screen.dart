@@ -9,8 +9,6 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-
     return Scaffold(
       body: SafeArea(
         child: DefaultTabController(

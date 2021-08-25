@@ -1,4 +1,5 @@
 import 'package:encostay/ui/screens/splash_screen.dart';
+import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Montserrat',
+        scaffoldBackgroundColor: brandBackground,
       ),
       home: SplashScreen(),
     );
