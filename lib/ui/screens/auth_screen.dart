@@ -19,6 +19,7 @@ class _AuthScreenState extends State<AuthScreen> {
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+                SizedBox(height: kToolbarHeight),
                 Image(
                   image: AssetImage('lib/assets/images/icon.png'),
                   height: 60,
