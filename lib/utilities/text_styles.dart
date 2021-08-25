@@ -16,6 +16,12 @@ const semiBold24 = TextStyle(
   fontWeight: FontWeight.w600,
 );
 
+const medium13 = TextStyle(
+  fontSize: 13,
+  fontWeight: FontWeight.w500,
+  height: 3.77,
+);
+
 const medium20 = TextStyle(
   fontSize: 20,
   height: 1.5,
