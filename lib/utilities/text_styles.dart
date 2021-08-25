@@ -1,5 +1,13 @@
+import 'dart:ui';
+
 import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
+
+const bold20 = TextStyle(
+  fontSize: 20,
+  fontWeight: FontWeight.w900,
+  height: 2.45,
+);
 
 const semiBold24 = TextStyle(
   fontSize: 24,
