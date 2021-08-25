@@ -1,3 +1,4 @@
+import 'package:encostay/ui/organisms/login_form.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,8 @@ class _AuthScreenState extends State<AuthScreen> {
                 ),
                 SizedBox(height: 41),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 95),
+                  padding: EdgeInsets.symmetric(horizontal: 95) +
+                      EdgeInsets.only(bottom: 8),
                   child: TabBar(
                     tabs: <Tab>[
                       Tab(
@@ -64,6 +66,9 @@ class _AuthScreenState extends State<AuthScreen> {
                     unselectedLabelStyle: regular14,
                     unselectedLabelColor: brandGrey,
                   ),
+                ),
+                Flexible(
+                  child: LoginForm(),
                 ),
               ],
             ),
