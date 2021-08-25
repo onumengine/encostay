@@ -1,3 +1,4 @@
+import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
 class TextWidget extends StatelessWidget {
@@ -15,7 +16,7 @@ class TextWidget extends StatelessWidget {
     return Container(
       height: 43,
       decoration: BoxDecoration(
-        color: Colors.black12,
+        color: brandWhite,
         borderRadius: BorderRadius.all(
           Radius.circular(27.5),
         ),
