@@ -11,7 +11,26 @@ class _AuthScreenState extends State<AuthScreen> {
       body: SafeArea(
         child: DefaultTabController(
           length: 2,
-          child: Container(),
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Image(image: AssetImage('lib/assets/images/icon.png'),),
+                Text('encostay'),
+                Text('Enjoy convenient stay'),
+                SizedBox(),
+                TabBar(tabs: <Tab>[
+                  Tab(
+                    child: Text('Log in'),
+                  ),
+                  Tab(
+                    child: Text('Sign Up'),
+                  ),
+                ],),
+              ],
+            ),
+          ),
         ),
       ),
     );
