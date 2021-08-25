@@ -10,6 +10,9 @@ class _LoginFormState extends State<LoginForm> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 25),
       color: brandBrown,
+      child: Column(
+        children: <Widget>[],
+      ),
     );
   }
 }

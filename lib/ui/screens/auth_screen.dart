@@ -68,7 +68,12 @@ class _AuthScreenState extends State<AuthScreen> {
                   ),
                 ),
                 Flexible(
-                  child: LoginForm(),
+                  child: TabBarView(
+                    children: <Widget>[
+                      LoginForm(),
+                      LoginForm(),
+                    ],
+                  ),
                 ),
               ],
             ),
