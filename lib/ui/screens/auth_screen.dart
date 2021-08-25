@@ -22,22 +22,25 @@ class _AuthScreenState extends State<AuthScreen> {
                 Text('encostay'),
                 Text('Enjoy convenient stay'),
                 SizedBox(),
-                TabBar(tabs: <Tab>[
-                  Tab(
-                    child: Text('Log in'),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 95),
+                  child: TabBar(tabs: <Tab>[
+                    Tab(
+                      child: Text('Log in'),
+                    ),
+                    Tab(
+                      child: Text('Sign Up'),
+                    ),
+                  ],
+                    indicator: BoxDecoration(
+                      color: brandBrown,
+                      borderRadius: BorderRadius.circular(27.5),
+                    ),
+                    labelStyle: regular14,
+                    labelColor: brandWhite,
+                    unselectedLabelStyle: regular14,
+                    unselectedLabelColor: brandGrey,
                   ),
-                  Tab(
-                    child: Text('Sign Up'),
-                  ),
-                ],
-                  indicator: BoxDecoration(
-                    color: brandBrown,
-                    borderRadius: BorderRadius.circular(27.5),
-                  ),
-                  labelStyle: regular14,
-                  labelColor: brandWhite,
-                  unselectedLabelStyle: regular14,
-                  unselectedLabelColor: brandGrey,
                 ),
               ],
             ),
