@@ -60,7 +60,7 @@ class _PasswordTextWidgetState extends State<PasswordTextWidget> {
                   _changeVisibility();
                 });
               },
-              child: Icon(_visibilityIcon),
+              child: Icon(_visibilityIcon, size: 15.6, color: brandGrey,),
             ),
           ),
         ],
