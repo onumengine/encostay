@@ -73,6 +73,21 @@ class _SignUpFormState extends State<SignUpForm> {
           SizedBox(
             child: Divider(height: 1, color: brandOrange,),
           ),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20) +
+                  EdgeInsets.only(bottom: (screenSize.height / 101.5)),
+              child: Text(
+                'Birthday',
+                style: TextStyle(
+                  fontSize: medium14.fontSize,
+                  fontWeight: medium14.fontWeight,
+                  height: 1.64,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
