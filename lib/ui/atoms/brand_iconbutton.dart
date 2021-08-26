@@ -47,6 +47,7 @@ class BrandIconButton extends StatelessWidget {
                   image: AssetImage(this.iconPath!),
                   height: 15,
                 ),
+                SizedBox(width: 12),
                 this.child,
               ],
             ),
