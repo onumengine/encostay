@@ -68,6 +68,7 @@ class _SignUpFormState extends State<SignUpForm> {
             hintText: 'Enter your last name',
             controller: _lastNameController,
           ),
+          Text('Make sure it matches the name on your government ID',),
         ],
       ),
     );
