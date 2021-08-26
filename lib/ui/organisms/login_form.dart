@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/brand_iconbutton.dart';
 import 'package:encostay/ui/molecules/password_text_widget.dart';
@@ -148,7 +150,14 @@ class _LoginFormState extends State<LoginForm> {
               children: <Widget>[
                 BrandIconButton(
                   iconPath: 'lib/assets/images/google_icon.png',
-                  child: Text('Google'),
+                  child: Text('Google',
+                    style: TextStyle(
+                      fontSize: bold14.fontSize,
+                      fontWeight: bold14.fontWeight,
+                      height: bold14.height,
+                      color: brandGreyAlt,
+                    ),
+                  ),
                   color: googleWhite,
                   onTap: () {},
                   height: 36,
@@ -156,7 +165,13 @@ class _LoginFormState extends State<LoginForm> {
                 SizedBox(width: 19),
                 BrandIconButton(
                   iconPath: 'lib/assets/images/fb_icon.png',
-                  child: Text('Google'),
+                  child: Text('Facebook',
+                    style: TextStyle(
+                    fontSize: medium12.fontSize,
+                    fontWeight: medium12.fontWeight,
+                    height: medium12.height,
+                    color: brandWhite,
+                  ),),
                   color: facebookBlue,
                   onTap: () {},
                   height: 36,
