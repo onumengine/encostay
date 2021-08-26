@@ -1,4 +1,5 @@
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class PasswordTextWidget extends StatefulWidget {
@@ -43,7 +44,10 @@ class _PasswordTextWidgetState extends State<PasswordTextWidget> {
               decoration: InputDecoration.collapsed(
                 hintText: widget.hintText,
                 hintStyle: TextStyle(
-                  color: Colors.black26,
+                  fontSize: normal14.fontSize,
+                  height: normal14.height,
+                  fontWeight: normal14.fontWeight,
+                  color: brandGrey,
                 ),
               ),
             ),
