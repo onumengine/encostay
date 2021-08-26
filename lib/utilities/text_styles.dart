@@ -40,6 +40,12 @@ const medium20 = TextStyle(
   letterSpacing: 0,
 );
 
+const normal14 = TextStyle(
+  fontSize: 14,
+  height: 1.78,
+  fontWeight: FontWeight.w400,
+);
+
 const regular11 = TextStyle(
   fontSize: 11,
   height: 1.64,
