@@ -43,9 +43,9 @@ class BrandIconButton extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                ImageIcon(
-                  AssetImage(this.iconPath!),
-                  size: 15,
+                Image(
+                  image: AssetImage(this.iconPath!),
+                  height: 15,
                 ),
                 this.child,
               ],
