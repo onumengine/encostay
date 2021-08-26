@@ -24,8 +24,11 @@ class BrandIconButton extends StatelessWidget {
     return Container(
       height: this.height,
       width: this.width,
-      padding: (this.height == null && this.width == null)
-          ? EdgeInsets.symmetric(horizontal: 16, vertical: 8)
+      /// With this expression, you'll be able to set the padding you want whether the height
+      /// or width are set or not and if you don't set your own padding, a default value will
+      /// be assigned to it for you
+      padding: (this.height == null || this.width == null)
+          ? this.padding ?? EdgeInsets.symmetric(horizontal: 16, vertical: 8)
           : this.padding ?? EdgeInsets.zero,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
