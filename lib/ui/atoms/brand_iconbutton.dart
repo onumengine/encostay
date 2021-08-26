@@ -26,7 +26,7 @@ class BrandIconButton extends StatelessWidget {
       width: this.width,
       padding: (this.height == null && this.width == null)
           ? EdgeInsets.symmetric(horizontal: 16, vertical: 8)
-          : EdgeInsets.zero,
+          : this.padding ?? EdgeInsets.zero,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(
           Radius.circular(this.radius ?? 28),
