@@ -15,6 +15,7 @@ class _LoginFormState extends State<LoginForm> {
   final TextEditingController passwordController = TextEditingController();
 
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 25),
       child: Column(
@@ -24,7 +25,7 @@ class _LoginFormState extends State<LoginForm> {
           Align(
             alignment: AlignmentDirectional.centerStart,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20) + EdgeInsets.only(bottom: (screenSize.height / 101.5)),
               child: Text('Username or E-mail',
                 style: TextStyle(
                   fontSize: medium14.fontSize,
@@ -42,7 +43,7 @@ class _LoginFormState extends State<LoginForm> {
           Align(
             alignment: AlignmentDirectional.centerStart,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20) + EdgeInsets.only(bottom: (screenSize.height / 101.5)),
               child: Text(
                 'Password',
                 style: TextStyle(
