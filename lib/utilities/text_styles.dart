@@ -17,6 +17,7 @@ const medium13 = TextStyle(
 
 const medium14 = TextStyle(
   fontSize: 14,
+  fontWeight: FontWeight.w500,
   height: 1.43,
   letterSpacing: 0,
 );
