@@ -139,18 +139,28 @@ class _LoginFormState extends State<LoginForm> {
               ],
             ),
           ),
-          SizedBox(
-            height: (screenSize.height / 54.13)
-          ),
+          SizedBox(height: (screenSize.height / 54.13)),
           Container(
             height: 50,
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                BrandIconButton(iconPath: 'lib/assets/images/google_icon.png', child: Text('Google'), onTap: (){},),
+                BrandIconButton(
+                  iconPath: 'lib/assets/images/google_icon.png',
+                  child: Text('Google'),
+                  color: googleWhite,
+                  onTap: () {},
+                  height: 36,
+                ),
                 SizedBox(width: 19),
-                BrandIconButton(iconPath: 'lib/assets/images/fb_icon.png', child: Text('Google'), color: facebookBlue, onTap: (){},),
+                BrandIconButton(
+                  iconPath: 'lib/assets/images/fb_icon.png',
+                  child: Text('Google'),
+                  color: facebookBlue,
+                  onTap: () {},
+                  height: 36,
+                ),
               ],
             ),
           ),

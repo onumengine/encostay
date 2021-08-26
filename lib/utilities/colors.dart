@@ -12,3 +12,4 @@ const brandGrey = Color(0xffa9a9a9);
 const brandGreyAlt = Color(0xff3e3e3e);
 
 const facebookBlue = Color(0xff486ab1);
+const googleWhite = Color(0xfffafafa);
