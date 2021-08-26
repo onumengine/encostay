@@ -17,6 +17,8 @@ class _LoginFormState extends State<LoginForm> {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 25),
       child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text('Username or E-mail'),
           TextWidget(
