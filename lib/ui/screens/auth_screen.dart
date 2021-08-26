@@ -1,4 +1,5 @@
 import 'package:encostay/ui/organisms/login_form.dart';
+import 'package:encostay/ui/organisms/signup_form.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -69,7 +70,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   child: TabBarView(
                     children: <Widget>[
                       LoginForm(),
-                      LoginForm(),
+                      SignUpForm(),
                     ],
                   ),
                 ),
