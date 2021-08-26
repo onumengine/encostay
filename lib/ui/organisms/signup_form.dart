@@ -1,4 +1,5 @@
 import 'package:encostay/ui/molecules/text_widget.dart';
+import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -69,6 +70,9 @@ class _SignUpFormState extends State<SignUpForm> {
             controller: _lastNameController,
           ),
           Text('Make sure it matches the name on your government ID',),
+          SizedBox(
+            child: Divider(height: 1, color: brandOrange,),
+          ),
         ],
       ),
     );
