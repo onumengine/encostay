@@ -1,4 +1,5 @@
 import 'package:encostay/ui/atoms/brand_button.dart';
+import 'package:encostay/ui/atoms/brand_iconbutton.dart';
 import 'package:encostay/ui/molecules/password_text_widget.dart';
 import 'package:encostay/ui/molecules/text_widget.dart';
 import 'package:encostay/utilities/colors.dart';
@@ -135,6 +136,21 @@ class _LoginFormState extends State<LoginForm> {
                     color: brandBrown,
                   ),
                 ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: (screenSize.height / 54.13)
+          ),
+          Container(
+            height: 50,
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                BrandIconButton(iconPath: 'lib/assets/images/google_icon.png', child: Text('Google'), onTap: (){},),
+                SizedBox(width: 19),
+                BrandIconButton(iconPath: 'lib/assets/images/fb_icon.png', child: Text('Google'), color: facebookBlue, onTap: (){},),
               ],
             ),
           ),
