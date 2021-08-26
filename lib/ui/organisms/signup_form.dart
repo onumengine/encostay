@@ -48,6 +48,26 @@ class _SignUpFormState extends State<SignUpForm> {
             controller: _firstNameController,
           ),
           SizedBox(height: (screenSize.height / 45)),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20) +
+                  EdgeInsets.only(bottom: (screenSize.height / 101.5)),
+              child: Text(
+                'Last Name',
+                style: TextStyle(
+                  fontSize: medium14.fontSize,
+                  fontWeight: medium14.fontWeight,
+                  height: 1.64,
+                ),
+              ),
+            ),
+          ),
+          TextWidget(
+            key: _lastNameKey,
+            hintText: 'Enter your last name',
+            controller: _lastNameController,
+          ),
         ],
       ),
     );
