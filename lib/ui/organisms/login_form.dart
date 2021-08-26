@@ -8,6 +8,7 @@ import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
+
 class LoginForm extends StatefulWidget {
   _LoginFormState createState() => _LoginFormState();
 }
@@ -97,7 +98,13 @@ class _LoginFormState extends State<LoginForm> {
             height: screenSize.height / 21.9,
           ),
           BrandButton(
-            onTap: () {},
+            onTap: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Login sequence initiated'),
+                ),
+              );
+            },
             child: Text(
               'Login',
               style: TextStyle(
@@ -159,7 +166,13 @@ class _LoginFormState extends State<LoginForm> {
                     ),
                   ),
                   color: googleWhite,
-                  onTap: () {},
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Google sign in initiated'),
+                      ),
+                    );
+                  },
                   height: 36,
                 ),
                 SizedBox(width: 19),
@@ -173,7 +186,13 @@ class _LoginFormState extends State<LoginForm> {
                     color: brandWhite,
                   ),),
                   color: facebookBlue,
-                  onTap: () {},
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Google sign in initiated'),
+                      ),
+                    );
+                  },
                   height: 36,
                 ),
               ],
