@@ -1,15 +1,16 @@
+import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
 class BrandButton extends StatelessWidget {
   final Widget child;
-  final Color color;
+  final Color? color;
   final VoidCallback onTap;
   final double? radius, height, width;
   final EdgeInsetsGeometry? padding;
 
   BrandButton({
     required this.child,
-    required this.color,
+    this.color,
     required this.onTap,
     this.radius,
     this.height,
@@ -18,7 +19,12 @@ class BrandButton extends StatelessWidget {
   }) : assert(!((height != null || width != null) && padding != null));
 
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkResponse(
+      containedInkWell: true,
+      highlightShape: BoxShape.rectangle,
+      borderRadius: BorderRadius.circular(28),
+      splashColor: brandLightGreen,
+      highlightColor: brandOrange,
       onTap: this.onTap,
       child: Container(
         height: this.height,
@@ -30,7 +36,7 @@ class BrandButton extends StatelessWidget {
           borderRadius: BorderRadius.all(
             Radius.circular(this.radius ?? 28),
           ),
-          color: this.color,
+          color: this.color ?? Colors.transparent,
         ),
         child: Center(
           child: this.child,
