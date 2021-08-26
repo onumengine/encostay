@@ -3,6 +3,12 @@ import 'dart:ui';
 import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
+const bold18 = TextStyle(
+  fontSize: 18,
+  fontWeight: FontWeight.w700,
+  height: 1.36,
+);
+
 const bold20 = TextStyle(
   fontSize: 20,
   fontWeight: FontWeight.w900,

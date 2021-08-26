@@ -1,3 +1,4 @@
+import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/molecules/password_text_widget.dart';
 import 'package:encostay/ui/molecules/text_widget.dart';
 import 'package:encostay/utilities/colors.dart';
@@ -63,14 +64,23 @@ class _LoginFormState extends State<LoginForm> {
             hintText: 'Enter your username or E-mail',
             controller: passwordController,
           ),
-          SizedBox(height: screenSize.height / 62.46,),
+          SizedBox(
+            height: screenSize.height / 62.46,
+          ),
           Align(
             alignment: AlignmentDirectional.centerEnd,
             child: Padding(
               padding: EdgeInsets.only(right: 23),
               child: GestureDetector(
-                onTap: () {},
-                child: Text('Forgot Password?',
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('You forgot your password'),
+                    ),
+                  );
+                },
+                child: Text(
+                  'Forgot Password?',
                   style: TextStyle(
                     fontSize: regular10.fontSize,
                     height: regular10.height,
@@ -79,6 +89,22 @@ class _LoginFormState extends State<LoginForm> {
                 ),
               ),
             ),
+          ),
+          SizedBox(
+            height: screenSize.height / 21.9,
+          ),
+          BrandButton(
+            onTap: () {},
+            child: Text('Login',
+              style: TextStyle(
+                fontSize: bold18.fontSize,
+                fontWeight: bold18.fontWeight,
+                height: bold18.height,
+                color: brandWhite,
+              ),
+            ),
+            color: brandOrange,
+            height: 43,
           ),
         ],
       ),
