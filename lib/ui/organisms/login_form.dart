@@ -68,11 +68,14 @@ class _LoginFormState extends State<LoginForm> {
             alignment: AlignmentDirectional.centerEnd,
             child: Padding(
               padding: EdgeInsets.only(right: 23),
-              child: Text('Forgot Password?',
-                style: TextStyle(
-                  fontSize: regular10.fontSize,
-                  height: regular10.height,
-                  color: brandGreyAlt.withOpacity(0.8),
+              child: GestureDetector(
+                onTap: () {},
+                child: Text('Forgot Password?',
+                  style: TextStyle(
+                    fontSize: regular10.fontSize,
+                    height: regular10.height,
+                    color: brandGreyAlt.withOpacity(0.8),
+                  ),
                 ),
               ),
             ),
