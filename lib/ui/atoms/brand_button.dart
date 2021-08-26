@@ -34,7 +34,7 @@ class BrandButton extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          splashColor: brandWhite,
+          splashColor: brandWhite.withOpacity(0.5),
           borderRadius: BorderRadius.circular(28),
           onTap: this.onTap,
           child: Center(
