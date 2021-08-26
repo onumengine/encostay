@@ -47,6 +47,11 @@ const normal14 = TextStyle(
   fontWeight: FontWeight.w400,
 );
 
+const regular10 = TextStyle(
+  fontSize: 10,
+  height: 1.8,
+);
+
 const regular11 = TextStyle(
   fontSize: 11,
   height: 1.64,

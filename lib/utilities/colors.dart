@@ -9,3 +9,6 @@ const brandWhite = Color(0xffffffff);
 const brandBackground = Color(0xfffafafa);
 const brandOverlay = Color(0x43ffffff);
 const brandGrey = Color(0xffa9a9a9);
+
+// Colors with opacity
+const brandGreyAlt = Color(0xff3e3e3e);

@@ -25,13 +25,16 @@ class _LoginFormState extends State<LoginForm> {
           Align(
             alignment: AlignmentDirectional.centerStart,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20) + EdgeInsets.only(bottom: (screenSize.height / 101.5)),
-              child: Text('Username or E-mail',
+              padding: const EdgeInsets.symmetric(horizontal: 20) +
+                  EdgeInsets.only(bottom: (screenSize.height / 101.5)),
+              child: Text(
+                'Username or E-mail',
                 style: TextStyle(
                   fontSize: medium14.fontSize,
                   fontWeight: medium14.fontWeight,
                   height: 1.64,
-                ),),
+                ),
+              ),
             ),
           ),
           TextWidget(
@@ -39,11 +42,12 @@ class _LoginFormState extends State<LoginForm> {
             hintText: 'Enter your username or E-mail',
             controller: emailController,
           ),
-          SizedBox(height: 18),
+          SizedBox(height: (screenSize.height / 45)),
           Align(
             alignment: AlignmentDirectional.centerStart,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20) + EdgeInsets.only(bottom: (screenSize.height / 101.5)),
+              padding: const EdgeInsets.symmetric(horizontal: 20) +
+                  EdgeInsets.only(bottom: (screenSize.height / 101.5)),
               child: Text(
                 'Password',
                 style: TextStyle(
@@ -58,6 +62,20 @@ class _LoginFormState extends State<LoginForm> {
             key: passwordKey,
             hintText: 'Enter your username or E-mail',
             controller: passwordController,
+          ),
+          SizedBox(height: screenSize.height / 62.46,),
+          Align(
+            alignment: AlignmentDirectional.centerEnd,
+            child: Padding(
+              padding: EdgeInsets.only(right: 23),
+              child: Text('Forgot Password?',
+                style: TextStyle(
+                  fontSize: regular10.fontSize,
+                  height: regular10.height,
+                  color: brandGreyAlt.withOpacity(0.8),
+                ),
+              ),
+            ),
           ),
         ],
       ),
