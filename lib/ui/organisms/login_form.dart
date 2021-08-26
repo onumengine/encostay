@@ -95,7 +95,8 @@ class _LoginFormState extends State<LoginForm> {
           ),
           BrandButton(
             onTap: () {},
-            child: Text('Login',
+            child: Text(
+              'Login',
               style: TextStyle(
                 fontSize: bold18.fontSize,
                 fontWeight: bold18.fontWeight,
@@ -105,6 +106,37 @@ class _LoginFormState extends State<LoginForm> {
             ),
             color: brandOrange,
             height: 43,
+          ),
+          SizedBox(height: screenSize.height / 9.78),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 57),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Flexible(
+                  flex: 1,
+                  child: Container(
+                    height: 1,
+                    color: brandBrown,
+                  ),
+                ),
+                SizedBox(width: 17),
+                Text(
+                  'Or login with',
+                  style: medium12,
+                ),
+                SizedBox(width: 17),
+                Flexible(
+                  flex: 1,
+                  child: Container(
+                    height: 1,
+                    color: brandBrown,
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

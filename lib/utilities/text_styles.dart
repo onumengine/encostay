@@ -15,6 +15,12 @@ const bold20 = TextStyle(
   height: 2.45,
 );
 
+const medium12 = TextStyle(
+  fontSize: 12,
+  fontWeight: FontWeight.w500,
+  height: 1.66,
+);
+
 const medium13 = TextStyle(
   fontSize: 13,
   fontWeight: FontWeight.w500,
