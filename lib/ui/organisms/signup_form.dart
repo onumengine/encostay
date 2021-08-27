@@ -85,6 +85,7 @@ class _SignUpFormState extends State<SignUpForm> {
               color: brandOrange,
             ),
           ),
+          SizedBox(height: (screenSize.height / 64.46)),
           Align(
             alignment: AlignmentDirectional.centerStart,
             child: Padding(
@@ -117,9 +118,13 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
             ),
           ),
-          Text(
-            'To sign up, you need to be at least 18. Other people who use Encostay won\'t see your birthday.',
-            style: normal10,
+          SizedBox(height: (screenSize.height / 162.4)),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 49),
+            child: Text(
+              'To sign up, you need to be at least 18. Other people who use Encostay won\'t see your birthday.',
+              style: normal10,
+            ),
           ),
           Align(
             alignment: AlignmentDirectional.centerStart,
@@ -141,9 +146,12 @@ class _SignUpFormState extends State<SignUpForm> {
             hintText: 'Enter your username or E-mail',
             controller: _emailController,
           ),
-          Text(
-            'By selecting Agree and continue below, I agree to Airbnb\'s Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.',
-            style: normal10,
+          Padding(
+            padding: const EdgeInsets.only(left: 16, right: 13),
+            child: Text(
+              'By selecting Agree and continue below, I agree to Airbnb\'s Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.',
+              style: normal10,
+            ),
           ),
           BrandButton(
             child: Text(
