@@ -1,5 +1,6 @@
 import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/molecules/text_widget.dart';
+import 'package:encostay/ui/screens/set_password_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -116,7 +117,14 @@ class _SignUpFormState extends State<SignUpForm> {
                 child: InkWell(
                   splashColor: brandWhite.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(28),
-                  onTap: () {},
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content:
+                            Text('Date picker is currently in development'),
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
@@ -170,7 +178,16 @@ class _SignUpFormState extends State<SignUpForm> {
               ),
               color: brandOrange,
               height: 43,
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => SetPasswordScreen(),
+                  ),
+                );
+              },
+            ),
+            SizedBox(
+              height: (screenSize.height / 7.52),
             ),
           ],
         ),
