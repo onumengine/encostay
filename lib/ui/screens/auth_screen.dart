@@ -13,13 +13,16 @@ class _AuthScreenState extends State<AuthScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: brandBackground,
+        ),
         body: SafeArea(
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                SizedBox(height: kToolbarHeight),
                 Image(
                   image: AssetImage('lib/assets/images/icon.png'),
                   height: 60,
