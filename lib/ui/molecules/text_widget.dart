@@ -26,7 +26,7 @@ class TextWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          SizedBox(width: 20),
+          SizedBox(width: 35),
           Expanded(
             child: TextField(
               controller: this.controller,

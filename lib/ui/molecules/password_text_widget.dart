@@ -33,7 +33,7 @@ class _PasswordTextWidgetState extends State<PasswordTextWidget> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          SizedBox(width: 20),
+          SizedBox(width: 35),
           Expanded(
             child: TextField(
               controller: widget.controller,
@@ -53,14 +53,18 @@ class _PasswordTextWidgetState extends State<PasswordTextWidget> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 20),
+            padding: const EdgeInsets.only(right: 23),
             child: GestureDetector(
               onTap: () {
                 setState(() {
                   _changeVisibility();
                 });
               },
-              child: Icon(_visibilityIcon, size: 15.6, color: brandGrey,),
+              child: Icon(
+                _visibilityIcon,
+                size: 15.6,
+                color: brandGrey,
+              ),
             ),
           ),
         ],
