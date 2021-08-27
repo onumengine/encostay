@@ -20,7 +20,7 @@ class _AuthScreenState extends State<AuthScreen> {
               SliverAppBar(
                 backgroundColor: brandBackground,
                 elevation: 0,
-                expandedHeight: 200,
+                expandedHeight: (screenSize.height / 3.92),
                 pinned: true,
                 flexibleSpace: FlexibleSpaceBar(
                   background: Column(
