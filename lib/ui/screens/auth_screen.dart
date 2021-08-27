@@ -19,6 +19,7 @@ class _AuthScreenState extends State<AuthScreen> {
               SliverAppBar(
                 backgroundColor: brandBackground,
                 expandedHeight: 200,
+                pinned: true,
                 flexibleSpace: FlexibleSpaceBar(
                   background: Column(
                     children: <Widget>[
