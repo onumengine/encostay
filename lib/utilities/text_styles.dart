@@ -59,6 +59,12 @@ const medium20 = TextStyle(
   letterSpacing: 0,
 );
 
+const normal10 = TextStyle(
+  fontSize: 10,
+  height: 1.8,
+  color: brandGreyAlt,
+);
+
 const normal14 = TextStyle(
   fontSize: 14,
   height: 1.78,
