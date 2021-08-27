@@ -10,10 +10,10 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: DefaultTabController(
-          length: 2,
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        body: SafeArea(
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.max,
