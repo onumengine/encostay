@@ -10,6 +10,7 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -18,6 +19,7 @@ class _AuthScreenState extends State<AuthScreen> {
             slivers: [
               SliverAppBar(
                 backgroundColor: brandBackground,
+                elevation: 0,
                 expandedHeight: 200,
                 pinned: true,
                 flexibleSpace: FlexibleSpaceBar(
