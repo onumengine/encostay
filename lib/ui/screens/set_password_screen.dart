@@ -12,10 +12,13 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Text('Set Password'),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25),
+          child: Column(
+            children: <Widget>[
+              Text('Set Password'),
+            ],
+          ),
         ),
       ),
     );
