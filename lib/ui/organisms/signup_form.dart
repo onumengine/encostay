@@ -71,9 +71,13 @@ class _SignUpFormState extends State<SignUpForm> {
             hintText: 'Enter your last name',
             controller: _lastNameController,
           ),
-          Text(
-            'Make sure it matches the name on your government ID',
-            style: normal10,
+          SizedBox(height: (screenSize.height / 162.4)),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              'Make sure it matches the name on your government ID',
+              style: normal10,
+            ),
           ),
           SizedBox(
             child: Divider(
