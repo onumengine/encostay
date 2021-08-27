@@ -20,39 +20,48 @@ class _AuthScreenState extends State<AuthScreen> {
               SliverAppBar(
                 backgroundColor: brandBackground,
                 elevation: 0,
-                expandedHeight: (screenSize.height / 3.92),
+                expandedHeight: (screenSize.height / 3.5),
                 pinned: true,
                 flexibleSpace: FlexibleSpaceBar(
                   background: Column(
                     children: <Widget>[
+                      SizedBox(height: (screenSize.height / 23.2)),
                       Image(
                         image: AssetImage('lib/assets/images/icon.png'),
                         height: 60,
                         width: 50,
                       ),
-                      Text(
-                        'encostay',
-                        style: TextStyle(
-                          fontSize: bold20.fontSize,
-                          fontWeight: bold20.fontWeight,
-                          height: bold20.height,
-                          color: brandBrown,
+                      ListTile(
+                        title: Center(
+                          child: Text(
+                            'encostay',
+                            style: TextStyle(
+                              fontSize: bold20.fontSize,
+                              fontWeight: bold20.fontWeight,
+                              height: bold20.height,
+                              color: brandBrown,
+                            ),
+                          ),
+                        ),
+                        subtitle: Center(
+                          child: Text(
+                            'Enjoy convenient stay',
+                            style: TextStyle(
+                              fontSize: medium13.fontSize,
+                              fontWeight: medium14.fontWeight,
+                              height: medium14.height,
+                              color: brandBrown,
+                            ),
+                          ),
                         ),
                       ),
-                      Text(
-                        'Enjoy convenient stay',
-                        style: TextStyle(
-                          fontSize: medium13.fontSize,
-                          fontWeight: medium14.fontWeight,
-                          height: medium14.height,
-                          color: brandBrown,
-                        ),
-                      ),
+                      SizedBox(height: (screenSize.height / 19.8)),
                     ],
                   ),
                 ),
                 bottom: PreferredSize(
-                  preferredSize: Size.fromHeight(kToolbarHeight),
+                  preferredSize: Size.fromHeight(
+                      kToolbarHeight + (screenSize.height / 19.8)),
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 95) +
                         EdgeInsets.only(bottom: 8),
