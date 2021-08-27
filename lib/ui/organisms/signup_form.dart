@@ -1,3 +1,4 @@
+import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/molecules/text_widget.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
@@ -70,9 +71,8 @@ class _SignUpFormState extends State<SignUpForm> {
             hintText: 'Enter your last name',
             controller: _lastNameController,
           ),
-          Text(
-            'Make sure it matches the name on your government ID',
-          ),
+          Text('Make sure it matches the name on your government ID',
+              style: TextStyle()),
           SizedBox(
             child: Divider(
               height: 1,
@@ -136,6 +136,20 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           Text(
             'By selecting Agree and continue below, I agree to Airbnb\'s Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.',
+          ),
+          BrandButton(
+            child: Text(
+              'Agree and continue',
+              style: TextStyle(
+                fontSize: bold18.fontSize,
+                fontWeight: bold18.fontWeight,
+                height: bold18.height,
+                color: brandWhite,
+              ),
+            ),
+            color: brandOrange,
+            height: 43,
+            onTap: () {},
           ),
         ],
       ),
