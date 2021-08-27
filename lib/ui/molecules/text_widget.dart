@@ -6,11 +6,13 @@ class TextWidget extends StatelessWidget {
   String hintText;
   GlobalKey key;
   TextEditingController controller;
+  bool textIsObscured;
 
   TextWidget({
     required this.key,
     required this.hintText,
     required this.controller,
+    this.textIsObscured = false,
   });
 
   Widget build(BuildContext context) {
@@ -31,6 +33,7 @@ class TextWidget extends StatelessWidget {
             child: TextField(
               controller: this.controller,
               textAlignVertical: TextAlignVertical.bottom,
+              obscureText: textIsObscured,
               decoration: InputDecoration.collapsed(
                 hintText: this.hintText,
                 hintStyle: TextStyle(
