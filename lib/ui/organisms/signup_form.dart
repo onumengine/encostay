@@ -81,7 +81,7 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           SizedBox(
             child: Divider(
-              height: 1,
+              thickness: 1,
               color: brandOrange,
             ),
           ),
