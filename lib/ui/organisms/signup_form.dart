@@ -115,6 +115,7 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           Text(
             'To sign up, you need to be at least 18. Other people who use Encostay won\'t see your birthday.',
+            style: normal10,
           ),
           Align(
             alignment: AlignmentDirectional.centerStart,
@@ -138,6 +139,7 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           Text(
             'By selecting Agree and continue below, I agree to Airbnb\'s Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.',
+            style: normal10,
           ),
           BrandButton(
             child: Text(
