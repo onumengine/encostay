@@ -13,72 +13,76 @@ class _AuthScreenState extends State<AuthScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: brandBackground,
-        ),
         body: SafeArea(
-          child: Center(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Image(
-                  image: AssetImage('lib/assets/images/icon.png'),
-                  height: 60,
-                  width: 50,
-                ),
-                Text(
-                  'encostay',
-                  style: TextStyle(
-                    fontSize: bold20.fontSize,
-                    fontWeight: bold20.fontWeight,
-                    height: bold20.height,
-                    color: brandBrown,
-                  ),
-                ),
-                Text(
-                  'Enjoy convenient stay',
-                  style: TextStyle(
-                    fontSize: medium13.fontSize,
-                    fontWeight: medium14.fontWeight,
-                    height: medium14.height,
-                    color: brandBrown,
-                  ),
-                ),
-                SizedBox(height: 41),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 95) +
-                      EdgeInsets.only(bottom: 8),
-                  child: TabBar(
-                    tabs: <Tab>[
-                      Tab(
-                        child: Text('Log in'),
-                      ),
-                      Tab(
-                        child: Text('Sign Up'),
-                      ),
-                    ],
-                    indicator: BoxDecoration(
-                      color: brandBrown,
-                      borderRadius: BorderRadius.circular(27.5),
-                    ),
-                    labelStyle: regular14,
-                    labelColor: brandWhite,
-                    unselectedLabelStyle: regular14,
-                    unselectedLabelColor: brandGrey,
-                  ),
-                ),
-                Flexible(
-                  child: TabBarView(
+          child: CustomScrollView(
+            slivers: [
+              SliverAppBar(
+                backgroundColor: brandBackground,
+                expandedHeight: 200,
+                flexibleSpace: FlexibleSpaceBar(
+                  background: Column(
                     children: <Widget>[
-                      LoginForm(),
-                      SignUpForm(),
+                      Image(
+                        image: AssetImage('lib/assets/images/icon.png'),
+                        height: 60,
+                        width: 50,
+                      ),
+                      Text(
+                        'encostay',
+                        style: TextStyle(
+                          fontSize: bold20.fontSize,
+                          fontWeight: bold20.fontWeight,
+                          height: bold20.height,
+                          color: brandBrown,
+                        ),
+                      ),
+                      Text(
+                        'Enjoy convenient stay',
+                        style: TextStyle(
+                          fontSize: medium13.fontSize,
+                          fontWeight: medium14.fontWeight,
+                          height: medium14.height,
+                          color: brandBrown,
+                        ),
+                      ),
                     ],
                   ),
                 ),
-              ],
-            ),
+                bottom: PreferredSize(
+                  preferredSize: Size.fromHeight(kToolbarHeight),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 95) +
+                        EdgeInsets.only(bottom: 8),
+                    child: TabBar(
+                      tabs: <Tab>[
+                        Tab(
+                          child: Text('Log in'),
+                        ),
+                        Tab(
+                          child: Text('Sign Up'),
+                        ),
+                      ],
+                      indicator: BoxDecoration(
+                        color: brandBrown,
+                        borderRadius: BorderRadius.circular(27.5),
+                      ),
+                      labelStyle: regular14,
+                      labelColor: brandWhite,
+                      unselectedLabelStyle: regular14,
+                      unselectedLabelColor: brandGrey,
+                    ),
+                  ),
+                ),
+              ),
+              SliverFillRemaining(
+                child: TabBarView(
+                  children: <Widget>[
+                    LoginForm(),
+                    SignUpForm(),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),
