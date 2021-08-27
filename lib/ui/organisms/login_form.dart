@@ -8,7 +8,6 @@ import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
-
 class LoginForm extends StatefulWidget {
   _LoginFormState createState() => _LoginFormState();
 }
@@ -65,7 +64,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
           PasswordTextWidget(
             key: passwordKey,
-            hintText: 'Enter your username or E-mail',
+            hintText: 'Enter your password',
             controller: passwordController,
           ),
           SizedBox(
@@ -157,7 +156,8 @@ class _LoginFormState extends State<LoginForm> {
               children: <Widget>[
                 BrandIconButton(
                   iconPath: 'lib/assets/images/google_icon.png',
-                  child: Text('Google',
+                  child: Text(
+                    'Google',
                     style: TextStyle(
                       fontSize: bold14.fontSize,
                       fontWeight: bold14.fontWeight,
@@ -178,13 +178,15 @@ class _LoginFormState extends State<LoginForm> {
                 SizedBox(width: 19),
                 BrandIconButton(
                   iconPath: 'lib/assets/images/fb_icon.png',
-                  child: Text('Facebook',
+                  child: Text(
+                    'Facebook',
                     style: TextStyle(
-                    fontSize: medium12.fontSize,
-                    fontWeight: medium12.fontWeight,
-                    height: medium12.height,
-                    color: brandWhite,
-                  ),),
+                      fontSize: medium12.fontSize,
+                      fontWeight: medium12.fontWeight,
+                      height: medium12.height,
+                      color: brandWhite,
+                    ),
+                  ),
                   color: facebookBlue,
                   onTap: () {
                     ScaffoldMessenger.of(context).showSnackBar(
