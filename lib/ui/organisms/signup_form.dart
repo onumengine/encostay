@@ -19,6 +19,7 @@ class _SignUpFormState extends State<SignUpForm> {
   TextEditingController _lastNameController = TextEditingController();
   TextEditingController _birthdayController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -69,9 +70,14 @@ class _SignUpFormState extends State<SignUpForm> {
             hintText: 'Enter your last name',
             controller: _lastNameController,
           ),
-          Text('Make sure it matches the name on your government ID',),
+          Text(
+            'Make sure it matches the name on your government ID',
+          ),
           SizedBox(
-            child: Divider(height: 1, color: brandOrange,),
+            child: Divider(
+              height: 1,
+              color: brandOrange,
+            ),
           ),
           Align(
             alignment: AlignmentDirectional.centerStart,
@@ -87,6 +93,49 @@ class _SignUpFormState extends State<SignUpForm> {
                 ),
               ),
             ),
+          ),
+          Container(
+            height: 43,
+            decoration: BoxDecoration(
+              color: brandWhite,
+              borderRadius: BorderRadius.all(
+                Radius.circular(27.5),
+              ),
+            ),
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                splashColor: brandWhite.withOpacity(0.5),
+                borderRadius: BorderRadius.circular(28),
+                onTap: () {},
+              ),
+            ),
+          ),
+          Text(
+            'To sign up, you need to be at least 18. Other people who use Encostay won\'t see your birthday.',
+          ),
+          Align(
+            alignment: AlignmentDirectional.centerStart,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20) +
+                  EdgeInsets.only(bottom: (screenSize.height / 101.5)),
+              child: Text(
+                'Email',
+                style: TextStyle(
+                  fontSize: medium14.fontSize,
+                  fontWeight: medium14.fontWeight,
+                  height: 1.64,
+                ),
+              ),
+            ),
+          ),
+          TextWidget(
+            key: _emailKey,
+            hintText: 'Enter your username or E-mail',
+            controller: _emailController,
+          ),
+          Text(
+            'By selecting Agree and continue below, I agree to Airbnb\'s Terms of Service, Payments Terms of Service, Privacy Policy, and Nondiscrimination Policy.',
           ),
         ],
       ),
