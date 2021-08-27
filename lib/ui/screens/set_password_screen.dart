@@ -15,6 +15,8 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text('Set Password'),
             ],
