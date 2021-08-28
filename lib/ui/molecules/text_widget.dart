@@ -6,14 +6,29 @@ class TextWidget extends StatelessWidget {
   String hintText;
   GlobalKey key;
   TextEditingController controller;
-  bool textIsObscured;
+  bool textIsObscured, autocorrectIsEnabled;
 
   TextWidget({
     required this.key,
     required this.hintText,
     required this.controller,
     this.textIsObscured = false,
+    this.autocorrectIsEnabled = true,
   });
+
+  factory TextWidget.obscured({
+    required GlobalKey key,
+    required String hintText,
+    required TextEditingController controller,
+  }) {
+    return TextWidget(
+      key: key,
+      hintText: hintText,
+      controller: controller,
+      textIsObscured: true,
+      autocorrectIsEnabled: false,
+    );
+  }
 
   Widget build(BuildContext context) {
     return Container(
@@ -34,6 +49,7 @@ class TextWidget extends StatelessWidget {
               controller: this.controller,
               textAlignVertical: TextAlignVertical.bottom,
               obscureText: textIsObscured,
+              autocorrect: autocorrectIsEnabled,
               decoration: InputDecoration.collapsed(
                 hintText: this.hintText,
                 hintStyle: TextStyle(
