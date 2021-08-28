@@ -41,7 +41,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                   ),
                 ),
               ),
-              TextWidget(
+              TextWidget.obscured(
                 key: _createPasswordKey,
                 hintText: 'New Password',
                 controller: _passwordController,
@@ -67,6 +67,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
               ),
               Text(
                   'Lorem ipsum dolor sit amet consectetur adipiscing elit. Suspendisse ipsum leo molestie in arcu sapien'),
+              SizedBox(height: 12.49),
             ],
           ),
         ),
