@@ -1,4 +1,6 @@
+import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/molecules/text_widget.dart';
+import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -82,6 +84,18 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                 ),
               ),
               SizedBox(height: 12.49),
+              BrandButton(
+                child: Text('Continue'),
+                onTap: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('Password confirmed. Attempting signup'),
+                    ),
+                  );
+                },
+                color: brandOrange,
+                height: 43,
+              ),
             ],
           ),
         ),
