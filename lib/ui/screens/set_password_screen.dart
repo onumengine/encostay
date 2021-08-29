@@ -85,7 +85,15 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
               ),
               SizedBox(height: 12.49),
               BrandButton(
-                child: Text('Continue'),
+                child: Text(
+                  'Continue',
+                  style: TextStyle(
+                    fontSize: bold18.fontSize,
+                    fontWeight: bold18.fontWeight,
+                    height: bold18.height,
+                    color: brandWhite,
+                  ),
+                ),
                 onTap: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
