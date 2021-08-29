@@ -68,9 +68,9 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                   ),
                 ),
               ),
-              TextWidget(
+              TextWidget.obscured(
                 key: _confirmPasswordKey,
-                hintText: 'New Password',
+                hintText: 'Confirm Password',
                 controller: _confirmPasswordController,
               ),
               Text(
