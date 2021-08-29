@@ -59,7 +59,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 20) +
                       EdgeInsets.only(bottom: (screenHeight / 101.5)),
                   child: Text(
-                    'Create Password',
+                    'Confirm Password',
                     style: TextStyle(
                       fontSize: medium14.fontSize,
                       fontWeight: medium14.fontWeight,
