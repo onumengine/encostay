@@ -73,8 +73,12 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                 hintText: 'Confirm Password',
                 controller: _confirmPasswordController,
               ),
-              Text(
-                  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Suspendisse ipsum leo molestie in arcu sapien'),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20) +
+                    EdgeInsets.only(top: screenHeight / 101.75),
+                child: Text(
+                    'Lorem ipsum dolor sit amet consectetur adipiscing elit. Suspendisse ipsum leo molestie in arcu sapien'),
+              ),
               SizedBox(height: 12.49),
             ],
           ),
