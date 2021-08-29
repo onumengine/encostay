@@ -83,7 +83,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                   style: normal10,
                 ),
               ),
-              SizedBox(height: 12.49),
+              SizedBox(height: (screenHeight / 12.49)),
               BrandButton(
                 child: Text(
                   'Continue',
