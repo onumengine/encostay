@@ -77,7 +77,9 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                 padding: EdgeInsets.symmetric(horizontal: 20) +
                     EdgeInsets.only(top: screenHeight / 101.75),
                 child: Text(
-                    'Lorem ipsum dolor sit amet consectetur adipiscing elit. Suspendisse ipsum leo molestie in arcu sapien'),
+                  'Lorem ipsum dolor sit amet consectetur adipiscing elit. Suspendisse ipsum leo molestie in arcu sapien',
+                  style: normal10,
+                ),
               ),
               SizedBox(height: 12.49),
             ],
