@@ -51,12 +51,16 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
               ),
               Align(
                 alignment: AlignmentDirectional.centerStart,
-                child: Text(
-                  'Create Password',
-                  style: TextStyle(
-                    fontSize: medium14.fontSize,
-                    fontWeight: medium14.fontWeight,
-                    height: 1.64,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20) +
+                      EdgeInsets.only(bottom: (screenHeight / 101.5)),
+                  child: Text(
+                    'Create Password',
+                    style: TextStyle(
+                      fontSize: medium14.fontSize,
+                      fontWeight: medium14.fontWeight,
+                      height: 1.64,
+                    ),
                   ),
                 ),
               ),
