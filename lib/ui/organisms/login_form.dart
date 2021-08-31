@@ -76,9 +76,10 @@ class _LoginFormState extends State<LoginForm> {
               padding: EdgeInsets.only(right: 23),
               child: GestureDetector(
                 onTap: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('You forgot your password'),
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (context) => Center(
+                      child: Text('Modal bottom sheet'),
                     ),
                   );
                 },
