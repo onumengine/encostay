@@ -19,17 +19,23 @@ class EmailEntryComponent extends StatelessWidget {
       children: <Widget>[
         Align(
           alignment: AlignmentDirectional.centerStart,
-          child: Text(
-            'Forgot password',
-            style: medium18BrownDark,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 7),
+            child: Text(
+              'Forgot password',
+              style: medium18BrownDark,
+            ),
           ),
         ),
         SizedBox(height: screenHeight / 58),
         Align(
           alignment: AlignmentDirectional.centerStart,
-          child: Text(
-            'Enter your email for the verification preocess. We will send a 4-digit code to your email',
-            style: instructionalTextStyleModal,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 7),
+            child: Text(
+              'Enter your email for the verification preocess. We will send a 4-digit code to your email',
+              style: instructionalTextStyleModal,
+            ),
           ),
         ),
         SizedBox(height: screenHeight / 36.9),
