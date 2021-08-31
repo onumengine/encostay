@@ -22,8 +22,11 @@ class EmailEntryComponent extends StatelessWidget {
             style: medium18BrownDark,
           ),
         ),
-        Text(
-            'Enter your email for the verification preocess. We will send a 4-digit code to your email'),
+        Align(
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+              'Enter your email for the verification preocess. We will send a 4-digit code to your email'),
+        ),
         Text('Email'),
         TextWidget(
           key: _emailKey,
