@@ -12,7 +12,7 @@ const bold14 = TextStyle(
 const bold18 = TextStyle(
   fontSize: 18,
   fontWeight: FontWeight.w700,
-  height: 1.36,
+  height: 24.55 / 18,
 );
 
 const bold20 = TextStyle(

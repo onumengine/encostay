@@ -1,5 +1,6 @@
 import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/text_widget.dart';
+import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -52,7 +53,15 @@ class EmailEntryComponent extends StatelessWidget {
         ),
         BrandButton(
           height: 57,
-          child: Text('Continue'),
+          child: Text(
+            'Continue',
+            style: TextStyle(
+              fontSize: bold18.fontSize,
+              fontWeight: bold18.fontWeight,
+              height: bold18.height,
+              color: brandWhite,
+            ),
+          ),
           onTap: () {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
