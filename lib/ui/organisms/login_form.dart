@@ -80,6 +80,7 @@ class _LoginFormState extends State<LoginForm> {
                   showModalBottomSheet(
                     context: context,
                     builder: (context) => Container(
+                      padding: EdgeInsets.symmetric(horizontal: 25),
                       child: EmailEntryComponent(
                         key: GlobalKey(),
                       ),
