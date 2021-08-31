@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class TextWidget extends StatelessWidget {
   String hintText;
+  double? height;
   GlobalKey key;
   TextEditingController controller;
   bool textIsObscured, autocorrectIsEnabled;
@@ -12,6 +13,7 @@ class TextWidget extends StatelessWidget {
     required this.key,
     required this.hintText,
     required this.controller,
+    this.height,
     this.textIsObscured = false,
     this.autocorrectIsEnabled = true,
   });
@@ -32,7 +34,7 @@ class TextWidget extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Container(
-      height: 43,
+      height: this.height ?? 43,
       decoration: BoxDecoration(
         color: brandWhite,
         borderRadius: BorderRadius.all(
