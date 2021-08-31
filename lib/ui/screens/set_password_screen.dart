@@ -1,5 +1,5 @@
 import 'package:encostay/ui/atoms/brand_button.dart';
-import 'package:encostay/ui/molecules/text_widget.dart';
+import 'package:encostay/ui/atoms/text_widget.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
