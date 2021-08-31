@@ -134,3 +134,10 @@ const instructionalTextStyleModal = TextStyle(
   height: 22 / 12,
   color: instructionalTextModal,
 );
+
+const inputTextStyle = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+  height: 23 / 14,
+  color: brandGreyAlt,
+);

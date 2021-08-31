@@ -48,6 +48,7 @@ class EmailEntryComponent extends StatelessWidget {
           hintText: 'Enter your email',
           controller: _emailController,
           height: 55,
+          inputStyle: inputTextStyle,
         ),
         BrandButton(
           height: 57,
