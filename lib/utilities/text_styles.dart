@@ -60,13 +60,6 @@ const medium18brown = TextStyle(
   color: brandBrown,
 );
 
-const medium18BrownDark = TextStyle(
-  fontSize: 18,
-  fontWeight: FontWeight.w500,
-  height: 30 / 18,
-  color: brandBrownDark,
-);
-
 const medium20 = TextStyle(
   fontSize: 20,
   height: 1.5,
@@ -126,4 +119,18 @@ const splashTitle = TextStyle(
   fontSize: 30,
   color: brandBrown,
   height: 1.63,
+);
+
+// Modal styles
+const medium18BrownDark = TextStyle(
+  fontSize: 18,
+  fontWeight: FontWeight.w500,
+  height: 30 / 18,
+  color: brandBrownDark,
+);
+
+const instructionalTextStyleModal = TextStyle(
+  fontSize: 12,
+  height: 22 / 12,
+  color: instructionalTextModal,
 );

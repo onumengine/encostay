@@ -14,6 +14,7 @@ const brandGreyAltOp80 = Color(0x503e3e3e);
 
 // Modal colors
 const brandBrownDark = Color(0xff313131);
+const instructionalTextModal = Color(0xff616161);
 
 const facebookBlue = Color(0xff486ab1);
 const googleWhite = Color(0xfffafafa);
