@@ -53,6 +53,13 @@ const medium16 = TextStyle(
   letterSpacing: 0,
 );
 
+const medium18brown = TextStyle(
+  fontSize: 18,
+  fontWeight: FontWeight.w500,
+  height: 30 / 18,
+  color: brandBrown,
+);
+
 const medium20 = TextStyle(
   fontSize: 20,
   height: 1.5,

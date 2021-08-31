@@ -30,7 +30,10 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               SizedBox(height: (screenHeight / 23.2)),
-              Text('Set Password'),
+              Text(
+                'Set Password',
+                style: medium18brown,
+              ),
               SizedBox(height: (screenHeight / 29)),
               Align(
                 alignment: AlignmentDirectional.centerStart,
@@ -97,7 +100,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                 onTap: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text('Password confirmed. Attempting signup'),
+                      content: Text('Attempting signup'),
                     ),
                   );
                 },
