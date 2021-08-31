@@ -33,7 +33,14 @@ class EmailEntryComponent extends StatelessWidget {
           alignment: AlignmentDirectional.centerStart,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 33),
-            child: Text('Email'),
+            child: Text(
+              'Email',
+              style: TextStyle(
+                fontSize: medium14.fontSize,
+                fontWeight: medium14.fontWeight,
+                height: 1.64,
+              ),
+            ),
           ),
         ),
         TextWidget(
