@@ -6,6 +6,7 @@ class TextWidget extends StatelessWidget {
   String hintText;
   double? height;
   GlobalKey key;
+  TextStyle? inputStyle;
   TextEditingController controller;
   bool textIsObscured, autocorrectIsEnabled;
 
@@ -14,6 +15,7 @@ class TextWidget extends StatelessWidget {
     required this.hintText,
     required this.controller,
     this.height,
+    this.inputStyle,
     this.textIsObscured = false,
     this.autocorrectIsEnabled = true,
   });
@@ -22,11 +24,15 @@ class TextWidget extends StatelessWidget {
     required GlobalKey key,
     required String hintText,
     required TextEditingController controller,
+    double? height,
+    TextStyle? inputStyle,
   }) {
     return TextWidget(
       key: key,
       hintText: hintText,
       controller: controller,
+      height: height,
+      inputStyle: inputStyle,
       textIsObscured: true,
       autocorrectIsEnabled: false,
     );
@@ -61,6 +67,13 @@ class TextWidget extends StatelessWidget {
                   color: brandGrey,
                 ),
               ),
+              style: inputStyle ??
+                  TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    height: 23 / 14,
+                    color: brandGreyAlt,
+                  ),
             ),
           ),
           SizedBox(width: 35),
