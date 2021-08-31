@@ -29,7 +29,13 @@ class EmailEntryComponent extends StatelessWidget {
             style: instructionalTextStyleModal,
           ),
         ),
-        Text('Email'),
+        Align(
+          alignment: AlignmentDirectional.centerStart,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 33),
+            child: Text('Email'),
+          ),
+        ),
         TextWidget(
           key: _emailKey,
           hintText: 'Enter your email',
