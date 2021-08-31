@@ -53,6 +53,7 @@ class EmailEntryComponent extends StatelessWidget {
         ),
         BrandButton(
           height: 57,
+          color: brandOrange,
           child: Text(
             'Continue',
             style: TextStyle(
