@@ -15,9 +15,12 @@ class EmailEntryComponent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Text(
-          'Forgot password',
-          style: medium18BrownDark,
+        Align(
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            'Forgot password',
+            style: medium18BrownDark,
+          ),
         ),
         Text(
             'Enter your email for the verification preocess. We will send a 4-digit code to your email'),
