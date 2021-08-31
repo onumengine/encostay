@@ -79,7 +79,7 @@ class _LoginFormState extends State<LoginForm> {
                 onTap: () {
                   showModalBottomSheet(
                     context: context,
-                    builder: (context) => Center(
+                    builder: (context) => Container(
                       child: EmailEntryComponent(
                         key: GlobalKey(),
                       ),

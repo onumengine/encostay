@@ -12,6 +12,7 @@ class EmailEntryComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -23,6 +24,7 @@ class EmailEntryComponent extends StatelessWidget {
             style: medium18BrownDark,
           ),
         ),
+        SizedBox(height: screenHeight / 58),
         Align(
           alignment: AlignmentDirectional.centerStart,
           child: Text(
@@ -30,6 +32,7 @@ class EmailEntryComponent extends StatelessWidget {
             style: instructionalTextStyleModal,
           ),
         ),
+        SizedBox(height: screenHeight / 36.9),
         Align(
           alignment: AlignmentDirectional.centerStart,
           child: Padding(
@@ -44,6 +47,7 @@ class EmailEntryComponent extends StatelessWidget {
             ),
           ),
         ),
+        SizedBox(height: screenHeight / 101.5),
         TextWidget(
           key: _emailKey,
           hintText: 'Enter your email',
@@ -51,6 +55,7 @@ class EmailEntryComponent extends StatelessWidget {
           height: 55,
           inputStyle: inputTextStyle,
         ),
+        SizedBox(height: screenHeight / 21.37),
         BrandButton(
           height: 57,
           color: brandOrange,
