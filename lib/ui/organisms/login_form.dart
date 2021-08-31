@@ -79,6 +79,12 @@ class _LoginFormState extends State<LoginForm> {
                 onTap: () {
                   showModalBottomSheet(
                     context: context,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(25),
+                        topRight: Radius.circular(25),
+                      ),
+                    ),
                     builder: (context) => Container(
                       padding: EdgeInsets.symmetric(horizontal: 25),
                       child: EmailEntryComponent(

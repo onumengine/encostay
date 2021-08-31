@@ -14,9 +14,11 @@ class EmailEntryComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     return Column(
+      mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
+        SizedBox(height: screenHeight / 14),
         Align(
           alignment: AlignmentDirectional.centerStart,
           child: Padding(
@@ -82,6 +84,7 @@ class EmailEntryComponent extends StatelessWidget {
             );
           },
         ),
+        SizedBox(height: screenHeight / 14),
       ],
     );
   }
