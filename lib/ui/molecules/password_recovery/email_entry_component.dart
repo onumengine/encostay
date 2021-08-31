@@ -1,5 +1,6 @@
 import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/text_widget.dart';
+import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class EmailEntryComponent extends StatelessWidget {
@@ -14,7 +15,10 @@ class EmailEntryComponent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        Text('Forgot password'),
+        Text(
+          'Forgot password',
+          style: medium18BrownDark,
+        ),
         Text(
             'Enter your email for the verification preocess. We will send a 4-digit code to your email'),
         Text('Email'),
