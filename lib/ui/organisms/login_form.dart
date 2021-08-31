@@ -4,6 +4,7 @@ import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/brand_iconbutton.dart';
 import 'package:encostay/ui/atoms/password_text_widget.dart';
 import 'package:encostay/ui/atoms/text_widget.dart';
+import 'package:encostay/ui/molecules/password_recovery/email_entry_component.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -79,7 +80,9 @@ class _LoginFormState extends State<LoginForm> {
                   showModalBottomSheet(
                     context: context,
                     builder: (context) => Center(
-                      child: Text('Modal bottom sheet'),
+                      child: EmailEntryComponent(
+                        key: GlobalKey(),
+                      ),
                     ),
                   );
                 },
