@@ -6,11 +6,14 @@ import 'package:introduction_screen/introduction_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
+    print(screenSize.width);
     return Scaffold(
       body: LayoutBuilder(
         builder: (_, constraints) => IntroductionScreen(
           done: Container(
             height: 41,
+            width: screenSize.width,
             padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
@@ -23,6 +26,7 @@ class OnboardingScreen extends StatelessWidget {
                 'Get Started',
                 style: TextStyle(
                   color: Colors.white,
+                  fontSize: (screenSize.width < 400) ? 10 : 12,
                 ),
               ),
             ),
