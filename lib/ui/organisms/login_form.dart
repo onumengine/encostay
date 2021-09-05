@@ -7,6 +7,7 @@ import 'package:encostay/ui/atoms/password_text_widget.dart';
 import 'package:encostay/ui/atoms/text_widget.dart';
 import 'package:encostay/ui/molecules/password_recovery/email_entry_component.dart';
 import 'package:encostay/ui/molecules/password_recovery/password_reset_component.dart';
+import 'package:encostay/ui/screens/home_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -114,10 +115,9 @@ class _LoginFormState extends State<LoginForm> {
           ),
           BrandButton(
             onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text('Login sequence initiated'),
-                ),
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomeScreen()),
               );
             },
             child: Text(
