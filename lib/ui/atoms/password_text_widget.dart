@@ -3,14 +3,18 @@ import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class PasswordTextWidget extends StatefulWidget {
-  String hintText;
-  GlobalKey key;
-  TextEditingController controller;
+  final String hintText;
+  double? height;
+  final GlobalKey key;
+  TextStyle? inputStyle;
+  final TextEditingController controller;
 
   PasswordTextWidget({
-    required this.key,
-    required this.hintText,
     required this.controller,
+    required this.hintText,
+    required this.key,
+    this.inputStyle,
+    this.height,
   });
 
   _PasswordTextWidgetState createState() => _PasswordTextWidgetState();
@@ -22,7 +26,7 @@ class _PasswordTextWidgetState extends State<PasswordTextWidget> {
 
   Widget build(BuildContext context) {
     return Container(
-      height: 43,
+      height: widget.height ?? 43,
       decoration: BoxDecoration(
         color: brandWhite,
         borderRadius: BorderRadius.all(
@@ -50,6 +54,7 @@ class _PasswordTextWidgetState extends State<PasswordTextWidget> {
                   color: brandGrey,
                 ),
               ),
+              style: widget.inputStyle,
             ),
           ),
           Padding(
