@@ -1,3 +1,5 @@
+import 'package:encostay/ui/atoms/search_box.dart';
+import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -9,10 +11,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  TextEditingController controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: brandBackgroundApp,
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
@@ -59,6 +64,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 27, 25, 27),
+                  child: SearchBox(
+                    controller: controller,
+                  ),
+                )
               ]),
             ),
           ],
