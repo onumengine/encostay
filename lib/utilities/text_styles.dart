@@ -72,6 +72,11 @@ const normal10 = TextStyle(
   color: brandGreyAlt,
 );
 
+const normal12 = TextStyle(
+  fontSize: 12,
+  height: 25 / 12,
+);
+
 const normal14 = TextStyle(
   fontSize: 14,
   height: 1.78,
