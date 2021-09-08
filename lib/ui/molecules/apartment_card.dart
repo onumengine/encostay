@@ -31,7 +31,7 @@ class _ApartmentCardState extends State<ApartmentCard> {
                 fit: StackFit.expand,
                 children: <Widget>[
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(16),
                     child: Image(
                       image: AssetImage('lib/assets/images/apartment_pic.png'),
                     ),
@@ -39,7 +39,39 @@ class _ApartmentCardState extends State<ApartmentCard> {
                 ],
               ),
             ),
-            Row(),
+            Row(
+              children: [
+                Text(
+                  'Marvin House',
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w600,
+                    height: 18 / 10,
+                  ),
+                ),
+                RichText(
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 8,
+                      height: 18 / 8,
+                      color: Color(0xffa1a0a6),
+                    ),
+                    children: [
+                      TextSpan(
+                        text: '\$230 ',
+                        style: TextStyle(
+                          color: brandOrange,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          height: 23 / 14,
+                        ),
+                      ),
+                      TextSpan(text: '/ Day'),
+                    ],
+                  ),
+                ),
+              ],
+            ),
             Text(''),
             Row(),
           ],
