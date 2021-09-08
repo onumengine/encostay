@@ -124,10 +124,14 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Container(
               height: 350,
-              child: ListView.builder(
+              child: ListView.separated(
                 itemBuilder: (_, index) => ApartmentCard(),
+                separatorBuilder: (_, index) => SizedBox(width: 10),
+                scrollDirection: Axis.horizontal,
+                itemCount: 20,
+                padding: EdgeInsets.only(left: 17),
               ),
-            )
+            ),
           ],
         ),
       ),
