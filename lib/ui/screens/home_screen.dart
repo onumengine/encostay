@@ -83,6 +83,44 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 25,
             ),
+            Padding(
+              padding: const EdgeInsets.only(left: 18, right: 36),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Featured places',
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      height: 23 / 14,
+                      color: brandBrown,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('See all button clicked'),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'See All',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                        height: 22 / 14,
+                        color: brandOrange,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 17,
+            ),
           ],
         ),
       ),
