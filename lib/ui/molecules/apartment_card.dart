@@ -1,3 +1,4 @@
+import 'package:encostay/ui/atoms/flat_iconbutton.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,6 @@ class _ApartmentCardState extends State<ApartmentCard> {
                 ],
               ),
             ),
-            SizedBox(height: 9),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -85,10 +85,30 @@ class _ApartmentCardState extends State<ApartmentCard> {
                 ),
               ),
             ),
+            SizedBox(height: 9),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(),
-                Container(),
+                FlatIconButton(
+                  iconPath: 'lib/assets/images/bedroom_icon.png',
+                  text: '3 Bedroom',
+                ),
+                FlatIconButton(
+                  iconPath: 'lib/assets/images/wifi_icon.png',
+                  text: 'Wifi',
+                ),
+                Container(
+                  height: 18,
+                  width: 18,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: brandOrange,
+                  ),
+                  child: ImageIcon(
+                    AssetImage('lib/assets/images/arrow_icon.png'),
+                    color: brandWhite,
+                  ),
+                ),
               ],
             ),
           ],
