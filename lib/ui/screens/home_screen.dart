@@ -1,5 +1,6 @@
 import 'package:encostay/ui/atoms/filter_chip.dart';
 import 'package:encostay/ui/atoms/search_box.dart';
+import 'package:encostay/ui/molecules/apartment_card.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -121,6 +122,12 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 17,
             ),
+            Container(
+              height: 350,
+              child: ListView.builder(
+                itemBuilder: (_, index) => ApartmentCard(),
+              ),
+            )
           ],
         ),
       ),
