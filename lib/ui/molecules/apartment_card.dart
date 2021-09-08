@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:encostay/ui/atoms/flat_iconbutton.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
@@ -29,12 +31,56 @@ class _ApartmentCardState extends State<ApartmentCard> {
               aspectRatio: 0.872,
               child: Stack(
                 alignment: AlignmentDirectional.center,
-                fit: StackFit.expand,
                 children: <Widget>[
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: Image(
                       image: AssetImage('lib/assets/images/apartment_pic.png'),
+                    ),
+                  ),
+                  Container(
+                    height: 17,
+                    width: 19,
+                    color: Colors.red,
+                  ),
+                  Positioned(
+                    top: 15,
+                    left: 12,
+                    child: Container(
+                      height: 27,
+                      width: 47.5,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(24),
+                        color: Color(0x20ffffff),
+                      ),
+                      child: Stack(
+                        alignment: AlignmentDirectional.center,
+                        children: [
+                          ImageFiltered(
+                            imageFilter: ImageFilter.blur(sigmaX: 3.0),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              ImageIcon(
+                                AssetImage('lib/assets/images/rating_icon.png'),
+                                size: 18,
+                                color: brandYellow,
+                              ),
+                              Text(
+                                '4.0',
+                                style: TextStyle(
+                                  fontSize: 8,
+                                  fontWeight: FontWeight.w700,
+                                  height: 18 / 8,
+                                  color: brandWhite,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
