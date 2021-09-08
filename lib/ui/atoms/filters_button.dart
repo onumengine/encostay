@@ -28,7 +28,7 @@ class _FiltersButtonState extends State<FiltersButton> {
         ),
         child: ImageIcon(
           AssetImage('lib/assets/images/filter_icon.png'),
-          color: brandWhite,
+          color: (_isSelected) ? brandWhite : brandBrown,
         ),
       ),
     );
