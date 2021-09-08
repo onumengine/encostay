@@ -39,7 +39,10 @@ class _ApartmentCardState extends State<ApartmentCard> {
                 ],
               ),
             ),
+            SizedBox(height: 9),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   'Marvin House',
@@ -72,8 +75,22 @@ class _ApartmentCardState extends State<ApartmentCard> {
                 ),
               ],
             ),
-            Text(''),
-            Row(),
+            Align(
+              alignment: AlignmentDirectional.centerStart,
+              child: Text(
+                'Lagos, Nigeria',
+                style: TextStyle(
+                  fontSize: 8,
+                  height: 18 / 8,
+                ),
+              ),
+            ),
+            Row(
+              children: [
+                Container(),
+                Container(),
+              ],
+            ),
           ],
         ),
       ),
