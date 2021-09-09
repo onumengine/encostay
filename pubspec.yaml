@@ -27,6 +27,8 @@ dependencies:
   flutter_bloc: ^7.1.0
   flutter_svg: ^0.22.0
   introduction_screen: ^2.1.0
+  floating_bottom_navigation_bar: 1.5.2
+  otp_text_field: 1.1.1
 
 dev_dependencies:
   flutter_test:
