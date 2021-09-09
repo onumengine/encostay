@@ -95,7 +95,7 @@ class PasswordResetComponent extends StatelessWidget {
           height: 57,
           color: brandOrange,
           child: Text(
-            'Continue',
+            'Reset Password',
             style: TextStyle(
               fontSize: bold18.fontSize,
               fontWeight: bold18.fontWeight,
@@ -106,7 +106,7 @@ class PasswordResetComponent extends StatelessWidget {
           onTap: () {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text('Email submitted'),
+                content: Text('password reset initiated'),
               ),
             );
           },
