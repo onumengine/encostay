@@ -3,6 +3,7 @@ import 'package:encostay/ui/atoms/search_box.dart';
 import 'package:encostay/ui/molecules/apartment_card.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,13 +15,16 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   TextEditingController controller = TextEditingController();
+  int _navbarIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: brandBackgroundApp,
+      extendBody: true,
       body: SafeArea(
+        bottom: false,
         child: ListView(
           children: [
             SizedBox(
@@ -181,6 +185,22 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: FloatingNavbar(
+        margin:
+            EdgeInsets.symmetric(horizontal: 29) + EdgeInsets.only(bottom: 42),
+        backgroundColor: brandBrown,
+        selectedBackgroundColor: brandBrown,
+        onTap: (selectedIndex) {
+          _navbarIndex = selectedIndex;
+        },
+        items: [
+          FloatingNavbarItem(icon: Icons.add),
+          FloatingNavbarItem(icon: Icons.add),
+          FloatingNavbarItem(icon: Icons.add),
+          FloatingNavbarItem(icon: Icons.add),
+        ],
+        currentIndex: _navbarIndex,
       ),
     );
   }
