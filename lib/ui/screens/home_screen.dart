@@ -187,18 +187,45 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: FloatingNavbar(
+        borderRadius: 20,
         margin:
             EdgeInsets.symmetric(horizontal: 29) + EdgeInsets.only(bottom: 42),
+        padding: EdgeInsets.symmetric(vertical: 19),
         backgroundColor: brandBrown,
         selectedBackgroundColor: brandBrown,
+        selectedItemColor: brandWhite,
+        unselectedItemColor: Color(0xffdde0e8),
         onTap: (selectedIndex) {
-          _navbarIndex = selectedIndex;
+          print('you tapped index ${selectedIndex}');
+          setState(() {
+            _navbarIndex = selectedIndex;
+          });
         },
         items: [
-          FloatingNavbarItem(icon: Icons.add),
-          FloatingNavbarItem(icon: Icons.add),
-          FloatingNavbarItem(icon: Icons.add),
-          FloatingNavbarItem(icon: Icons.add),
+          FloatingNavbarItem(
+            customWidget: ImageIcon(
+              AssetImage('lib/assets/images/navbar_home_ic.png'),
+              color: Color(0xffdde0e8),
+            ),
+          ),
+          FloatingNavbarItem(
+            customWidget: ImageIcon(
+              AssetImage('lib/assets/images/navbar_book_ic.png'),
+              color: Color(0xffdde0e8),
+            ),
+          ),
+          FloatingNavbarItem(
+            customWidget: ImageIcon(
+              AssetImage('lib/assets/images/navbar_location_ic.png'),
+              color: Color(0xffdde0e8),
+            ),
+          ),
+          FloatingNavbarItem(
+            customWidget: ImageIcon(
+              AssetImage('lib/assets/images/navbar_user_ic.png'),
+              color: Color(0xffdde0e8),
+            ),
+          ),
         ],
         currentIndex: _navbarIndex,
       ),
