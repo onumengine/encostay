@@ -38,11 +38,6 @@ class _ApartmentCardState extends State<ApartmentCard> {
                       image: AssetImage('lib/assets/images/apartment_pic.png'),
                     ),
                   ),
-                  Container(
-                    height: 17,
-                    width: 19,
-                    color: Colors.red,
-                  ),
                   Positioned(
                     top: 15,
                     left: 12,
@@ -82,6 +77,14 @@ class _ApartmentCardState extends State<ApartmentCard> {
                         ],
                       ),
                     ),
+                  ),
+                  Positioned(
+                    child: ImageIcon(
+                      AssetImage('lib/assets/images/favorite_icon.png'),
+                      color: brandWhite,
+                    ),
+                    top: 20,
+                    right: 20,
                   ),
                 ],
               ),
