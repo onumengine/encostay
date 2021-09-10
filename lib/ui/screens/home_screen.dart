@@ -187,10 +187,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: FloatingNavbar(
-        borderRadius: 20,
+        borderRadius: 70,
         margin:
             EdgeInsets.symmetric(horizontal: 29) + EdgeInsets.only(bottom: 42),
-        padding: EdgeInsets.symmetric(vertical: 19),
+        padding: EdgeInsets.symmetric(vertical: 16),
         backgroundColor: brandBrown,
         selectedBackgroundColor: brandBrown,
         selectedItemColor: brandWhite,
