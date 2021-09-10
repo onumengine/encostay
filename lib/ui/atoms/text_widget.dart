@@ -46,6 +46,13 @@ class TextWidget extends StatelessWidget {
         borderRadius: BorderRadius.all(
           Radius.circular(27.5),
         ),
+        boxShadow: [
+          BoxShadow(
+            color: Color(0x10939393),
+            blurRadius: 6,
+            offset: Offset.fromDirection(0.2),
+          ),
+        ],
       ),
       child: Row(
         mainAxisSize: MainAxisSize.max,
