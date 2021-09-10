@@ -5,11 +5,7 @@ import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/brand_iconbutton.dart';
 import 'package:encostay/ui/atoms/password_text_widget.dart';
 import 'package:encostay/ui/atoms/text_widget.dart';
-import 'package:encostay/ui/molecules/password_recovery/email_entry_component.dart';
-import 'package:encostay/ui/molecules/password_recovery/otp_entry_component.dart';
-import 'package:encostay/ui/molecules/password_recovery/password_reset_component.dart';
-import 'package:encostay/ui/molecules/password_recovery/reset_failure_component.dart';
-import 'package:encostay/ui/molecules/password_recovery/reset_success_component.dart';
+import 'package:encostay/ui/molecules/modal_container.dart';
 import 'package:encostay/ui/screens/home_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
@@ -91,13 +87,8 @@ class _LoginFormState extends State<LoginForm> {
                         topRight: Radius.circular(25),
                       ),
                     ),
-                    builder: (context) => Container(
-                      padding: EdgeInsets.symmetric(horizontal: 25),
-                      child: Container(
-                        child: OtpEntryComponent(
-                          key: GlobalKey(),
-                        ),
-                      ),
+                    builder: (context) => ModalContainer(
+                      screenHeight: screenSize.height,
                     ),
                     isScrollControlled: true,
                   );
