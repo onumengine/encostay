@@ -150,6 +150,11 @@ class _SignUpFormState extends State<SignUpForm> {
                       );
                     });
                   },
+                  child: Center(
+                    child: Text(
+                      (_dateOfBirth.toString()).split(' ').elementAt(0),
+                    ),
+                  ),
                 ),
               ),
             ),
