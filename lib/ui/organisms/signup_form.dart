@@ -4,6 +4,12 @@ import 'package:encostay/ui/screens/set_password_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
+
+enum AccountType {
+  user,
+  guest,
+}
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({Key? key}) : super(key: key);
@@ -21,6 +27,8 @@ class _SignUpFormState extends State<SignUpForm> {
   TextEditingController _lastNameController = TextEditingController();
   TextEditingController _birthdayController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
+  AccountType? _accountType;
+  DateTime? _dateOfBirth = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -106,6 +114,7 @@ class _SignUpFormState extends State<SignUpForm> {
             ),
             Container(
               height: 43,
+              width: double.infinity,
               decoration: BoxDecoration(
                 color: brandWhite,
                 borderRadius: BorderRadius.all(
@@ -118,17 +127,84 @@ class _SignUpFormState extends State<SignUpForm> {
                   splashColor: brandWhite.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(28),
                   onTap: () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content:
-                            Text('Date picker is currently in development'),
-                      ),
-                    );
+                    setState(() async {
+                      _dateOfBirth = await showRoundedDatePicker(
+                        initialDate: DateTime(DateTime.now().year - 18),
+                        firstDate: DateTime(DateTime.now().year - 150),
+                        lastDate: DateTime(DateTime.now().year - 18),
+                        textPositiveButton: 'Save',
+                        textNegativeButton: 'Clear All',
+                        context: context,
+                        styleDatePicker: MaterialRoundedDatePickerStyle(
+                          backgroundHeader: brandOrange,
+                          backgroundActionBar: brandOrange,
+                          textStyleButtonPositive: TextStyle(color: brandWhite),
+                          textStyleButtonNegative: TextStyle(color: brandWhite),
+                          paddingMonthHeader: EdgeInsets.only(top: 12),
+                          decorationDateSelected: BoxDecoration(
+                            borderRadius: BorderRadius.circular(14),
+                            color: brandOrange,
+                            shape: BoxShape.rectangle,
+                          ),
+                        ),
+                      );
+                    });
                   },
                 ),
               ),
             ),
             SizedBox(height: (screenSize.height / 162.4)),
+            Container(
+              padding: EdgeInsets.only(left: 35, right: 33),
+              height: 43,
+              decoration: BoxDecoration(
+                color: brandWhite,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(27.5),
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color(0x10939393),
+                    blurRadius: 6,
+                    offset: Offset.fromDirection(0.2),
+                  ),
+                ],
+              ),
+              child: DropdownButton<AccountType>(
+                items: [
+                  DropdownMenuItem(
+                    child: Text('User'),
+                    value: AccountType.user,
+                  ),
+                  DropdownMenuItem(
+                    child: Text('Guest'),
+                    value: AccountType.guest,
+                  ),
+                ],
+                value: _accountType,
+                hint: Text(
+                  'I want to book',
+                  style: TextStyle(
+                    height: 15,
+                    color: Color(
+                      0x50a9a9a9,
+                    ),
+                  ),
+                ),
+                onChanged: (AccountType? selectedAccountType) {
+                  _accountType = selectedAccountType;
+                },
+                style: TextStyle(
+                  height: 15,
+                  color: Color(
+                    0x50a9a9a9,
+                  ),
+                ),
+                underline: SizedBox(height: 1),
+                iconEnabledColor: brandOrange,
+                isExpanded: true,
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 49),
               child: Text(
