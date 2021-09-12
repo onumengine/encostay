@@ -158,7 +158,7 @@ class _SignUpFormState extends State<SignUpForm> {
                 ),
               ),
             ),
-            SizedBox(height: (screenSize.height / 162.4)),
+            SizedBox(height: (screenSize.height / 31.2)),
             Container(
               padding: EdgeInsets.only(left: 35, right: 33),
               height: 43,
@@ -191,20 +191,12 @@ class _SignUpFormState extends State<SignUpForm> {
                   'I want to book',
                   style: TextStyle(
                     height: 15,
-                    color: Color(
-                      0x50a9a9a9,
-                    ),
+                    color: Colors.black,
                   ),
                 ),
                 onChanged: (AccountType? selectedAccountType) {
                   _accountType = selectedAccountType;
                 },
-                style: TextStyle(
-                  height: 15,
-                  color: Color(
-                    0x50a9a9a9,
-                  ),
-                ),
                 underline: SizedBox(height: 1),
                 iconEnabledColor: brandOrange,
                 isExpanded: true,
