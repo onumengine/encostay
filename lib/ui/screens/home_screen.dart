@@ -1,6 +1,7 @@
 import 'package:encostay/ui/atoms/filter_chip.dart';
 import 'package:encostay/ui/atoms/search_box.dart';
 import 'package:encostay/ui/molecules/apartment_card.dart';
+import 'package:encostay/ui/organisms/search_results.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
@@ -71,6 +72,14 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.fromLTRB(20, 27, 25, 27),
               child: SearchBox(
                 controller: controller,
+                searchFunction: (searchQuery) {
+                  print(searchQuery);
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => SearchResults(),
+                    ),
+                  );
+                },
               ),
             ),
             Container(

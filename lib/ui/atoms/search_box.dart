@@ -4,8 +4,13 @@ import 'package:flutter/material.dart';
 
 class SearchBox extends StatelessWidget {
   final TextEditingController? controller;
+  void Function(String)? searchFunction;
 
-  SearchBox({Key? key, required this.controller}) : super(key: key);
+  SearchBox({
+    Key? key,
+    required this.controller,
+    this.searchFunction,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +55,7 @@ class SearchBox extends StatelessWidget {
                   color: Color(0xffd8d8d8),
                 ),
               ),
+              onSubmitted: searchFunction,
             ),
           ),
           Padding(
