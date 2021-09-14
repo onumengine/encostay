@@ -81,7 +81,6 @@ class _HomeScreenState extends State<HomeScreen> {
               child: SearchBox(
                 controller: controller,
                 searchFunction: (searchQuery) {
-                  print(searchQuery);
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) => SearchResults(),
