@@ -76,7 +76,8 @@ class _SearchResultsState extends State<SearchResults> {
                   children: [],
                 ),
                 FiltersButton(
-                  isSelected: false,
+                  backgroundColor: brandWhite,
+                  foregroundColor: brandBrown,
                 ),
               ],
             ),
