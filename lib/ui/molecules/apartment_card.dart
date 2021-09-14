@@ -12,6 +12,8 @@ class ApartmentCard extends StatefulWidget {
 }
 
 class _ApartmentCardState extends State<ApartmentCard> {
+  bool _isFavorited = false;
+
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -79,9 +81,16 @@ class _ApartmentCardState extends State<ApartmentCard> {
                     ),
                   ),
                   Positioned(
-                    child: ImageIcon(
-                      AssetImage('lib/assets/images/favorite_icon.png'),
-                      color: brandWhite,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _isFavorited = !_isFavorited;
+                        });
+                      },
+                      child: ImageIcon(
+                        AssetImage('lib/assets/images/favorite_icon.png'),
+                        color: (_isFavorited) ? brandYellow : brandWhite,
+                      ),
                     ),
                     top: 20,
                     right: 20,
