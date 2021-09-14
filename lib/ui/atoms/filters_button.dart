@@ -2,9 +2,9 @@ import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
 class FiltersButton extends StatelessWidget {
-  FiltersButton({Key? key, this.isSelected = true}) : super(key: key);
+  FiltersButton({Key? key, this.foregroundColor, this.backgroundColor,})
+      : super(key: key);
 
-  bool isSelected;
   Color? backgroundColor, foregroundColor;
 
   @override
