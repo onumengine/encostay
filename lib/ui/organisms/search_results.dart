@@ -25,9 +25,14 @@ class _SearchResultsState extends State<SearchResults> {
       backgroundColor: brandSecondBackground,
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        leading: Icon(
-          Platform.isIOS ? CupertinoIcons.back : Icons.arrow_back,
-          color: Colors.black,
+        leading: IconButton(
+          icon: Icon(
+            Platform.isIOS ? CupertinoIcons.back : Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
         ),
         title: Container(
           height: 47,
