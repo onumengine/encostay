@@ -8,6 +8,7 @@ const brandLightGreen = Color(0xffe2f4f3);
 const brandWhite = Color(0xffffffff);
 const brandBackground = Color(0xfffafafa);
 const brandBackgroundApp = Color(0xfff2f2f2);
+const brandSecondBackground = Color(0xfff8f8f8);
 const brandOverlay = Color(0x43ffffff);
 const brandGrey = Color(0xffa9a9a9);
 const brandGreyAlt = Color(0xff3e3e3e);
