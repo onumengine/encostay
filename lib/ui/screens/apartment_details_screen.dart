@@ -33,6 +33,18 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
             ),
           ),
         ),
+        actions: <Widget>[
+          RawMaterialButton(
+            child: ImageIcon(
+              AssetImage('lib/assets/images/save_icon.png'),
+              color: brandOrange,
+              size: 24,
+            ),
+            onPressed: () {},
+            fillColor: brandWhite,
+            shape: CircleBorder(),
+          ),
+        ],
       ),
       body: SafeArea(
         child: Center(
