@@ -17,6 +17,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   TextEditingController controller = TextEditingController();
   int _navbarIndex = 0;
+  List<String> _labels = [
+    'All',
+    'Apartment',
+    'Loft',
+    'Condo',
+    'House',
+    'Studio',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -86,8 +94,8 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 35,
               padding: EdgeInsets.only(left: 17),
               child: ListView.separated(
-                itemBuilder: (_, index) => CustomChip(label: 'label'),
-                itemCount: 20,
+                itemBuilder: (_, index) => CustomChip(label: _labels[index]),
+                itemCount: _labels.length,
                 separatorBuilder: (_, index) => SizedBox(
                   width: 11,
                 ),
