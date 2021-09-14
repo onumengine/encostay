@@ -73,7 +73,7 @@ class _SearchResultsState extends State<SearchResults> {
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Row(
-                  children: [],
+                  children: <Widget>[],
                 ),
                 FiltersButton(
                   backgroundColor: brandWhite,
