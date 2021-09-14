@@ -12,6 +12,8 @@ class SearchResultCard extends StatefulWidget {
 }
 
 class _SearchResultCardState extends State<SearchResultCard> {
+  bool _isFavorited = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -77,9 +79,16 @@ class _SearchResultCardState extends State<SearchResultCard> {
                 ),
               ),
               Positioned(
-                child: ImageIcon(
-                  AssetImage('lib/assets/images/favorite_icon.png'),
-                  color: brandWhite,
+                child: GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _isFavorited = !_isFavorited;
+                    });
+                  },
+                  child: ImageIcon(
+                    AssetImage('lib/assets/images/favorite_icon.png'),
+                    color: (_isFavorited) ? brandYellow : brandWhite,
+                  ),
                 ),
                 top: 20,
                 right: 20,
