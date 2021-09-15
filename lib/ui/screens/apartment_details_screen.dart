@@ -227,6 +227,35 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   ],
                 ),
               ),
+              SizedBox(height: 14),
+              Text(
+                'About',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  height: 23 / 14,
+                ),
+              ),
+              SizedBox(height: 14),
+              Text(
+                'Welcome to New York City, travelers! I\'m excited toshare my newly renovated Upper West Side apartment with you! My place is close...',
+                style: TextStyle(
+                  fontSize: 12,
+                  height: 22 / 12,
+                  color: Color(0xffa1a0a6),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional.centerEnd,
+                child: Text(
+                  'read more',
+                  style: TextStyle(
+                    fontSize: 12,
+                    height: 22 / 12,
+                    color: brandOrange,
+                  ),
+                ),
+              )
             ],
           ),
         ),
