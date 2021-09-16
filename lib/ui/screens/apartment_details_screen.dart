@@ -708,7 +708,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
