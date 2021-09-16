@@ -50,6 +50,7 @@ flutter:
   assets:
     - lib/assets/
     - lib/assets/images/
+    - lib/assets/images/amenity_icons/
     - lib/assets/vectors/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
