@@ -1,7 +1,6 @@
 import 'dart:io';
 
-import 'package:encostay/ui/molecules/booking_status_container.dart';
-import 'package:encostay/ui/molecules/modal_container.dart';
+import 'package:encostay/ui/molecules/booking_status_modal.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
