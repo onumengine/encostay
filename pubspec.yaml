@@ -32,6 +32,7 @@ dependencies:
   floating_bottom_navigation_bar: 1.5.2
   otp_text_field: 1.1.1
   flutter_rounded_date_picker: 2.0.2
+  carousel_slider: 4.0.0
 
 dev_dependencies:
   flutter_test:
