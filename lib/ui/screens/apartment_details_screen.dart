@@ -24,33 +24,44 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leadingWidth: 56,
         leading: GestureDetector(
           onTap: () {
             Navigator.of(context).pop();
           },
-          child: Container(
-            height: 32,
-            width: 32,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              color: brandOrange,
-            ),
-            child: Icon(
-              Icons.arrow_back,
-              size: 24,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 24) +
+                EdgeInsets.symmetric(vertical: 12),
+            child: Container(
+              height: 32,
+              width: 32,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(7),
+                color: brandOrange,
+              ),
+              child: Icon(
+                Icons.arrow_back,
+                size: 24,
+              ),
             ),
           ),
         ),
         actions: <Widget>[
-          RawMaterialButton(
-            child: ImageIcon(
-              AssetImage('lib/assets/images/save_icon.png'),
-              color: brandOrange,
-              size: 24,
+          Padding(
+            padding: const EdgeInsets.only(
+                  right: 16,
+                ) +
+                EdgeInsets.symmetric(vertical: 10),
+            child: RawMaterialButton(
+              child: ImageIcon(
+                AssetImage('lib/assets/images/save_icon.png'),
+                color: brandOrange,
+                size: 24,
+              ),
+              onPressed: () {},
+              fillColor: brandWhite,
+              shape: CircleBorder(),
             ),
-            onPressed: () {},
-            fillColor: brandWhite,
-            shape: CircleBorder(),
           ),
         ],
       ),
