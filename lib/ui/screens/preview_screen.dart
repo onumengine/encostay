@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:encostay/ui/screens/booking_status_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -366,21 +367,30 @@ class _PreviewScreenState extends State<PreviewScreen> {
               SizedBox(
                 height: screenSize.height / 7.06,
               ),
-              Container(
-                constraints: BoxConstraints(maxWidth: screenSize.width / 2.5),
-                padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
-                decoration: BoxDecoration(
-                  color: brandBrown,
-                  borderRadius: BorderRadius.circular(26.5),
-                ),
-                child: Center(
-                  child: Text(
-                    'Reserve',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      height: 19.5 / 16,
-                      color: brandWhite,
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => BookingStatusScreen(),
+                    ),
+                  );
+                },
+                child: Container(
+                  constraints: BoxConstraints(maxWidth: screenSize.width / 2.5),
+                  padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
+                  decoration: BoxDecoration(
+                    color: brandBrown,
+                    borderRadius: BorderRadius.circular(26.5),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Reserve',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        height: 19.5 / 16,
+                        color: brandWhite,
+                      ),
                     ),
                   ),
                 ),
