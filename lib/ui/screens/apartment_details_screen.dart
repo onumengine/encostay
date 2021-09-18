@@ -817,6 +817,48 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
           ],
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Container(
+        width: screenSize.width,
+        padding: EdgeInsets.only(left: 38, right: 22) +
+            EdgeInsets.symmetric(vertical: 22),
+        decoration: BoxDecoration(
+          color: brandWhite,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(48.5),
+            topRight: Radius.circular(48.5),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xffdde0e8),
+              blurRadius: 33,
+              offset: Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Text('\$172/night'),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
+              decoration: BoxDecoration(
+                color: brandBrown,
+                borderRadius: BorderRadius.circular(26.5),
+              ),
+              child: Text(
+                'Reserve',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  height: 19.5 / 16,
+                  color: brandWhite,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
