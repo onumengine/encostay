@@ -15,6 +15,8 @@ const brandGreyAlt = Color(0xff3e3e3e);
 const brandGreyAltOp80 = Color(0x503e3e3e);
 const brandTextInputShadow = Color(0xff939393);
 
+const lightTextColor = Color(0xff2f2f2F);
+
 // Modal colors
 const brandBrownDark = Color(0xff313131);
 const instructionalTextModal = Color(0xff616161);

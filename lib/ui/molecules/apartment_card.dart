@@ -22,7 +22,7 @@ class _ApartmentCardState extends State<ApartmentCard> {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => DetailsScreen(),
+            builder: (context) => ApartmentDetailsScreen(),
           ),
         );
       },

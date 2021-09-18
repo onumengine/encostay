@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:encostay/ui/atoms/amenity_chip.dart';
 import 'package:encostay/ui/atoms/availability_tile.dart';
 import 'package:encostay/ui/molecules/bedroom_card.dart';
+import 'package:encostay/ui/screens/preview_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -840,19 +841,28 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text('\$172/night'),
-            Container(
-              padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
-              decoration: BoxDecoration(
-                color: brandBrown,
-                borderRadius: BorderRadius.circular(26.5),
-              ),
-              child: Text(
-                'Reserve',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  height: 19.5 / 16,
-                  color: brandWhite,
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => PreviewScreen(),
+                  ),
+                );
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
+                decoration: BoxDecoration(
+                  color: brandBrown,
+                  borderRadius: BorderRadius.circular(26.5),
+                ),
+                child: Text(
+                  'Reserve',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    height: 19.5 / 16,
+                    color: brandWhite,
+                  ),
                 ),
               ),
             ),
