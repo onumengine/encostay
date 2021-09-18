@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:encostay/ui/atoms/flat_iconbutton.dart';
 import 'package:encostay/ui/screens/apartment_details_screen.dart';
+import 'package:encostay/ui/screens/details_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class _ApartmentCardState extends State<ApartmentCard> {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => ApartmentDetailsScreen(),
+            builder: (context) => DetailsScreen(),
           ),
         );
       },
