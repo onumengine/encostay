@@ -840,7 +840,14 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Text('\$172/night'),
+            Text(
+              '\$172/night',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+                height: 30 / 18,
+              ),
+            ),
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(
