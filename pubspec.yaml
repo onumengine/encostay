@@ -33,6 +33,7 @@ dependencies:
   otp_text_field: 1.1.1
   flutter_rounded_date_picker: 2.0.2
   carousel_slider: 4.0.0
+  equatable: 2.0.3
 
 dev_dependencies:
   flutter_test:

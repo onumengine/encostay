@@ -155,7 +155,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   ImageIcon(
-                    AssetImage('lib/assets/images/location_icon.png'),
+                    AssetImage(ASSET_IMAGE_PATH + 'location_icon.png'),
                     size: 13,
                     color: brandBrown,
                   ),
@@ -240,7 +240,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(15),
                               child: Image.asset(
-                                  'lib/assets/images/owner_pic.png'),
+                                  ASSET_IMAGE_PATH + 'owner_pic.png'),
                             ),
                             SizedBox(width: 8),
                             Column(
