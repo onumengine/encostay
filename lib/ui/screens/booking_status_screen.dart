@@ -1,6 +1,9 @@
 import 'dart:io';
 
+import 'package:encostay/ui/atoms/custom_tab_indicator.dart';
 import 'package:encostay/ui/molecules/booking_status_modal.dart';
+import 'package:encostay/ui/organisms/confirm_phone_number.dart';
+import 'package:encostay/ui/organisms/host_chat.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +16,20 @@ class BookingStatusScreen extends StatefulWidget {
 }
 
 class _BookingStatusScreenState extends State<BookingStatusScreen> {
+  List<CustomTabIndicator>? _tabIndicators;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabIndicators = [
+      CustomTabIndicator.withValue(isSelected: true, index: 1),
+      CustomTabIndicator(index: 2),
+      CustomTabIndicator(index: 3),
+      CustomTabIndicator(index: 4),
+      CustomTabIndicator(index: 5),
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -20,8 +37,9 @@ class _BookingStatusScreenState extends State<BookingStatusScreen> {
       length: 5,
       child: Scaffold(
         backgroundColor: brandWhite,
+        extendBody: true,
         appBar: AppBar(
-          backgroundColor: brandWhite,
+          backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(
             onPressed: () {
@@ -39,28 +57,25 @@ class _BookingStatusScreenState extends State<BookingStatusScreen> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: TabBar(
+                onTap: (index) {
+                  setState(() {
+                    /// store the tab children in an array,
+                    /// store the tab labels in variables
+                    /// change the color and label of the selected tab when it is tapped
+                    _tabIndicators!.forEach((tabIndicator) {});
+                  });
+                },
+                unselectedLabelColor: brandBrown,
                 indicatorColor: brandOrange,
                 indicator: BoxDecoration(
                   borderRadius: BorderRadius.circular(17),
                   color: brandOrange,
                 ),
-                tabs: [
-                  Tab(
-                    text: 'Step 1',
-                  ),
-                  Tab(
-                    text: '2',
-                  ),
-                  Tab(
-                    text: '3',
-                  ),
-                  Tab(
-                    text: '4',
-                  ),
-                  Tab(
-                    text: '5',
-                  ),
-                ],
+                tabs: _tabIndicators!
+                    .map((tabIndicator) => Tab(
+                          child: tabIndicator,
+                        ))
+                    .toList(),
               ),
             ),
           ),
@@ -483,12 +498,16 @@ class _BookingStatusScreenState extends State<BookingStatusScreen> {
               ],
             ),
           ),
-          Container(),
-          Container(),
+          HostChatComponent(),
+          ConfirmPhoneNumberComponent(),
           Container(),
           Container(),
         ]),
       ),
     );
+  }
+
+  void _toggleTabSelection(CustomTabIndicator tabIndicator) {
+    // Todo
   }
 }
