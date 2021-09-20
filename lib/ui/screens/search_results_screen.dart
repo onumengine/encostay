@@ -23,6 +23,7 @@ class _SearchResultsScreenState extends State<SearchResultsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: brandSecondBackground,
+      extendBody: true,
       appBar: AppBar(
         automaticallyImplyLeading: true,
         leading: IconButton(
