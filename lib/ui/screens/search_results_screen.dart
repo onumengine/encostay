@@ -8,14 +8,14 @@ import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.da
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SearchResults extends StatefulWidget {
-  SearchResults({Key? key}) : super(key: key);
+class SearchResultsScreen extends StatefulWidget {
+  SearchResultsScreen({Key? key}) : super(key: key);
 
   @override
-  _SearchResultsState createState() => _SearchResultsState();
+  _SearchResultsScreenState createState() => _SearchResultsScreenState();
 }
 
-class _SearchResultsState extends State<SearchResults> {
+class _SearchResultsScreenState extends State<SearchResultsScreen> {
   TextEditingController _controller = TextEditingController();
   int _navbarIndex = 0;
 
