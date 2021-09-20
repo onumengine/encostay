@@ -1,5 +1,6 @@
 import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/text_widget.dart';
+import 'package:encostay/ui/screens/home_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -98,9 +99,9 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                   ),
                 ),
                 onTap: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('Attempting signup'),
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
                     ),
                   );
                 },
