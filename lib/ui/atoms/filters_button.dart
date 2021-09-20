@@ -1,18 +1,20 @@
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class FiltersButton extends StatelessWidget {
-  FiltersButton({Key? key, this.foregroundColor, this.backgroundColor,})
-      : super(key: key);
+  FiltersButton({
+    Key? key,
+    this.foregroundColor,
+    this.backgroundColor,
+  }) : super(key: key);
 
   Color? backgroundColor, foregroundColor;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-
-      },
+      onTap: () {},
       child: Container(
         height: 33,
         width: 36,
@@ -21,7 +23,7 @@ class FiltersButton extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
         child: ImageIcon(
-          AssetImage('lib/assets/images/filter_icon.png'),
+          AssetImage(COLORED_IMAGES_PATH + 'filter_icon.png'),
           color: foregroundColor ?? brandWhite,
         ),
       ),

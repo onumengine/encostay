@@ -3,9 +3,12 @@ import 'package:encostay/ui/atoms/search_box.dart';
 import 'package:encostay/ui/molecules/apartment_card.dart';
 import 'package:encostay/ui/screens/search_results_screen.dart';
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -70,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   CircleAvatar(
-                    backgroundImage: AssetImage('lib/assets/images/avatar.png'),
+                    backgroundImage: AssetImage(IMAGES_PATH + 'avatar.png'),
                     radius: 24,
                   ),
                 ],
