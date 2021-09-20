@@ -52,6 +52,9 @@ flutter:
   assets:
     - lib/assets/
     - lib/assets/images/
+    - lib/assets/images/images/
+    - lib/assets/images/orange/
+    - lib/assets/images/colored/
     - lib/assets/images/amenity_icons/
     - lib/assets/vectors/
     - lib/assets/vectors/images/
