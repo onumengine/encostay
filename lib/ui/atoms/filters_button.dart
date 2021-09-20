@@ -23,7 +23,7 @@ class FiltersButton extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
         child: ImageIcon(
-          AssetImage(COLORED_IMAGES_PATH + 'filter_icon.png'),
+          AssetImage(COLORED_ICONS_PATH + 'ic_filter.png'),
           color: foregroundColor ?? brandWhite,
         ),
       ),

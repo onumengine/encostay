@@ -1,5 +1,6 @@
 import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class FlatIconButton extends StatelessWidget {
   final String iconPath;
@@ -23,7 +24,15 @@ class FlatIconButton extends StatelessWidget {
       ),
       child: Row(
         children: [
-          ImageIcon(AssetImage(iconPath)),
+          //ImageIcon(AssetImage(iconPath)),
+          SvgPicture.asset(
+            iconPath,
+            width: 14.7,
+            height: 12.6,
+          ),
+          SizedBox(
+            width: 6,
+          ),
           Text(
             text,
             style: TextStyle(

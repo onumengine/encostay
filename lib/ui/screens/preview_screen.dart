@@ -4,6 +4,7 @@ import 'package:encostay/ui/screens/booking_status_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class PreviewScreen extends StatefulWidget {
   const PreviewScreen({Key? key}) : super(key: key);
@@ -51,11 +52,18 @@ class _PreviewScreenState extends State<PreviewScreen> {
                 children: <Widget>[
                   ClipRRect(
                     borderRadius: BorderRadius.circular(15),
+                    /*
                     child: Image.asset(
                       ASSET_IMAGE_PATH + 'apartment_2.png',
                       height: 93,
                       width: 81,
                       fit: BoxFit.fitHeight,
+                    ),
+                    */
+                    child: SvgPicture.asset(
+                      VECTOR_IMAGES_PATH + 'apartment.svg',
+                      height: 93,
+                      width: 81,
                     ),
                   ),
                   SizedBox(

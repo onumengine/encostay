@@ -1,12 +1,26 @@
 import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+enum ChipType {
+  image,
+  vector,
+}
 
 class AmenityChip extends StatelessWidget {
   final String iconPath;
+  final ChipType chipType;
 
   const AmenityChip({
     Key? key,
     required this.iconPath,
+    this.chipType = ChipType.image,
+  }) : super(key: key);
+
+  AmenityChip.svg({
+    Key? key,
+    required this.iconPath,
+    this.chipType = ChipType.vector,
   }) : super(key: key);
 
   @override
@@ -19,7 +33,9 @@ class AmenityChip extends StatelessWidget {
         borderRadius: BorderRadius.circular(14),
       ),
       child: Center(
-        child: Image.asset(iconPath),
+        child: (chipType == ChipType.image)
+            ? Image.asset(iconPath)
+            : SvgPicture.asset(iconPath),
       ),
     );
   }

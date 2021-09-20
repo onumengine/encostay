@@ -6,6 +6,7 @@ import 'package:encostay/ui/screens/preview_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class ApartmentDetailsScreen extends StatefulWidget {
   const ApartmentDetailsScreen({Key? key}) : super(key: key);
@@ -56,10 +57,10 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                 ) +
                 EdgeInsets.symmetric(vertical: 10),
             child: RawMaterialButton(
-              child: ImageIcon(
-                AssetImage('lib/assets/images/save_icon.png'),
-                color: brandOrange,
-                size: 24,
+              child: SvgPicture.asset(
+                ORANGE_VECTORS_PATH + 'ic_orange_save.svg',
+                width: 10,
+                height: 12.7,
               ),
               onPressed: () {},
               fillColor: brandWhite,
@@ -87,7 +88,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   children: [0, 1, 2, 3, 4, 5]
                       .map(
                         (e) => Image.asset(
-                          ASSET_IMAGE_PATH + 'apartment_2.png',
+                          IMAGES_PATH + 'apartment.png',
                           fit: BoxFit.cover,
                         ),
                       )
@@ -95,35 +96,9 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                 ),
               ),
             ),
-            /*
-            ClipRRect(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30),
-                bottomRight: Radius.circular(30),
-              ),
-              child: CarouselSlider(
-                items: [0, 1, 2, 3, 4, 5]
-                    .map(
-                      (e) => ClipRRect(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(30),
-                          bottomRight: Radius.circular(30),
-                        ),
-                        child: Image.asset(
-                          ASSET_IMAGE_PATH + 'apartment_2.png',
-                        ),
-                      ),
-                    )
-                    .toList(),
-                options: CarouselOptions(
-                  aspectRatio: 1.0,
-                  viewportFraction: 1.0,
-                  enlargeCenterPage: true,
-                  disableCenter: true,
-                ),
-              ),
+            SizedBox(
+              height: 12,
             ),
-            */
             Align(
               alignment: AlignmentDirectional.center,
               child: Padding(
@@ -132,10 +107,9 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ImageIcon(
-                      AssetImage('lib/assets/images/rating_icon.png'),
-                      color: brandYellow,
-                      size: 24,
+                    SvgPicture.asset(COLORED_VECTORS_PATH + 'ic_rating.svg'),
+                    SizedBox(
+                      width: 2,
                     ),
                     Text(
                       '4.8',
@@ -188,9 +162,8 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    ImageIcon(
-                      AssetImage(ASSET_IMAGE_PATH + 'location_icon.png'),
-                      size: 13,
+                    SvgPicture.asset(
+                      VECTORS_ROOT_PATH + 'location.svg',
                       color: brandBrown,
                     ),
                     SizedBox(
@@ -277,7 +250,11 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(15),
                                 child: Image.asset(
-                                    ASSET_IMAGE_PATH + 'owner_pic.png'),
+                                  IMAGES_PATH + 'owner.png',
+                                  height: 36,
+                                  width: 36,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                               SizedBox(width: 8),
                               Column(
@@ -437,7 +414,8 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                 children: <Widget>[
                   Column(
                     children: [
-                      AmenityChip(iconPath: AMENITY_ICONS_PATH + 'wifi.png'),
+                      AmenityChip.svg(
+                          iconPath: ORANGE_VECTORS_PATH + 'ic_orange_wifi.svg'),
                       SizedBox(height: 5),
                       Text(
                         'Wifi',
@@ -452,7 +430,8 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   SizedBox(width: 19),
                   Column(
                     children: [
-                      AmenityChip(iconPath: AMENITY_ICONS_PATH + 'tv.png'),
+                      AmenityChip.svg(
+                          iconPath: ORANGE_VECTORS_PATH + 'ic_orange_tv.svg'),
                       SizedBox(height: 5),
                       Text(
                         'TV Cable',
@@ -467,7 +446,9 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   SizedBox(width: 19),
                   Column(
                     children: [
-                      AmenityChip(iconPath: AMENITY_ICONS_PATH + 'gym.png'),
+                      AmenityChip.svg(
+                          iconPath:
+                              ORANGE_VECTORS_PATH + 'ic_orange_laundry.svg'),
                       SizedBox(height: 5),
                       Text(
                         'Laundry',
@@ -482,7 +463,8 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   SizedBox(width: 19),
                   Column(
                     children: [
-                      AmenityChip(iconPath: AMENITY_ICONS_PATH + 'laundry.png'),
+                      AmenityChip.svg(
+                          iconPath: ORANGE_VECTORS_PATH + 'ic_orange_gym.svg'),
                       SizedBox(height: 5),
                       Text(
                         'Gym',
@@ -497,8 +479,9 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   SizedBox(width: 19),
                   Column(
                     children: [
-                      AmenityChip(
-                          iconPath: AMENITY_ICONS_PATH + 'security.png'),
+                      AmenityChip.svg(
+                          iconPath:
+                              ORANGE_VECTORS_PATH + 'ic_orange_security.svg'),
                       SizedBox(height: 5),
                       Text(
                         'Security',
@@ -533,13 +516,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Container(
-                width: double.maxFinite,
-                height: 137,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(13),
-                ),
-              ),
+              child: Image.asset(IMAGES_PATH + 'mapview.png'),
             ),
             SizedBox(
               height: 7,
@@ -549,9 +526,10 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  ImageIcon(
-                    AssetImage('lib/assets/images/location_icon.png'),
-                    size: 13,
+                  SvgPicture.asset(
+                    VECTORS_ROOT_PATH + 'location.svg',
+                    width: 9.66,
+                    height: 13,
                     color: brandBrown,
                   ),
                   SizedBox(
@@ -604,8 +582,8 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
               child: Column(
                 children: <Widget>[
                   ListTile(
-                    leading:
-                        Image.asset(ASSET_IMAGE_PATH + 'not_allowed_icon.png'),
+                    leading: SvgPicture.asset(
+                        COLORED_VECTORS_PATH + 'ic_uncheck.svg'),
                     title: Text(
                       'Smoking',
                       style: TextStyle(
@@ -624,7 +602,8 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                     ),
                   ),
                   ListTile(
-                    leading: Image.asset(ASSET_IMAGE_PATH + 'allowed_icon.png'),
+                    leading:
+                        SvgPicture.asset(COLORED_VECTORS_PATH + 'ic_check.svg'),
                     title: Text(
                       'Pets Allowed',
                       style: TextStyle(
@@ -643,7 +622,8 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                     ),
                   ),
                   ListTile(
-                    leading: Image.asset(ASSET_IMAGE_PATH + 'allowed_icon.png'),
+                    leading:
+                        SvgPicture.asset(COLORED_VECTORS_PATH + 'ic_check.svg'),
                     title: Text(
                       'Party Allowed',
                       style: TextStyle(
@@ -662,7 +642,8 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                     ),
                   ),
                   ListTile(
-                    leading: Image.asset(ASSET_IMAGE_PATH + 'allowed_icon.png'),
+                    leading:
+                        SvgPicture.asset(COLORED_VECTORS_PATH + 'ic_check.svg'),
                     title: Text(
                       'Children Allowed',
                       style: TextStyle(

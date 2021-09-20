@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                   CircleAvatar(
-                    backgroundImage: AssetImage(IMAGES_PATH + 'avatar.png'),
+                    backgroundImage: AssetImage(IMAGES_PATH + 'img_avatar.png'),
                     radius: 24,
                   ),
                 ],

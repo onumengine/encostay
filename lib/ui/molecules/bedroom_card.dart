@@ -1,15 +1,32 @@
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+enum CardType {
+  image,
+  vector,
+}
 
 class BedroomCard extends StatefulWidget {
   bool isSelected;
   int numberOfBeds;
+  CardType cardType;
 
   BedroomCard({
     Key? key,
     this.numberOfBeds = 1,
     this.isSelected = false,
+    this.cardType = CardType.image,
   }) : super(key: key);
+
+  BedroomCard.svg({
+    Key? key,
+    this.numberOfBeds = 1,
+    this.isSelected = false,
+    this.cardType = CardType.vector,
+  })  : assert(cardType == CardType.vector),
+        super(key: key);
 
   @override
   _BedroomCardState createState() => _BedroomCardState(
@@ -46,7 +63,9 @@ class _BedroomCardState extends State<BedroomCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Image.asset('lib/assets/images/bed_icon.png'),
+          ((widget.cardType == CardType.vector)
+              ? SvgPicture.asset(COLORED_VECTORS_PATH + 'ic_bedroom.svg')
+              : Image.asset('lib/assets/images/bed_icon.png')),
           SizedBox(
             height: 11,
           ),

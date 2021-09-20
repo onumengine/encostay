@@ -3,7 +3,9 @@ import 'dart:ui';
 import 'package:encostay/ui/atoms/flat_iconbutton.dart';
 import 'package:encostay/ui/screens/apartment_details_screen.dart';
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SearchResultCard extends StatefulWidget {
   const SearchResultCard({Key? key}) : super(key: key);
@@ -67,10 +69,10 @@ class _SearchResultCardState extends State<SearchResultCard> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            ImageIcon(
-                              AssetImage('lib/assets/images/rating_icon.png'),
-                              size: 18,
-                              color: brandYellow,
+                            SvgPicture.asset(
+                              COLORED_VECTORS_PATH + 'ic_rating.svg',
+                              width: 10.5,
+                              height: 10.5,
                             ),
                             Text(
                               '4.0',
@@ -94,8 +96,10 @@ class _SearchResultCardState extends State<SearchResultCard> {
                         _isFavorited = !_isFavorited;
                       });
                     },
-                    child: ImageIcon(
-                      AssetImage('lib/assets/images/favorite_icon.png'),
+                    child: SvgPicture.asset(
+                      COLORED_VECTORS_PATH + 'ic_favorite.svg',
+                      width: 19,
+                      height: 17,
                       color: (_isFavorited) ? brandYellow : brandWhite,
                     ),
                   ),
@@ -135,14 +139,14 @@ class _SearchResultCardState extends State<SearchResultCard> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     FlatIconButton(
-                      iconPath: 'lib/assets/images/bedroom_icon.png',
+                      iconPath: COLORED_VECTORS_PATH + 'ic_bed.svg',
                       text: '3 Bedroom',
                     ),
                     SizedBox(
                       width: 11.8,
                     ),
                     FlatIconButton(
-                      iconPath: 'lib/assets/images/wifi_icon.png',
+                      iconPath: COLORED_VECTORS_PATH + 'ic_wifi.svg',
                       text: 'Wifi',
                     ),
                     SizedBox(
@@ -155,8 +159,9 @@ class _SearchResultCardState extends State<SearchResultCard> {
                         borderRadius: BorderRadius.circular(5),
                         color: brandOrange,
                       ),
-                      child: ImageIcon(
-                        AssetImage('lib/assets/images/arrow_icon.png'),
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                        size: 12,
                         color: brandWhite,
                       ),
                     ),
@@ -203,30 +208,30 @@ class _SearchResultCardState extends State<SearchResultCard> {
                     ),
                     Row(
                       children: <Widget>[
-                        ImageIcon(
-                          AssetImage('lib/assets/images/rating_icon.png'),
-                          size: 20,
-                          color: brandYellow,
+                        SvgPicture.asset(
+                          COLORED_VECTORS_PATH + 'ic_rating.svg',
+                          width: 20,
+                          height: 20,
                         ),
-                        ImageIcon(
-                          AssetImage('lib/assets/images/rating_icon.png'),
-                          size: 20,
-                          color: brandYellow,
+                        SvgPicture.asset(
+                          COLORED_VECTORS_PATH + 'ic_rating.svg',
+                          width: 20,
+                          height: 20,
                         ),
-                        ImageIcon(
-                          AssetImage('lib/assets/images/rating_icon.png'),
-                          size: 20,
-                          color: brandYellow,
+                        SvgPicture.asset(
+                          COLORED_VECTORS_PATH + 'ic_rating.svg',
+                          width: 20,
+                          height: 20,
                         ),
-                        ImageIcon(
-                          AssetImage('lib/assets/images/rating_icon.png'),
-                          size: 20,
-                          color: brandYellow,
+                        SvgPicture.asset(
+                          COLORED_VECTORS_PATH + 'ic_rating.svg',
+                          width: 20,
+                          height: 20,
                         ),
-                        ImageIcon(
-                          AssetImage('lib/assets/images/rating_icon.png'),
-                          size: 20,
-                          color: brandYellow,
+                        SvgPicture.asset(
+                          COLORED_VECTORS_PATH + 'ic_rating.svg',
+                          width: 20,
+                          height: 20,
                         ),
                       ],
                     ),

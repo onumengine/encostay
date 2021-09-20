@@ -1,5 +1,6 @@
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AvailabilityTile extends StatelessWidget {
   final String text;
@@ -12,9 +13,9 @@ class AvailabilityTile extends StatelessWidget {
       width: double.maxFinite,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Image.asset(ASSET_IMAGE_PATH + 'calendar_icon_orange.png'),
+          SvgPicture.asset(ORANGE_VECTORS_PATH + 'ic_orange_calendar.svg'),
           SizedBox(
             width: 15,
           ),
