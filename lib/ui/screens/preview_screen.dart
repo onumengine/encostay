@@ -57,18 +57,11 @@ class _PreviewScreenState extends State<PreviewScreen> {
                 children: <Widget>[
                   ClipRRect(
                     borderRadius: BorderRadius.circular(15),
-                    /*
                     child: Image.asset(
-                      ASSET_IMAGE_PATH + 'apartment_2.png',
+                      IMAGES_PATH + 'apartment.png',
                       height: 93,
                       width: 81,
                       fit: BoxFit.fitHeight,
-                    ),
-                    */
-                    child: SvgPicture.asset(
-                      VECTOR_IMAGES_PATH + 'apartment.svg',
-                      height: 93,
-                      width: 81,
                     ),
                   ),
                   SizedBox(
@@ -97,10 +90,12 @@ class _PreviewScreenState extends State<PreviewScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          ImageIcon(
-                            AssetImage('lib/assets/images/rating_icon.png'),
-                            color: brandYellow,
-                            size: 24,
+                          SvgPicture.asset(
+                            COLORED_VECTORS_PATH + 'ic_rating.svg',
+                            width: 14,
+                          ),
+                          SizedBox(
+                            width: 7,
                           ),
                           Text(
                             '4.8',
@@ -249,10 +244,13 @@ class _PreviewScreenState extends State<PreviewScreen> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
-                              ImageIcon(
-                                AssetImage(ASSET_IMAGE_PATH + 'user_icon.png'),
-                                color: brandYellow,
-                                size: 24,
+                              SvgPicture.asset(
+                                ORANGE_VECTORS_PATH + 'ic_guest.svg',
+                                width: 14.44,
+                                height: 14.29,
+                              ),
+                              SizedBox(
+                                width: 4,
                               ),
                               Text(
                                 '1',
