@@ -4,6 +4,7 @@ import 'package:encostay/ui/atoms/custom_tab_indicator.dart';
 import 'package:encostay/ui/molecules/booking_status_modal.dart';
 import 'package:encostay/ui/organisms/confirm_phone_number.dart';
 import 'package:encostay/ui/organisms/host_chat.dart';
+import 'package:encostay/ui/organisms/upload_id.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -500,14 +501,10 @@ class _BookingStatusScreenState extends State<BookingStatusScreen> {
           ),
           HostChatComponent(),
           ConfirmPhoneNumberComponent(),
-          Container(),
+          UploadIDComponent(),
           Container(),
         ]),
       ),
     );
-  }
-
-  void _toggleTabSelection(CustomTabIndicator tabIndicator) {
-    // Todo
   }
 }
