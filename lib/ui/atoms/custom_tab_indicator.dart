@@ -29,7 +29,7 @@ class _CustomTabIndicatorState extends State<CustomTabIndicator> {
           (_isSelected) ? (screenSize.width / 3.35) : (screenSize.width / 7.98),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(17),
-        color: (_isSelected) ? brandOrange : brandLight,
+        color: (_isSelected) ? brandOrange : brandOrange,
       ),
       child: Center(
         child: (_isSelected)
