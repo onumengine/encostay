@@ -54,6 +54,9 @@ flutter:
     - lib/assets/images/
     - lib/assets/images/amenity_icons/
     - lib/assets/vectors/
+    - lib/assets/vectors/images/
+    - lib/assets/vectors/orange_icons/
+    - lib/assets/vectors/colored_icons/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
