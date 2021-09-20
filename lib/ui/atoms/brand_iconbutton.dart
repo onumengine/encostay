@@ -57,6 +57,13 @@ class BrandIconButton extends StatelessWidget {
         borderRadius: BorderRadius.all(
           Radius.circular(this.radius ?? 28),
         ),
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(0, 6),
+            blurRadius: 75,
+            color: Color(0x15645757),
+          )
+        ],
         color: this.color ?? Colors.transparent,
       ),
       child: Material(
