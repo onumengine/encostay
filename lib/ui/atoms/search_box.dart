@@ -24,15 +24,8 @@ class SearchBox extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: brandTextInputShadow.withOpacity(0.13),
-          ),
-          BoxShadow(
-            color: brandTextInputShadow.withOpacity(0.13),
-          ),
-          BoxShadow(
-            color: brandTextInputShadow.withOpacity(0.13),
-          ),
-          BoxShadow(
-            color: brandTextInputShadow.withOpacity(0.13),
+            offset: Offset(0, 10),
+            blurRadius: 75,
           ),
         ],
       ),
