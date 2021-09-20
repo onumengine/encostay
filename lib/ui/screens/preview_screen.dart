@@ -23,12 +23,17 @@ class _PreviewScreenState extends State<PreviewScreen> {
         automaticallyImplyLeading: true,
         backgroundColor: brandWhite,
         elevation: 0,
-        leading: (Icon(
-          (Platform.isIOS)
-              ? Icons.arrow_back_ios_rounded
-              : Icons.arrow_back_rounded,
-          color: brandBrown,
-        )),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pop();
+          },
+          child: (Icon(
+            (Platform.isIOS)
+                ? Icons.arrow_back_ios_rounded
+                : Icons.arrow_back_rounded,
+            color: brandBrown,
+          )),
+        ),
         actions: <Widget>[
           IconButton(
             onPressed: () {
