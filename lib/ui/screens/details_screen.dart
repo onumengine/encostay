@@ -27,28 +27,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
             backgroundColor: Colors.transparent,
             expandedHeight: screenSize.width * 0.71,
             automaticallyImplyLeading: false,
-            actions: <Widget>[
-              /*
-              RawMaterialButton(
-                child: ImageIcon(
-                  AssetImage('lib/assets/images/save_icon.png'),
-                  color: brandOrange,
-                  size: 24,
-                ),
-                onPressed: () {},
-                fillColor: brandWhite,
-                shape: CircleBorder(),
-                elevation: 0,
-                constraints: BoxConstraints(
-                  minHeight: 39,
-                  minWidth: 39,
-                ),
-              ),
-              */
-              SizedBox(
-                width: 21,
-              ),
-            ],
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 children: [
