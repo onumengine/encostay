@@ -8,6 +8,7 @@ import 'package:encostay/ui/atoms/text_widget.dart';
 import 'package:encostay/ui/molecules/modal_container.dart';
 import 'package:encostay/ui/screens/home_screen.dart';
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -164,8 +165,8 @@ class _LoginFormState extends State<LoginForm> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                BrandIconButton(
-                  iconPath: 'lib/assets/images/google_icon.png',
+                BrandIconButton.svg(
+                  iconPath: COLORED_VECTORS_PATH + 'ic_google.svg',
                   child: Text(
                     'Google',
                     style: TextStyle(
@@ -186,8 +187,8 @@ class _LoginFormState extends State<LoginForm> {
                   height: 36,
                 ),
                 SizedBox(width: 19),
-                BrandIconButton(
-                  iconPath: 'lib/assets/images/fb_icon.png',
+                BrandIconButton.svg(
+                  iconPath: COLORED_VECTORS_PATH + 'ic_fb.svg',
                   child: Text(
                     'Facebook',
                     style: TextStyle(
