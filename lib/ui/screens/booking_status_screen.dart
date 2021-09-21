@@ -112,14 +112,6 @@ class _BookingStatusScreenState extends State<BookingStatusScreen> {
             }
             return Container();
           },
-          buildWhen: (previousState, nextState) {
-            /*
-            if (previousState is DefaultState && nextState is DefaultState) {
-              return previousState.progressIndex != nextState.progressIndex;
-            }
-            */
-            return true;
-          },
           listener: (context, state) {},
         ));
   }
