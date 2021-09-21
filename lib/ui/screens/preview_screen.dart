@@ -1,9 +1,12 @@
 import 'dart:io';
 
+import 'package:encostay/blocs/booking_status/bloc.dart';
+import 'package:encostay/blocs/booking_status/state.dart';
 import 'package:encostay/ui/screens/booking_status_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
 class PreviewScreen extends StatefulWidget {
@@ -375,14 +378,17 @@ class _PreviewScreenState extends State<PreviewScreen> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: screenSize.height / 7.06,
+              Expanded(
+                child: SizedBox(),
               ),
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => BookingStatusScreen(),
+                      builder: (context) => BlocProvider<BookingStatusBloc>(
+                        create: (context) => BookingStatusBloc(DummyState()),
+                        child: BookingStatusScreen(),
+                      ),
                     ),
                   );
                 },
@@ -405,6 +411,9 @@ class _PreviewScreenState extends State<PreviewScreen> {
                     ),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: screenSize.height / 16.24,
               ),
             ],
           ),

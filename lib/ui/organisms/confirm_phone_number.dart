@@ -1,6 +1,7 @@
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ConfirmPhoneNumberComponent extends StatefulWidget {
   const ConfirmPhoneNumberComponent({Key? key}) : super(key: key);
@@ -64,10 +65,8 @@ class _ConfirmPhoneNumberComponentState
                 ),
                 Row(
                   children: [
-                    Image(
-                      image: AssetImage(
-                          ASSET_IMAGE_PATH + 'nigeria_flag_icon.png'),
-                    ),
+                    SvgPicture.asset(
+                        COLORED_VECTORS_PATH + 'ic_nigeria_flag.svg'),
                     SizedBox(
                       width: 8,
                     ),

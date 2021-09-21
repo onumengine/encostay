@@ -1,6 +1,7 @@
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HostChatComponent extends StatefulWidget {
   const HostChatComponent({Key? key}) : super(key: key);
@@ -62,7 +63,7 @@ class _HostChatComponentState extends State<HostChatComponent> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(12),
                         child: Image.asset(
-                          ASSET_IMAGE_PATH + 'owner_pic.png',
+                          IMAGES_PATH + 'owner.png',
                           height: 37,
                           width: 37,
                           fit: BoxFit.fitHeight,
@@ -157,10 +158,12 @@ class _HostChatComponentState extends State<HostChatComponent> {
                         hintText: 'Type your message...',
                       ),
                       onSubmitted: (message) {
-                        setState(() {
-                          _sendMessage(_messageController.text);
-                          _clearController(_messageController);
-                        });
+                        if (message.length > 0) {
+                          setState(() {
+                            _sendMessage(message);
+                            _clearController(_messageController);
+                          });
+                        }
                         _scrollToBottom(_scrollController);
                       },
                     ),
@@ -170,10 +173,12 @@ class _HostChatComponentState extends State<HostChatComponent> {
                   ),
                   RawMaterialButton(
                     onPressed: () {
-                      setState(() {
-                        _sendMessage(_messageController.text);
-                        _clearController(_messageController);
-                      });
+                      if (_messageController.text.length > 0) {
+                        setState(() {
+                          _sendMessage(_messageController.text);
+                          _clearController(_messageController);
+                        });
+                      }
                       _scrollToBottom(_scrollController);
                     },
                     fillColor: brandDarkGreen,
@@ -183,10 +188,8 @@ class _HostChatComponentState extends State<HostChatComponent> {
                       minWidth: 48,
                       minHeight: 48,
                     ),
-                    child: ImageIcon(
-                      AssetImage(ASSET_IMAGE_PATH + 'send_message_icon.png'),
-                      color: brandWhite,
-                    ),
+                    child: SvgPicture.asset(
+                        COLORED_VECTORS_PATH + 'ic_send_msg.svg'),
                   ),
                 ],
               ),

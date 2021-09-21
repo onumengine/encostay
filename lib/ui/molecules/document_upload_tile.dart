@@ -1,6 +1,7 @@
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DocumentUploadTile extends StatefulWidget {
   String documentName;
@@ -40,13 +41,10 @@ class _DocumentUploadTileState extends State<DocumentUploadTile> {
                 color: lightTextColor,
               ),
             ),
-            Image(
-              image: AssetImage(
-                ASSET_IMAGE_PATH +
-                    ((_documentIsUploaded)
-                        ? 'check_icon.png'
-                        : 'uncheck_oval_icon.png'),
-              ),
+            SvgPicture.asset(
+              (_documentIsUploaded)
+                  ? (COLORED_VECTORS_PATH + 'ic_marked.svg')
+                  : (VECTORS_ROOT_PATH + 'unmarked.svg'),
               height: 24,
             ),
           ],
