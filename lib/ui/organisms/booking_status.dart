@@ -1,7 +1,10 @@
+import 'package:encostay/blocs/booking_status/bloc.dart';
+import 'package:encostay/blocs/booking_status/event.dart';
 import 'package:encostay/ui/molecules/booking_status_modal.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class BookingStatusComponent extends StatefulWidget {
@@ -12,6 +15,14 @@ class BookingStatusComponent extends StatefulWidget {
 }
 
 class _BookingStatusComponentState extends State<BookingStatusComponent> {
+  late BookingStatusBloc _bookingViewModel;
+
+  @override
+  void initState() {
+    super.initState();
+    _bookingViewModel = BlocProvider.of<BookingStatusBloc>(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -390,16 +401,8 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    showModalBottomSheet(
-                      context: context,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(25),
-                          topRight: Radius.circular(25),
-                        ),
-                      ),
-                      builder: (context) => BookingStatusModal(),
-                      isScrollControlled: true,
+                    _bookingViewModel.add(
+                      TabSelectionEvent(selectedTabIndex: 1),
                     );
                   },
                   child: Container(
