@@ -6,3 +6,12 @@ abstract class BookingStatusState extends Equatable {
 }
 
 class DummyState extends BookingStatusState {}
+
+class DefaultState extends BookingStatusState {
+  int progressIndex = 0;
+
+  DefaultState({required this.progressIndex});
+
+  @override
+  List<Object?> get props => [this.progressIndex];
+}

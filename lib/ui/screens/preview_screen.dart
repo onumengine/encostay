@@ -386,7 +386,8 @@ class _PreviewScreenState extends State<PreviewScreen> {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (context) => BlocProvider<BookingStatusBloc>(
-                        create: (context) => BookingStatusBloc(DummyState()),
+                        create: (context) =>
+                            BookingStatusBloc(DefaultState(progressIndex: 0)),
                         child: BookingStatusScreen(),
                       ),
                     ),

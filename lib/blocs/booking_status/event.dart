@@ -6,10 +6,11 @@ abstract class BookingStatusEvent extends Equatable {
 }
 
 class TabSelectionEvent extends BookingStatusEvent {
-  int? selectedTab;
+  int? selectedTabIndex;
 
-  TabSelectionEvent({required this.selectedTab});
+  TabSelectionEvent({required this.selectedTabIndex})
+      : assert(selectedTabIndex! < 5);
 
   @override
-  List<Object?> get props => [this.selectedTab];
+  List<Object?> get props => [this.selectedTabIndex];
 }
