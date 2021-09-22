@@ -50,3 +50,6 @@ Enjoy convenient stay
 
 ### Booking Journey
 <img src="https://user-images.githubusercontent.com/66191032/134351497-7af170a5-0a3b-4ccb-8b7b-7dc6d5fd9ca7.png" width="30%" hspace="10"><img src="https://user-images.githubusercontent.com/66191032/134351502-267ac267-f96c-43eb-8e68-22d09e3869b5.png" width="30%" hspace="10"><img src="https://user-images.githubusercontent.com/66191032/134351505-8a632834-786e-4e0a-98a8-b5de93c24384.png" width="30%" hspace="10"><img src="https://user-images.githubusercontent.com/66191032/134351511-3f6a5270-e6d5-4447-b3d9-51dd9f12b312.png" width="30%" hspace="10"><img src="https://user-images.githubusercontent.com/66191032/134351519-222150e2-0a62-4a7b-b603-910aea9c6020.png" width="30%" hspace="10">
+
+## Author
+Peter Onum
