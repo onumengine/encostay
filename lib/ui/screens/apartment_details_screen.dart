@@ -52,10 +52,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
         ),
         actions: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(
-                  right: 16,
-                ) +
-                EdgeInsets.symmetric(vertical: 10),
+            padding: const EdgeInsets.symmetric(vertical: 10),
             child: RawMaterialButton(
               child: SvgPicture.asset(
                 ORANGE_VECTORS_PATH + 'ic_orange_save.svg',
