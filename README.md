@@ -14,7 +14,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-![Simulator Screen Shot - iPhone 12 Pro Max - 2021-09-22 at 13 49 03](https://user-images.githubusercontent.com/66191032/134351328-15bbb4e4-c867-454a-bd01-adfddcf30f9a.png)
+
+![Simulator Screen Shot - iPhone 12 Pro Max - 2021-09-22 at 13 49 03](https://user-images.githubusercontent.com/66191032/134351328-15bbb4e4-c867-454a-bd01-adfddcf30f9a.png){width="375px" height="812px"}
+
 ![Simulator Screen Shot - iPhone 12 Pro Max - 2021-09-22 at 13 49 12](https://user-images.githubusercontent.com/66191032/134351389-3110f0c8-b828-433f-bd2f-a8c16881e058.png)
 ![Simulator Screen Shot - iPhone 12 Pro Max - 2021-09-22 at 13 49 18](https://user-images.githubusercontent.com/66191032/134351396-63233448-18cb-4224-a017-2c863f2975eb.png)
 ![Simulator Screen Shot - iPhone 12 Pro Max - 2021-09-22 at 13 49 24](https://user-images.githubusercontent.com/66191032/134351408-7a0e7d10-2bab-4f28-8a4c-97592a90f105.png)
