@@ -82,7 +82,20 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   bottomRight: Radius.circular(30),
                 ),
                 child: IntroductionScreen(
+                  dotsFlex: 2,
+                  dotsDecorator: DotsDecorator(
+                    color: brandWhite,
+                    activeColor: brandWhite,
+                    activeSize: Size(16.8, 9.0),
+                    activeShape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
                   rawPages: <Widget>[
+                    Image.asset(
+                      IMAGES_PATH + 'apartment.png',
+                      fit: BoxFit.cover,
+                    ),
                     Image.asset(
                       IMAGES_PATH + 'apartment.png',
                       fit: BoxFit.cover,
@@ -106,6 +119,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   ],
                   showDoneButton: false,
                   showNextButton: false,
+                  showSkipButton: false,
                 ),
               ),
             ),
