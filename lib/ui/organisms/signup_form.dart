@@ -2,16 +2,10 @@ import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/text_widget.dart';
 import 'package:encostay/ui/screens/set_password_screen.dart';
 import 'package:encostay/utilities/colors.dart';
-import 'package:encostay/utilities/constants.dart';
+import 'package:encostay/utilities/enums.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
-enum AccountType {
-  user,
-  guest,
-}
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({Key? key}) : super(key: key);
