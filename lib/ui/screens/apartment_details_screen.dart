@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:encostay/ui/atoms/amenity_chip.dart';
 import 'package:encostay/ui/atoms/availability_tile.dart';
 import 'package:encostay/ui/molecules/bedroom_card.dart';
+import 'package:encostay/ui/molecules/custom_expansion_panel.dart';
 import 'package:encostay/ui/screens/preview_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
@@ -361,11 +362,22 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Container(
-                    height: 308,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
                       color: Color(0xfff8f9f9),
+                    ),
+                    child: CustomExpansionPanel(
+                      header: Text(
+                        'Details',
+                        style: TextStyle(
+                          fontSize: 12,
+                          height: 22 / 12,
+                          color: brandBrown,
+                        ),
+                      ),
+                      body: Text(
+                          'hjgbdfn dkdhfkdb fjdfbjfdfh djgfkbhgfd dgfsd jdfu jdfyug sdgsd jsuzd qilhq fxdt wudqz '),
                     ),
                   ),
                 ),
