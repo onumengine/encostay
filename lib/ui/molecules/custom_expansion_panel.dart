@@ -72,18 +72,6 @@ class _CustomExpansionPanelState extends State<CustomExpansionPanel> {
                 child: widget.body,
               )
             : SizedBox(),
-        /*
-        Container(
-          padding: widget.bodyPadding ??
-              const EdgeInsets.symmetric(horizontal: 24) +
-                  const EdgeInsets.only(bottom: 19),
-          child: (_isExpanded)
-              ? widget.body
-              : SizedBox(
-                  height: 0,
-                ),
-        ),
-        */
       ],
     );
   }
