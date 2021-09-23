@@ -376,8 +376,141 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           color: brandBrown,
                         ),
                       ),
-                      body: Text(
-                          'hjgbdfn dkdhfkdb fjdfbjfdfh djgfkbhgfd dgfsd jdfu jdfyug sdgsd jsuzd qilhq fxdt wudqz '),
+                      body: Column(
+                        children: <Widget>[
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Bedrooms',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  height: 22 / 12,
+                                  color: brandBrown,
+                                ),
+                              ),
+                              Text(
+                                '2',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  height: 18 / 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 7),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Beds',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  height: 22 / 12,
+                                  color: brandBrown,
+                                ),
+                              ),
+                              Text(
+                                '2',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  height: 18 / 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 7),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Bathrooms',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  height: 22 / 12,
+                                  color: brandBrown,
+                                ),
+                              ),
+                              Text(
+                                '2',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  height: 18 / 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 7),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Check-in After',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  height: 22 / 12,
+                                  color: brandBrown,
+                                ),
+                              ),
+                              Text(
+                                '10:00am',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  height: 18 / 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 7),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Check-out Before',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  height: 22 / 12,
+                                  color: brandBrown,
+                                ),
+                              ),
+                              Text(
+                                '3:00am',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  height: 18 / 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 7),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Type',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  height: 22 / 12,
+                                  color: brandBrown,
+                                ),
+                              ),
+                              Text(
+                                'Entire Place / Apartment',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  height: 18 / 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
