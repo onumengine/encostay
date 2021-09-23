@@ -45,7 +45,7 @@ class _CustomExpansionPanelState extends State<CustomExpansionPanel> {
                   : null,
               child: Padding(
                 padding: widget.headerPadding ??
-                    const EdgeInsets.symmetric(horizontal: 24),
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 21),
                 child: widget.header,
               ),
             ),
