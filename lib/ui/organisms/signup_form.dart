@@ -31,19 +31,6 @@ class _SignUpFormState extends State<SignUpForm> {
   TextEditingController _emailController = TextEditingController();
   AccountType? _accountType;
   DateTime? _dateOfBirth = DateTime.now();
-  List<String>? _listOfCountries = [
-    'Namibia',
-    'Nicaragua',
-    'Nigeria',
-    'Niger',
-  ];
-  String? _selectedCountry;
-
-  @override
-  void initState() {
-    super.initState();
-    _selectedCountry = _listOfCountries![0];
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -111,7 +98,28 @@ class _SignUpFormState extends State<SignUpForm> {
                 color: brandOrange,
               ),
             ),
-            SizedBox(height: (screenSize.height / 64.46)),
+            SizedBox(height: (screenSize.height / 81.2)),
+            Align(
+              alignment: AlignmentDirectional.centerStart,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20) +
+                    EdgeInsets.only(bottom: (screenSize.height / 101.5)),
+                child: Text(
+                  'Email',
+                  style: TextStyle(
+                    fontSize: medium14.fontSize,
+                    fontWeight: medium14.fontWeight,
+                    height: 1.64,
+                  ),
+                ),
+              ),
+            ),
+            TextWidget(
+              key: _emailKey,
+              hintText: 'Enter your username or E-mail',
+              controller: _emailController,
+            ),
+            SizedBox(height: (screenSize.height / 81.2)),
             Align(
               alignment: AlignmentDirectional.centerStart,
               child: Padding(
@@ -144,9 +152,24 @@ class _SignUpFormState extends State<SignUpForm> {
                   onTap: () {
                     setState(() async {
                       _dateOfBirth = await showRoundedDatePicker(
-                        initialDate: DateTime(DateTime.now().year - 18),
+                        height: 395,
+                        onTapDay: (tappedDate, isTapped) {
+                          setState(() {
+                            _dateOfBirth = tappedDate;
+                          });
+                          return isTapped;
+                        },
+                        initialDate: DateTime(
+                          DateTime.now().year - 18,
+                          DateTime.now().month,
+                          DateTime.now().day,
+                        ),
                         firstDate: DateTime(DateTime.now().year - 150),
-                        lastDate: DateTime(DateTime.now().year - 18),
+                        lastDate: DateTime(
+                          DateTime.now().year - 18,
+                          DateTime.now().month,
+                          DateTime.now().day,
+                        ),
                         textPositiveButton: 'Save',
                         textNegativeButton: 'Clear All',
                         context: context,
@@ -165,7 +188,9 @@ class _SignUpFormState extends State<SignUpForm> {
                       );
                     });
                   },
-                  child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 12) +
+                        EdgeInsets.only(left: 35),
                     child: Text(
                       (_dateOfBirth.toString()).split(' ').elementAt(0),
                     ),
@@ -249,27 +274,6 @@ class _SignUpFormState extends State<SignUpForm> {
                 'To sign up, you need to be at least 18. Other people who use Encostay won\'t see your birthday.',
                 style: normal10,
               ),
-            ),
-            SizedBox(height: (screenSize.height / 47.76)),
-            Align(
-              alignment: AlignmentDirectional.centerStart,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20) +
-                    EdgeInsets.only(bottom: (screenSize.height / 101.5)),
-                child: Text(
-                  'Email',
-                  style: TextStyle(
-                    fontSize: medium14.fontSize,
-                    fontWeight: medium14.fontWeight,
-                    height: 1.64,
-                  ),
-                ),
-              ),
-            ),
-            TextWidget(
-              key: _emailKey,
-              hintText: 'Enter your username or E-mail',
-              controller: _emailController,
             ),
             SizedBox(height: (screenSize.height / 23.2)),
             Padding(
