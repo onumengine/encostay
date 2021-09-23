@@ -2,9 +2,11 @@ import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/text_widget.dart';
 import 'package:encostay/ui/screens/set_password_screen.dart';
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 enum AccountType {
   user,
@@ -29,6 +31,19 @@ class _SignUpFormState extends State<SignUpForm> {
   TextEditingController _emailController = TextEditingController();
   AccountType? _accountType;
   DateTime? _dateOfBirth = DateTime.now();
+  List<String>? _listOfCountries = [
+    'Namibia',
+    'Nicaragua',
+    'Nigeria',
+    'Niger',
+  ];
+  String? _selectedCountry;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedCountry = _listOfCountries![0];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -160,8 +175,8 @@ class _SignUpFormState extends State<SignUpForm> {
             ),
             SizedBox(height: (screenSize.height / 31.2)),
             Container(
-              padding: EdgeInsets.only(left: 35, right: 33),
               height: 43,
+              padding: EdgeInsets.only(left: 35, right: 33),
               decoration: BoxDecoration(
                 color: brandWhite,
                 borderRadius: BorderRadius.all(
@@ -176,30 +191,47 @@ class _SignUpFormState extends State<SignUpForm> {
                 ],
               ),
               child: DropdownButton<AccountType>(
-                items: [
-                  DropdownMenuItem(
-                    child: Text('User'),
+                value: _accountType,
+                onChanged: (dropdownValue) {
+                  setState(() {
+                    _accountType = dropdownValue;
+                  });
+                },
+                items: <DropdownMenuItem<AccountType>>[
+                  DropdownMenuItem<AccountType>(
+                    child: Text(
+                      'User',
+                    ),
                     value: AccountType.user,
                   ),
-                  DropdownMenuItem(
-                    child: Text('Guest'),
+                  DropdownMenuItem<AccountType>(
+                    child: Text(
+                      'Guest',
+                    ),
                     value: AccountType.guest,
                   ),
                 ],
-                value: _accountType,
                 hint: Text(
                   'I want to book',
                   style: TextStyle(
-                    height: 15,
-                    color: Colors.black,
+                    height: 25 / 14,
+                    color: Color(0x50a9a9a9),
                   ),
                 ),
-                onChanged: (AccountType? selectedAccountType) {
-                  _accountType = selectedAccountType;
-                },
-                underline: SizedBox(height: 1),
+                disabledHint: Text(
+                  'Currently disabled',
+                  style: TextStyle(
+                    fontSize: 12,
+                    height: 22 / 12,
+                    color: paleTextColor,
+                  ),
+                ),
+                underline: SizedBox(
+                  height: 0,
+                ),
                 iconEnabledColor: brandOrange,
                 isExpanded: true,
+                elevation: 0,
               ),
             ),
             Padding(
