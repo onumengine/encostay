@@ -357,7 +357,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
           ),
         ),
         Positioned(
-          bottom: 42,
+          bottom: 0,
           child: Container(
             width: screenSize.width,
             padding: EdgeInsets.only(left: 38, right: 22) +

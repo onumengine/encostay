@@ -51,11 +51,11 @@ class _CustomExpansionPanelState extends State<CustomExpansionPanel> {
             ),
             Padding(
               padding: const EdgeInsets.only(right: 24),
-              child: IconButton(
-                onPressed: () {
+              child: GestureDetector(
+                onTap: () {
                   _toggleExpansion();
                 },
-                icon: Icon(
+                child: Icon(
                   (_isExpanded)
                       ? Icons.keyboard_arrow_up
                       : Icons.keyboard_arrow_down,

@@ -519,18 +519,20 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 24),
                   child: Container(
                     width: double.infinity,
-                    padding: EdgeInsets.all(24),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
                       color: Color(0xfff8f9f9),
                     ),
-                    child: DropdownButton(
-                      isExpanded: true,
-                      underline: SizedBox(
-                        height: 0,
+                    child: CustomExpansionPanel(
+                      header: Text(
+                        'Price',
+                        style: TextStyle(
+                          fontSize: 12,
+                          height: 22 / 12,
+                          color: brandBrown,
+                        ),
                       ),
-                      hint: Text('Price'),
-                      items: [],
+                      body: SizedBox(),
                     ),
                   ),
                 ),
