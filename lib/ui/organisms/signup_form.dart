@@ -211,19 +211,28 @@ class _SignUpFormState extends State<SignUpForm> {
                     value: AccountType.guest,
                   ),
                 ],
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  height: 23 / 14,
+                  color: brandGreyAlt,
+                ),
                 hint: Text(
                   'I want to book',
                   style: TextStyle(
-                    height: 25 / 14,
-                    color: Color(0x50a9a9a9),
+                    fontSize: normal14.fontSize,
+                    height: normal14.height,
+                    fontWeight: normal14.fontWeight,
+                    color: brandGrey,
                   ),
                 ),
                 disabledHint: Text(
                   'Currently disabled',
                   style: TextStyle(
-                    fontSize: 12,
-                    height: 22 / 12,
-                    color: paleTextColor,
+                    fontSize: normal14.fontSize,
+                    height: normal14.height,
+                    fontWeight: normal14.fontWeight,
+                    color: brandGrey,
                   ),
                 ),
                 underline: SizedBox(
