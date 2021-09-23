@@ -7,6 +7,7 @@ import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:introduction_screen/introduction_screen.dart';
 
 class ApartmentDetailsScreen extends StatefulWidget {
   const ApartmentDetailsScreen({Key? key}) : super(key: key);
@@ -80,16 +81,31 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   bottomLeft: Radius.circular(30),
                   bottomRight: Radius.circular(30),
                 ),
-                child: PageView(
-                  controller: _controller,
-                  children: [0, 1, 2, 3, 4, 5]
-                      .map(
-                        (e) => Image.asset(
-                          IMAGES_PATH + 'apartment.png',
-                          fit: BoxFit.cover,
-                        ),
-                      )
-                      .toList(),
+                child: IntroductionScreen(
+                  rawPages: <Widget>[
+                    Image.asset(
+                      IMAGES_PATH + 'apartment.png',
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      IMAGES_PATH + 'apartment.png',
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      IMAGES_PATH + 'apartment.png',
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      IMAGES_PATH + 'apartment.png',
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      IMAGES_PATH + 'apartment.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ],
+                  showDoneButton: false,
+                  showNextButton: false,
                 ),
               ),
             ),
