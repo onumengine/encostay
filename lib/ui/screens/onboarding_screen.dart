@@ -1,7 +1,10 @@
+import 'package:encostay/blocs/auth/bloc.dart';
+import 'package:encostay/blocs/auth/state.dart';
 import 'package:encostay/ui/screens/auth_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -34,7 +37,10 @@ class OnboardingScreen extends StatelessWidget {
           onDone: () {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
-                builder: (context) => AuthScreen(),
+                builder: (context) => BlocProvider<AuthBloc>(
+                  create: (context) => AuthBloc(DefaultAuthState()),
+                  child: AuthScreen(),
+                ),
               ),
             );
           },
