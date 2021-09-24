@@ -2,6 +2,7 @@ import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:otp_text_field/otp_field.dart';
 
 class ConfirmPhoneNumberComponent extends StatefulWidget {
   const ConfirmPhoneNumberComponent({Key? key}) : super(key: key);

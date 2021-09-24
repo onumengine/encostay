@@ -7,6 +7,7 @@ import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 import 'package:flutter_svg/svg.dart';
 
 class PreviewScreen extends StatefulWidget {
@@ -17,6 +18,29 @@ class PreviewScreen extends StatefulWidget {
 }
 
 class _PreviewScreenState extends State<PreviewScreen> {
+  DateTime? checkInDate, checkOutDate;
+  final Map<int, String> numberToMonth = <int, String>{
+    1: 'Jan',
+    2: 'Feb',
+    3: 'Mar',
+    4: 'Apr',
+    5: 'May',
+    6: 'Jun',
+    7: 'Jul',
+    8: 'Aug',
+    9: 'Sep',
+    10: 'Oct',
+    11: 'Nov',
+    12: 'Dec',
+  };
+
+  @override
+  void initState() {
+    super.initState();
+    checkInDate = DateTime.now();
+    checkOutDate = DateTime.now();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -149,32 +173,72 @@ class _PreviewScreenState extends State<PreviewScreen> {
                           ),
                         ),
                         SizedBox(height: 10),
-                        PhysicalModel(
-                          color: Color(0x7000000),
-                          shadowColor: Colors.black,
-                          elevation: 3,
-                          borderRadius: BorderRadius.circular(10),
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(12, 6, 0, 5),
-                            decoration: BoxDecoration(
-                                color: brandWhite,
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Text(
-                                  'Jan 3',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    height: 22 / 12,
+                        GestureDetector(
+                          onTap: () async {
+                            try {
+                              await showRoundedDatePicker(
+                                context: context,
+                                styleDatePicker: MaterialRoundedDatePickerStyle(
+                                  backgroundHeader: brandOrange,
+                                  backgroundActionBar: brandOrange,
+                                  textStyleButtonPositive:
+                                      TextStyle(color: brandWhite),
+                                  textStyleButtonNegative:
+                                      TextStyle(color: brandWhite),
+                                  paddingMonthHeader: EdgeInsets.only(top: 12),
+                                  decorationDateSelected: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(14),
+                                    color: brandOrange,
+                                    shape: BoxShape.rectangle,
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 14,
+                                onTapDay: (date, isSelected) {
+                                  setState(() {
+                                    checkInDate = date;
+                                  });
+                                  return isSelected;
+                                },
+                                initialDate: DateTime.now(),
+                                height: 300,
+                              );
+                            } on Exception catch (error) {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Error'),
+                                  content: Text(error.toString()),
                                 ),
-                                Icon(Icons.arrow_forward_ios_rounded),
-                              ],
+                              );
+                            }
+                          },
+                          child: PhysicalModel(
+                            color: Color(0x7000000),
+                            shadowColor: Colors.black,
+                            elevation: 3,
+                            borderRadius: BorderRadius.circular(10),
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(12, 6, 0, 5),
+                              decoration: BoxDecoration(
+                                  color: brandWhite,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Text(
+                                    '${numberToMonth[checkInDate?.month]} ${checkInDate?.day}',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      height: 22 / 12,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 14,
+                                  ),
+                                  Icon(Icons.arrow_forward_ios_rounded),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -187,7 +251,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          'Check In',
+                          'Checkout',
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
@@ -195,32 +259,72 @@ class _PreviewScreenState extends State<PreviewScreen> {
                           ),
                         ),
                         SizedBox(height: 10),
-                        PhysicalModel(
-                          color: Color(0x7000000),
-                          shadowColor: Colors.black,
-                          elevation: 3,
-                          borderRadius: BorderRadius.circular(10),
-                          child: Container(
-                            padding: EdgeInsets.fromLTRB(12, 6, 0, 5),
-                            decoration: BoxDecoration(
-                                color: brandWhite,
-                                borderRadius: BorderRadius.circular(10)),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Text(
-                                  'Jan 3',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    height: 22 / 12,
+                        GestureDetector(
+                          onTap: () async {
+                            try {
+                              await showRoundedDatePicker(
+                                context: context,
+                                styleDatePicker: MaterialRoundedDatePickerStyle(
+                                  backgroundHeader: brandOrange,
+                                  backgroundActionBar: brandOrange,
+                                  textStyleButtonPositive:
+                                      TextStyle(color: brandWhite),
+                                  textStyleButtonNegative:
+                                      TextStyle(color: brandWhite),
+                                  paddingMonthHeader: EdgeInsets.only(top: 12),
+                                  decorationDateSelected: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(14),
+                                    color: brandOrange,
+                                    shape: BoxShape.rectangle,
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 14,
+                                onTapDay: (date, isSelected) {
+                                  setState(() {
+                                    checkOutDate = date;
+                                  });
+                                  return isSelected;
+                                },
+                                initialDate: DateTime.now(),
+                                height: 300,
+                              );
+                            } on Exception catch (error) {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Error'),
+                                  content: Text(error.toString()),
                                 ),
-                                Icon(Icons.arrow_forward_ios_rounded),
-                              ],
+                              );
+                            }
+                          },
+                          child: PhysicalModel(
+                            color: Color(0x7000000),
+                            shadowColor: Colors.black,
+                            elevation: 3,
+                            borderRadius: BorderRadius.circular(10),
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(12, 6, 0, 5),
+                              decoration: BoxDecoration(
+                                  color: brandWhite,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Text(
+                                    '${numberToMonth[checkOutDate?.month]} ${checkOutDate?.day}',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      height: 22 / 12,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 14,
+                                  ),
+                                  Icon(Icons.arrow_forward_ios_rounded),
+                                ],
+                              ),
                             ),
                           ),
                         ),
