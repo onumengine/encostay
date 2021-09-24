@@ -1,6 +1,9 @@
+import 'package:encostay/blocs/booking_status/bloc.dart';
+import 'package:encostay/blocs/booking_status/event.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:otp_text_field/otp_field.dart';
 
@@ -14,8 +17,17 @@ class ConfirmPhoneNumberComponent extends StatefulWidget {
 
 class _ConfirmPhoneNumberComponentState
     extends State<ConfirmPhoneNumberComponent> {
+  late BookingStatusBloc _bookingViewModel;
+
+  @override
+  void initState() {
+    super.initState();
+    _bookingViewModel = BlocProvider.of<BookingStatusBloc>(context);
+  }
+
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 24),
       child: Column(
@@ -83,6 +95,36 @@ class _ConfirmPhoneNumberComponentState
                 ),
               ],
             ),
+          ),
+          Expanded(
+            child: SizedBox(),
+          ),
+          GestureDetector(
+            onTap: () {
+              _bookingViewModel.add(TabSelectionEvent(selectedTabIndex: 3));
+            },
+            child: Container(
+              constraints: BoxConstraints(maxWidth: screenSize.width / 2.5),
+              padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
+              decoration: BoxDecoration(
+                color: brandBrown,
+                borderRadius: BorderRadius.circular(26.5),
+              ),
+              child: Center(
+                child: Text(
+                  'Confirm',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    height: 19.5 / 16,
+                    color: brandWhite,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: screenSize.height / 16.24,
           ),
         ],
       ),
