@@ -1,5 +1,6 @@
 import 'package:encostay/blocs/booking_status/bloc.dart';
 import 'package:encostay/blocs/booking_status/state.dart';
+import 'package:encostay/ui/molecules/card_selection_dialog.dart';
 import 'package:encostay/ui/screens/booking_status_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
@@ -356,58 +357,69 @@ class _ReviewComponentState extends State<ReviewComponent> {
             ),
           ),
           SizedBox(height: 19),
-          Container(
-            padding: EdgeInsets.all(14),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: brandLightGreen,
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  width: 64.64,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(11),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0x11709897),
-                        offset: Offset(1, 3),
-                        blurRadius: 15,
-                      )
+          GestureDetector(
+            onTap: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  content: CardSelectionDialog(),
+                  scrollable: true,
+                ),
+              );
+            },
+            child: Container(
+              padding: EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: brandLightGreen,
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    width: 64.64,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(11),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x11709897),
+                          offset: Offset(1, 3),
+                          blurRadius: 15,
+                        )
+                      ],
+                    ),
+                    child: SvgPicture.asset(
+                      VECTOR_IMAGES_PATH + 'card.svg',
+                      fit: BoxFit.fitWidth,
+                    ),
+                  ),
+                  SizedBox(width: 19.76),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Travel card',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          height: 23 / 14,
+                          color: lightTextColor,
+                        ),
+                      ),
+                      Text(
+                        'Mastercard - 5647',
+                        style: TextStyle(
+                          fontSize: 12,
+                          height: 22 / 12,
+                          color: paleTextColor,
+                        ),
+                      ),
                     ],
                   ),
-                  child: SvgPicture.asset(
-                    VECTOR_IMAGES_PATH + 'card.svg',
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
-                SizedBox(width: 19.76),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'Travel card',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        height: 23 / 14,
-                        color: lightTextColor,
-                      ),
-                    ),
-                    Text(
-                      'Mastercard - 5647',
-                      style: TextStyle(
-                        fontSize: 12,
-                        height: 22 / 12,
-                        color: paleTextColor,
-                      ),
-                    ),
-                  ],
-                ),
-                Expanded(child: SizedBox()),
-                Icon(Icons.keyboard_arrow_right),
-              ],
+                  Expanded(child: SizedBox()),
+                  Icon(Icons.keyboard_arrow_right),
+                ],
+              ),
             ),
           ),
           SizedBox(height: 8),
