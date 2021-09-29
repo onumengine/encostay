@@ -18,7 +18,7 @@ class ReviewComponent extends StatefulWidget {
 }
 
 class _ReviewComponentState extends State<ReviewComponent> {
-  DateTime? checkInDate, checkOutDate;
+  DateTime? _checkInDate, _checkOutDate;
   final Map<int, String> numberToMonth = <int, String>{
     1: 'Jan',
     2: 'Feb',
@@ -33,6 +33,13 @@ class _ReviewComponentState extends State<ReviewComponent> {
     11: 'Nov',
     12: 'Dec',
   };
+
+  @override
+  void initState() {
+    super.initState();
+    _checkInDate = DateTime.now();
+    _checkOutDate = DateTime.now();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -167,11 +174,11 @@ class _ReviewComponentState extends State<ReviewComponent> {
                             ),
                             onTapDay: (date, isSelected) {
                               setState(() {
-                                checkInDate = date;
+                                _checkInDate = date;
                               });
                               return isSelected;
                             },
-                            initialDate: DateTime.now(),
+                            initialDate: _checkInDate,
                             height: 300,
                           );
                         } on Exception catch (error) {
@@ -199,7 +206,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                '${numberToMonth[checkInDate?.month]} ${checkInDate?.day}',
+                                '${numberToMonth[_checkInDate?.month]} ${_checkInDate?.day}',
                                 style: TextStyle(
                                   fontSize: 12,
                                   height: 22 / 12,
@@ -252,7 +259,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                             ),
                             onTapDay: (date, isSelected) {
                               setState(() {
-                                checkOutDate = date;
+                                _checkOutDate = date;
                               });
                               return isSelected;
                             },
@@ -284,7 +291,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                '${numberToMonth[checkOutDate?.month]} ${checkOutDate?.day}',
+                                '${numberToMonth[_checkOutDate?.month]} ${_checkOutDate?.day}',
                                 style: TextStyle(
                                   fontSize: 12,
                                   height: 22 / 12,
@@ -363,6 +370,14 @@ class _ReviewComponentState extends State<ReviewComponent> {
                 context: context,
                 builder: (context) => AlertDialog(
                   content: CardSelectionDialog(),
+                  title: Center(
+                    child: Text('Select Card'),
+                  ),
+                  titleTextStyle: TextStyle(
+                    fontSize: 13,
+                    height: 19.5 / 13,
+                    color: Color(0xff4e4e4e),
+                  ),
                   scrollable: true,
                 ),
               );
