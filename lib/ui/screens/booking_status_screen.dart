@@ -7,6 +7,7 @@ import 'package:encostay/ui/atoms/custom_tab_indicator.dart';
 import 'package:encostay/ui/organisms/booking_status.dart';
 import 'package:encostay/ui/organisms/confirm_phone_number.dart';
 import 'package:encostay/ui/organisms/host_chat.dart';
+import 'package:encostay/ui/organisms/review.dart';
 import 'package:encostay/ui/organisms/upload_id.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class _BookingStatusScreenState extends State<BookingStatusScreen> {
     HostChatComponent(),
     ConfirmPhoneNumberComponent(),
     UploadIDComponent(),
-    Container(),
+    ReviewComponent(),
   ];
   late BookingStatusBloc _viewModel;
 
