@@ -4,12 +4,11 @@ import 'package:encostay/utilities/enums.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
 class PaymentCardTile extends StatefulWidget {
   const PaymentCardTile({required this.card});
 
-  final TextStyle _labelStyle = const TextStyle(
-      fontSize: 10, height: 15 / 10, color: Color(0xffc4c4c4));
+  final TextStyle _labelStyle =
+      const TextStyle(fontSize: 10, height: 15 / 10, color: Color(0xffc4c4c4));
   final TextStyle _detailStyle = const TextStyle(
     fontSize: 10,
     height: 15 / 10,
@@ -21,13 +20,12 @@ class PaymentCardTile extends StatefulWidget {
 }
 
 class _PaymentCardTileState extends State<PaymentCardTile> {
-
   bool _checkboxIsChecked = false;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(11, 12, 19, 10),
+      padding: EdgeInsets.fromLTRB(11, 12, 11, 10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
@@ -42,6 +40,9 @@ class _PaymentCardTileState extends State<PaymentCardTile> {
             (widget.card.getPaymentProcessor() == PaymentProcessor.mastercard
                 ? (COLORED_VECTORS_PATH + 'ic_mastercard.svg')
                 : (COLORED_VECTORS_PATH + 'ic_mastercard.svg')),
+          ),
+          SizedBox(
+            width: 11,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,11 +114,16 @@ class _PaymentCardTileState extends State<PaymentCardTile> {
               ),
             ],
           ),
-          Checkbox(value: _checkboxIsChecked, onChanged: (value) {
-            setState(() {
-              _checkboxIsChecked = value!;
-            });
-          })
+          Expanded(
+            child: SizedBox(),
+          ),
+          Checkbox(
+              value: _checkboxIsChecked,
+              onChanged: (value) {
+                setState(() {
+                  _checkboxIsChecked = value!;
+                });
+              })
         ],
       ),
     );
