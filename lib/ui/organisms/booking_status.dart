@@ -15,12 +15,12 @@ class BookingStatusComponent extends StatefulWidget {
 }
 
 class _BookingStatusComponentState extends State<BookingStatusComponent> {
-  late BookingStatusBloc _bookingViewModel;
+  late BookingBloc _bookingViewModel;
 
   @override
   void initState() {
     super.initState();
-    _bookingViewModel = BlocProvider.of<BookingStatusBloc>(context);
+    _bookingViewModel = BlocProvider.of<BookingBloc>(context);
   }
 
   @override

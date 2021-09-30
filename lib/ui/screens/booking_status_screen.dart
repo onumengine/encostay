@@ -32,12 +32,12 @@ class _BookingStatusScreenState extends State<BookingStatusScreen> {
     UploadIDComponent(),
     ReviewComponent(),
   ];
-  late BookingStatusBloc _viewModel;
+  late BookingBloc _viewModel;
 
   @override
   void initState() {
     super.initState();
-    _viewModel = BlocProvider.of<BookingStatusBloc>(context);
+    _viewModel = BlocProvider.of<BookingBloc>(context);
   }
 
   @override
@@ -61,9 +61,9 @@ class _BookingStatusScreenState extends State<BookingStatusScreen> {
           ),
         ),
       ),
-      body: BlocConsumer<BookingStatusBloc, BookingStatusState>(
+      body: BlocConsumer<BookingBloc, BookingState>(
         builder: (context, state) {
-          if (state is DefaultState) {
+          if (state is DefaultBookingState) {
             return Container(
               child: Column(
                 children: [

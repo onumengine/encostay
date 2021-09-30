@@ -1,11 +1,11 @@
 import 'package:equatable/equatable.dart';
 
-abstract class BookingStatusEvent extends Equatable {
+abstract class BookingEvent extends Equatable {
   @override
   List<Object?> get props => [];
 }
 
-class TabSelectionEvent extends BookingStatusEvent {
+class TabSelectionEvent extends BookingEvent {
   int? selectedTabIndex;
 
   TabSelectionEvent({required this.selectedTabIndex})

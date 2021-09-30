@@ -3,20 +3,20 @@ import 'package:encostay/blocs/booking_status/state.dart';
 import 'package:encostay/models/payment_card.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class BookingStatusBloc extends Bloc<BookingStatusEvent, BookingStatusState> {
+class BookingBloc extends Bloc<BookingEvent, BookingState> {
   int? _selectedTabindex;
   late DateTime checkInDate, checkOutDate;
   late List<PaymentCard> availableCards;
 
   // ---------------------------------------------------------------------------
 
-  BookingStatusBloc(BookingStatusState initialState) : super(initialState);
+  BookingBloc(BookingState initialState) : super(initialState);
 
   @override
-  Stream<BookingStatusState> mapEventToState(BookingStatusEvent event) async* {
+  Stream<BookingState> mapEventToState(BookingEvent event) async* {
     if (event is TabSelectionEvent) {
       _switchToTab(event.selectedTabIndex!);
-      yield DefaultState(progressIndex: _selectedTabindex!);
+      yield DefaultBookingState(progressIndex: _selectedTabindex!);
     }
   }
 

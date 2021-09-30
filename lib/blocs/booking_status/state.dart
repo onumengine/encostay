@@ -1,16 +1,16 @@
 import 'package:equatable/equatable.dart';
 
-abstract class BookingStatusState extends Equatable {
+abstract class BookingState extends Equatable {
   @override
   List<Object?> get props => [];
 }
 
-class DummyState extends BookingStatusState {}
+class DummyBookingState extends BookingState {}
 
-class DefaultState extends BookingStatusState {
+class DefaultBookingState extends BookingState {
   int progressIndex = 0;
 
-  DefaultState({required this.progressIndex});
+  DefaultBookingState({required this.progressIndex});
 
   @override
   List<Object?> get props => [this.progressIndex];
