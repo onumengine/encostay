@@ -1,6 +1,7 @@
 import 'package:encostay/blocs/booking_status/bloc.dart';
 import 'package:encostay/blocs/booking_status/state.dart';
 import 'package:encostay/ui/molecules/card_selection_dialog.dart';
+import 'package:encostay/ui/screens/add_payment_screen.dart';
 import 'package:encostay/ui/screens/booking_status_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
@@ -441,35 +442,44 @@ class _ReviewComponentState extends State<ReviewComponent> {
             ),
           ),
           SizedBox(height: 8),
-          Container(
-            padding: EdgeInsets.all(14),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: paleTextColor.withOpacity(0.1)),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                  height: 44,
-                  width: 64.24,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(11),
-                    color: paleTextColor.withOpacity(0.1),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => AddPaymentScreen(),
+                ),
+              );
+            },
+            child: Container(
+              padding: EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(color: paleTextColor.withOpacity(0.1)),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                    height: 44,
+                    width: 64.24,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(11),
+                      color: paleTextColor.withOpacity(0.1),
+                    ),
+                    child: Icon(Icons.add),
                   ),
-                  child: Icon(Icons.add),
-                ),
-                SizedBox(
-                  width: 19.76,
-                ),
-                Text(
-                  'Add payment',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    height: 23 / 14,
+                  SizedBox(
+                    width: 19.76,
                   ),
-                ),
-              ],
+                  Text(
+                    'Add payment',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      height: 23 / 14,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           SizedBox(height: 32),
