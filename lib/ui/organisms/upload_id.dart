@@ -24,7 +24,7 @@ class _UploadIDComponentState extends State<UploadIDComponent> {
   @override
   void initState() {
     super.initState();
-    _selectedCountry = _listOfCountries![0];
+    _selectedCountry = _listOfCountries![2];
   }
 
   @override
@@ -143,7 +143,7 @@ class _UploadIDComponentState extends State<UploadIDComponent> {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              SvgPicture.asset(VECTORS_ROOT_PATH + 'ic_lock.svg'),
+              SvgPicture.asset(VECTORS_ROOT_PATH + 'lock.svg'),
               SizedBox(
                 width: 15,
               ),

@@ -19,6 +19,8 @@ const brandTextInputShadow = Color(0xff939393);
 const lightTextColor = Color(0xff2f2f2F);
 const paleTextColor = Color(0xffa1a0a6);
 
+const greyCardColor = Color(0Xfff8f9f9);
+
 // Modal colors
 const brandBrownDark = Color(0xff313131);
 const instructionalTextModal = Color(0xff616161);

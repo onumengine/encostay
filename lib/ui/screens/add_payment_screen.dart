@@ -1,4 +1,6 @@
+import 'package:encostay/ui/atoms/payment_method_tile.dart';
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class AddPaymentScreen extends StatefulWidget {
@@ -71,6 +73,10 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
               ),
               SizedBox(
                 height: screenSize.height / 20.3,
+              ),
+              PaymentMethodTile(
+                iconPath: VECTORS_ROOT_PATH + 'card.svg',
+                label: 'Card',
               ),
             ],
           ),
