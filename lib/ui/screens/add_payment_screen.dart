@@ -78,6 +78,42 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
                 iconPath: VECTORS_ROOT_PATH + 'card.svg',
                 label: 'Card',
               ),
+              SizedBox(
+                height: screenSize.height / 28,
+              ),
+              PaymentMethodTile(
+                iconPath: COLORED_VECTORS_PATH + 'ic_google_pay.svg',
+                label: 'Google Pay',
+              ),
+              SizedBox(
+                height: screenSize.height / 54.13,
+              ),
+              PaymentMethodTile(
+                iconPath: COLORED_VECTORS_PATH + 'ic_paypal.svg',
+                label: 'Paypal',
+              ),
+              SizedBox(
+                height: screenSize.height / 54.13,
+              ),
+              PaymentMethodTile(
+                iconPath: VECTORS_ROOT_PATH + 'apple_pay.svg',
+                label: 'Apple Pay',
+                padding: EdgeInsets.symmetric(horizontal: 13) +
+                    EdgeInsets.only(
+                      top: 5,
+                      bottom: 1,
+                    ),
+              ),
+              SizedBox(
+                height: screenSize.height / 54.13,
+              ),
+              PaymentMethodTile(
+                iconPath: COLORED_VECTORS_PATH + 'ic_cash_app.svg',
+                label: 'Cash App',
+              ),
+              SizedBox(
+                height: screenSize.height / 54.13,
+              ),
             ],
           ),
         ),

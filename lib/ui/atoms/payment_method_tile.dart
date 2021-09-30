@@ -8,16 +8,18 @@ class PaymentMethodTile extends StatefulWidget {
     Key? key,
     required this.iconPath,
     required this.label,
+    this.padding,
   }) : super(key: key);
 
   final String iconPath, label;
+  final EdgeInsetsGeometry? padding;
 
   @override
   _PaymentMethodTileState createState() => _PaymentMethodTileState();
 }
 
 class _PaymentMethodTileState extends State<PaymentMethodTile> {
-  bool _documentIsUploaded = true;
+  bool _documentIsUploaded = false;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,7 @@ class _PaymentMethodTileState extends State<PaymentMethodTile> {
             Container(
               width: 64.24,
               height: 44,
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: widget.padding ?? EdgeInsets.symmetric(vertical: 12),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(11),
                 color: brandWhite,
