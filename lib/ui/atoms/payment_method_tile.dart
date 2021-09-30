@@ -1,3 +1,4 @@
+import 'package:encostay/ui/screens/add_card_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -9,10 +10,17 @@ class PaymentMethodTile extends StatefulWidget {
     required this.iconPath,
     required this.label,
     this.padding,
+    this.onTap,
   }) : super(key: key);
 
   final String iconPath, label;
   final EdgeInsetsGeometry? padding;
+  final void Function()? onTap;
+
+  // TODO
+  /// I'll add a string variable representing the named route that you'll want
+  /// to navigate to so that you can pass it as an argument to the constructor
+  /// of this class
 
   @override
   _PaymentMethodTileState createState() => _PaymentMethodTileState();
@@ -28,6 +36,15 @@ class _PaymentMethodTileState extends State<PaymentMethodTile> {
         setState(() {
           _documentIsUploaded = !_documentIsUploaded;
         });
+
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => AddCardScreen(),
+          ),
+        );
+
+        // TODO
+        /// Later, navigate to a named route here
       },
       child: Container(
         padding: EdgeInsets.all(14) + EdgeInsets.only(right: 24),
