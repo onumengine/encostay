@@ -379,6 +379,9 @@ class _ReviewComponentState extends State<ReviewComponent> {
                     color: Color(0xff4e4e4e),
                   ),
                   scrollable: true,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
               );
             },
@@ -590,9 +593,9 @@ class _ReviewComponentState extends State<ReviewComponent> {
               onTap: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => BlocProvider<BookingStatusBloc>(
-                      create: (context) => BookingStatusBloc(
-                        DefaultState(progressIndex: 0),
+                    builder: (context) => BlocProvider<BookingBloc>(
+                      create: (context) => BookingBloc(
+                        DefaultBookingState(progressIndex: 0),
                       ),
                       child: BookingStatusScreen(),
                     ),
