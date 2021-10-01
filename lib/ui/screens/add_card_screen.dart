@@ -1,4 +1,5 @@
 import 'package:encostay/ui/atoms/brand_button.dart';
+import 'package:encostay/ui/screens/filters_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -232,7 +233,13 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     color: brandWhite,
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => FiltersScreen(),
+                    ),
+                  );
+                },
                 color: brandOrange,
                 padding: EdgeInsets.symmetric(vertical: 9),
               )
