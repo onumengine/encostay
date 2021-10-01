@@ -37,7 +37,8 @@ class _AddPaymentScreenState extends State<AddPaymentScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(left: 3),
+                padding:
+                    EdgeInsets.only(left: 3, top: screenSize.height / 20.82),
                 child: Text(
                   'Pay with',
                   style: TextStyle(
