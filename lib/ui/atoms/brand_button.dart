@@ -7,6 +7,7 @@ class BrandButton extends StatelessWidget {
   final VoidCallback onTap;
   final double? radius, height, width;
   final EdgeInsetsGeometry? padding;
+  final BoxDecoration? decoration;
 
   BrandButton({
     required this.child,
@@ -16,6 +17,7 @@ class BrandButton extends StatelessWidget {
     this.height,
     this.width,
     this.padding,
+    this.decoration,
   }) : assert(!((height != null || width != null) && padding != null));
 
   Widget build(BuildContext context) {
@@ -25,12 +27,13 @@ class BrandButton extends StatelessWidget {
       padding: (this.height == null && this.width == null)
           ? EdgeInsets.symmetric(horizontal: 16, vertical: 8)
           : EdgeInsets.zero,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(
-          Radius.circular(this.radius ?? 28),
-        ),
-        color: this.color ?? Colors.transparent,
-      ),
+      decoration: this.decoration ??
+          BoxDecoration(
+            borderRadius: BorderRadius.all(
+              Radius.circular(this.radius ?? 28),
+            ),
+            color: this.color ?? Colors.transparent,
+          ),
       child: Material(
         color: Colors.transparent,
         child: InkWell(

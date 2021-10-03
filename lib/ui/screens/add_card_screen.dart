@@ -132,12 +132,15 @@ class _AddCardScreenState extends State<AddCardScreen> {
                       children: <Widget>[
                         Align(
                           alignment: AlignmentDirectional.centerStart,
-                          child: Text(
-                            'Expiry Date',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              height: 23 / 14,
-                              color: brandGreyAlt,
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Text(
+                              'Expiry Date',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                height: 23 / 14,
+                                color: brandGreyAlt,
+                              ),
                             ),
                           ),
                         ),
@@ -224,6 +227,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
               ),
               SizedBox(height: screenSize.height / 20.3),
               BrandButton(
+                height: 43,
                 child: Text(
                   'Continue',
                   style: TextStyle(
@@ -241,7 +245,6 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   );
                 },
                 color: brandOrange,
-                padding: EdgeInsets.symmetric(vertical: 9),
               )
             ],
           ),
