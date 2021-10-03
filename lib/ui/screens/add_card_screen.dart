@@ -70,6 +70,8 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 ),
                 child: Center(
                   child: TextField(
+                    keyboardType: TextInputType.name,
+                    textCapitalization: TextCapitalization.words,
                     decoration: InputDecoration.collapsed(
                       hintText: 'Card Name',
                     ),
@@ -110,6 +112,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   children: [
                     Flexible(
                       child: TextField(
+                        keyboardType: TextInputType.number,
                         decoration: InputDecoration.collapsed(
                           hintText: 'Card Number',
                         ),
