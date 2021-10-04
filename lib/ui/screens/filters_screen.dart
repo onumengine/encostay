@@ -1,5 +1,8 @@
 import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/molecules/custom_expansion_panel.dart';
+import 'package:encostay/ui/molecules/document_upload_tile.dart';
+import 'package:encostay/ui/screens/cancellation_screen.dart';
+import 'package:encostay/ui/screens/owner_profile_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -215,7 +218,17 @@ class _FiltersScreenState extends State<FiltersScreen> {
                         height: 23 / 14,
                       ),
                     ),
-                    body: SizedBox(),
+                    body: Column(
+                      children: [
+                        'Suitable for events',
+                        'Pets allowed',
+                        'Smoking allowed',
+                      ]
+                          .map<DocumentUploadTile>(
+                            (e) => DocumentUploadTile(documentName: e),
+                          )
+                          .toList(),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -254,7 +267,13 @@ class _FiltersScreenState extends State<FiltersScreen> {
                             color: paleTextColor,
                           ),
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => CancellationScreen(),
+                            ),
+                          );
+                        },
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(29),
                           border: Border.all(
@@ -277,7 +296,13 @@ class _FiltersScreenState extends State<FiltersScreen> {
                             color: brandWhite,
                           ),
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => OwnerProfileScreen(),
+                            ),
+                          );
+                        },
                         decoration: BoxDecoration(
                           color: brandBrown,
                           borderRadius: BorderRadius.circular(29),
