@@ -1,5 +1,7 @@
 import 'package:encostay/ui/screens/splash_screen.dart';
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
+import 'package:encostay/utilities/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -25,7 +27,10 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat',
         scaffoldBackgroundColor: brandBackground,
       ),
-      home: SplashScreen(),
+      initialRoute: ROUTE_SPLASH,
+      onGenerateRoute: (settings) => AppRouter().onGenerateRoute(settings),
+      onUnknownRoute: (settings) =>
+          MaterialPageRoute(builder: (context) => SplashScreen()),
     );
   }
 }
