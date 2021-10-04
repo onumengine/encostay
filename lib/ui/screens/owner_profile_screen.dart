@@ -1,3 +1,5 @@
+import 'package:encostay/ui/organisms/home_reviews.dart';
+import 'package:encostay/ui/organisms/owner_profile.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -87,16 +89,8 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
             SliverFillRemaining(
               child: TabBarView(
                 children: <Widget>[
-                  Container(
-                    child: Center(
-                      child: Text('ProfileComponent'),
-                    ),
-                  ),
-                  Container(
-                    child: Center(
-                      child: Text('ReviewsComponent'),
-                    ),
-                  ),
+                  OwnerProfileComponent(),
+                  HomeReviewsComponent(),
                 ],
               ),
             ),
