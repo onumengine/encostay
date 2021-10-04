@@ -26,6 +26,9 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
               backgroundColor: brandWhite,
               foregroundColor: Colors.black,
               elevation: 0,
+              expandedHeight: 300,
+              pinned: true,
+              floating: false,
               actions: [
                 GestureDetector(
                   onTap: () {},
@@ -36,11 +39,52 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
                 ),
               ],
               flexibleSpace: FlexibleSpaceBar(
-                background: Container(
-                  height: 200,
-                ),
-                title: Container(
-                  height: 200,
+                background: Column(
+                  children: <Widget>[
+                    SvgPicture.asset(
+                      VECTOR_IMAGES_PATH + 'owner.svg',
+                      height: 90,
+                      width: 95,
+                    ),
+                    Text(
+                      'Robert Bowie',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                        height: 34 / 24,
+                        color: lightTextColor,
+                      ),
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        SvgPicture.asset(
+                            COLORED_VECTORS_PATH + 'ic_rating.svg'),
+                        RichText(
+                          text: TextSpan(
+                            text: '4.8',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              height: 23 / 14,
+                              color: lightTextColor,
+                            ),
+                            children: [
+                              TextSpan(
+                                text: '(617)',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  height: 22 / 12,
+                                  color: paleTextColor,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
                 ),
               ),
               bottom: PreferredSize(
