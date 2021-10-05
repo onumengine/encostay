@@ -184,7 +184,6 @@ class _OwnerProfileComponentState extends State<OwnerProfileComponent> {
                 Text(
                   'Report this user',
                   style: TextStyle(
-                    height: 25 / 14,
                     color: lightTextColor,
                   ),
                 ),
