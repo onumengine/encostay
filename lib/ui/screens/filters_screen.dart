@@ -4,6 +4,7 @@ import 'package:encostay/ui/molecules/document_upload_tile.dart';
 import 'package:encostay/ui/screens/cancellation_screen.dart';
 import 'package:encostay/ui/screens/owner_profile_screen.dart';
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class FiltersScreen extends StatefulWidget {
@@ -268,11 +269,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           ),
                         ),
                         onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => CancellationScreen(),
-                            ),
-                          );
+                          Navigator.of(context).pushNamed(ROUTE_CANCELLATION);
                         },
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(29),
@@ -297,11 +294,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           ),
                         ),
                         onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => OwnerProfileScreen(),
-                            ),
-                          );
+                          Navigator.of(context).pushNamed(ROUTE_OWNER);
                         },
                         decoration: BoxDecoration(
                           color: brandBrown,

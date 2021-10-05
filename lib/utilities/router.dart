@@ -1,8 +1,12 @@
+import 'package:encostay/blocs/auth/bloc.dart';
+import 'package:encostay/blocs/auth/state.dart';
+import 'package:encostay/blocs/booking_status/bloc.dart';
+import 'package:encostay/blocs/booking_status/state.dart';
 import 'package:encostay/ui/screens/add_card_screen.dart';
 import 'package:encostay/ui/screens/add_payment_screen.dart';
 import 'package:encostay/ui/screens/apartment_details_screen.dart';
 import 'package:encostay/ui/screens/auth_screen.dart';
-import 'package:encostay/ui/screens/booking_status_screen.dart';
+import 'package:encostay/ui/screens/booking_screen.dart';
 import 'package:encostay/ui/screens/cancellation_screen.dart';
 import 'package:encostay/ui/screens/filters_screen.dart';
 import 'package:encostay/ui/screens/home_screen.dart';
@@ -14,6 +18,7 @@ import 'package:encostay/ui/screens/set_password_screen.dart';
 import 'package:encostay/ui/screens/splash_screen.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppRouter {
   Route<dynamic> onGenerateRoute(RouteSettings routeSettings) {
@@ -29,10 +34,24 @@ class AppRouter {
       case ROUTE_APARTMENT_DETAILS:
         return MaterialPageRoute(
             builder: (context) => ApartmentDetailsScreen());
-      case ROUTE_AUTH_SCREEN:
-        return MaterialPageRoute(builder: (context) => AuthScreen());
+      case ROUTE_AUTH:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider<AuthBloc>(
+            create: (context) => AuthBloc(
+              DefaultAuthState(),
+            ),
+            child: AuthScreen(),
+          ),
+        );
       case ROUTE_BOOKING:
-        return MaterialPageRoute(builder: (context) => BookingScreen());
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider<BookingBloc>(
+            create: (context) => BookingBloc(
+              DefaultBookingState(progressIndex: 0),
+            ),
+            child: BookingScreen(),
+          ),
+        );
       case ROUTE_CANCELLATION:
         return MaterialPageRoute(builder: (context) => CancellationScreen());
       case ROUTE_FILTERS:

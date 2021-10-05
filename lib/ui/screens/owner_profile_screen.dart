@@ -41,10 +41,12 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
               flexibleSpace: FlexibleSpaceBar(
                 background: Column(
                   children: <Widget>[
-                    SvgPicture.asset(
-                      VECTOR_IMAGES_PATH + 'owner.svg',
+                    Container(
                       height: 90,
                       width: 95,
+                      child: SvgPicture.asset(
+                        VECTOR_IMAGES_PATH + 'apartment.svg',
+                      ),
                     ),
                     Text(
                       'Robert Bowie',

@@ -1,9 +1,7 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:encostay/ui/atoms/amenity_chip.dart';
 import 'package:encostay/ui/atoms/availability_tile.dart';
 import 'package:encostay/ui/molecules/bedroom_card.dart';
 import 'package:encostay/ui/molecules/custom_expansion_panel.dart';
-import 'package:encostay/ui/screens/preview_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -18,8 +16,6 @@ class ApartmentDetailsScreen extends StatefulWidget {
 }
 
 class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
-  PageController _controller = PageController();
-
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -1124,11 +1120,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => PreviewScreen(),
-                        ),
-                      );
+                      Navigator.of(context).pushNamed(ROUTE_PREVIEW);
                     },
                     child: Container(
                       padding:

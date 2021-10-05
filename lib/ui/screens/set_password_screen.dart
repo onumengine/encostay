@@ -2,6 +2,7 @@ import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/text_widget.dart';
 import 'package:encostay/ui/screens/home_screen.dart';
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -99,11 +100,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                   ),
                 ),
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => HomeScreen(),
-                    ),
-                  );
+                  Navigator.of(context).pushNamed(ROUTE_HOME);
                 },
                 color: brandOrange,
                 height: 43,

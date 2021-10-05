@@ -1,12 +1,8 @@
 import 'dart:io';
 
-import 'package:encostay/blocs/booking_status/bloc.dart';
-import 'package:encostay/blocs/booking_status/state.dart';
-import 'package:encostay/ui/screens/booking_status_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -487,15 +483,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => BlocProvider<BookingBloc>(
-                        create: (context) =>
-                            BookingBloc(DefaultBookingState(progressIndex: 0)),
-                        child: BookingStatusScreen(),
-                      ),
-                    ),
-                  );
+                  Navigator.of(context).pushNamed(ROUTE_BOOKING);
                 },
                 child: Container(
                   constraints: BoxConstraints(maxWidth: screenSize.width / 2.5),

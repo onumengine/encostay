@@ -21,11 +21,7 @@ class _ApartmentCardState extends State<ApartmentCard> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => ApartmentDetailsScreen(),
-          ),
-        );
+        Navigator.of(context).pushNamed(ROUTE_APARTMENT_DETAILS);
       },
       child: AspectRatio(
         aspectRatio: 0.65,

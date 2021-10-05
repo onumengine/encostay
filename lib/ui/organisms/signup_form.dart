@@ -2,6 +2,7 @@ import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/text_widget.dart';
 import 'package:encostay/ui/screens/set_password_screen.dart';
 import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/utilities/constants.dart';
 import 'package:encostay/utilities/enums.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -17,11 +18,9 @@ class SignUpForm extends StatefulWidget {
 class _SignUpFormState extends State<SignUpForm> {
   GlobalKey _firstNameKey = GlobalKey();
   GlobalKey _lastNameKey = GlobalKey();
-  GlobalKey _birthdayKey = GlobalKey();
   GlobalKey _emailKey = GlobalKey();
   TextEditingController _firstNameController = TextEditingController();
   TextEditingController _lastNameController = TextEditingController();
-  TextEditingController _birthdayController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
   AccountType? _accountType;
   DateTime? _dateOfBirth = DateTime.now();
@@ -291,11 +290,7 @@ class _SignUpFormState extends State<SignUpForm> {
               color: brandOrange,
               height: 43,
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => SetPasswordScreen(),
-                  ),
-                );
+                Navigator.of(context).pushNamed(ROUTE_SET_PASSWORD);
               },
             ),
             SizedBox(

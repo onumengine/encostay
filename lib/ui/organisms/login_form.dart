@@ -110,10 +110,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
           BrandButton(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HomeScreen()),
-              );
+              Navigator.of(context).pushNamed(ROUTE_HOME);
             },
             child: Text(
               'Login',

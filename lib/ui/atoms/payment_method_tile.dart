@@ -36,12 +36,9 @@ class _PaymentMethodTileState extends State<PaymentMethodTile> {
         setState(() {
           _documentIsUploaded = !_documentIsUploaded;
         });
-
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => AddCardScreen(),
-          ),
-        );
+        if (_documentIsUploaded) {
+          Navigator.of(context).pushNamed(ROUTE_ADD_CARD);
+        }
 
         // TODO
         /// Later, navigate to a named route here

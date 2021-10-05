@@ -7,8 +7,6 @@ import 'package:encostay/utilities/constants.dart';
 import 'package:encostay/utilities/text_styles.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_svg/svg.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -31,7 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: brandBackgroundApp,
       extendBody: true,
@@ -215,7 +212,6 @@ class _HomeScreenState extends State<HomeScreen> {
         selectedItemColor: brandWhite,
         unselectedItemColor: Color(0xffdde0e8),
         onTap: (selectedIndex) {
-          print('you tapped index ${selectedIndex}');
           setState(() {
             _navbarIndex = selectedIndex;
           });

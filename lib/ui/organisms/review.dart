@@ -1,13 +1,9 @@
-import 'package:encostay/blocs/booking_status/bloc.dart';
-import 'package:encostay/blocs/booking_status/state.dart';
 import 'package:encostay/ui/molecules/card_selection_dialog.dart';
 import 'package:encostay/ui/screens/add_payment_screen.dart';
-import 'package:encostay/ui/screens/booking_status_screen.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -444,11 +440,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
           SizedBox(height: 8),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => AddPaymentScreen(),
-                ),
-              );
+              Navigator.of(context).pushNamed(ROUTE_ADD_PAYMENT);
             },
             child: Container(
               padding: EdgeInsets.all(14),
@@ -601,16 +593,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
             padding: EdgeInsets.symmetric(horizontal: 78),
             child: GestureDetector(
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => BlocProvider<BookingBloc>(
-                      create: (context) => BookingBloc(
-                        DefaultBookingState(progressIndex: 0),
-                      ),
-                      child: BookingStatusScreen(),
-                    ),
-                  ),
-                );
+                Navigator.of(context).pushNamed(ROUTE_FILTERS);
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),

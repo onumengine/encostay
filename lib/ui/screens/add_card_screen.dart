@@ -241,11 +241,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   ),
                 ),
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => FiltersScreen(),
-                    ),
-                  );
+                  Navigator.of(context).pushNamed(ROUTE_FILTERS);
                 },
                 color: brandOrange,
               )

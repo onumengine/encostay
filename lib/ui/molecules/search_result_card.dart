@@ -21,11 +21,7 @@ class _SearchResultCardState extends State<SearchResultCard> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => ApartmentDetailsScreen(),
-          ),
-        );
+        Navigator.of(context).pushReplacementNamed(ROUTE_APARTMENT_DETAILS);
       },
       child: Container(
         width: double.maxFinite,

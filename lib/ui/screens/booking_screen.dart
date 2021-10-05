@@ -17,14 +17,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 /// in the bloc and when a [SelectionEvent] is passed into the bloc, I'll change the value
 /// of the [selectedCustomTabIndicator] in the bloc and rebuild the CustomTabIndicator.
 
-class BookingStatusScreen extends StatefulWidget {
-  const BookingStatusScreen({Key? key}) : super(key: key);
+class BookingScreen extends StatefulWidget {
+  const BookingScreen({Key? key}) : super(key: key);
 
   @override
-  _BookingStatusScreenState createState() => _BookingStatusScreenState();
+  _BookingScreenState createState() => _BookingScreenState();
 }
 
-class _BookingStatusScreenState extends State<BookingStatusScreen> {
+class _BookingScreenState extends State<BookingScreen> {
   List<Widget> _tabs = [
     BookingStatusComponent(),
     HostChatComponent(),
@@ -42,7 +42,6 @@ class _BookingStatusScreenState extends State<BookingStatusScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: brandWhite,
       extendBody: true,
