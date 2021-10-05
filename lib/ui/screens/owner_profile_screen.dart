@@ -15,6 +15,7 @@ class OwnerProfileScreen extends StatefulWidget {
 class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -28,7 +29,7 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
               elevation: 0,
               expandedHeight: 300,
               pinned: true,
-              floating: false,
+              floating: true,
               actions: [
                 GestureDetector(
                   onTap: () {},
@@ -39,54 +40,68 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
                 ),
               ],
               flexibleSpace: FlexibleSpaceBar(
-                background: Column(
-                  children: <Widget>[
-                    Container(
-                      height: 90,
-                      width: 95,
-                      child: SvgPicture.asset(
-                        VECTOR_IMAGES_PATH + 'apartment.svg',
+                background: Container(
+                  height: screenSize.height / 3.2,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SizedBox(
+                        height: screenSize.height / 21.94,
                       ),
-                    ),
-                    Text(
-                      'Robert Bowie',
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
-                        height: 34 / 24,
-                        color: lightTextColor,
-                      ),
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        SvgPicture.asset(
-                            COLORED_VECTORS_PATH + 'ic_rating.svg'),
-                        RichText(
-                          text: TextSpan(
-                            text: '4.8',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              height: 23 / 14,
-                              color: lightTextColor,
-                            ),
-                            children: [
-                              TextSpan(
-                                text: '(617)',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  height: 22 / 12,
-                                  color: paleTextColor,
-                                ),
-                              )
-                            ],
-                          ),
+                      Container(
+                        height: 90,
+                        width: 95,
+                        child: Image.asset(
+                          IMAGES_PATH + 'owner.png',
                         ),
-                      ],
-                    )
-                  ],
+                      ),
+                      SizedBox(
+                        height: screenSize.height / 38.67,
+                      ),
+                      Text(
+                        'Robert Bowie',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w600,
+                          height: 34 / 24,
+                          color: lightTextColor,
+                        ),
+                      ),
+                      SizedBox(
+                        height: screenSize.height / 73.82,
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          SvgPicture.asset(
+                              COLORED_VECTORS_PATH + 'ic_rating.svg'),
+                          RichText(
+                            text: TextSpan(
+                              text: '4.8',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                height: 23 / 14,
+                                color: lightTextColor,
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: '(617)',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    height: 22 / 12,
+                                    color: paleTextColor,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
               bottom: PreferredSize(

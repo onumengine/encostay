@@ -241,7 +241,9 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   ),
                 ),
                 onTap: () {
-                  Navigator.of(context).pushNamed(ROUTE_FILTERS);
+                  Navigator.of(context)
+                    ..pop()
+                    ..pop();
                 },
                 color: brandOrange,
               )

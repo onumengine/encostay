@@ -23,7 +23,8 @@ class _OwnerProfileComponentState extends State<OwnerProfileComponent> {
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 24),
-            padding: EdgeInsets.symmetric(horizontal: 32, vertical: 29),
+            padding: EdgeInsets.symmetric(horizontal: 32, vertical: 29) +
+                EdgeInsets.only(bottom: 16.5),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               color: brandLight,
@@ -69,7 +70,7 @@ class _OwnerProfileComponentState extends State<OwnerProfileComponent> {
                       'Lives in NY, USA',
                       style: TextStyle(
                         fontSize: 12,
-                        color: Color(0xffff765e),
+                        color: redTextColor,
                       ),
                     ),
                   ],
@@ -89,7 +90,7 @@ class _OwnerProfileComponentState extends State<OwnerProfileComponent> {
                       'Speaks Deutsch, English, Italiano',
                       style: TextStyle(
                         fontSize: 12,
-                        color: Color(0xffff765e),
+                        color: redTextColor,
                       ),
                     ),
                   ],
@@ -109,30 +110,38 @@ class _OwnerProfileComponentState extends State<OwnerProfileComponent> {
                       'Work: United Nations, HBO',
                       style: TextStyle(
                         fontSize: 12,
-                        color: Color(0xffff765e),
+                        color: redTextColor,
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: screenSize.height / 16.92,
+              ],
+            ),
+          ),
+          SizedBox(
+            height: screenSize.height / 16.92,
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 24),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  'Roberto\'s listings',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                    height: 30 / 18,
+                    color: lightTextColor,
+                  ),
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        '',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          height: 30 / 18,
-                          color: lightTextColor,
-                        ),
-                      ),
-                      Text(''),
-                    ],
+                Text(
+                  'See All',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                    height: 22 / 12,
+                    color: redTextColor,
                   ),
                 ),
               ],
