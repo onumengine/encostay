@@ -8,11 +8,13 @@ import 'package:encostay/ui/screens/apartment_details_screen.dart';
 import 'package:encostay/ui/screens/auth_screen.dart';
 import 'package:encostay/ui/screens/booking_screen.dart';
 import 'package:encostay/ui/screens/cancellation_screen.dart';
+import 'package:encostay/ui/screens/confirmed_screen.dart';
 import 'package:encostay/ui/screens/filters_screen.dart';
 import 'package:encostay/ui/screens/home_screen.dart';
 import 'package:encostay/ui/screens/onboarding_screen.dart';
 import 'package:encostay/ui/screens/owner_profile_screen.dart';
 import 'package:encostay/ui/screens/preview_screen.dart';
+import 'package:encostay/ui/screens/receiving_screen.dart';
 import 'package:encostay/ui/screens/search_results_screen.dart';
 import 'package:encostay/ui/screens/set_password_screen.dart';
 import 'package:encostay/ui/screens/splash_screen.dart';
@@ -54,6 +56,8 @@ class AppRouter {
         );
       case ROUTE_CANCELLATION:
         return MaterialPageRoute(builder: (context) => CancellationScreen());
+      case ROUTE_CONFIRMED:
+        return MaterialPageRoute(builder: (context) => ConfirmedScreen());
       case ROUTE_FILTERS:
         return MaterialPageRoute(builder: (context) => FiltersScreen());
       case ROUTE_HOME:
@@ -64,6 +68,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (context) => OwnerProfileScreen());
       case ROUTE_PREVIEW:
         return MaterialPageRoute(builder: (context) => PreviewScreen());
+      case ROUTE_RECEIVING:
+        return MaterialPageRoute(builder: (context) => ReceivingScreen());
       case ROUTE_SEARCH_RESULTS:
         return MaterialPageRoute(builder: (context) => SearchResultsScreen());
       case ROUTE_SET_PASSWORD:
