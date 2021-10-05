@@ -78,9 +78,10 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
                         children: <Widget>[
                           SvgPicture.asset(
                               COLORED_VECTORS_PATH + 'ic_rating.svg'),
+                          SizedBox(width: 2),
                           RichText(
                             text: TextSpan(
-                              text: '4.8',
+                              text: '4.8  ',
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 height: 23 / 14,

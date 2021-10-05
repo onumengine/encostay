@@ -1,3 +1,4 @@
+import 'package:encostay/ui/molecules/listing_card.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:encostay/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -125,6 +126,7 @@ class _OwnerProfileComponentState extends State<OwnerProfileComponent> {
             padding: EdgeInsets.symmetric(horizontal: 24),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Text(
                   'Roberto\'s listings',
@@ -146,6 +148,51 @@ class _OwnerProfileComponentState extends State<OwnerProfileComponent> {
                 ),
               ],
             ),
+          ),
+          Container(
+            height: screenSize.height / 3.38,
+            width: screenSize.width,
+            child: ListView.separated(
+              itemBuilder: (_, index) {
+                return ListingCard();
+              },
+              separatorBuilder: (_, index) {
+                return SizedBox();
+              },
+              itemCount: 10,
+              scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.symmetric(horizontal: 24),
+            ),
+          ),
+          SizedBox(
+            height: 56,
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 24),
+            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 26),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              color: Color(0xfffff4f1),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                SvgPicture.asset(ORANGE_VECTORS_PATH + 'ic_orange_alert.svg'),
+                SizedBox(
+                  width: 13,
+                ),
+                Text(
+                  'Report this user',
+                  style: TextStyle(
+                    height: 25 / 14,
+                    color: lightTextColor,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 56,
           ),
         ],
       ),
