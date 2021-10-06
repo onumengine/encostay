@@ -175,7 +175,9 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
               child: Material(
                 color: Colors.transparent,
                 child: InkResponse(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed(ROUTE_CANCELLATION_SURVEY);
+                  },
                   splashColor: brandOrange,
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 18),

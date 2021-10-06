@@ -9,6 +9,7 @@ import 'package:encostay/ui/screens/auth_screen.dart';
 import 'package:encostay/ui/screens/booking_screen.dart';
 import 'package:encostay/ui/screens/cancel_booking.dart';
 import 'package:encostay/ui/screens/cancellation_screen.dart';
+import 'package:encostay/ui/screens/cancellation_survey_screen.dart';
 import 'package:encostay/ui/screens/confirmed_screen.dart';
 import 'package:encostay/ui/screens/filters_screen.dart';
 import 'package:encostay/ui/screens/home_screen.dart';
@@ -70,6 +71,7 @@ class MyApp extends StatelessWidget {
             ),
         ROUTE_CANCEL_BOOKING: (context) => CancelBookingScreen(),
         ROUTE_CANCELLATION: (context) => CancellationScreen(),
+        ROUTE_CANCELLATION_SURVEY: (context) => CancellationSurveyScreen(),
         ROUTE_CONFIRMED: (context) => ConfirmedScreen(),
         ROUTE_FILTERS: (context) => FiltersScreen(),
         ROUTE_HOME: (context) => HomeScreen(),

@@ -21,6 +21,7 @@ const ROUTE_AUTH = '/auth';
 const ROUTE_BOOKING = '/booking';
 const ROUTE_CANCEL_BOOKING = '/cancel_booking';
 const ROUTE_CANCELLATION = '/cancel';
+const ROUTE_CANCELLATION_SURVEY = '/cancellation_survey';
 const ROUTE_CONFIRMED = '/confirmed';
 const ROUTE_FILTERS = '/filters';
 const ROUTE_HOME = '/home';
