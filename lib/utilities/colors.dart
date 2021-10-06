@@ -21,6 +21,7 @@ const lightTextColor = Color(0xff2f2f2F);
 const paleTextColor = Color(0xffa1a0a6);
 
 const redTextColor = Color(0Xffff765e);
+const redBgColor = Color(0xfffff4f1);
 
 const greyCardColor = Color(0Xfff8f9f9);
 

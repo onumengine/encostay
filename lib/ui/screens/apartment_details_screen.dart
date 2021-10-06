@@ -261,53 +261,58 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                         ),
                         SizedBox(width: 10),
                         Expanded(
-                          child: PhysicalModel(
-                            color: Color(0xfffff4e0),
-                            borderRadius: BorderRadius.circular(15),
-                            elevation: 3,
-                            child: Container(
-                              padding: EdgeInsets.all(12),
-                              decoration: BoxDecoration(
-                                color: brandWhite,
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(15),
-                                    child: Image.asset(
-                                      IMAGES_PATH + 'owner.png',
-                                      height: 36,
-                                      width: 36,
-                                      fit: BoxFit.cover,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).pushNamed(ROUTE_OWNER);
+                            },
+                            child: PhysicalModel(
+                              color: Color(0xfffff4e0),
+                              borderRadius: BorderRadius.circular(15),
+                              elevation: 3,
+                              child: Container(
+                                padding: EdgeInsets.all(12),
+                                decoration: BoxDecoration(
+                                  color: brandWhite,
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(15),
+                                      child: Image.asset(
+                                        IMAGES_PATH + 'owner.png',
+                                        height: 36,
+                                        width: 36,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(width: 8),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Robert',
-                                        style: TextStyle(
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w500,
-                                          height: 20 / 12,
-                                          color: brandBrown,
+                                    SizedBox(width: 8),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Robert',
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500,
+                                            height: 20 / 12,
+                                            color: brandBrown,
+                                          ),
                                         ),
-                                      ),
-                                      Text(
-                                        'Owner',
-                                        style: TextStyle(
-                                          fontSize: 10,
-                                          height: 18 / 10,
-                                          color: Color(0xffa1a0a6),
+                                        Text(
+                                          'Owner',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            height: 18 / 10,
+                                            color: Color(0xffa1a0a6),
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  )
-                                ],
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),

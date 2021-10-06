@@ -7,14 +7,19 @@ class FiltersButton extends StatelessWidget {
     Key? key,
     this.foregroundColor,
     this.backgroundColor,
+    this.onTap,
   }) : super(key: key);
 
-  Color? backgroundColor, foregroundColor;
+  final Color? backgroundColor, foregroundColor;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap ??
+          () {
+            Navigator.of(context).pushNamed(ROUTE_FILTERS);
+          },
       child: Container(
         height: 33,
         width: 36,
