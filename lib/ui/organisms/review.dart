@@ -593,7 +593,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
             padding: EdgeInsets.symmetric(horizontal: 78),
             child: GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed(ROUTE_FILTERS);
+                Navigator.of(context).pushNamed(ROUTE_RECEIVING);
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
@@ -616,9 +616,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
               ),
             ),
           ),
-          SizedBox(
-            height: screenSize.height / 16.24,
-          ),
+          SizedBox(height: screenSize.height / 16.24),
         ],
       ),
     );
