@@ -7,6 +7,7 @@ import 'package:encostay/ui/screens/add_payment_screen.dart';
 import 'package:encostay/ui/screens/apartment_details_screen.dart';
 import 'package:encostay/ui/screens/auth_screen.dart';
 import 'package:encostay/ui/screens/booking_screen.dart';
+import 'package:encostay/ui/screens/cancel_booking.dart';
 import 'package:encostay/ui/screens/cancellation_screen.dart';
 import 'package:encostay/ui/screens/confirmed_screen.dart';
 import 'package:encostay/ui/screens/filters_screen.dart';
@@ -54,6 +55,8 @@ class AppRouter {
             child: BookingScreen(),
           ),
         );
+      case ROUTE_CANCEL_BOOKING:
+        return MaterialPageRoute(builder: (context) => CancelBookingScreen());
       case ROUTE_CANCELLATION:
         return MaterialPageRoute(builder: (context) => CancellationScreen());
       case ROUTE_CONFIRMED:

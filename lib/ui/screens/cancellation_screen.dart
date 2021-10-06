@@ -386,30 +386,34 @@ class _CancellationScreenState extends State<CancellationScreen> {
             ),
             Row(
               children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(29),
-                    border: Border.all(
-                      color: paleTextColor.withOpacity(0.3),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(29),
+                      border: Border.all(
+                        color: paleTextColor.withOpacity(0.3),
+                      ),
                     ),
-                  ),
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkResponse(
-                      onTap: () {
-                        print('TAPPED ME');
-                      },
-                      highlightColor: redTextColor,
-                      highlightShape: BoxShape.rectangle,
-                      child: Padding(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 16, vertical: 18),
-                        child: Text(
-                          'Cancellation',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            height: 23 / 14,
-                            color: paleTextColor,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkResponse(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        highlightColor: redTextColor,
+                        highlightShape: BoxShape.rectangle,
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 18),
+                          child: Center(
+                            child: Text(
+                              'Back',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                height: 23 / 14,
+                                color: paleTextColor,
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -425,7 +429,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                       color: Colors.transparent,
                       child: InkResponse(
                         onTap: () {
-                          print('TAPPED ME');
+                          Navigator.of(context).pushNamed(ROUTE_CANCEL_BOOKING);
                         },
                         splashColor: brandOrange,
                         child: Container(

@@ -7,6 +7,7 @@ import 'package:encostay/ui/screens/add_payment_screen.dart';
 import 'package:encostay/ui/screens/apartment_details_screen.dart';
 import 'package:encostay/ui/screens/auth_screen.dart';
 import 'package:encostay/ui/screens/booking_screen.dart';
+import 'package:encostay/ui/screens/cancel_booking.dart';
 import 'package:encostay/ui/screens/cancellation_screen.dart';
 import 'package:encostay/ui/screens/confirmed_screen.dart';
 import 'package:encostay/ui/screens/filters_screen.dart';
@@ -67,6 +68,7 @@ class MyApp extends StatelessWidget {
               ),
               child: BookingScreen(),
             ),
+        ROUTE_CANCEL_BOOKING: (context) => CancelBookingScreen(),
         ROUTE_CANCELLATION: (context) => CancellationScreen(),
         ROUTE_CONFIRMED: (context) => ConfirmedScreen(),
         ROUTE_FILTERS: (context) => FiltersScreen(),

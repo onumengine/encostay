@@ -19,6 +19,7 @@ const ROUTE_ADD_PAYMENT = '/add_payment';
 const ROUTE_APARTMENT_DETAILS = '/apartment_details/';
 const ROUTE_AUTH = '/auth';
 const ROUTE_BOOKING = '/booking';
+const ROUTE_CANCEL_BOOKING = '/cancel_booking';
 const ROUTE_CANCELLATION = '/cancel';
 const ROUTE_CONFIRMED = '/confirmed';
 const ROUTE_FILTERS = '/filters';
