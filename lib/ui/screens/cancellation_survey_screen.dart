@@ -1,4 +1,6 @@
+import 'package:encostay/ui/atoms/brand_button.dart';
 import 'package:encostay/ui/atoms/survey_option_tile.dart';
+import 'package:encostay/ui/molecules/confirm_cancellation_dialog.dart';
 import 'package:encostay/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -91,7 +93,38 @@ class _CancellationSurveyScreenState extends State<CancellationSurveyScreen> {
             ),
             SurveyOptionTile(title: 'Personal reasons / Trip called off'),
             Expanded(
-              flex: 96,
+              flex: 17,
+              child: SizedBox(),
+            ),
+            BrandButton(
+              child: Text(
+                'Continue',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  height: 23 / 14,
+                  color: brandWhite,
+                ),
+              ),
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    content: ConfirmCancellationDialog(),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    contentPadding:
+                        EdgeInsets.all(24) + EdgeInsets.only(top: 3),
+                    scrollable: true,
+                  ),
+                );
+              },
+              color: brandBrown,
+              height: 58,
+              width: 185,
+            ),
+            Expanded(
+              flex: 21,
               child: SizedBox(),
             ),
           ],
