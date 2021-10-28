@@ -1,4 +1,4 @@
-import 'package:encostay/utilities/enums.dart';
+import 'package:encostay/core/utilities/enums.dart';
 
 abstract class PaymentCard {
   String getName();

@@ -1,5 +1,5 @@
 import 'package:encostay/ui/atoms/brand_button.dart';
-import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/core/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmCancellationDialog extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:encostay/models/payment_card.dart';
 import 'package:encostay/ui/molecules/payment_card_tile.dart';
-import 'package:encostay/utilities/colors.dart';
-import 'package:encostay/utilities/enums.dart';
+import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/enums.dart';
 import 'package:flutter/material.dart';
 
 class CardSelectionDialog extends StatelessWidget {

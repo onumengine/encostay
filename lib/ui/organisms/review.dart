@@ -1,7 +1,7 @@
 import 'package:encostay/ui/molecules/card_selection_dialog.dart';
-import 'package:encostay/ui/screens/add_payment_screen.dart';
-import 'package:encostay/utilities/colors.dart';
-import 'package:encostay/utilities/constants.dart';
+import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_payment_screen.dart';
+import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';

@@ -1,4 +1,4 @@
-import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/core/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
 class SelectedTab extends StatefulWidget {

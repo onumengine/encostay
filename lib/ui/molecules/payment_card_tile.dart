@@ -1,6 +1,6 @@
 import 'package:encostay/models/payment_card.dart';
-import 'package:encostay/utilities/constants.dart';
-import 'package:encostay/utilities/enums.dart';
+import 'package:encostay/core/utilities/constants.dart';
+import 'package:encostay/core/utilities/enums.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

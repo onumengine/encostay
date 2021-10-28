@@ -1,6 +1,6 @@
-import 'package:encostay/ui/screens/add_card_screen.dart';
-import 'package:encostay/utilities/colors.dart';
-import 'package:encostay/utilities/constants.dart';
+import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_card_screen.dart';
+import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

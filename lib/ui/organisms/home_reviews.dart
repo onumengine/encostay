@@ -1,5 +1,5 @@
-import 'package:encostay/utilities/colors.dart';
-import 'package:encostay/utilities/constants.dart';
+import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

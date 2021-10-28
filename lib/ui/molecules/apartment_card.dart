@@ -1,9 +1,9 @@
 import 'dart:ui';
 
 import 'package:encostay/ui/atoms/flat_iconbutton.dart';
-import 'package:encostay/ui/screens/apartment_details_screen.dart';
-import 'package:encostay/utilities/colors.dart';
-import 'package:encostay/utilities/constants.dart';
+import 'package:encostay/features/guest/booking/presentation/ui/screens/apartment_details_screen.dart';
+import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

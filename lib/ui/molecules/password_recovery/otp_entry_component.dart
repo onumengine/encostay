@@ -1,6 +1,6 @@
 import 'package:encostay/ui/atoms/brand_button.dart';
-import 'package:encostay/utilities/colors.dart';
-import 'package:encostay/utilities/text_styles.dart';
+import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:otp_text_field/otp_field.dart';
 import 'package:otp_text_field/otp_text_field.dart';

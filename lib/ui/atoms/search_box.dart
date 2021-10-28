@@ -1,5 +1,5 @@
 import 'package:encostay/ui/atoms/filters_button.dart';
-import 'package:encostay/utilities/colors.dart';
+import 'package:encostay/core/utilities/colors.dart';
 import 'package:flutter/material.dart';
 
 class SearchBox extends StatelessWidget {
