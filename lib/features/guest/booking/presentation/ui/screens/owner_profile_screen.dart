@@ -1,5 +1,5 @@
-import 'package:encostay/ui/organisms/home_reviews.dart';
-import 'package:encostay/ui/organisms/owner_profile.dart';
+import 'package:encostay/core/widgets/organisms/home_reviews.dart';
+import 'package:encostay/core/widgets/organisms/owner_profile.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
