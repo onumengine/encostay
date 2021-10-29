@@ -1,5 +1,3 @@
-import 'package:encostay/blocs/auth/bloc.dart';
-import 'package:encostay/blocs/auth/state.dart';
 import 'package:encostay/blocs/booking_status/bloc.dart';
 import 'package:encostay/blocs/booking_status/state.dart';
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_card_screen.dart';
@@ -26,6 +24,9 @@ import 'package:encostay/core/navigation/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'features/shared/authentication/presentation/logic_holders/blocs/auth_bloc.dart';
+import 'features/shared/authentication/presentation/logic_holders/states/auth_state.dart';
 
 void main() {
   runApp(MyApp());
@@ -59,7 +60,7 @@ class MyApp extends StatelessWidget {
         ROUTE_APARTMENT_DETAILS: (context) => ApartmentDetailsScreen(),
         ROUTE_AUTH: (context) => BlocProvider<AuthBloc>(
               create: (context) => AuthBloc(
-                DefaultAuthState(),
+                Unauthenticated(),
               ),
               child: AuthScreen(),
             ),

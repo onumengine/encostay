@@ -3,6 +3,8 @@ import 'package:encostay/blocs/booking_status/state.dart';
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_card_screen.dart';
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_payment_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/apartment_details_screen.dart';
+import 'package:encostay/features/shared/authentication/presentation/logic_holders/blocs/auth_bloc.dart';
+import 'package:encostay/features/shared/authentication/presentation/logic_holders/states/auth_state.dart';
 import 'package:encostay/features/shared/authentication/presentation/ui/screens/auth_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/booking_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/cancel_booking.dart';
@@ -40,7 +42,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => BlocProvider<AuthBloc>(
             create: (context) => AuthBloc(
-              DefaultAuthState(),
+              Unauthenticated(),
             ),
             child: AuthScreen(),
           ),

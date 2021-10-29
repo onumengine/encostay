@@ -3,11 +3,11 @@ import 'package:encostay/features/shared/authentication/presentation/logic_holde
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  AuthBloc(AuthState initialState) : super(initialState);
+  AuthBloc() : super(Unauthenticated());
 
   @override
   Stream<AuthState> mapEventToState(AuthEvent event) {
-    // TODO: implement mapEventToState
+    // TODO: Implement mapEventToState
     throw UnimplementedError();
   }
 }
