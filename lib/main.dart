@@ -59,9 +59,7 @@ class MyApp extends StatelessWidget {
         ROUTE_ADD_PAYMENT: (context) => AddPaymentScreen(),
         ROUTE_APARTMENT_DETAILS: (context) => ApartmentDetailsScreen(),
         ROUTE_AUTH: (context) => BlocProvider<AuthBloc>(
-              create: (context) => AuthBloc(
-                Unauthenticated(),
-              ),
+              create: (context) => AuthBloc(),
               child: AuthScreen(),
             ),
         ROUTE_BOOKING: (context) => BlocProvider<BookingBloc>(
