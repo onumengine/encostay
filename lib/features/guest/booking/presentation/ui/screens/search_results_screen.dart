@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:encostay/core/widgets/atoms/filters_button.dart';
 import 'package:encostay/core/widgets/atoms/search_box.dart';
-import 'package:encostay/ui/molecules/search_result_card.dart';
+import 'package:encostay/core/widgets/molecules/search_result_card.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';

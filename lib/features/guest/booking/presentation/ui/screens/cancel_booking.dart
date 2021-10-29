@@ -1,6 +1,6 @@
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/brand_iconbutton.dart';
-import 'package:encostay/ui/molecules/custom_expansion_panel.dart';
+import 'package:encostay/core/widgets/molecules/custom_expansion_panel.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';

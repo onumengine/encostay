@@ -1,6 +1,6 @@
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/survey_option_tile.dart';
-import 'package:encostay/ui/molecules/confirm_cancellation_dialog.dart';
+import 'package:encostay/core/widgets/molecules/confirm_cancellation_dialog.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:flutter/material.dart';
 

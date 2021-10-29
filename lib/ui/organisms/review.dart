@@ -1,4 +1,4 @@
-import 'package:encostay/ui/molecules/card_selection_dialog.dart';
+import 'package:encostay/core/widgets/molecules/card_selection_dialog.dart';
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_payment_screen.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';

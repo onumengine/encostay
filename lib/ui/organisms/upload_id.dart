@@ -1,5 +1,5 @@
-import 'package:encostay/ui/molecules/document_upload_active_tile.dart';
-import 'package:encostay/ui/molecules/document_upload_tile.dart';
+import 'package:encostay/core/widgets/molecules/document_upload_active_tile.dart';
+import 'package:encostay/core/widgets/molecules/document_upload_tile.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
