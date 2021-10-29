@@ -1,5 +1,5 @@
-import 'package:encostay/ui/atoms/filter_chip.dart';
-import 'package:encostay/ui/atoms/search_box.dart';
+import 'package:encostay/core/widgets/atoms/filter_chip.dart';
+import 'package:encostay/core/widgets/atoms/search_box.dart';
 import 'package:encostay/ui/molecules/apartment_card.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/search_results_screen.dart';
 import 'package:encostay/core/utilities/colors.dart';

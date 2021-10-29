@@ -1,4 +1,4 @@
-import 'package:encostay/ui/atoms/brand_button.dart';
+import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/ui/molecules/custom_expansion_panel.dart';
 import 'package:encostay/ui/molecules/document_upload_tile.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/cancellation_screen.dart';

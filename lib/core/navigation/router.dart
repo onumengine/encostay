@@ -41,9 +41,7 @@ class AppRouter {
       case ROUTE_AUTH:
         return MaterialPageRoute(
           builder: (context) => BlocProvider<AuthBloc>(
-            create: (context) => AuthBloc(
-              Unauthenticated(),
-            ),
+            create: (context) => AuthBloc(),
             child: AuthScreen(),
           ),
         );

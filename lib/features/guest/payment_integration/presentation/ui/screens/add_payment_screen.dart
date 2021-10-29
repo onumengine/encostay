@@ -1,4 +1,4 @@
-import 'package:encostay/ui/atoms/payment_method_tile.dart';
+import 'package:encostay/core/widgets/atoms/payment_method_tile.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';

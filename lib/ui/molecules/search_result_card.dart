@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:encostay/ui/atoms/flat_iconbutton.dart';
+import 'package:encostay/core/widgets/atoms/flat_iconbutton.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/apartment_details_screen.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';

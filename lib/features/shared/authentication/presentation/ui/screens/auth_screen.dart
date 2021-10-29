@@ -1,10 +1,10 @@
 import 'dart:io';
 import 'dart:ui';
 
-import 'package:encostay/ui/atoms/brand_button.dart';
-import 'package:encostay/ui/atoms/brand_iconbutton.dart';
-import 'package:encostay/ui/atoms/password_text_widget.dart';
-import 'package:encostay/ui/atoms/text_widget.dart';
+import 'package:encostay/core/widgets/atoms/brand_button.dart';
+import 'package:encostay/core/widgets/atoms/brand_iconbutton.dart';
+import 'package:encostay/core/widgets/atoms/password_text_widget.dart';
+import 'package:encostay/core/widgets/atoms/text_widget.dart';
 import 'package:encostay/ui/molecules/modal_container.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';

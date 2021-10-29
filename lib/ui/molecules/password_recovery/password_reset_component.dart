@@ -1,6 +1,6 @@
-import 'package:encostay/ui/atoms/brand_button.dart';
-import 'package:encostay/ui/atoms/password_text_widget.dart';
-import 'package:encostay/ui/atoms/text_widget.dart';
+import 'package:encostay/core/widgets/atoms/brand_button.dart';
+import 'package:encostay/core/widgets/atoms/password_text_widget.dart';
+import 'package:encostay/core/widgets/atoms/text_widget.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:flutter/material.dart';

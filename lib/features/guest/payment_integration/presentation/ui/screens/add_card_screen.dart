@@ -1,4 +1,4 @@
-import 'package:encostay/ui/atoms/brand_button.dart';
+import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/filters_screen.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';

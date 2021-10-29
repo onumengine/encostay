@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:encostay/blocs/booking_status/bloc.dart';
 import 'package:encostay/blocs/booking_status/event.dart';
 import 'package:encostay/blocs/booking_status/state.dart';
-import 'package:encostay/ui/atoms/custom_tab_indicator.dart';
+import 'package:encostay/core/widgets/atoms/custom_tab_indicator.dart';
 import 'package:encostay/ui/organisms/booking_status.dart';
 import 'package:encostay/ui/organisms/confirm_phone_number.dart';
 import 'package:encostay/ui/organisms/host_chat.dart';
