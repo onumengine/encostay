@@ -1,5 +1,5 @@
-import 'package:encostay/blocs/booking_status/bloc.dart';
-import 'package:encostay/blocs/booking_status/event.dart';
+import 'package:encostay/features/guest/booking/presentation/logic_holders/blocs/booking_bloc.dart';
+import 'package:encostay/features/guest/booking/presentation/logic_holders/events/booking_event.dart';
 import 'package:encostay/core/widgets/molecules/booking_status_modal.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';

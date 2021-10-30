@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:encostay/blocs/booking_status/bloc.dart';
-import 'package:encostay/blocs/booking_status/event.dart';
-import 'package:encostay/blocs/booking_status/state.dart';
+import 'package:encostay/features/guest/booking/presentation/logic_holders/blocs/booking_bloc.dart';
+import 'package:encostay/features/guest/booking/presentation/logic_holders/events/booking_event.dart';
+import 'package:encostay/features/guest/booking/presentation/logic_holders/states/booking_state.dart';
 import 'package:encostay/core/widgets/atoms/custom_tab_indicator.dart';
 import 'package:encostay/core/widgets/organisms/booking_status.dart';
 import 'package:encostay/core/widgets/organisms/confirm_phone_number.dart';

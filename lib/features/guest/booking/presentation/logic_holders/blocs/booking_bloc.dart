@@ -1,5 +1,5 @@
-import 'package:encostay/blocs/booking_status/event.dart';
-import 'package:encostay/blocs/booking_status/state.dart';
+import 'package:encostay/features/guest/booking/presentation/logic_holders/events/booking_event.dart';
+import 'package:encostay/features/guest/booking/presentation/logic_holders/states/booking_state.dart';
 import 'package:encostay/models/payment_card.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,5 +1,5 @@
-import 'package:encostay/blocs/booking_status/bloc.dart';
-import 'package:encostay/blocs/booking_status/state.dart';
+import 'package:encostay/features/guest/booking/presentation/logic_holders/blocs/booking_bloc.dart';
+import 'package:encostay/features/guest/booking/presentation/logic_holders/states/booking_state.dart';
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_card_screen.dart';
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_payment_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/apartment_details_screen.dart';
