@@ -16,17 +16,15 @@ import 'package:encostay/features/guest/booking/presentation/ui/screens/owner_pr
 import 'package:encostay/features/guest/booking/presentation/ui/screens/preview_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/receiving_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/search_results_screen.dart';
-import 'package:encostay/features/shared/authentication/presentation/ui/screens/set_password_screen.dart';
+import 'package:encostay/features/shared/sign_up/presentation/ui/screens/set_password_screen.dart';
 import 'package:encostay/features/shared/onboarding/presentation/ui/screens/splash_screen.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/navigation/router.dart';
+import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
-import 'features/shared/authentication/presentation/logic_holders/blocs/auth_bloc.dart';
-import 'features/shared/authentication/presentation/logic_holders/states/auth_state.dart';
 
 void main() {
   runApp(MyApp());
@@ -58,8 +56,12 @@ class MyApp extends StatelessWidget {
         ROUTE_ADD_CARD: (context) => AddCardScreen(),
         ROUTE_ADD_PAYMENT: (context) => AddPaymentScreen(),
         ROUTE_APARTMENT_DETAILS: (context) => ApartmentDetailsScreen(),
-        ROUTE_AUTH: (context) => BlocProvider<AuthBloc>(
-              create: (context) => AuthBloc(),
+        ROUTE_AUTH: (context) => MultiBlocProvider(
+              providers: [
+                BlocProvider<SignUpBloc>(
+                  create: (context) => SignUpBloc(),
+                ),
+              ],
               child: AuthScreen(),
             ),
         ROUTE_BOOKING: (context) => BlocProvider<BookingBloc>(
@@ -79,7 +81,10 @@ class MyApp extends StatelessWidget {
         ROUTE_PREVIEW: (context) => PreviewScreen(),
         ROUTE_RECEIVING: (context) => ReceivingScreen(),
         ROUTE_SEARCH_RESULTS: (context) => SearchResultsScreen(),
-        ROUTE_SET_PASSWORD: (context) => SetPasswordScreen(),
+        ROUTE_SET_PASSWORD: (context) => BlocProvider<SignUpBloc>(
+              create: (context) => SignUpBloc(),
+              child: SetPasswordScreen(),
+            ),
         ROUTE_SPLASH: (context) => SplashScreen(),
       },
     );

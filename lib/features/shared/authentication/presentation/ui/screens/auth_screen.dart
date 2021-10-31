@@ -10,7 +10,12 @@ import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/enums.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
+import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
+import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_event.dart';
+import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_state.dart';
+import 'package:encostay/features/shared/sign_up/presentation/ui/components/sign_up_form.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -101,7 +106,29 @@ class _AuthScreenState extends State<AuthScreen> {
                 child: TabBarView(
                   children: <Widget>[
                     LoginForm(),
-                    SignUpForm(),
+                    BlocConsumer<SignUpBloc, SignUpState>(
+                      listener: (context, state) {
+                        print(
+                            'Just called the AuthBloc\'s consumer\'s listener');
+                      },
+                      builder: (context, state) {
+                        if (state is Unregistered) {
+                          return SignUpForm(
+                            dateOfBirth: state.dateOfBirth,
+                            accountType: state.accountType,
+                          );
+                        } else if (state is SigningUp) {
+                          return SignUpForm(
+                            dateOfBirth: state.dateOfBirth,
+                            accountType: state.accountType,
+                          );
+                        } else {
+                          return Center(
+                            child: CircularProgressIndicator(),
+                          );
+                        }
+                      },
+                    ),
                   ],
                 ),
               ),
@@ -315,6 +342,7 @@ class _LoginFormState extends State<LoginForm> {
   }
 }
 
+/*
 class SignUpForm extends StatefulWidget {
   const SignUpForm({Key? key}) : super(key: key);
 
@@ -527,7 +555,7 @@ class _SignUpFormState extends State<SignUpForm> {
                     child: Text(
                       'User',
                     ),
-                    value: AccountType.user,
+                    value: AccountType.host,
                   ),
                   DropdownMenuItem<AccountType>(
                     child: Text(
@@ -609,3 +637,5 @@ class _SignUpFormState extends State<SignUpForm> {
     );
   }
 }
+
+ */

@@ -3,7 +3,11 @@ import 'package:encostay/core/widgets/atoms/text_widget.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
+import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
+import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_event.dart';
+import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SetPasswordScreen extends StatefulWidget {
   const SetPasswordScreen({Key? key}) : super(key: key);
@@ -88,21 +92,59 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                 ),
               ),
               SizedBox(height: (screenHeight / 12.49)),
-              BrandButton(
-                child: Text(
-                  'Continue',
-                  style: TextStyle(
-                    fontSize: bold18.fontSize,
-                    fontWeight: bold18.fontWeight,
-                    height: bold18.height,
-                    color: brandWhite,
-                  ),
-                ),
-                onTap: () {
-                  Navigator.of(context).pushNamed(ROUTE_HOME);
+              BlocConsumer<SignUpBloc, SignUpState>(
+                listener: (context, state) {
+                  if (state is DetectedInvalidInput) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Detected invalid input'),
+                      ),
+                    );
+                  } else if (state is Validated) {
+                    Navigator.of(context).pushNamed(ROUTE_HOME);
+                  }
                 },
-                color: brandOrange,
-                height: 43,
+                builder: (context, state) {
+                  if (state is ValidatingInput) {
+                    return BrandButton(
+                      child: CircularProgressIndicator(),
+                      onTap: () {
+                        BlocProvider.of<SignUpBloc>(context).add(
+                          SubmitPassword(
+                            firstPasswordEntry: _passwordController.text,
+                            secondPasswordEntry:
+                                _confirmPasswordController.text,
+                          ),
+                        );
+                      },
+                      color: brandOrange,
+                      height: 43,
+                    );
+                  } else {
+                    return BrandButton(
+                      child: Text(
+                        'Continue',
+                        style: TextStyle(
+                          fontSize: bold18.fontSize,
+                          fontWeight: bold18.fontWeight,
+                          height: bold18.height,
+                          color: brandWhite,
+                        ),
+                      ),
+                      onTap: () {
+                        BlocProvider.of<SignUpBloc>(context).add(
+                          SubmitPassword(
+                            firstPasswordEntry: _passwordController.text,
+                            secondPasswordEntry:
+                                _confirmPasswordController.text,
+                          ),
+                        );
+                      },
+                      color: brandOrange,
+                      height: 43,
+                    );
+                  }
+                },
               ),
             ],
           ),

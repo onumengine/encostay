@@ -3,8 +3,6 @@ import 'package:encostay/features/guest/booking/presentation/logic_holders/state
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_card_screen.dart';
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_payment_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/apartment_details_screen.dart';
-import 'package:encostay/features/shared/authentication/presentation/logic_holders/blocs/auth_bloc.dart';
-import 'package:encostay/features/shared/authentication/presentation/logic_holders/states/auth_state.dart';
 import 'package:encostay/features/shared/authentication/presentation/ui/screens/auth_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/booking_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/cancel_booking.dart';
@@ -18,9 +16,12 @@ import 'package:encostay/features/guest/booking/presentation/ui/screens/owner_pr
 import 'package:encostay/features/guest/booking/presentation/ui/screens/preview_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/receiving_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/search_results_screen.dart';
-import 'package:encostay/features/shared/authentication/presentation/ui/screens/set_password_screen.dart';
+import 'package:encostay/features/shared/sign_up/presentation/ui/components/sign_up_form.dart';
+import 'package:encostay/features/shared/sign_up/presentation/ui/screens/set_password_screen.dart';
 import 'package:encostay/features/shared/onboarding/presentation/ui/screens/splash_screen.dart';
 import 'package:encostay/core/utilities/constants.dart';
+import 'package:encostay/features/shared/sign_in/presentation/logic_holders/sign_in_bloc.dart';
+import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -40,8 +41,15 @@ class AppRouter {
             builder: (context) => ApartmentDetailsScreen());
       case ROUTE_AUTH:
         return MaterialPageRoute(
-          builder: (context) => BlocProvider<AuthBloc>(
-            create: (context) => AuthBloc(),
+          builder: (context) => MultiBlocProvider(
+            providers: [
+              BlocProvider<SignUpBloc>(
+                create: (context) => SignUpBloc(),
+              ),
+              BlocProvider<SignInBloc>(
+                create: (context) => SignInBloc(),
+              ),
+            ],
             child: AuthScreen(),
           ),
         );
@@ -78,7 +86,12 @@ class AppRouter {
       case ROUTE_SEARCH_RESULTS:
         return MaterialPageRoute(builder: (context) => SearchResultsScreen());
       case ROUTE_SET_PASSWORD:
-        return MaterialPageRoute(builder: (context) => SetPasswordScreen());
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider<SignUpBloc>(
+            create: (context) => SignUpBloc(),
+            child: SetPasswordScreen(),
+          ),
+        );
       case ROUTE_SPLASH:
         return MaterialPageRoute(builder: (context) => SplashScreen());
       default:

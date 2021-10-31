@@ -1,5 +1,5 @@
 enum AccountType {
-  user,
+  host,
   guest,
 }
 
