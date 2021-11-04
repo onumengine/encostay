@@ -25,6 +25,7 @@ const ROUTE_CANCELLATION_SURVEY = '/cancellation_survey';
 const ROUTE_CONFIRMED = '/confirmed';
 const ROUTE_FILTERS = '/filters';
 const ROUTE_HOME = '/home';
+const ROUTE_HOST_HOME = '/guest_home';
 const ROUTE_ONBOARDING = '/onboarding';
 const ROUTE_OWNER = '/owner';
 const ROUTE_PREVIEW = '/preview';

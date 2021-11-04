@@ -3,6 +3,7 @@ import 'package:encostay/features/guest/booking/presentation/logic_holders/state
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_card_screen.dart';
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_payment_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/apartment_details_screen.dart';
+import 'package:encostay/features/host/leasing/presentation/ui/screens/home_screen.dart';
 import 'package:encostay/features/shared/authentication/presentation/ui/screens/auth_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/booking_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/cancel_booking.dart';
@@ -76,6 +77,7 @@ class MyApp extends StatelessWidget {
         ROUTE_CONFIRMED: (context) => ConfirmedScreen(),
         ROUTE_FILTERS: (context) => FiltersScreen(),
         ROUTE_HOME: (context) => HomeScreen(),
+        ROUTE_HOST_HOME: (context) => HostHomeScreen(),
         ROUTE_ONBOARDING: (context) => OnboardingScreen(),
         ROUTE_OWNER: (context) => OwnerProfileScreen(),
         ROUTE_PREVIEW: (context) => PreviewScreen(),

@@ -27,9 +27,11 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
       );
     } else if (event is SubmitSignUpForm) {
       yield ValidatingInput();
-      Timer(Duration(milliseconds: 500), () {
-
-      });
+      Timer(Duration(milliseconds: 500), () {});
+      yield getStateFromInput(event);
+    } else if (event is SubmitPassword) {
+      yield ValidatingInput();
+      Timer(Duration(milliseconds: 500), () {});
       yield getStateFromInput(event);
     }
   }
@@ -44,11 +46,21 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
     dateOfBirth = event.dateOfBirth;
   }
 
-  SignUpState getStateFromInput(SubmitSignUpForm event) {
-    if (event.firstPasswordEntry == event.secondPasswordEntry) {
-      return Validated();
+  SignUpState getStateFromInput(SignUpEvent event) {
+    if (event is SubmitPassword) {
+      if (event.firstPasswordEntry == event.secondPasswordEntry) {
+        return Validated(accountType: accountType!);
+      } else {
+        return DetectedInvalidInput();
+      }
+    } else if (event is SubmitSignUpForm) {
+      if (event.firstPasswordEntry == event.secondPasswordEntry) {
+        return Validated(accountType: event.accountType);
+      } else {
+        return DetectedInvalidInput();
+      }
     } else {
-      return DetectedInvalidInput();
+      return ValidatingInput();
     }
   }
 }

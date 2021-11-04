@@ -1,3 +1,4 @@
+import 'package:encostay/core/utilities/enums.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/text_widget.dart';
 import 'package:encostay/core/utilities/colors.dart';
@@ -93,6 +94,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
               ),
               SizedBox(height: (screenHeight / 12.49)),
               BlocConsumer<SignUpBloc, SignUpState>(
+                bloc: BlocProvider.of<SignUpBloc>(context),
                 listener: (context, state) {
                   if (state is DetectedInvalidInput) {
                     ScaffoldMessenger.of(context).showSnackBar(
@@ -101,13 +103,22 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                       ),
                     );
                   } else if (state is Validated) {
-                    Navigator.of(context).pushNamed(ROUTE_HOME);
+                    if (state.accountType == AccountType.guest) {
+                      Navigator.of(context).pushNamed(ROUTE_HOME);
+                    } else if (state.accountType == AccountType.host) {
+                      Navigator.of(context).pushNamed(ROUTE_HOST_HOME);
+                    }
                   }
                 },
                 builder: (context, state) {
                   if (state is ValidatingInput) {
                     return BrandButton(
-                      child: CircularProgressIndicator(),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        child: CircularProgressIndicator(
+                          color: brandWhite,
+                        ),
+                      ),
                       onTap: () {
                         BlocProvider.of<SignUpBloc>(context).add(
                           SubmitPassword(
@@ -132,13 +143,15 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                         ),
                       ),
                       onTap: () {
-                        BlocProvider.of<SignUpBloc>(context).add(
-                          SubmitPassword(
-                            firstPasswordEntry: _passwordController.text,
-                            secondPasswordEntry:
-                                _confirmPasswordController.text,
-                          ),
-                        );
+                        print('Submitted password');
+                        // BlocProvider.of<SignUpBloc>(context).add(
+                        //   SubmitPassword(
+                        //     firstPasswordEntry: _passwordController.text,
+                        //     secondPasswordEntry:
+                        //         _confirmPasswordController.text,
+                        //   ),
+                        // );
+                        Navigator.of(context).pushNamed(ROUTE_HOST_HOME);
                       },
                       color: brandOrange,
                       height: 43,

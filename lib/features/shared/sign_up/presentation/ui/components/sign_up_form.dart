@@ -217,7 +217,7 @@ class SignUpForm extends StatelessWidget {
                 items: <DropdownMenuItem<AccountType>>[
                   DropdownMenuItem<AccountType>(
                     child: Text(
-                      'User',
+                      'Host',
                     ),
                     value: AccountType.host,
                   ),

@@ -11,7 +11,8 @@ class Unregistered extends SignUpState {
   final DateTime dateOfBirth = DateTime.now();
 
   @override
-  List<Object?> get props => [
+  List<Object?> get props =>
+      [
         accountType,
         dateOfBirth,
       ];
@@ -27,7 +28,8 @@ class SigningUp extends SignUpState {
   });
 
   @override
-  List<Object?> get props => [
+  List<Object?> get props =>
+      [
         accountType,
         dateOfBirth,
       ];
@@ -35,6 +37,13 @@ class SigningUp extends SignUpState {
 
 class ValidatingInput extends SignUpState {}
 
-class Validated extends SignUpState {}
+class Validated extends SignUpState {
+  final AccountType accountType;
+
+  Validated({required this.accountType});
+
+  @override
+  List<Object?> get props => [];
+}
 
 class DetectedInvalidInput extends SignUpState {}
