@@ -3,6 +3,8 @@ import 'package:encostay/features/guest/booking/presentation/logic_holders/state
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_card_screen.dart';
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_payment_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/apartment_details_screen.dart';
+import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/host_home_bloc.dart';
+import 'package:encostay/features/host/leasing/presentation/ui/screens/home_screen.dart';
 import 'package:encostay/features/shared/authentication/presentation/ui/screens/auth_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/booking_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/cancel_booking.dart';
@@ -75,6 +77,13 @@ class AppRouter {
         return MaterialPageRoute(builder: (context) => FiltersScreen());
       case ROUTE_HOME:
         return MaterialPageRoute(builder: (context) => HomeScreen());
+      case ROUTE_HOST_HOME:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider<HostHomeBloc>(
+            create: (context) => HostHomeBloc(),
+            child: HostHomeScreen(),
+          ),
+        );
       case ROUTE_ONBOARDING:
         return MaterialPageRoute(builder: (context) => OnboardingScreen());
       case ROUTE_OWNER:
