@@ -18,7 +18,6 @@ import 'package:encostay/features/guest/booking/presentation/ui/screens/owner_pr
 import 'package:encostay/features/guest/booking/presentation/ui/screens/preview_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/receiving_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/search_results_screen.dart';
-import 'package:encostay/features/shared/sign_up/presentation/ui/components/sign_up_form.dart';
 import 'package:encostay/features/shared/sign_up/presentation/ui/screens/set_password_screen.dart';
 import 'package:encostay/features/shared/onboarding/presentation/ui/screens/splash_screen.dart';
 import 'package:encostay/core/utilities/constants.dart';

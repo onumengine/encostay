@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class CustomBottomNavbar extends StatelessWidget {
-  int currentIndex;
   void Function(int selectedindex) onTap;
 
   CustomBottomNavbar({
-    required this.currentIndex,
     required this.onTap,
   });
 
@@ -61,7 +59,9 @@ class CustomBottomNavbar extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 9, horizontal: 16),
           ),
         ],
-        onTabChange: onTap,
+        onTabChange: (index) {
+          onTap(index);
+        },
         tabBorderRadius: 70,
         color: brandBrown,
       ),

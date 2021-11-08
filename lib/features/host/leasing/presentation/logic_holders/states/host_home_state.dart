@@ -11,5 +11,5 @@ class Default extends HostHomeState {
   Default({required this.tabIndex});
 
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [tabIndex];
 }
