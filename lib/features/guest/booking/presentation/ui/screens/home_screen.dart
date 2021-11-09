@@ -6,7 +6,6 @@ import 'package:encostay/features/guest/booking/presentation/ui/screens/search_r
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,7 +17,6 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   TextEditingController controller = TextEditingController();
-  int _navbarIndex = 0;
   List<String> _labels = [
     'All',
     'Apartment',
@@ -203,50 +201,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      /*
-      bottomNavigationBar: FloatingNavbar(
-        borderRadius: 70,
-        margin:
-            EdgeInsets.symmetric(horizontal: 29) + EdgeInsets.only(bottom: 42),
-        padding: EdgeInsets.symmetric(vertical: 16),
-        backgroundColor: brandBrown,
-        selectedBackgroundColor: brandBrown,
-        selectedItemColor: brandWhite,
-        unselectedItemColor: Color(0xffdde0e8),
-        onTap: (selectedIndex) {
-          setState(() {
-            _navbarIndex = selectedIndex;
-          });
-        },
-        items: [
-          FloatingNavbarItem(
-            customWidget: ImageIcon(
-              AssetImage('lib/assets/images/navbar_home_ic.png'),
-              color: Color(0xffdde0e8),
-            ),
-          ),
-          FloatingNavbarItem(
-            customWidget: ImageIcon(
-              AssetImage('lib/assets/images/navbar_book_ic.png'),
-              color: Color(0xffdde0e8),
-            ),
-          ),
-          FloatingNavbarItem(
-            customWidget: ImageIcon(
-              AssetImage('lib/assets/images/navbar_location_ic.png'),
-              color: Color(0xffdde0e8),
-            ),
-          ),
-          FloatingNavbarItem(
-            customWidget: ImageIcon(
-              AssetImage('lib/assets/images/navbar_user_ic.png'),
-              color: Color(0xffdde0e8),
-            ),
-          ),
-        ],
-        currentIndex: _navbarIndex,
-      ),
-      */
       bottomNavigationBar: CustomBottomNavbar(
         onTap: (selectedIndex) {
           print(selectedIndex);

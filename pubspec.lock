@@ -197,13 +197,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
-  floating_bottom_navigation_bar:
-    dependency: "direct main"
-    description:
-      name: floating_bottom_navigation_bar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.5.2"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -245,13 +238,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  font_awesome_flutter:
-    dependency: "direct main"
-    description:
-      name: font_awesome_flutter
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "9.2.0"
   geolocator:
     dependency: "direct main"
     description:
@@ -441,13 +427,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.11.1"
-  persistent_bottom_nav_bar:
-    dependency: "direct main"
-    description:
-      name: persistent_bottom_nav_bar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.0.2"
   petitparser:
     dependency: transitive
     description:

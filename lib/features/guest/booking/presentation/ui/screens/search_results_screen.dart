@@ -4,7 +4,7 @@ import 'package:encostay/core/widgets/atoms/filters_button.dart';
 import 'package:encostay/core/widgets/atoms/search_box.dart';
 import 'package:encostay/core/widgets/molecules/search_result_card.dart';
 import 'package:encostay/core/utilities/colors.dart';
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
+import 'package:encostay/core/widgets/organisms/custom_bottom_navbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -108,49 +108,9 @@ class _SearchResultsScreenState extends State<SearchResultsScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: FloatingNavbar(
-        borderRadius: 70,
-        margin:
-            EdgeInsets.symmetric(horizontal: 29) + EdgeInsets.only(bottom: 42),
-        padding: EdgeInsets.symmetric(vertical: 16),
-        backgroundColor: brandBrown,
-        selectedBackgroundColor: brandBrown,
-        selectedItemColor: brandWhite,
-        unselectedItemColor: Color(0xffdde0e8),
-        onTap: (selectedIndex) {
-          print('you tapped index ${selectedIndex}');
-          setState(() {
-            _navbarIndex = selectedIndex;
-          });
-        },
-        items: [
-          FloatingNavbarItem(
-            customWidget: ImageIcon(
-              AssetImage('lib/assets/images/navbar_home_ic.png'),
-              color: Color(0xffdde0e8),
-            ),
-          ),
-          FloatingNavbarItem(
-            customWidget: ImageIcon(
-              AssetImage('lib/assets/images/navbar_book_ic.png'),
-              color: Color(0xffdde0e8),
-            ),
-          ),
-          FloatingNavbarItem(
-            customWidget: ImageIcon(
-              AssetImage('lib/assets/images/navbar_location_ic.png'),
-              color: Color(0xffdde0e8),
-            ),
-          ),
-          FloatingNavbarItem(
-            customWidget: ImageIcon(
-              AssetImage('lib/assets/images/navbar_user_ic.png'),
-              color: Color(0xffdde0e8),
-            ),
-          ),
-        ],
-        currentIndex: _navbarIndex,
-      ),
+      bottomNavigationBar: CustomBottomNavbar(onTap: (index) {
+        // TODO: implement bottom navbar click function
+      }),
     );
   }
 }

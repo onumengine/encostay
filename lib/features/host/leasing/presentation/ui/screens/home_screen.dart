@@ -1,63 +1,46 @@
+import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/widgets/organisms/custom_bottom_navbar.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/host_home_bloc.dart';
+import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/host_home_component_bloc.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/events/host_home_event.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/states/host_home_state.dart';
+import 'package:encostay/features/host/leasing/presentation/ui/components/host_home_component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class HostHomeScreen extends StatefulWidget {
-  const HostHomeScreen({Key? key}) : super(key: key);
-
-  @override
-  _HostHomeScreenState createState() => _HostHomeScreenState();
-}
-
-class _HostHomeScreenState extends State<HostHomeScreen> {
-  late final List<StatelessWidget> components;
-  late HostHomeBloc hostHomeBloc;
-
-  @override
-  void initState() {
-    super.initState();
-    hostHomeBloc = BlocProvider.of<HostHomeBloc>(context);
-    components = const [
-      HomeComponent(),
-      BookingsViewComponent(),
-      ChatComponent(),
-      HostProfileComponent(),
-    ];
-  }
+class HostHomeScreen extends StatelessWidget {
+  final List<StatelessWidget> components = [
+    BlocProvider<HostHomeComponentBloc>(
+      create: (context) => HostHomeComponentBloc(),
+      child: HostHomeComponent(),
+    ),
+    BookingsViewComponent(),
+    ChatComponent(),
+    HostProfileComponent(),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HostHomeBloc, HostHomeState>(
-      builder: (context, hostHomeState) {
-        if (hostHomeState is Default) {
-          return Scaffold(
-            body: components[hostHomeState.tabIndex],
-            bottomNavigationBar: CustomBottomNavbar(
-              onTap: (index) {
-                hostHomeBloc.add(ChangeTab(tabIndex: index));
-              },
-            ),
-          );
-        } else {
-          return Center(
-            child: Text('Can\'t load the HostHomeScreen'),
-          );
-        }
-      },
-    );
-  }
-}
-
-class HomeComponent extends StatelessWidget {
-  const HomeComponent({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('HostHomeComponent'),
+    final HostHomeBloc hostHomeBloc = BlocProvider.of<HostHomeBloc>(context);
+    return Scaffold(
+      extendBody: true,
+      backgroundColor: brandSecondBackground,
+      body: BlocBuilder<HostHomeBloc, HostHomeState>(
+        builder: (context, hostHomeState) {
+          if (hostHomeState is Default) {
+            return components[hostHomeState.tabIndex];
+          } else {
+            return Center(
+              child: Text('Can\'t load the HostHomeScreen'),
+            );
+          }
+        },
+      ),
+      bottomNavigationBar: CustomBottomNavbar(
+        onTap: (index) {
+          hostHomeBloc.add(ChangeTab(tabIndex: index));
+        },
+      ),
     );
   }
 }

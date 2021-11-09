@@ -31,3 +31,8 @@ const instructionalTextModal = Color(0xff616161);
 
 const facebookBlue = Color(0xff486ab1);
 const googleWhite = Color(0xfffafafa);
+
+// Host Colors
+const hamburgerIconColor = Color(0xff774037);
+const brownTextColor = Color(0xff6c2c00);
+const palehostText = Color(0xff9b9b9b);

@@ -26,7 +26,6 @@ dependencies:
   dartz: ^0.10.0
   data_connection_checker: ^0.3.4
   equatable: 2.0.3
-  floating_bottom_navigation_bar: 1.5.2
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -40,9 +39,7 @@ dependencies:
   introduction_screen: ^2.1.0
   otp_text_field: 1.1.1
   shared_preferences: ^2.0.8
-  persistent_bottom_nav_bar: ^4.0.2
   google_nav_bar: ^5.0.5
-  font_awesome_flutter: ^9.2.0
 
 dev_dependencies:
   flutter_test:
