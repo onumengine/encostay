@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class CustomBottomNavbar extends StatelessWidget {
-  void Function(int selectedindex) onTap;
+  final void Function(int selectedindex) onTap;
 
   CustomBottomNavbar({
     required this.onTap,
@@ -43,7 +43,7 @@ class CustomBottomNavbar extends StatelessWidget {
           GButton(
             icon: Icons.near_me_outlined,
             iconColor: brandWhite,
-            text: 'Location',
+            text: 'Messages',
             textColor: brandBrown,
             backgroundColor: brandWhite,
             gap: 16,
