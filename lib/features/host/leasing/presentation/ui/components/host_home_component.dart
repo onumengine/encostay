@@ -230,9 +230,40 @@ class HostHomeComponent extends StatelessWidget {
         ),
         SliverToBoxAdapter(
           child: Container(
-            height: 25,
             width: screenWidth,
-            color: Colors.orangeAccent,
+            padding: EdgeInsets.symmetric(horizontal: 21),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Most Rated Listing',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    height: 23 / 14,
+                    color: brandBrown,
+                  ),
+                ),
+                BrandButton(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text(
+                    'View All',
+                    style: TextStyle(
+                      fontSize: 12,
+                      height: 14.63 / 12,
+                      color: brandBrown,
+                    ),
+                  ),
+                  onTap: () {},
+                  color: Colors.transparent,
+                ),
+              ],
+            ),
           ),
         ),
         SliverList(
