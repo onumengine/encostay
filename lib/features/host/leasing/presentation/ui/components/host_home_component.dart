@@ -16,6 +16,7 @@ class HostHomeComponent extends StatelessWidget {
         SliverAppBar(
           backgroundColor: Colors.transparent,
           centerTitle: true,
+          floating: true,
           leading: IconButton(
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
