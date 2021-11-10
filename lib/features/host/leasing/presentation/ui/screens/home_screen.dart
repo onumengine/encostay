@@ -2,9 +2,11 @@ import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/widgets/organisms/custom_bottom_navbar.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/host_home_bloc.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/host_home_component_bloc.dart';
+import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/host_profile_component_bloc.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/events/host_home_event.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/states/host_home_state.dart';
 import 'package:encostay/features/host/leasing/presentation/ui/components/host_home_component.dart';
+import 'package:encostay/features/host/leasing/presentation/ui/components/host_profile_component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,7 +18,10 @@ class HostHomeScreen extends StatelessWidget {
     ),
     BookingsViewComponent(),
     ChatComponent(),
-    HostProfileComponent(),
+    BlocProvider<HostProfileComponentBloc>(
+      create: (context) => HostProfileComponentBloc(),
+      child: HostProfileComponent(),
+    ),
   ];
 
   @override
@@ -63,17 +68,6 @@ class ChatComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text('ChatComponent'),
-    );
-  }
-}
-
-class HostProfileComponent extends StatelessWidget {
-  const HostProfileComponent({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('HostProfileComponent'),
     );
   }
 }
