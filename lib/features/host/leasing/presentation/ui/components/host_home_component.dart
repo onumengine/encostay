@@ -1,6 +1,7 @@
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
+import 'package:encostay/core/widgets/molecules/apartment_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -266,15 +267,24 @@ class HostHomeComponent extends StatelessWidget {
             ),
           ),
         ),
-        SliverList(
-          delegate: SliverChildBuilderDelegate(
-            (context, index) => Container(
-              color: Colors.redAccent,
-              height: 100,
-              width: 100,
+        SliverToBoxAdapter(
+          child: Container(
+            height: 350,
+            margin: EdgeInsets.symmetric(vertical: 14),
+            child: ListView.separated(
+              itemBuilder: (_, index) => ApartmentCard(),
+              separatorBuilder: (_, index) => SizedBox(width: 10),
+              scrollDirection: Axis.horizontal,
+              itemCount: 20,
+              padding: EdgeInsets.only(left: 17),
             ),
           ),
         ),
+        SliverToBoxAdapter(
+          child: Container(
+            height: 150,
+          ),
+        )
       ],
     );
   }
