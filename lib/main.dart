@@ -4,7 +4,9 @@ import 'package:encostay/features/guest/payment_integration/presentation/ui/scre
 import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_payment_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/apartment_details_screen.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/host_home_bloc.dart';
+import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/host_listings_bloc.dart';
 import 'package:encostay/features/host/leasing/presentation/ui/screens/home_screen.dart';
+import 'package:encostay/features/host/leasing/presentation/ui/screens/host_listings_screen.dart';
 import 'package:encostay/features/shared/authentication/presentation/ui/screens/auth_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/booking_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/cancel_booking.dart';
@@ -81,6 +83,10 @@ class MyApp extends StatelessWidget {
         ROUTE_HOST_HOME: (context) => BlocProvider<HostHomeBloc>(
               create: (context) => HostHomeBloc(),
               child: HostHomeScreen(),
+            ),
+        ROUTE_HOST_LISTINGS: (context) => BlocProvider<HostListingsBloc>(
+              create: (cotntext) => HostListingsBloc(),
+              child: HostListingsScreen(),
             ),
         ROUTE_ONBOARDING: (context) => OnboardingScreen(),
         ROUTE_OWNER: (context) => OwnerProfileScreen(),
