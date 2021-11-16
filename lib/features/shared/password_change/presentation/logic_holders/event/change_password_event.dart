@@ -1,11 +1,11 @@
 import 'package:equatable/equatable.dart';
 
-abstract class PasswordChangeEvent extends Equatable {
+abstract class ChangePasswordEvent extends Equatable {
   @override
   List<Object?> get props => [];
 }
 
-class ValidateOriginalPassword extends PasswordChangeEvent {
+class ValidateOriginalPassword extends ChangePasswordEvent {
   final String password;
 
   ValidateOriginalPassword({required this.password});
@@ -14,7 +14,7 @@ class ValidateOriginalPassword extends PasswordChangeEvent {
   List<Object?> get props => [password];
 }
 
-class ConfirmNewPasswordsMatch extends PasswordChangeEvent {
+class ConfirmNewPasswordsMatch extends ChangePasswordEvent {
   final String newPassword, confirmPassword;
 
   ConfirmNewPasswordsMatch(
@@ -27,7 +27,7 @@ class ConfirmNewPasswordsMatch extends PasswordChangeEvent {
       ];
 }
 
-class SubmitnewPassword extends PasswordChangeEvent {
+class SubmitnewPassword extends ChangePasswordEvent {
   final String newPassword;
 
   SubmitnewPassword({required this.newPassword});

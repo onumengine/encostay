@@ -3,8 +3,8 @@ import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/text_widget.dart';
-import 'package:encostay/features/shared/password_change/presentation/logic_holders/bloc/password_change_bloc.dart';
-import 'package:encostay/features/shared/password_change/presentation/logic_holders/state/password_change_state.dart';
+import 'package:encostay/features/shared/password_change/presentation/logic_holders/bloc/change_password_bloc.dart';
+import 'package:encostay/features/shared/password_change/presentation/logic_holders/state/change_password_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,7 +23,7 @@ class ChangePasswordScreen extends StatelessWidget {
 
     return Scaffold(
       body: SafeArea(
-        child: BlocConsumer<PasswordChangeBloc, PasswordChangeState>(
+        child: BlocConsumer<ChangePasswordBloc, ChangePasswordState>(
             listener: (context, state) {},
             builder: (context, state) {
               return Padding(

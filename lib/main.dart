@@ -20,7 +20,7 @@ import 'package:encostay/features/guest/booking/presentation/ui/screens/owner_pr
 import 'package:encostay/features/guest/booking/presentation/ui/screens/preview_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/receiving_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/search_results_screen.dart';
-import 'package:encostay/features/shared/password_change/presentation/logic_holders/bloc/password_change_bloc.dart';
+import 'package:encostay/features/shared/password_change/presentation/logic_holders/bloc/change_password_bloc.dart';
 import 'package:encostay/features/shared/password_change/presentation/ui/screens/change_password_screen.dart';
 import 'package:encostay/features/shared/sign_up/presentation/ui/screens/set_password_screen.dart';
 import 'package:encostay/features/shared/onboarding/presentation/ui/screens/splash_screen.dart';
@@ -79,8 +79,8 @@ class MyApp extends StatelessWidget {
         ROUTE_CANCEL_BOOKING: (context) => CancelBookingScreen(),
         ROUTE_CANCELLATION: (context) => CancellationScreen(),
         ROUTE_CANCELLATION_SURVEY: (context) => CancellationSurveyScreen(),
-        ROUTE_CHANGE_PASSWORD: (context) => BlocProvider<PasswordChangeBloc>(
-              create: (context) => PasswordChangeBloc(),
+        ROUTE_CHANGE_PASSWORD: (context) => BlocProvider<ChangePasswordBloc>(
+              create: (context) => ChangePasswordBloc(),
               child: ChangePasswordScreen(),
             ),
         ROUTE_CONFIRMED: (context) => ConfirmedScreen(),
