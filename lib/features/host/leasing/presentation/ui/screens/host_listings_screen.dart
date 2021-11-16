@@ -26,16 +26,18 @@ class HostListingsScreen extends StatelessWidget {
             backgroundColor: Colors.transparent,
             foregroundColor: ColorPalette.brandBrown,
           ),
-          SliverToBoxAdapter(
-            child: AddNewListingCard(),
+          SliverList(
+            delegate: SliverChildListDelegate([
+              AddNewListingCard(),
+              ...List.generate(
+                20,
+                (index) => Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: ListingTile(),
+                ),
+              ),
+            ]),
           ),
-          SliverFillRemaining(
-            child: ListView.separated(
-              itemBuilder: (context, index) => ListingTile(),
-              separatorBuilder: (context, index) => SizedBox(height: 10),
-              itemCount: 20,
-            ),
-          )
         ],
       ),
     );
