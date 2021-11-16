@@ -24,7 +24,7 @@ import 'package:encostay/features/shared/sign_up/presentation/ui/screens/set_pas
 import 'package:encostay/features/shared/onboarding/presentation/ui/screens/splash_screen.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
-import 'package:encostay/core/navigation/router.dart';
+// import 'package:encostay/core/navigation/router.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: brandBackground,
       ),
       initialRoute: ROUTE_SPLASH,
-      onGenerateRoute: (settings) => AppRouter().onGenerateRoute(settings),
+      // onGenerateRoute: (settings) => AppRouter().onGenerateRoute(settings),
       onUnknownRoute: (settings) =>
           MaterialPageRoute(builder: (context) => SplashScreen()),
       routes: {
