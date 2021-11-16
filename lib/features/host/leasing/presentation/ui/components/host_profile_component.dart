@@ -67,7 +67,9 @@ class HostProfileComponent extends StatelessWidget {
                 ),
                 ProfileItemTile(
                   title: 'My Listings',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed(ROUTE_HOST_LISTINGS);
+                  },
                 ),
                 ProfileItemTile(
                   title: 'Contact Support',

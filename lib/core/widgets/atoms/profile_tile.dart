@@ -11,9 +11,7 @@ class ProfileItemTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        print('tapped $title');
-      },
+      onTap: onTap,
       child: Material(
         color: Colors.transparent,
         child: Container(
