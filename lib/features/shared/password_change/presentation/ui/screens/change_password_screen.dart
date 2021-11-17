@@ -1,5 +1,4 @@
 import 'package:encostay/core/utilities/colors.dart';
-import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/text_widget.dart';
@@ -9,9 +8,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ChangePasswordScreen extends StatelessWidget {
-  final GlobalKey _createPasswordKey = GlobalKey();
+  final GlobalKey _currentPasswordKey = GlobalKey();
+  final GlobalKey _newPasswordKey = GlobalKey();
   final GlobalKey _confirmPasswordKey = GlobalKey();
-  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _currentPasswordController =
+      TextEditingController();
+  final TextEditingController _newPasswordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
       TextEditingController();
 
@@ -22,6 +24,17 @@ class ChangePasswordScreen extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: true,
+        title: Text(
+          'Set Password',
+          style: medium18brown,
+        ),
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        foregroundColor: brandBrown,
+        elevation: 0,
+      ),
       body: SafeArea(
         child: BlocConsumer<ChangePasswordBloc, ChangePasswordState>(
             listener: (context, state) {},
@@ -32,19 +45,14 @@ class ChangePasswordScreen extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
-                    SizedBox(height: (screenHeight / 23.2)),
-                    Text(
-                      'Set Password',
-                      style: medium18brown,
-                    ),
-                    SizedBox(height: (screenHeight / 29)),
+                    SizedBox(height: (screenHeight / 19.8)),
                     Align(
                       alignment: AlignmentDirectional.centerStart,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20) +
                             EdgeInsets.only(bottom: (screenHeight / 101.5)),
                         child: Text(
-                          'Create Password',
+                          'Enter Current Password',
                           style: TextStyle(
                             fontSize: medium14.fontSize,
                             fontWeight: medium14.fontWeight,
@@ -54,9 +62,32 @@ class ChangePasswordScreen extends StatelessWidget {
                       ),
                     ),
                     TextWidget.obscured(
-                      key: _createPasswordKey,
+                      key: _currentPasswordKey,
+                      hintText: 'Current Password',
+                      controller: _currentPasswordController,
+                    ),
+                    SizedBox(
+                      height: (screenHeight / 58),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional.centerStart,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20) +
+                            EdgeInsets.only(bottom: (screenHeight / 101.5)),
+                        child: Text(
+                          'Enter new Password',
+                          style: TextStyle(
+                            fontSize: medium14.fontSize,
+                            fontWeight: medium14.fontWeight,
+                            height: 1.64,
+                          ),
+                        ),
+                      ),
+                    ),
+                    TextWidget.obscured(
+                      key: _newPasswordKey,
                       hintText: 'New Password',
-                      controller: _passwordController,
+                      controller: _newPasswordController,
                     ),
                     SizedBox(
                       height: (screenHeight / 58),
@@ -101,7 +132,7 @@ class ChangePasswordScreen extends StatelessWidget {
                         ),
                       ),
                       onTap: () {
-                        Navigator.of(context).pushNamed(ROUTE_HOST_HOME);
+                        Navigator.of(context).pop();
                       },
                       color: brandOrange,
                       height: 43,

@@ -55,7 +55,9 @@ class HostProfileComponent extends StatelessWidget {
                 ),
                 ProfileItemTile(
                   title: 'Change Password',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed(ROUTE_CHANGE_PASSWORD);
+                  },
                 ),
                 ProfileItemTile(
                   title: 'Payment Method',
