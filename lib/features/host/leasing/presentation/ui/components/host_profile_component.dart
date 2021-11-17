@@ -1,5 +1,6 @@
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/widgets/atoms/profile_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -75,7 +76,10 @@ class HostProfileComponent extends StatelessWidget {
                 ),
                 ProfileItemTile(
                   title: 'Contact Support',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamed(Routenames.ROUTE_CONTACT_SUPPORT);
+                  },
                 ),
                 ProfileItemTile(
                   title: 'Log Out',

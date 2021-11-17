@@ -20,10 +20,24 @@ class ContactSupportScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-    return Scaffold(
-      body: BlocConsumer<ContactSupportBloc, ContactSupportState>(
-        builder: (context, state) {
-          return Container(
+    return BlocConsumer<ContactSupportBloc, ContactSupportState>(
+      builder: (context, state) {
+        return Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            title: Text(
+              'Helena Reynolds',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+                height: 24 / 15,
+              ),
+            ),
+            backgroundColor: Colors.transparent,
+            foregroundColor: brandBrown,
+            elevation: 0,
+          ),
+          body: Container(
             child: Column(
               children: <Widget>[
                 Expanded(
@@ -35,24 +49,8 @@ class ContactSupportScreen extends StatelessWidget {
                         SizedBox(
                           height: 42,
                         ),
-                        Text(
-                          'Tell your host about your trip',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w600,
-                            height: 34 / 24,
-                          ),
-                        ),
                         SizedBox(
                           height: 16,
-                        ),
-                        Text(
-                          'Help your host prepare for your stay by answering their questions check in progress',
-                          style: TextStyle(
-                            fontSize: 12,
-                            height: 22 / 12,
-                            color: Color(0xffa1a0a6),
-                          ),
                         ),
                         SizedBox(
                           height: 44,
@@ -194,10 +192,10 @@ class ContactSupportScreen extends StatelessWidget {
                 ),
               ],
             ),
-          );
-        },
-        listener: (context, state) {},
-      ),
+          ),
+        );
+      },
+      listener: (context, state) {},
     );
   }
 
