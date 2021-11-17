@@ -25,6 +25,8 @@ import 'package:encostay/features/guest/booking/presentation/ui/screens/receivin
 import 'package:encostay/features/guest/booking/presentation/ui/screens/search_results_screen.dart';
 import 'package:encostay/features/shared/password_change/presentation/logic_holders/bloc/change_password_bloc.dart';
 import 'package:encostay/features/shared/password_change/presentation/ui/screens/change_password_screen.dart';
+import 'package:encostay/features/shared/payment_method_management/presentation/logic_holders/bloc/payment_method_bloc.dart';
+import 'package:encostay/features/shared/payment_method_management/presentation/ui/screens/payment_method_screen.dart';
 import 'package:encostay/features/shared/sign_up/presentation/ui/screens/set_password_screen.dart';
 import 'package:encostay/features/shared/onboarding/presentation/ui/screens/splash_screen.dart';
 import 'package:encostay/core/utilities/colors.dart';
@@ -106,6 +108,11 @@ class MyApp extends StatelessWidget {
             ),
         RouteNames.ROUTE_ONBOARDING: (context) => OnboardingScreen(),
         RouteNames.ROUTE_OWNER: (context) => OwnerProfileScreen(),
+        RouteNames.ROUTE_PAYMENT_METHOD: (context) =>
+            BlocProvider<PaymentMethodBloc>(
+              create: (context) => PaymentMethodBloc(),
+              child: PaymentMethodScreen(),
+            ),
         RouteNames.ROUTE_PREVIEW: (context) => PreviewScreen(),
         RouteNames.ROUTE_RECEIVING: (context) => ReceivingScreen(),
         RouteNames.ROUTE_SEARCH_RESULTS: (context) => SearchResultsScreen(),
