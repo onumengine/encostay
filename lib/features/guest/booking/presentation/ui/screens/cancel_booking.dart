@@ -1,10 +1,10 @@
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/brand_iconbutton.dart';
 import 'package:encostay/core/widgets/molecules/custom_expansion_panel.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class CancelBookingScreen extends StatefulWidget {
   const CancelBookingScreen({Key? key}) : super(key: key);
@@ -176,7 +176,8 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                 color: Colors.transparent,
                 child: InkResponse(
                   onTap: () {
-                    Navigator.of(context).pushNamed(ROUTE_CANCELLATION_SURVEY);
+                    Navigator.of(context)
+                        .pushNamed(RouteNames.ROUTE_CANCELLATION_SURVEY);
                   },
                   splashColor: brandOrange,
                   child: Container(

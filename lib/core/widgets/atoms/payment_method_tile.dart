@@ -1,4 +1,4 @@
-import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_card_screen.dart';
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +37,7 @@ class _PaymentMethodTileState extends State<PaymentMethodTile> {
           _documentIsUploaded = !_documentIsUploaded;
         });
         if (_documentIsUploaded) {
-          Navigator.of(context).pushNamed(ROUTE_ADD_CARD);
+          Navigator.of(context).pushNamed(RouteNames.ROUTE_ADD_CARD);
         }
 
         // TODO

@@ -1,8 +1,7 @@
 import 'package:encostay/core/utilities/colors.dart';
-import 'package:encostay/core/utilities/constants.dart';
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -33,7 +32,7 @@ class OnboardingScreen extends StatelessWidget {
             ),
           ),
           onDone: () {
-            Navigator.of(context).pushReplacementNamed(ROUTE_AUTH);
+            Navigator.of(context).pushReplacementNamed(RouteNames.ROUTE_AUTH);
           },
           next: Container(
             height: 41,

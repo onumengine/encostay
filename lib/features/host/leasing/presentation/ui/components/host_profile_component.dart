@@ -57,7 +57,8 @@ class HostProfileComponent extends StatelessWidget {
                 ProfileItemTile(
                   title: 'Change Password',
                   onTap: () {
-                    Navigator.of(context).pushNamed(ROUTE_CHANGE_PASSWORD);
+                    Navigator.of(context)
+                        .pushNamed(RouteNames.ROUTE_CHANGE_PASSWORD);
                   },
                 ),
                 ProfileItemTile(
@@ -71,14 +72,15 @@ class HostProfileComponent extends StatelessWidget {
                 ProfileItemTile(
                   title: 'My Listings',
                   onTap: () {
-                    Navigator.of(context).pushNamed(ROUTE_HOST_LISTINGS);
+                    Navigator.of(context)
+                        .pushNamed(RouteNames.ROUTE_HOST_LISTINGS);
                   },
                 ),
                 ProfileItemTile(
                   title: 'Contact Support',
                   onTap: () {
                     Navigator.of(context)
-                        .pushNamed(Routenames.ROUTE_CONTACT_SUPPORT);
+                        .pushNamed(RouteNames.ROUTE_CONTACT_SUPPORT);
                   },
                 ),
                 ProfileItemTile(

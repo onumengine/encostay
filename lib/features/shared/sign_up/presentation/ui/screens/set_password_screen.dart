@@ -1,8 +1,8 @@
 import 'package:encostay/core/utilities/enums.dart';
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/text_widget.dart';
 import 'package:encostay/core/utilities/colors.dart';
-import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_event.dart';
@@ -104,9 +104,10 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                     );
                   } else if (state is Validated) {
                     if (state.accountType == AccountType.guest) {
-                      Navigator.of(context).pushNamed(ROUTE_HOME);
+                      Navigator.of(context).pushNamed(RouteNames.ROUTE_HOME);
                     } else if (state.accountType == AccountType.host) {
-                      Navigator.of(context).pushNamed(ROUTE_HOST_HOME);
+                      Navigator.of(context)
+                          .pushNamed(RouteNames.ROUTE_HOST_HOME);
                     }
                   }
                 },
@@ -151,7 +152,8 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                         //         _confirmPasswordController.text,
                         //   ),
                         // );
-                        Navigator.of(context).pushNamed(ROUTE_HOST_HOME);
+                        Navigator.of(context)
+                            .pushNamed(RouteNames.ROUTE_HOST_HOME);
                       },
                       color: brandOrange,
                       height: 43,

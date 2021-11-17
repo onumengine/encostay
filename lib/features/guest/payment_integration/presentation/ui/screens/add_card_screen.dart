@@ -1,5 +1,5 @@
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
-import 'package:encostay/features/guest/booking/presentation/ui/screens/filters_screen.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
@@ -242,7 +242,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 ),
                 onTap: () {
                   Navigator.of(context)
-                      .popUntil(ModalRoute.withName(ROUTE_BOOKING));
+                      .popUntil(ModalRoute.withName(RouteNames.ROUTE_BOOKING));
                 },
                 color: brandOrange,
               )

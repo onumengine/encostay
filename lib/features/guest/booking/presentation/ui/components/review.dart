@@ -1,5 +1,5 @@
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/widgets/molecules/card_selection_dialog.dart';
-import 'package:encostay/features/guest/payment_integration/presentation/ui/screens/add_payment_screen.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/cupertino.dart';
@@ -440,7 +440,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
           SizedBox(height: 8),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushNamed(ROUTE_ADD_PAYMENT);
+              Navigator.of(context).pushNamed(RouteNames.ROUTE_ADD_PAYMENT);
             },
             child: Container(
               padding: EdgeInsets.all(14),
@@ -593,7 +593,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
             padding: EdgeInsets.symmetric(horizontal: 78),
             child: GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed(ROUTE_RECEIVING);
+                Navigator.of(context).pushNamed(RouteNames.ROUTE_RECEIVING);
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),

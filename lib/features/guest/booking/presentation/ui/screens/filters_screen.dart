@@ -1,3 +1,4 @@
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/molecules/custom_expansion_panel.dart';
 import 'package:encostay/core/widgets/molecules/document_upload_tile.dart';
@@ -269,7 +270,8 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           ),
                         ),
                         onTap: () {
-                          Navigator.of(context).pushNamed(ROUTE_CANCELLATION);
+                          Navigator.of(context)
+                              .pushNamed(RouteNames.ROUTE_CANCELLATION);
                         },
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(29),
@@ -294,7 +296,8 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           ),
                         ),
                         onTap: () {
-                          Navigator.of(context).pushNamed(ROUTE_OWNER);
+                          Navigator.of(context)
+                              .pushNamed(RouteNames.ROUTE_OWNER);
                         },
                         decoration: BoxDecoration(
                           color: brandBrown,

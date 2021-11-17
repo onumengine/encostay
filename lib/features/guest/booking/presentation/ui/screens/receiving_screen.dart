@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -19,7 +20,7 @@ class _ReceivingScreenState extends State<ReceivingScreen> {
     Timer(
       Duration(seconds: 2),
       () {
-        Navigator.of(context).pushReplacementNamed(ROUTE_CONFIRMED);
+        Navigator.of(context).pushReplacementNamed(RouteNames.ROUTE_CONFIRMED);
       },
     );
   }

@@ -1,5 +1,6 @@
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:flutter/material.dart';
 
 class FiltersButton extends StatelessWidget {
@@ -18,7 +19,7 @@ class FiltersButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap ??
           () {
-            Navigator.of(context).pushNamed(ROUTE_FILTERS);
+            Navigator.of(context).pushNamed(RouteNames.ROUTE_FILTERS);
           },
       child: Container(
         height: 33,

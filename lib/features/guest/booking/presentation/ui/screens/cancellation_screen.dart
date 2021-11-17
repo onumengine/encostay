@@ -1,5 +1,6 @@
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 import 'package:flutter_svg/svg.dart';
@@ -429,7 +430,8 @@ class _CancellationScreenState extends State<CancellationScreen> {
                       color: Colors.transparent,
                       child: InkResponse(
                         onTap: () {
-                          Navigator.of(context).pushNamed(ROUTE_CANCEL_BOOKING);
+                          Navigator.of(context)
+                              .pushNamed(RouteNames.ROUTE_CANCEL_BOOKING);
                         },
                         splashColor: brandOrange,
                         child: Container(

@@ -1,3 +1,4 @@
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
@@ -54,8 +55,8 @@ class ConfirmedScreen extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                Navigator.of(context)
-                    .pushNamedAndRemoveUntil(ROUTE_HOME, (route) => false);
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                    RouteNames.ROUTE_HOME, (route) => false);
               },
               color: brandBrown,
               height: 58,

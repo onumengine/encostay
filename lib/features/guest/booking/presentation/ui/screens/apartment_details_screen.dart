@@ -1,3 +1,4 @@
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/widgets/atoms/amenity_chip.dart';
 import 'package:encostay/core/widgets/atoms/availability_tile.dart';
 import 'package:encostay/core/widgets/molecules/bedroom_card.dart';
@@ -263,7 +264,8 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                         Expanded(
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.of(context).pushNamed(ROUTE_OWNER);
+                              Navigator.of(context)
+                                  .pushNamed(RouteNames.ROUTE_OWNER);
                             },
                             child: PhysicalModel(
                               color: Color(0xfffff4e0),
@@ -1125,7 +1127,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushNamed(ROUTE_PREVIEW);
+                      Navigator.of(context).pushNamed(RouteNames.ROUTE_PREVIEW);
                     },
                     child: Container(
                       padding:
