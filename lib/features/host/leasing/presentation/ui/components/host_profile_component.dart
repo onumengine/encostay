@@ -88,7 +88,10 @@ class HostProfileComponent extends StatelessWidget {
                 ),
                 ProfileItemTile(
                   title: 'Log Out',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context)
+                        .popUntil(ModalRoute.withName(RouteNames.ROUTE_AUTH));
+                  },
                 ),
               ],
             ),
