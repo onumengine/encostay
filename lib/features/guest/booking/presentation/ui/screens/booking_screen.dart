@@ -4,11 +4,11 @@ import 'package:encostay/features/guest/booking/presentation/logic_holders/blocs
 import 'package:encostay/features/guest/booking/presentation/logic_holders/events/booking_event.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/states/booking_state.dart';
 import 'package:encostay/core/widgets/atoms/custom_tab_indicator.dart';
-import 'package:encostay/core/widgets/organisms/booking_status.dart';
-import 'package:encostay/core/widgets/organisms/confirm_phone_number.dart';
-import 'package:encostay/core/widgets/organisms/host_chat.dart';
-import 'package:encostay/core/widgets/organisms/review.dart';
-import 'package:encostay/core/widgets/organisms/upload_id.dart';
+import 'package:encostay/features/guest/booking/presentation/ui/components/booking_status.dart';
+import 'package:encostay/features/guest/booking/presentation/ui/components/confirm_phone_number.dart';
+import 'package:encostay/features/guest/booking/presentation/ui/components/host_chat.dart';
+import 'package:encostay/features/guest/booking/presentation/ui/components/review.dart';
+import 'package:encostay/features/guest/booking/presentation/ui/components/upload_id.dart';
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
