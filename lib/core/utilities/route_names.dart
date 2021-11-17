@@ -16,7 +16,6 @@ class RouteNames {
   static const ROUTE_HOST_LISTINGS = '/host_listings';
   static const ROUTE_ONBOARDING = '/onboarding';
   static const ROUTE_OWNER = '/owner';
-  static const ROUTE_PAYMENT_METHOD = '/payment_method';
   static const ROUTE_PREVIEW = '/preview';
   static const ROUTE_RECEIVING = '/receiving';
   static const ROUTE_SEARCH_RESULTS = '/search_results';

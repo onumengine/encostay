@@ -65,7 +65,7 @@ class HostProfileComponent extends StatelessWidget {
                   title: 'Payment Method',
                   onTap: () {
                     Navigator.of(context)
-                        .pushNamed(RouteNames.ROUTE_PAYMENT_METHOD);
+                        .pushNamed(RouteNames.ROUTE_ADD_PAYMENT);
                   },
                 ),
                 ProfileItemTile(
