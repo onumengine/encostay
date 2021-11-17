@@ -4,11 +4,21 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ContactSupportBloc
     extends Bloc<ContactSupportEvent, ContactSupportState> {
-  ContactSupportBloc() : super(EmptyChat());
+  final List<String> _messages = [];
+  ContactSupportBloc() : super(DefaultDebugChat());
 
   @override
   Stream<ContactSupportState> mapEventToState(
       ContactSupportEvent event) async* {
-    yield EmptyChat();
+    if (event is SendMessage) {
+      addMessageToChat(event.message);
+      yield ActivelyChatting(messages: _messages);
+    } else {
+      yield EmptyChat();
+    }
+  }
+
+  void addMessageToChat(String message) {
+    _messages.add(message);
   }
 }
