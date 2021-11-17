@@ -1,6 +1,8 @@
 import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/blocs/booking_bloc.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/states/booking_state.dart';
+import 'package:encostay/features/host/tx_management/presentation/logic_holders/bloc/transaction_bloc.dart';
+import 'package:encostay/features/host/tx_management/presentation/ui/screens/transaction_history_screen.dart';
 import 'package:encostay/features/shared/payment_method_management/presentation/ui/screens/add_card_screen.dart';
 import 'package:encostay/features/shared/payment_method_management/presentation/ui/screens/add_payment_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/apartment_details_screen.dart';
@@ -118,6 +120,11 @@ class MyApp extends StatelessWidget {
               child: SetPasswordScreen(),
             ),
         RouteNames.ROUTE_SPLASH: (context) => SplashScreen(),
+        RouteNames.TRANSACTION_SUMMARY: (context) =>
+            BlocProvider<TransactionsBloc>(
+              create: (context) => TransactionsBloc(),
+              child: TransactionHistoryScreen(),
+            ),
       },
     );
   }

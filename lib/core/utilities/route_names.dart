@@ -21,4 +21,5 @@ class RouteNames {
   static const ROUTE_SEARCH_RESULTS = '/search_results';
   static const ROUTE_SET_PASSWORD = '/set_password';
   static const ROUTE_SPLASH = '/';
+  static const TRANSACTION_SUMMARY = '/transaction_summary';
 }
