@@ -6,14 +6,7 @@ import 'package:encostay/features/shared/payment_method_management/presentation/
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class AddPaymentScreen extends StatefulWidget {
-  const AddPaymentScreen({Key? key}) : super(key: key);
-
-  @override
-  _AddPaymentScreenState createState() => _AddPaymentScreenState();
-}
-
-class _AddPaymentScreenState extends State<AddPaymentScreen> {
+class AddPaymentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
