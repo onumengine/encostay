@@ -1,6 +1,7 @@
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/components/earnings_card.dart';
+import 'package:encostay/features/host/tx_management/presentation/ui/components/transaction_summary_card.dart';
 import 'package:flutter/material.dart';
 
 class TransactionSummaryScreen extends StatelessWidget {
@@ -43,6 +44,21 @@ class TransactionSummaryScreen extends StatelessWidget {
               ),
             ),
             EarningsCard(),
+            SizedBox(
+              height: 17,
+            ),
+            TransactionSummaryCard(),
+            SizedBox(
+              height: 17,
+            ),
+            TransactionSummaryCard(),
+            SizedBox(
+              height: 17,
+            ),
+            TransactionSummaryCard(),
+            SizedBox(
+              height: 200,
+            ),
           ]),
         ),
       ],
