@@ -75,4 +75,6 @@ abstract class ColorPalette {
   static const brownTextColor = Color(0xff6c2c00);
   static const palehostText = Color(0xff9b9b9b);
   static const paleHostGrey = Color(0xff787878);
+  static const greySubtitleColor = Color(0xffaaacae);
+  static const greySubtitleColor2 = Color(0xffa4a4a4);
 }
