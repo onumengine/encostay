@@ -70,7 +70,10 @@ class HostProfileComponent extends StatelessWidget {
                 ),
                 ProfileItemTile(
                   title: 'Transactions',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamed(RouteNames.TRANSACTION_SUMMARY);
+                  },
                 ),
                 ProfileItemTile(
                   title: 'My Listings',
