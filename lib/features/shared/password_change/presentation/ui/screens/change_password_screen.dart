@@ -32,7 +32,7 @@ class ChangePasswordScreen extends StatelessWidget {
         ),
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        foregroundColor: brandBrown,
+        foregroundColor: ColorPalette.brandBrown,
         elevation: 0,
       ),
       body: SafeArea(
@@ -128,13 +128,13 @@ class ChangePasswordScreen extends StatelessWidget {
                           fontSize: bold18.fontSize,
                           fontWeight: bold18.fontWeight,
                           height: bold18.height,
-                          color: brandWhite,
+                          color: ColorPalette.brandWhite,
                         ),
                       ),
                       onTap: () {
                         Navigator.of(context).pop();
                       },
-                      color: brandOrange,
+                      color: ColorPalette.brandOrange,
                       height: 43,
                     ),
                   ],

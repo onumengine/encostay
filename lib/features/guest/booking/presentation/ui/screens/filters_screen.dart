@@ -18,12 +18,12 @@ class _FiltersScreenState extends State<FiltersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: brandWhite,
+      backgroundColor: ColorPalette.brandWhite,
       appBar: AppBar(
         centerTitle: true,
         automaticallyImplyLeading: true,
-        backgroundColor: brandWhite,
-        foregroundColor: lightTextColor,
+        backgroundColor: ColorPalette.brandWhite,
+        foregroundColor: ColorPalette.lightTextColor,
         elevation: 0,
         title: Text('Filters'),
       ),
@@ -39,7 +39,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                       EdgeInsets.only(left: 24, right: 21),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    color: brandLightGreen,
+                    color: ColorPalette.brandLightGreen,
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,7 +48,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                         'This is a work trip',
                         style: TextStyle(
                           height: 25 / 14,
-                          color: lightTextColor,
+                          color: ColorPalette.lightTextColor,
                         ),
                       ),
                       Switch.adaptive(
@@ -72,7 +72,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
                       border: Border.all(
-                        color: paleTextColor,
+                        color: ColorPalette.paleTextColor,
                         width: 1,
                       ),
                     ),
@@ -84,7 +84,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             height: 23 / 14,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                         SizedBox(height: 10),
@@ -95,7 +95,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: paleTextColor,
+                            color: ColorPalette.paleTextColor,
                           ),
                         ),
                       ],
@@ -109,7 +109,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                     padding: EdgeInsets.all(24),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
-                      color: brandPaleGreen,
+                      color: ColorPalette.brandPaleGreen,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,7 +119,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             height: 23 / 14,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                         SizedBox(height: 27),
@@ -130,7 +130,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 SizedBox(height: 13),
                 Container(
                   decoration: BoxDecoration(
-                    color: greyCardColor,
+                    color: ColorPalette.greyCardColor,
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: CustomExpansionPanel(
@@ -149,7 +149,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: greyCardColor,
+                    color: ColorPalette.greyCardColor,
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: CustomExpansionPanel(
@@ -168,7 +168,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: greyCardColor,
+                    color: ColorPalette.greyCardColor,
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: CustomExpansionPanel(
@@ -187,7 +187,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: greyCardColor,
+                    color: ColorPalette.greyCardColor,
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: CustomExpansionPanel(
@@ -206,7 +206,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: greyCardColor,
+                    color: ColorPalette.greyCardColor,
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: CustomExpansionPanel(
@@ -235,7 +235,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 ),
                 Container(
                   decoration: BoxDecoration(
-                    color: greyCardColor,
+                    color: ColorPalette.greyCardColor,
                     borderRadius: BorderRadius.circular(25),
                   ),
                   child: CustomExpansionPanel(
@@ -263,7 +263,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             height: 23 / 14,
-                            color: paleTextColor,
+                            color: ColorPalette.paleTextColor,
                           ),
                         ),
                         onTap: () {
@@ -274,7 +274,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           borderRadius: BorderRadius.circular(29),
                           border: Border.all(
                             width: 1,
-                            color: paleTextColor.withOpacity(0.3),
+                            color: ColorPalette.paleTextColor.withOpacity(0.3),
                           ),
                         ),
                       ),
@@ -289,14 +289,14 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             height: 23 / 14,
-                            color: brandWhite,
+                            color: ColorPalette.brandWhite,
                           ),
                         ),
                         onTap: () {
                           Navigator.of(context).pushNamed(RouteNames.OWNER);
                         },
                         decoration: BoxDecoration(
-                          color: brandBrown,
+                          color: ColorPalette.brandBrown,
                           borderRadius: BorderRadius.circular(29),
                         ),
                       ),

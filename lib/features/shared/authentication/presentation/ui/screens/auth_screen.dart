@@ -29,7 +29,7 @@ class _AuthScreenState extends State<AuthScreen> {
           child: CustomScrollView(
             slivers: [
               SliverAppBar(
-                backgroundColor: brandBackground,
+                backgroundColor: ColorPalette.brandBackground,
                 elevation: 0,
                 expandedHeight: /*(screenSize.height / 3.5)*/ 300,
                 pinned: true,
@@ -52,7 +52,7 @@ class _AuthScreenState extends State<AuthScreen> {
                               fontSize: bold20.fontSize,
                               fontWeight: bold20.fontWeight,
                               height: bold20.height,
-                              color: brandBrown,
+                              color: ColorPalette.brandBrown,
                             ),
                           ),
                         ),
@@ -63,7 +63,7 @@ class _AuthScreenState extends State<AuthScreen> {
                               fontSize: medium13.fontSize,
                               fontWeight: medium14.fontWeight,
                               height: medium14.height,
-                              color: brandBrown,
+                              color: ColorPalette.brandBrown,
                             ),
                           ),
                         ),
@@ -88,13 +88,13 @@ class _AuthScreenState extends State<AuthScreen> {
                         ),
                       ],
                       indicator: BoxDecoration(
-                        color: brandBrown,
+                        color: ColorPalette.brandBrown,
                         borderRadius: BorderRadius.circular(27.5),
                       ),
                       labelStyle: regular14,
-                      labelColor: brandWhite,
+                      labelColor: ColorPalette.brandWhite,
                       unselectedLabelStyle: regular14,
-                      unselectedLabelColor: brandGrey,
+                      unselectedLabelColor: ColorPalette.brandGrey,
                     ),
                   ),
                 ),
@@ -224,7 +224,7 @@ class _LoginFormState extends State<LoginForm> {
                   style: TextStyle(
                     fontSize: regular10.fontSize,
                     height: regular10.height,
-                    color: brandGreyAlt.withOpacity(0.8),
+                    color: ColorPalette.brandGreyAlt.withOpacity(0.8),
                   ),
                 ),
               ),
@@ -243,10 +243,10 @@ class _LoginFormState extends State<LoginForm> {
                 fontSize: bold18.fontSize,
                 fontWeight: bold18.fontWeight,
                 height: bold18.height,
-                color: brandWhite,
+                color: ColorPalette.brandWhite,
               ),
             ),
-            color: brandOrange,
+            color: ColorPalette.brandOrange,
             height: 43,
           ),
           SizedBox(height: screenSize.height / 9.78),
@@ -261,7 +261,7 @@ class _LoginFormState extends State<LoginForm> {
                   flex: 1,
                   child: Container(
                     height: 1,
-                    color: brandBrown,
+                    color: ColorPalette.brandBrown,
                   ),
                 ),
                 SizedBox(width: 17),
@@ -274,7 +274,7 @@ class _LoginFormState extends State<LoginForm> {
                   flex: 1,
                   child: Container(
                     height: 1,
-                    color: brandBrown,
+                    color: ColorPalette.brandBrown,
                   ),
                 ),
               ],
@@ -295,10 +295,10 @@ class _LoginFormState extends State<LoginForm> {
                       fontSize: bold14.fontSize,
                       fontWeight: bold14.fontWeight,
                       height: bold14.height,
-                      color: brandGreyAlt,
+                      color: ColorPalette.brandGreyAlt,
                     ),
                   ),
-                  color: googleWhite,
+                  color: ColorPalette.googleWhite,
                   onTap: () {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
@@ -317,10 +317,10 @@ class _LoginFormState extends State<LoginForm> {
                       fontSize: medium12.fontSize,
                       fontWeight: medium12.fontWeight,
                       height: medium12.height,
-                      color: brandWhite,
+                      color: ColorPalette.brandWhite,
                     ),
                   ),
-                  color: facebookBlue,
+                  color: ColorPalette.facebookBlue,
                   onTap: () {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(

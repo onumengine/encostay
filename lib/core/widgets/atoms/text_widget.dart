@@ -42,7 +42,7 @@ class TextWidget extends StatelessWidget {
     return Container(
       height: this.height ?? 43,
       decoration: BoxDecoration(
-        color: brandWhite,
+        color: ColorPalette.brandWhite,
         borderRadius: BorderRadius.all(
           Radius.circular(27.5),
         ),
@@ -71,7 +71,7 @@ class TextWidget extends StatelessWidget {
                   fontSize: normal14.fontSize,
                   height: normal14.height,
                   fontWeight: normal14.fontWeight,
-                  color: brandGrey,
+                  color: ColorPalette.brandGrey,
                 ),
               ),
               style: inputStyle ??
@@ -79,7 +79,7 @@ class TextWidget extends StatelessWidget {
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     height: 23 / 14,
-                    color: brandGreyAlt,
+                    color: ColorPalette.brandGreyAlt,
                   ),
             ),
           ),

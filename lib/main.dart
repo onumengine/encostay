@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Montserrat',
-        scaffoldBackgroundColor: brandBackground,
+        scaffoldBackgroundColor: ColorPalette.brandBackground,
       ),
       initialRoute: RouteNames.SPLASH,
       // onGenerateRoute: (settings) => AppRouter().onGenerateRoute(settings),

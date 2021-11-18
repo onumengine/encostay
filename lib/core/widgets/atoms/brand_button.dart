@@ -23,7 +23,7 @@ class BrandButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      splashColor: brandWhite,
+      splashColor: ColorPalette.brandWhite,
       child: Material(
         color: Colors.transparent,
         child: Container(

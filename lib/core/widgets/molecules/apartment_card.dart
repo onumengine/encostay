@@ -29,7 +29,7 @@ class _ApartmentCardState extends State<ApartmentCard> {
           width: MediaQuery.of(context).size.width / 1.74,
           padding: EdgeInsets.fromLTRB(12, 11, 13, 20),
           decoration: BoxDecoration(
-            color: brandWhite,
+            color: ColorPalette.brandWhite,
             borderRadius: BorderRadius.all(
               Radius.circular(20),
             ),
@@ -79,7 +79,7 @@ class _ApartmentCardState extends State<ApartmentCard> {
                                     fontSize: 8,
                                     fontWeight: FontWeight.w700,
                                     height: 18 / 8,
-                                    color: brandWhite,
+                                    color: ColorPalette.brandWhite,
                                   ),
                                 ),
                               ],
@@ -99,7 +99,9 @@ class _ApartmentCardState extends State<ApartmentCard> {
                           COLORED_VECTORS_PATH + 'ic_favorite.svg',
                           width: 19,
                           height: 17,
-                          color: (_isFavorited) ? brandYellow : brandWhite,
+                          color: (_isFavorited)
+                              ? ColorPalette.brandYellow
+                              : ColorPalette.brandWhite,
                         ),
                       ),
                       top: 20,
@@ -131,7 +133,7 @@ class _ApartmentCardState extends State<ApartmentCard> {
                         TextSpan(
                           text: '\$230 ',
                           style: TextStyle(
-                            color: brandOrange,
+                            color: ColorPalette.brandOrange,
                             fontSize: 14,
                             fontWeight: FontWeight.w500,
                             height: 23 / 14,
@@ -170,12 +172,12 @@ class _ApartmentCardState extends State<ApartmentCard> {
                     width: 18,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
-                      color: brandOrange,
+                      color: ColorPalette.brandOrange,
                     ),
                     child: Icon(
                       Icons.arrow_forward_ios,
                       size: 12,
-                      color: brandWhite,
+                      color: ColorPalette.brandWhite,
                     ),
                   ),
                 ],

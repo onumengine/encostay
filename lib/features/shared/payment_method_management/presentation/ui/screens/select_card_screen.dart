@@ -17,7 +17,7 @@ class SelectCardScreen extends StatelessWidget {
             height: 30 / 18,
           ),
         ),
-        foregroundColor: brandBrown,
+        foregroundColor: ColorPalette.brandBrown,
         actions: [
           IconButton(
             onPressed: () {

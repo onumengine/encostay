@@ -28,7 +28,7 @@ class _PasswordTextWidgetState extends State<PasswordTextWidget> {
     return Container(
       height: widget.height ?? 43,
       decoration: BoxDecoration(
-        color: brandWhite,
+        color: ColorPalette.brandWhite,
         borderRadius: BorderRadius.all(
           Radius.circular(27.5),
         ),
@@ -51,7 +51,7 @@ class _PasswordTextWidgetState extends State<PasswordTextWidget> {
                   fontSize: normal14.fontSize,
                   height: normal14.height,
                   fontWeight: normal14.fontWeight,
-                  color: brandGrey,
+                  color: ColorPalette.brandGrey,
                 ),
               ),
               style: widget.inputStyle,
@@ -68,7 +68,7 @@ class _PasswordTextWidgetState extends State<PasswordTextWidget> {
               child: Icon(
                 _visibilityIcon,
                 size: 15.6,
-                color: brandGrey,
+                color: ColorPalette.brandGrey,
               ),
             ),
           ),

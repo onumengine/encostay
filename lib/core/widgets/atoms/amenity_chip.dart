@@ -29,7 +29,7 @@ class AmenityChip extends StatelessWidget {
       height: 46,
       width: 46,
       decoration: BoxDecoration(
-        color: brandLight,
+        color: ColorPalette.brandLight,
         borderRadius: BorderRadius.circular(14),
       ),
       child: Center(

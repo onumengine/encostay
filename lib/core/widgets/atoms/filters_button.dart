@@ -25,12 +25,12 @@ class FiltersButton extends StatelessWidget {
         height: 33,
         width: 36,
         decoration: BoxDecoration(
-          color: backgroundColor ?? brandBrown,
+          color: backgroundColor ?? ColorPalette.brandBrown,
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
         child: ImageIcon(
           AssetImage(COLORED_ICONS_PATH + 'ic_filter.png'),
-          color: foregroundColor ?? brandWhite,
+          color: foregroundColor ?? ColorPalette.brandWhite,
         ),
       ),
     );

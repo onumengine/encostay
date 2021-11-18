@@ -11,11 +11,11 @@ class AddPaymentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: brandWhite,
+      backgroundColor: ColorPalette.brandWhite,
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        backgroundColor: brandWhite,
-        foregroundColor: brandBrown,
+        backgroundColor: ColorPalette.brandWhite,
+        foregroundColor: ColorPalette.brandBrown,
         elevation: 0,
         actions: <Widget>[
           IconButton(
@@ -43,7 +43,7 @@ class AddPaymentScreen extends StatelessWidget {
                       fontSize: 24,
                       fontWeight: FontWeight.w600,
                       height: 34 / 24,
-                      color: lightTextColor,
+                      color: ColorPalette.lightTextColor,
                     ),
                   ),
                 ),
@@ -53,7 +53,7 @@ class AddPaymentScreen extends StatelessWidget {
                     text: TextSpan(
                       style: TextStyle(
                         height: 25 / 14,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                       children: [
                         TextSpan(
@@ -63,7 +63,7 @@ class AddPaymentScreen extends StatelessWidget {
                           text: 'USD',
                           style: TextStyle(
                             height: 25 / 14,
-                            color: paleTextColor,
+                            color: ColorPalette.paleTextColor,
                           ),
                         )
                       ],

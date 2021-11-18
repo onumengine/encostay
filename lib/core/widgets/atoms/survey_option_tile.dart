@@ -30,7 +30,9 @@ class _SurveyOptionTileState extends State<SurveyOptionTile> {
             padding: EdgeInsets.only(left: 26, right: 23),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: _isSelected ? brandLightGreen : greyCardColor,
+              color: _isSelected
+                  ? ColorPalette.brandLightGreen
+                  : ColorPalette.greyCardColor,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,7 +42,7 @@ class _SurveyOptionTileState extends State<SurveyOptionTile> {
                     widget.title,
                     style: TextStyle(
                       height: 25 / 14,
-                      color: lightTextColor,
+                      color: ColorPalette.lightTextColor,
                     ),
                   ),
                 ),

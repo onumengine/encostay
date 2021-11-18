@@ -33,7 +33,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   height: 30 / 18,
-                  color: lightTextColor,
+                  color: ColorPalette.lightTextColor,
                 ),
               ),
               SizedBox(
@@ -48,7 +48,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
-                      color: brandGreyAlt,
+                      color: ColorPalette.brandGreyAlt,
                     ),
                   ),
                 ),
@@ -63,10 +63,10 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     BoxShadow(
                       offset: Offset(0, 10),
                       blurRadius: 75,
-                      color: brandTextInputShadow.withOpacity(0.1),
+                      color: ColorPalette.brandTextInputShadow.withOpacity(0.1),
                     ),
                   ],
-                  color: brandWhite,
+                  color: ColorPalette.brandWhite,
                 ),
                 child: Center(
                   child: TextField(
@@ -88,7 +88,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
-                      color: brandGreyAlt,
+                      color: ColorPalette.brandGreyAlt,
                     ),
                   ),
                 ),
@@ -103,10 +103,10 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     BoxShadow(
                       offset: Offset(0, 10),
                       blurRadius: 75,
-                      color: brandTextInputShadow.withOpacity(0.1),
+                      color: ColorPalette.brandTextInputShadow.withOpacity(0.1),
                     ),
                   ],
-                  color: brandWhite,
+                  color: ColorPalette.brandWhite,
                 ),
                 child: Row(
                   children: [
@@ -142,7 +142,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 height: 23 / 14,
-                                color: brandGreyAlt,
+                                color: ColorPalette.brandGreyAlt,
                               ),
                             ),
                           ),
@@ -158,10 +158,11 @@ class _AddCardScreenState extends State<AddCardScreen> {
                               BoxShadow(
                                 offset: Offset(0, 10),
                                 blurRadius: 75,
-                                color: brandTextInputShadow.withOpacity(0.1),
+                                color: ColorPalette.brandTextInputShadow
+                                    .withOpacity(0.1),
                               ),
                             ],
-                            color: brandWhite,
+                            color: ColorPalette.brandWhite,
                           ),
                           child: Center(
                             child: TextField(
@@ -184,7 +185,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             height: 23 / 14,
-                            color: brandGreyAlt,
+                            color: ColorPalette.brandGreyAlt,
                           ),
                         ),
                         SizedBox(height: screenSize.height / 101.5),
@@ -198,10 +199,11 @@ class _AddCardScreenState extends State<AddCardScreen> {
                               BoxShadow(
                                 offset: Offset(0, 10),
                                 blurRadius: 75,
-                                color: brandTextInputShadow.withOpacity(0.1),
+                                color: ColorPalette.brandTextInputShadow
+                                    .withOpacity(0.1),
                               ),
                             ],
-                            color: brandWhite,
+                            color: ColorPalette.brandWhite,
                           ),
                           child: Center(
                             child: TextField(
@@ -224,7 +226,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                   style: TextStyle(
                     fontSize: 10,
                     height: 18 / 10,
-                    color: brandGreyAltOp80,
+                    color: ColorPalette.brandGreyAltOp80,
                   ),
                 ),
               ),
@@ -237,14 +239,14 @@ class _AddCardScreenState extends State<AddCardScreen> {
                     fontSize: 18,
                     fontWeight: FontWeight.w700,
                     height: 24.55 / 18,
-                    color: brandWhite,
+                    color: ColorPalette.brandWhite,
                   ),
                 ),
                 onTap: () {
                   Navigator.of(context)
                       .popUntil(ModalRoute.withName(RouteNames.BOOKING));
                 },
-                color: brandOrange,
+                color: ColorPalette.brandOrange,
               )
             ],
           ),

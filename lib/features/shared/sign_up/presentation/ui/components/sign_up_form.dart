@@ -90,7 +90,7 @@ class SignUpForm extends StatelessWidget {
             SizedBox(
               child: Divider(
                 thickness: 1,
-                color: brandOrange,
+                color: ColorPalette.brandOrange,
               ),
             ),
             SizedBox(height: (screenSize.height / 81.2)),
@@ -134,7 +134,7 @@ class SignUpForm extends StatelessWidget {
               height: 43,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: brandWhite,
+                color: ColorPalette.brandWhite,
                 borderRadius: BorderRadius.all(
                   Radius.circular(27.5),
                 ),
@@ -142,7 +142,7 @@ class SignUpForm extends StatelessWidget {
               child: Material(
                 color: Colors.transparent,
                 child: InkWell(
-                  splashColor: brandWhite.withOpacity(0.5),
+                  splashColor: ColorPalette.brandWhite.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(28),
                   onTap: () async {
                     var selectedDate = await showRoundedDatePicker(
@@ -166,14 +166,16 @@ class SignUpForm extends StatelessWidget {
                       textNegativeButton: 'Clear All',
                       context: context,
                       styleDatePicker: MaterialRoundedDatePickerStyle(
-                        backgroundHeader: brandOrange,
-                        backgroundActionBar: brandOrange,
-                        textStyleButtonPositive: TextStyle(color: brandWhite),
-                        textStyleButtonNegative: TextStyle(color: brandWhite),
+                        backgroundHeader: ColorPalette.brandOrange,
+                        backgroundActionBar: ColorPalette.brandOrange,
+                        textStyleButtonPositive:
+                            TextStyle(color: ColorPalette.brandWhite),
+                        textStyleButtonNegative:
+                            TextStyle(color: ColorPalette.brandWhite),
                         paddingMonthHeader: EdgeInsets.only(top: 12),
                         decorationDateSelected: BoxDecoration(
                           borderRadius: BorderRadius.circular(14),
-                          color: brandOrange,
+                          color: ColorPalette.brandOrange,
                           shape: BoxShape.rectangle,
                         ),
                       ),
@@ -196,7 +198,7 @@ class SignUpForm extends StatelessWidget {
               height: 43,
               padding: EdgeInsets.only(left: 35, right: 33),
               decoration: BoxDecoration(
-                color: brandWhite,
+                color: ColorPalette.brandWhite,
                 borderRadius: BorderRadius.all(
                   Radius.circular(27.5),
                 ),
@@ -232,7 +234,7 @@ class SignUpForm extends StatelessWidget {
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
                   height: 23 / 14,
-                  color: brandGreyAlt,
+                  color: ColorPalette.brandGreyAlt,
                 ),
                 hint: Text(
                   'I want to book',
@@ -240,7 +242,7 @@ class SignUpForm extends StatelessWidget {
                     fontSize: normal14.fontSize,
                     height: normal14.height,
                     fontWeight: normal14.fontWeight,
-                    color: brandGrey,
+                    color: ColorPalette.brandGrey,
                   ),
                 ),
                 disabledHint: Text(
@@ -249,13 +251,13 @@ class SignUpForm extends StatelessWidget {
                     fontSize: normal14.fontSize,
                     height: normal14.height,
                     fontWeight: normal14.fontWeight,
-                    color: brandGrey,
+                    color: ColorPalette.brandGrey,
                   ),
                 ),
                 underline: SizedBox(
                   height: 0,
                 ),
-                iconEnabledColor: brandOrange,
+                iconEnabledColor: ColorPalette.brandOrange,
                 isExpanded: true,
                 elevation: 0,
               ),
@@ -283,10 +285,10 @@ class SignUpForm extends StatelessWidget {
                   fontSize: bold18.fontSize,
                   fontWeight: bold18.fontWeight,
                   height: bold18.height,
-                  color: brandWhite,
+                  color: ColorPalette.brandWhite,
                 ),
               ),
-              color: brandOrange,
+              color: ColorPalette.brandOrange,
               height: 43,
               onTap: () {
                 Navigator.of(context).pushNamed(RouteNames.SET_PASSWORD);

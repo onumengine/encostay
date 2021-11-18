@@ -16,7 +16,7 @@ class EarningsCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: brandWhite,
+        color: ColorPalette.brandWhite,
       ),
       child: Stack(
         alignment: AlignmentDirectional.center,
@@ -27,7 +27,7 @@ class EarningsCard extends StatelessWidget {
             child: Container(
               height: 16,
               width: 13,
-              color: brandOrange.withOpacity(0.2),
+              color: ColorPalette.brandOrange.withOpacity(0.2),
             ),
           ),
           Positioned(
@@ -36,7 +36,7 @@ class EarningsCard extends StatelessWidget {
             child: Container(
               height: 32,
               width: 33.34,
-              color: brandOrange.withOpacity(0.15),
+              color: ColorPalette.brandOrange.withOpacity(0.15),
             ),
           ),
           Positioned(
@@ -67,7 +67,7 @@ class EarningsCard extends StatelessWidget {
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                       height: 18.29 / 15,
-                      color: brownTextColor,
+                      color: ColorPalette.brownTextColor,
                     ),
                   ),
                   SizedBox(
@@ -79,11 +79,11 @@ class EarningsCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 15,
                         height: 18.29 / 15,
-                        color: brandWhite,
+                        color: ColorPalette.brandWhite,
                       ),
                     ),
                     onTap: () {},
-                    color: brandOrange,
+                    color: ColorPalette.brandOrange,
                   ),
                 ],
               ),

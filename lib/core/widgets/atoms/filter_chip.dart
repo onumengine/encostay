@@ -27,7 +27,9 @@ class _CustomChipState extends State<CustomChip> {
         child: Text(
           widget.label,
           style: TextStyle(
-            color: (_isSelected) ? brandWhite : brandBrown,
+            color: (_isSelected)
+                ? ColorPalette.brandWhite
+                : ColorPalette.brandBrown,
             fontSize: 10,
             fontWeight: FontWeight.w600,
             height: 12.19 / 10,
@@ -36,7 +38,7 @@ class _CustomChipState extends State<CustomChip> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
           border: Border.all(color: Color(0x11000000)),
-          color: (_isSelected) ? brandBrown : Colors.transparent,
+          color: (_isSelected) ? ColorPalette.brandBrown : Colors.transparent,
         ),
       ),
     );

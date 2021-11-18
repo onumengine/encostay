@@ -19,7 +19,7 @@ class AddNewListingCard extends StatelessWidget {
           width: 66,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(11),
-            color: brandBrown.withOpacity(0.1),
+            color: ColorPalette.brandBrown.withOpacity(0.1),
           ),
           child: Icon(
             Icons.add,

@@ -43,7 +43,7 @@ class _BookingScreenState extends State<BookingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: brandWhite,
+      backgroundColor: ColorPalette.brandWhite,
       extendBody: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -56,7 +56,7 @@ class _BookingScreenState extends State<BookingScreen> {
             (Platform.isIOS)
                 ? Icons.arrow_back_ios_rounded
                 : Icons.arrow_back_rounded,
-            color: brandBrown,
+            color: ColorPalette.brandBrown,
           ),
         ),
       ),

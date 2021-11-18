@@ -116,7 +116,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 12),
                         child: CircularProgressIndicator(
-                          color: brandWhite,
+                          color: ColorPalette.brandWhite,
                         ),
                       ),
                       onTap: () {
@@ -128,7 +128,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                           ),
                         );
                       },
-                      color: brandOrange,
+                      color: ColorPalette.brandOrange,
                       height: 43,
                     );
                   } else {
@@ -139,7 +139,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                           fontSize: bold18.fontSize,
                           fontWeight: bold18.fontWeight,
                           height: bold18.height,
-                          color: brandWhite,
+                          color: ColorPalette.brandWhite,
                         ),
                       ),
                       onTap: () {
@@ -153,7 +153,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                         // );
                         Navigator.of(context).pushNamed(RouteNames.HOST_HOME);
                       },
-                      color: brandOrange,
+                      color: ColorPalette.brandOrange,
                       height: 43,
                     );
                   }

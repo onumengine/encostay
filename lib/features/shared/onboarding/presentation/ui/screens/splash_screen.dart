@@ -62,7 +62,7 @@ class SplashScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      splashColor: brandWhite,
+                      splashColor: ColorPalette.brandWhite,
                       child: Container(
                         margin: EdgeInsets.symmetric(
                             horizontal: (screenSize.width / 3.6)),
@@ -72,14 +72,14 @@ class SplashScreen extends StatelessWidget {
                           borderRadius: BorderRadius.all(
                             Radius.circular(29),
                           ),
-                          color: brandBrown,
+                          color: ColorPalette.brandBrown,
                         ),
                         child: Center(
                           child: Text('Get started',
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
-                                color: brandWhite,
+                                color: ColorPalette.brandWhite,
                               )),
                         ),
                       ),
@@ -103,7 +103,7 @@ class CircularOverlay extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paintBrush = Paint()
-      ..color = brandOverlay
+      ..color = ColorPalette.brandOverlay
       ..style = PaintingStyle.fill;
     canvas.drawCircle(
         Offset((screenSize.width * 0.06), (screenSize.height * 0.78)),

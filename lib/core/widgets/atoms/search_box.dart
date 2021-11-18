@@ -17,13 +17,13 @@ class SearchBox extends StatelessWidget {
     return Container(
       height: 47,
       decoration: BoxDecoration(
-        color: brandWhite,
+        color: ColorPalette.brandWhite,
         borderRadius: BorderRadius.all(
           Radius.circular(13),
         ),
         boxShadow: [
           BoxShadow(
-            color: brandTextInputShadow.withOpacity(0.13),
+            color: ColorPalette.brandTextInputShadow.withOpacity(0.13),
             offset: Offset(0, 10),
             blurRadius: 75,
           ),

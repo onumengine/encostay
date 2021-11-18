@@ -42,14 +42,14 @@ class ResetFailureComponent extends StatelessWidget {
         ),
         BrandButton(
           height: 57,
-          color: brandOrange,
+          color: ColorPalette.brandOrange,
           child: Text(
             'Retry',
             style: TextStyle(
               fontSize: bold18.fontSize,
               fontWeight: bold18.fontWeight,
               height: bold18.height,
-              color: brandWhite,
+              color: ColorPalette.brandWhite,
             ),
           ),
           onTap: () {

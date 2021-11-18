@@ -16,18 +16,18 @@ class _CancellationSurveyScreenState extends State<CancellationSurveyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: brandWhite,
+      backgroundColor: ColorPalette.brandWhite,
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        backgroundColor: brandWhite,
-        foregroundColor: lightTextColor,
+        backgroundColor: ColorPalette.brandWhite,
+        foregroundColor: ColorPalette.lightTextColor,
         elevation: 0,
         centerTitle: true,
         titleTextStyle: TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.w500,
           height: 19.5 / 16,
-          color: lightTextColor,
+          color: ColorPalette.lightTextColor,
         ),
         title: Text('Cancellation survey'),
       ),
@@ -39,7 +39,7 @@ class _CancellationSurveyScreenState extends State<CancellationSurveyScreen> {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 16, vertical: 15),
               decoration: BoxDecoration(
-                color: redBgColor,
+                color: ColorPalette.redBgColor,
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(20),
                   bottomRight: Radius.circular(20),
@@ -51,7 +51,7 @@ class _CancellationSurveyScreenState extends State<CancellationSurveyScreen> {
                 style: TextStyle(
                   fontSize: 12,
                   height: 22 / 12,
-                  color: redTextColor,
+                  color: ColorPalette.redTextColor,
                 ),
               ),
             ),
@@ -102,7 +102,7 @@ class _CancellationSurveyScreenState extends State<CancellationSurveyScreen> {
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   height: 23 / 14,
-                  color: brandWhite,
+                  color: ColorPalette.brandWhite,
                 ),
               ),
               onTap: () {
@@ -119,7 +119,7 @@ class _CancellationSurveyScreenState extends State<CancellationSurveyScreen> {
                   ),
                 );
               },
-              color: brandBrown,
+              color: ColorPalette.brandBrown,
               height: 58,
               width: 185,
             ),

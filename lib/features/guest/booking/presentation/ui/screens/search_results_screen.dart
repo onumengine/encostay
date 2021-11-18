@@ -21,7 +21,7 @@ class _SearchResultsScreenState extends State<SearchResultsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: brandSecondBackground,
+      backgroundColor: ColorPalette.brandSecondBackground,
       extendBody: true,
       appBar: AppBar(
         automaticallyImplyLeading: true,
@@ -37,22 +37,22 @@ class _SearchResultsScreenState extends State<SearchResultsScreen> {
         title: Container(
           height: 47,
           decoration: BoxDecoration(
-            color: brandWhite,
+            color: ColorPalette.brandWhite,
             borderRadius: BorderRadius.all(
               Radius.circular(13),
             ),
             boxShadow: [
               BoxShadow(
-                color: brandTextInputShadow.withOpacity(0.13),
+                color: ColorPalette.brandTextInputShadow.withOpacity(0.13),
               ),
               BoxShadow(
-                color: brandTextInputShadow.withOpacity(0.13),
+                color: ColorPalette.brandTextInputShadow.withOpacity(0.13),
               ),
               BoxShadow(
-                color: brandTextInputShadow.withOpacity(0.13),
+                color: ColorPalette.brandTextInputShadow.withOpacity(0.13),
               ),
               BoxShadow(
-                color: brandTextInputShadow.withOpacity(0.13),
+                color: ColorPalette.brandTextInputShadow.withOpacity(0.13),
               ),
             ],
           ),
@@ -81,8 +81,8 @@ class _SearchResultsScreenState extends State<SearchResultsScreen> {
                   children: <Widget>[],
                 ),
                 FiltersButton(
-                  backgroundColor: brandWhite,
-                  foregroundColor: brandBrown,
+                  backgroundColor: ColorPalette.brandWhite,
+                  foregroundColor: ColorPalette.brandBrown,
                 ),
               ],
             ),

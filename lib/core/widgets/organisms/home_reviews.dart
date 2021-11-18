@@ -34,7 +34,7 @@ class _HomeReviewsComponentState extends State<HomeReviewsComponent> {
               style: TextStyle(
                 fontWeight: FontWeight.w500,
                 height: 23 / 14,
-                color: lightTextColor,
+                color: ColorPalette.lightTextColor,
               ),
             ),
           ),
@@ -85,7 +85,7 @@ class _HomeReviewsComponentState extends State<HomeReviewsComponent> {
               Text(
                 '617 reviews',
                 style: TextStyle(
-                  color: paleTextColor,
+                  color: ColorPalette.paleTextColor,
                 ),
               ),
             ],
@@ -124,7 +124,7 @@ class _HomeReviewsComponentState extends State<HomeReviewsComponent> {
                       child: CircularProgressIndicator(
                         value: progress2,
                         valueColor: AlwaysStoppedAnimation<Color>(
-                          redTextColor,
+                          ColorPalette.redTextColor,
                         ),
                       ),
                     ),
@@ -142,7 +142,7 @@ class _HomeReviewsComponentState extends State<HomeReviewsComponent> {
                       child: CircularProgressIndicator(
                         value: progress3,
                         valueColor: AlwaysStoppedAnimation<Color>(
-                          brandDarkGreen,
+                          ColorPalette.brandDarkGreen,
                         ),
                       ),
                     ),
@@ -160,7 +160,7 @@ class _HomeReviewsComponentState extends State<HomeReviewsComponent> {
                       child: CircularProgressIndicator(
                         value: progress4,
                         valueColor: AlwaysStoppedAnimation<Color>(
-                          redTextColor,
+                          ColorPalette.redTextColor,
                         ),
                       ),
                     ),
@@ -175,7 +175,7 @@ class _HomeReviewsComponentState extends State<HomeReviewsComponent> {
             padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              color: brandPaleGreen,
+              color: ColorPalette.brandPaleGreen,
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -196,7 +196,7 @@ class _HomeReviewsComponentState extends State<HomeReviewsComponent> {
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           height: 23 / 14,
-                          color: lightTextColor,
+                          color: ColorPalette.lightTextColor,
                         ),
                       ),
                       SizedBox(height: 5),
@@ -207,7 +207,7 @@ class _HomeReviewsComponentState extends State<HomeReviewsComponent> {
                         style: TextStyle(
                           fontSize: 12,
                           height: 22 / 12,
-                          color: lightTextColor,
+                          color: ColorPalette.lightTextColor,
                         ),
                       ),
                     ],

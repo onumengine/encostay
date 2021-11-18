@@ -29,7 +29,7 @@ class _SearchResultCardState extends State<SearchResultCard> {
         padding: EdgeInsets.fromLTRB(17, 14, 15, 15),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: brandWhite,
+          color: ColorPalette.brandWhite,
         ),
         child: Column(
           children: <Widget>[
@@ -77,7 +77,7 @@ class _SearchResultCardState extends State<SearchResultCard> {
                                 fontSize: 8,
                                 fontWeight: FontWeight.w700,
                                 height: 18 / 8,
-                                color: brandWhite,
+                                color: ColorPalette.brandWhite,
                               ),
                             ),
                           ],
@@ -97,7 +97,9 @@ class _SearchResultCardState extends State<SearchResultCard> {
                       COLORED_VECTORS_PATH + 'ic_favorite.svg',
                       width: 19,
                       height: 17,
-                      color: (_isFavorited) ? brandYellow : brandWhite,
+                      color: (_isFavorited)
+                          ? ColorPalette.brandYellow
+                          : ColorPalette.brandWhite,
                     ),
                   ),
                   top: 20,
@@ -154,12 +156,12 @@ class _SearchResultCardState extends State<SearchResultCard> {
                       width: 18,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        color: brandOrange,
+                        color: ColorPalette.brandOrange,
                       ),
                       child: Icon(
                         Icons.arrow_forward_ios,
                         size: 12,
-                        color: brandWhite,
+                        color: ColorPalette.brandWhite,
                       ),
                     ),
                   ],
@@ -183,7 +185,7 @@ class _SearchResultCardState extends State<SearchResultCard> {
                       TextSpan(
                         text: '\$230 ',
                         style: TextStyle(
-                          color: brandOrange,
+                          color: ColorPalette.brandOrange,
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
                           height: 23 / 14,

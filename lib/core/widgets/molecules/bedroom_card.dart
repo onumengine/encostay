@@ -53,7 +53,7 @@ class _BedroomCardState extends State<BedroomCard> {
           EdgeInsets.only(top: 16, bottom: 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        color: (this.isSelected) ? brandLight : Colors.transparent,
+        color: (this.isSelected) ? ColorPalette.brandLight : Colors.transparent,
         border: (isSelected)
             ? null
             : Border.all(
@@ -75,7 +75,7 @@ class _BedroomCardState extends State<BedroomCard> {
               fontSize: 12,
               fontWeight: FontWeight.w500,
               height: 20 / 12,
-              color: brandBrown,
+              color: ColorPalette.brandBrown,
             ),
           ),
           SizedBox(

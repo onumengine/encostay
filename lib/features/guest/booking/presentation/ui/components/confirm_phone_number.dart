@@ -51,7 +51,7 @@ class _ConfirmPhoneNumberComponentState
           Container(
             padding: EdgeInsets.all(24) + EdgeInsets.only(right: 66),
             decoration: BoxDecoration(
-              color: brandWhite,
+              color: ColorPalette.brandWhite,
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
@@ -106,7 +106,7 @@ class _ConfirmPhoneNumberComponentState
               constraints: BoxConstraints(maxWidth: screenSize.width / 2.5),
               padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
               decoration: BoxDecoration(
-                color: brandBrown,
+                color: ColorPalette.brandBrown,
                 borderRadius: BorderRadius.circular(26.5),
               ),
               child: Center(
@@ -116,7 +116,7 @@ class _ConfirmPhoneNumberComponentState
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                     height: 19.5 / 16,
-                    color: brandWhite,
+                    color: ColorPalette.brandWhite,
                   ),
                 ),
               ),

@@ -5,7 +5,7 @@ abstract class CustomTab extends StatefulWidget {}
 
 class SelectedTab extends StatefulWidget {
   final int index;
-  void Function() onTap;
+  final void Function() onTap;
 
   SelectedTab({
     required this.onTap,
@@ -25,7 +25,7 @@ class _SelectedTabState extends State<SelectedTab> {
         width: (screenSize.width / 3.35),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(17),
-          color: brandOrange,
+          color: ColorPalette.brandOrange,
           boxShadow: [
             BoxShadow(
               offset: Offset(9, 11),
@@ -40,7 +40,7 @@ class _SelectedTabState extends State<SelectedTab> {
           style: TextStyle(
             fontWeight: FontWeight.w500,
             height: 23 / 14,
-            color: brandWhite,
+            color: ColorPalette.brandWhite,
           ),
         )),
       ),
@@ -70,7 +70,7 @@ class _UnselectedTabState extends State<UnselectedTab> {
         width: (screenSize.width / 7.98),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(17),
-          color: brandLight,
+          color: ColorPalette.brandLight,
         ),
         child: Center(
           child: Text(
@@ -78,7 +78,7 @@ class _UnselectedTabState extends State<UnselectedTab> {
             style: TextStyle(
               fontWeight: FontWeight.w500,
               height: 23 / 14,
-              color: lightTextColor,
+              color: ColorPalette.lightTextColor,
             ),
           ),
         ),
@@ -127,7 +127,9 @@ class _CustomTabIndicatorState extends State<CustomTabIndicator> {
             : (screenSize.width / 7.98),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(17),
-          color: (_isSelected) ? brandOrange : brandLight,
+          color: (_isSelected)
+              ? ColorPalette.brandOrange
+              : ColorPalette.brandLight,
           boxShadow: (_isSelected)
               ? [
                   BoxShadow(
@@ -145,7 +147,7 @@ class _CustomTabIndicatorState extends State<CustomTabIndicator> {
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     height: 23 / 14,
-                    color: brandWhite,
+                    color: ColorPalette.brandWhite,
                   ),
                 )
               : Text(
@@ -153,7 +155,7 @@ class _CustomTabIndicatorState extends State<CustomTabIndicator> {
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     height: 23 / 14,
-                    color: lightTextColor,
+                    color: ColorPalette.lightTextColor,
                   ),
                 ),
         ),

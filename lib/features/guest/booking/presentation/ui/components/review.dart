@@ -146,7 +146,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                       style: TextStyle(
                         fontSize: 12,
                         height: 22 / 12,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                     SizedBox(height: 10),
@@ -156,16 +156,16 @@ class _ReviewComponentState extends State<ReviewComponent> {
                           await showRoundedDatePicker(
                             context: context,
                             styleDatePicker: MaterialRoundedDatePickerStyle(
-                              backgroundHeader: brandOrange,
-                              backgroundActionBar: brandOrange,
+                              backgroundHeader: ColorPalette.brandOrange,
+                              backgroundActionBar: ColorPalette.brandOrange,
                               textStyleButtonPositive:
-                                  TextStyle(color: brandWhite),
+                                  TextStyle(color: ColorPalette.brandWhite),
                               textStyleButtonNegative:
-                                  TextStyle(color: brandWhite),
+                                  TextStyle(color: ColorPalette.brandWhite),
                               paddingMonthHeader: EdgeInsets.only(top: 12),
                               decorationDateSelected: BoxDecoration(
                                 borderRadius: BorderRadius.circular(14),
-                                color: brandOrange,
+                                color: ColorPalette.brandOrange,
                                 shape: BoxShape.rectangle,
                               ),
                             ),
@@ -196,7 +196,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                         child: Container(
                           padding: EdgeInsets.fromLTRB(12, 6, 0, 5),
                           decoration: BoxDecoration(
-                              color: brandWhite,
+                              color: ColorPalette.brandWhite,
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -231,7 +231,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                       style: TextStyle(
                         fontSize: 12,
                         height: 22 / 12,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                     SizedBox(height: 10),
@@ -241,16 +241,16 @@ class _ReviewComponentState extends State<ReviewComponent> {
                           await showRoundedDatePicker(
                             context: context,
                             styleDatePicker: MaterialRoundedDatePickerStyle(
-                              backgroundHeader: brandOrange,
-                              backgroundActionBar: brandOrange,
+                              backgroundHeader: ColorPalette.brandOrange,
+                              backgroundActionBar: ColorPalette.brandOrange,
                               textStyleButtonPositive:
-                                  TextStyle(color: brandWhite),
+                                  TextStyle(color: ColorPalette.brandWhite),
                               textStyleButtonNegative:
-                                  TextStyle(color: brandWhite),
+                                  TextStyle(color: ColorPalette.brandWhite),
                               paddingMonthHeader: EdgeInsets.only(top: 12),
                               decorationDateSelected: BoxDecoration(
                                 borderRadius: BorderRadius.circular(14),
-                                color: brandOrange,
+                                color: ColorPalette.brandOrange,
                                 shape: BoxShape.rectangle,
                               ),
                             ),
@@ -281,7 +281,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                         child: Container(
                           padding: EdgeInsets.fromLTRB(12, 6, 0, 5),
                           decoration: BoxDecoration(
-                              color: brandWhite,
+                              color: ColorPalette.brandWhite,
                               borderRadius: BorderRadius.circular(10)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -316,7 +316,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                       style: TextStyle(
                         fontSize: 12,
                         height: 22 / 12,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                     SizedBox(height: 10),
@@ -357,7 +357,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
               fontSize: 18,
               fontWeight: FontWeight.w500,
               height: 30 / 18,
-              color: lightTextColor,
+              color: ColorPalette.lightTextColor,
             ),
           ),
           SizedBox(height: 19),
@@ -386,7 +386,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
               padding: EdgeInsets.all(14),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                color: brandLightGreen,
+                color: ColorPalette.brandLightGreen,
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -418,7 +418,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           height: 23 / 14,
-                          color: lightTextColor,
+                          color: ColorPalette.lightTextColor,
                         ),
                       ),
                       Text(
@@ -426,7 +426,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                         style: TextStyle(
                           fontSize: 12,
                           height: 22 / 12,
-                          color: paleTextColor,
+                          color: ColorPalette.paleTextColor,
                         ),
                       ),
                     ],
@@ -446,7 +446,8 @@ class _ReviewComponentState extends State<ReviewComponent> {
               padding: EdgeInsets.all(14),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                border: Border.all(color: paleTextColor.withOpacity(0.1)),
+                border: Border.all(
+                    color: ColorPalette.paleTextColor.withOpacity(0.1)),
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -456,7 +457,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                     width: 64.24,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(11),
-                      color: paleTextColor.withOpacity(0.1),
+                      color: ColorPalette.paleTextColor.withOpacity(0.1),
                     ),
                     child: Icon(Icons.add),
                   ),
@@ -484,7 +485,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
             padding: EdgeInsets.symmetric(vertical: 30, horizontal: 24),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
-              color: brandLight,
+              color: ColorPalette.brandLight,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -494,7 +495,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     height: 23 / 14,
-                    color: lightTextColor,
+                    color: ColorPalette.lightTextColor,
                   ),
                 ),
                 SizedBox(height: screenSize.height / 36.9),
@@ -507,7 +508,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                       style: TextStyle(
                         fontSize: 12,
                         height: 22 / 12,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                     Text(
@@ -515,7 +516,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         height: 20 / 12,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                   ],
@@ -530,7 +531,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                       style: TextStyle(
                         fontSize: 12,
                         height: 22 / 12,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                     Text(
@@ -538,14 +539,14 @@ class _ReviewComponentState extends State<ReviewComponent> {
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         height: 20 / 12,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                   ],
                 ),
                 SizedBox(height: screenSize.height / 34.55),
                 Divider(
-                  color: brandYellow,
+                  color: ColorPalette.brandYellow,
                   thickness: 1,
                 ),
                 SizedBox(height: screenSize.height / 36.09),
@@ -561,14 +562,14 @@ class _ReviewComponentState extends State<ReviewComponent> {
                     ),
                     PhysicalModel(
                       color: Color(0x7000000),
-                      shadowColor: brandBrown,
+                      shadowColor: ColorPalette.brandBrown,
                       elevation: 3,
                       borderRadius: BorderRadius.circular(7),
                       child: Container(
                         padding:
                             EdgeInsets.symmetric(vertical: 5, horizontal: 22),
                         decoration: BoxDecoration(
-                          color: brandWhite,
+                          color: ColorPalette.brandWhite,
                           borderRadius: BorderRadius.circular(7),
                         ),
                         child: Text(
@@ -599,7 +600,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                 padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
                 width: screenSize.width / 2.5,
                 decoration: BoxDecoration(
-                  color: brandBrown,
+                  color: ColorPalette.brandBrown,
                   borderRadius: BorderRadius.circular(26.5),
                 ),
                 child: Center(
@@ -609,7 +610,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                       height: 19.5 / 16,
-                      color: brandWhite,
+                      color: ColorPalette.brandWhite,
                     ),
                   ),
                 ),

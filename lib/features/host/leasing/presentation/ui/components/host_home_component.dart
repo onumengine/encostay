@@ -29,7 +29,7 @@ class HostHomeComponent extends StatelessWidget {
             },
             icon: Icon(
               Icons.sort,
-              color: hamburgerIconColor,
+              color: ColorPalette.hamburgerIconColor,
             ),
           ),
           title: Text(
@@ -37,7 +37,7 @@ class HostHomeComponent extends StatelessWidget {
             style: TextStyle(
               fontSize: 12,
               height: 34 / 12,
-              color: palehostText,
+              color: ColorPalette.palehostText,
             ),
           ),
           actions: [
@@ -123,7 +123,7 @@ class HostHomeComponent extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     height: 23 / 14,
-                    color: brandBrown,
+                    color: ColorPalette.brandBrown,
                   ),
                 ),
                 BrandButton(
@@ -139,7 +139,7 @@ class HostHomeComponent extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 12,
                       height: 14.63 / 12,
-                      color: brandBrown,
+                      color: ColorPalette.brandBrown,
                     ),
                   ),
                   onTap: () {},

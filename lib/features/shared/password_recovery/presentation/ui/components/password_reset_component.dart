@@ -92,14 +92,14 @@ class PasswordResetComponent extends StatelessWidget {
         SizedBox(height: screenHeight / 21),
         BrandButton(
           height: 57,
-          color: brandOrange,
+          color: ColorPalette.brandOrange,
           child: Text(
             'Reset Password',
             style: TextStyle(
               fontSize: bold18.fontSize,
               fontWeight: bold18.fontWeight,
               height: bold18.height,
-              color: brandWhite,
+              color: ColorPalette.brandWhite,
             ),
           ),
           onTap: () {

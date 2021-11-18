@@ -40,18 +40,18 @@ class _CancellationScreenState extends State<CancellationScreen> {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: brandWhite,
+      backgroundColor: ColorPalette.brandWhite,
       appBar: AppBar(
         automaticallyImplyLeading: true,
         centerTitle: true,
         title: Text('Manage Booking'),
-        backgroundColor: brandWhite,
+        backgroundColor: ColorPalette.brandWhite,
         elevation: 0,
-        foregroundColor: lightTextColor,
+        foregroundColor: ColorPalette.lightTextColor,
         titleTextStyle: TextStyle(
           fontWeight: FontWeight.w500,
           height: 23 / 14,
-          color: lightTextColor,
+          color: ColorPalette.lightTextColor,
         ),
       ),
       body: Padding(
@@ -134,7 +134,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
             Container(
               padding: EdgeInsets.all(24),
               decoration: BoxDecoration(
-                color: redBgColor,
+                color: ColorPalette.redBgColor,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
@@ -159,7 +159,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                     style: TextStyle(
                       fontSize: 12,
                       height: 22 / 12,
-                      color: lightTextColor,
+                      color: ColorPalette.lightTextColor,
                     ),
                   ),
                   SizedBox(height: 10),
@@ -172,16 +172,16 @@ class _CancellationScreenState extends State<CancellationScreen> {
                             await showRoundedDatePicker(
                               context: context,
                               styleDatePicker: MaterialRoundedDatePickerStyle(
-                                backgroundHeader: brandOrange,
-                                backgroundActionBar: brandOrange,
+                                backgroundHeader: ColorPalette.brandOrange,
+                                backgroundActionBar: ColorPalette.brandOrange,
                                 textStyleButtonPositive:
-                                    TextStyle(color: brandWhite),
+                                    TextStyle(color: ColorPalette.brandWhite),
                                 textStyleButtonNegative:
-                                    TextStyle(color: brandWhite),
+                                    TextStyle(color: ColorPalette.brandWhite),
                                 paddingMonthHeader: EdgeInsets.only(top: 12),
                                 decorationDateSelected: BoxDecoration(
                                   borderRadius: BorderRadius.circular(14),
-                                  color: brandOrange,
+                                  color: ColorPalette.brandOrange,
                                   shape: BoxShape.rectangle,
                                 ),
                               ),
@@ -212,7 +212,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                           child: Container(
                             padding: EdgeInsets.fromLTRB(12, 6, 0, 5),
                             decoration: BoxDecoration(
-                                color: brandWhite,
+                                color: ColorPalette.brandWhite,
                                 borderRadius: BorderRadius.circular(10)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -241,7 +241,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                           style: TextStyle(
                             fontSize: 10,
                             height: 18 / 10,
-                            color: redTextColor,
+                            color: ColorPalette.redTextColor,
                           ),
                         ),
                       )
@@ -249,14 +249,15 @@ class _CancellationScreenState extends State<CancellationScreen> {
                   ),
                   SizedBox(
                     height: 33,
-                    child: Divider(color: redTextColor, thickness: 1),
+                    child:
+                        Divider(color: ColorPalette.redTextColor, thickness: 1),
                   ),
                   Text(
                     'Checkout',
                     style: TextStyle(
                       fontSize: 12,
                       height: 22 / 12,
-                      color: lightTextColor,
+                      color: ColorPalette.lightTextColor,
                     ),
                   ),
                   SizedBox(height: 10),
@@ -268,16 +269,16 @@ class _CancellationScreenState extends State<CancellationScreen> {
                             await showRoundedDatePicker(
                               context: context,
                               styleDatePicker: MaterialRoundedDatePickerStyle(
-                                backgroundHeader: brandOrange,
-                                backgroundActionBar: brandOrange,
+                                backgroundHeader: ColorPalette.brandOrange,
+                                backgroundActionBar: ColorPalette.brandOrange,
                                 textStyleButtonPositive:
-                                    TextStyle(color: brandWhite),
+                                    TextStyle(color: ColorPalette.brandWhite),
                                 textStyleButtonNegative:
-                                    TextStyle(color: brandWhite),
+                                    TextStyle(color: ColorPalette.brandWhite),
                                 paddingMonthHeader: EdgeInsets.only(top: 12),
                                 decorationDateSelected: BoxDecoration(
                                   borderRadius: BorderRadius.circular(14),
-                                  color: brandOrange,
+                                  color: ColorPalette.brandOrange,
                                   shape: BoxShape.rectangle,
                                 ),
                               ),
@@ -309,7 +310,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                             width: 85,
                             padding: EdgeInsets.fromLTRB(12, 6, 0, 5),
                             decoration: BoxDecoration(
-                                color: brandWhite,
+                                color: ColorPalette.brandWhite,
                                 borderRadius: BorderRadius.circular(10)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -339,7 +340,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                         style: TextStyle(
                           fontSize: 10,
                           height: 18 / 10,
-                          color: redTextColor,
+                          color: ColorPalette.redTextColor,
                         ),
                       ),
                     ],
@@ -356,18 +357,18 @@ class _CancellationScreenState extends State<CancellationScreen> {
                   'Total',
                   style: TextStyle(
                     height: 25 / 14,
-                    color: lightTextColor,
+                    color: ColorPalette.lightTextColor,
                   ),
                 ),
                 PhysicalModel(
                   color: Color(0x7000000),
-                  shadowColor: brandBrown,
+                  shadowColor: ColorPalette.brandBrown,
                   elevation: 3,
                   borderRadius: BorderRadius.circular(7),
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 5, horizontal: 22),
                     decoration: BoxDecoration(
-                      color: brandWhite,
+                      color: ColorPalette.brandWhite,
                       borderRadius: BorderRadius.circular(7),
                     ),
                     child: Text(
@@ -392,7 +393,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(29),
                       border: Border.all(
-                        color: paleTextColor.withOpacity(0.3),
+                        color: ColorPalette.paleTextColor.withOpacity(0.3),
                       ),
                     ),
                     child: Material(
@@ -401,7 +402,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        highlightColor: redTextColor,
+                        highlightColor: ColorPalette.redTextColor,
                         highlightShape: BoxShape.rectangle,
                         child: Padding(
                           padding: EdgeInsets.symmetric(
@@ -412,7 +413,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 height: 23 / 14,
-                                color: paleTextColor,
+                                color: ColorPalette.paleTextColor,
                               ),
                             ),
                           ),
@@ -433,12 +434,12 @@ class _CancellationScreenState extends State<CancellationScreen> {
                           Navigator.of(context)
                               .pushNamed(RouteNames.CANCEL_BOOKING);
                         },
-                        splashColor: brandOrange,
+                        splashColor: ColorPalette.brandOrange,
                         child: Container(
                           padding: EdgeInsets.symmetric(vertical: 18),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(29),
-                            color: brandBrown,
+                            color: ColorPalette.brandBrown,
                           ),
                           child: Center(
                             child: Text(
@@ -446,7 +447,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 height: 23 / 14,
-                                color: brandWhite,
+                                color: ColorPalette.brandWhite,
                               ),
                             ),
                           ),

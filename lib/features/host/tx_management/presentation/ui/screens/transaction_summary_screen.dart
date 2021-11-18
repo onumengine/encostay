@@ -25,7 +25,7 @@ class TransactionSummaryScreen extends StatelessWidget {
           ),
           centerTitle: true,
           backgroundColor: Colors.transparent,
-          foregroundColor: brownTextColor,
+          foregroundColor: ColorPalette.brownTextColor,
           elevation: 0,
           actions: [
             CircleAvatar(

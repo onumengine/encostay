@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: brandBackgroundApp,
+      backgroundColor: ColorPalette.brandBackgroundApp,
       extendBody: true,
       body: SafeArea(
         bottom: false,
@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
-                      color: brandBrown,
+                      color: ColorPalette.brandBrown,
                     ),
                   ),
                   TextButton(
@@ -131,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
                         height: 22 / 14,
-                        color: brandOrange,
+                        color: ColorPalette.brandOrange,
                       ),
                     ),
                   ),
@@ -163,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
-                      color: brandBrown,
+                      color: ColorPalette.brandBrown,
                     ),
                   ),
                   TextButton(
@@ -180,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
                         height: 22 / 14,
-                        color: brandOrange,
+                        color: ColorPalette.brandOrange,
                       ),
                     ),
                   ),

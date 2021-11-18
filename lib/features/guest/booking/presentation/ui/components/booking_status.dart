@@ -73,7 +73,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
                   height: 30 / 18,
-                  color: brandBrown,
+                  color: ColorPalette.brandBrown,
                 ),
               ),
               SizedBox(
@@ -94,7 +94,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                               vertical: 15, horizontal: 19.5),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: brandWhite,
+                            color: ColorPalette.brandWhite,
                           ),
                           child: Center(
                             child: Column(
@@ -104,7 +104,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                                   style: TextStyle(
                                     fontSize: 14,
                                     height: 17.07 / 14,
-                                    color: paleTextColor,
+                                    color: ColorPalette.paleTextColor,
                                   ),
                                 ),
                                 Text(
@@ -127,7 +127,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                               vertical: 15, horizontal: 19.5),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: brandWhite,
+                            color: ColorPalette.brandWhite,
                           ),
                           child: Center(
                             child: Column(
@@ -137,7 +137,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                                   style: TextStyle(
                                     fontSize: 14,
                                     height: 17.07 / 14,
-                                    color: paleTextColor,
+                                    color: ColorPalette.paleTextColor,
                                   ),
                                 ),
                                 Text(
@@ -169,7 +169,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                             'Friday check in',
                             style: TextStyle(
                               height: 25 / 14,
-                              color: paleTextColor,
+                              color: ColorPalette.paleTextColor,
                             ),
                           ),
                           SizedBox(
@@ -194,7 +194,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                             'Tuesday check out',
                             style: TextStyle(
                               height: 25 / 14,
-                              color: paleTextColor,
+                              color: ColorPalette.paleTextColor,
                             ),
                           ),
                           SizedBox(
@@ -220,7 +220,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                 padding: EdgeInsets.symmetric(vertical: 21, horizontal: 24) +
                     EdgeInsets.only(bottom: 47),
                 decoration: BoxDecoration(
-                  color: brandLight,
+                  color: ColorPalette.brandLight,
                   borderRadius: BorderRadius.circular(25),
                 ),
                 child: Column(
@@ -233,7 +233,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                           'Things to keep in mind',
                           style: TextStyle(
                             height: 25 / 14,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                         Icon(Icons.keyboard_arrow_up),
@@ -248,7 +248,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                           padding: EdgeInsets.symmetric(
                               horizontal: 17, vertical: 15),
                           decoration: BoxDecoration(
-                            color: brandWhite,
+                            color: ColorPalette.brandWhite,
                             borderRadius: BorderRadius.circular(15),
                             boxShadow: [
                               BoxShadow(
@@ -270,7 +270,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                       ],
@@ -284,7 +284,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                           padding: EdgeInsets.symmetric(
                               horizontal: 17, vertical: 15),
                           decoration: BoxDecoration(
-                            color: brandWhite,
+                            color: ColorPalette.brandWhite,
                             borderRadius: BorderRadius.circular(15),
                             boxShadow: [
                               BoxShadow(
@@ -306,7 +306,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                       ],
@@ -320,7 +320,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                           padding: EdgeInsets.symmetric(
                               horizontal: 17, vertical: 15),
                           decoration: BoxDecoration(
-                            color: brandWhite,
+                            color: ColorPalette.brandWhite,
                             borderRadius: BorderRadius.circular(15),
                             boxShadow: [
                               BoxShadow(
@@ -342,7 +342,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                       ],
@@ -363,7 +363,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
             padding: EdgeInsets.only(left: 38, right: 22) +
                 EdgeInsets.symmetric(vertical: 22),
             decoration: BoxDecoration(
-              color: brandWhite,
+              color: ColorPalette.brandWhite,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(48.5),
                 topRight: Radius.circular(48.5),
@@ -383,7 +383,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                   text: TextSpan(
                     style: TextStyle(
                       height: 25 / 14,
-                      color: paleTextColor,
+                      color: ColorPalette.paleTextColor,
                     ),
                     children: <TextSpan>[
                       TextSpan(
@@ -392,7 +392,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
                           height: 30 / 18,
-                          color: lightTextColor,
+                          color: ColorPalette.lightTextColor,
                         ),
                       ),
                       TextSpan(text: '  for 3 nights'),
@@ -408,7 +408,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
                     decoration: BoxDecoration(
-                      color: brandBrown,
+                      color: ColorPalette.brandBrown,
                       borderRadius: BorderRadius.circular(26.5),
                     ),
                     child: Text(
@@ -417,7 +417,7 @@ class _BookingStatusComponentState extends State<BookingStatusComponent> {
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         height: 19.5 / 16,
-                        color: brandWhite,
+                        color: ColorPalette.brandWhite,
                       ),
                     ),
                   ),

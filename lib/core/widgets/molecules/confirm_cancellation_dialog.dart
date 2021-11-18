@@ -28,7 +28,7 @@ class ConfirmCancellationDialog extends StatelessWidget {
             padding: EdgeInsets.all(24) + EdgeInsets.only(top: 3, bottom: 27),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              color: brandLight,
+              color: ColorPalette.brandLight,
             ),
             child: Column(
               children: <Widget>[
@@ -39,7 +39,7 @@ class ConfirmCancellationDialog extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
-                      color: lightTextColor,
+                      color: ColorPalette.lightTextColor,
                     ),
                   ),
                 ),
@@ -53,7 +53,7 @@ class ConfirmCancellationDialog extends StatelessWidget {
                       'Room',
                       style: TextStyle(
                         height: 25 / 14,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                     Text(
@@ -61,7 +61,7 @@ class ConfirmCancellationDialog extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         height: 23 / 14,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                   ],
@@ -76,7 +76,7 @@ class ConfirmCancellationDialog extends StatelessWidget {
                       'Service charges',
                       style: TextStyle(
                         height: 25 / 14,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                     Text(
@@ -84,7 +84,7 @@ class ConfirmCancellationDialog extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         height: 23 / 14,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                   ],
@@ -106,7 +106,7 @@ class ConfirmCancellationDialog extends StatelessWidget {
                     Text(
                       'Total',
                       style: TextStyle(
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                     PhysicalModel(
@@ -118,7 +118,7 @@ class ConfirmCancellationDialog extends StatelessWidget {
                         width: 86,
                         height: 40,
                         decoration: BoxDecoration(
-                            color: brandWhite,
+                            color: ColorPalette.brandWhite,
                             borderRadius: BorderRadius.circular(10)),
                         child: Center(
                           child: Text(
@@ -148,7 +148,7 @@ class ConfirmCancellationDialog extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 12,
                       height: 22 / 12,
-                      color: lightTextColor,
+                      color: ColorPalette.lightTextColor,
                     ),
                   ),
                   onTap: () {},
@@ -170,11 +170,11 @@ class ConfirmCancellationDialog extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 12,
                       height: 22 / 12,
-                      color: brandWhite,
+                      color: ColorPalette.brandWhite,
                     ),
                   ),
                   onTap: () {},
-                  color: brandBrown,
+                  color: ColorPalette.brandBrown,
                 ),
               ),
             ],

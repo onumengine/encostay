@@ -32,7 +32,7 @@ class ContactSupportScreen extends StatelessWidget {
                 ),
               ),
               backgroundColor: Colors.transparent,
-              foregroundColor: brandBrown,
+              foregroundColor: ColorPalette.brandBrown,
               elevation: 0,
             ),
             body: Container(
@@ -78,14 +78,14 @@ class ContactSupportScreen extends StatelessWidget {
                                       bottomRight: Radius.circular(20),
                                       bottomLeft: Radius.circular(20),
                                     ),
-                                    color: brandLight,
+                                    color: ColorPalette.brandLight,
                                   ),
                                   child: Text(
                                     state.messages[0],
                                     style: TextStyle(
                                       fontSize: 12,
                                       height: 22 / 12,
-                                      color: lightTextColor,
+                                      color: ColorPalette.lightTextColor,
                                     ),
                                   ),
                                 ),
@@ -112,7 +112,7 @@ class ContactSupportScreen extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: 12,
                                           height: 22 / 12,
-                                          color: lightTextColor,
+                                          color: ColorPalette.lightTextColor,
                                         ),
                                       ),
                                     ),
@@ -135,7 +135,7 @@ class ContactSupportScreen extends StatelessWidget {
                       padding: EdgeInsets.only(left: 24, right: 8),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(32),
-                        color: brandWhite,
+                        color: ColorPalette.brandWhite,
                         boxShadow: [
                           BoxShadow(
                             offset: Offset(0, 2),
@@ -178,7 +178,7 @@ class ContactSupportScreen extends StatelessWidget {
                               }
                               _scrollToBottom(_scrollController);
                             },
-                            fillColor: brandDarkGreen,
+                            fillColor: ColorPalette.brandDarkGreen,
                             shape: CircleBorder(),
                             elevation: 0,
                             constraints: BoxConstraints(
@@ -209,7 +209,7 @@ class ContactSupportScreen extends StatelessWidget {
                 ),
               ),
               backgroundColor: Colors.transparent,
-              foregroundColor: brandBrown,
+              foregroundColor: ColorPalette.brandBrown,
               elevation: 0,
             ),
             body: Container(
@@ -227,7 +227,7 @@ class ContactSupportScreen extends StatelessWidget {
                       padding: EdgeInsets.only(left: 24, right: 8),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(32),
-                        color: brandWhite,
+                        color: ColorPalette.brandWhite,
                         boxShadow: [
                           BoxShadow(
                             offset: Offset(0, 2),
@@ -270,7 +270,7 @@ class ContactSupportScreen extends StatelessWidget {
                               }
                               _scrollToBottom(_scrollController);
                             },
-                            fillColor: brandDarkGreen,
+                            fillColor: ColorPalette.brandDarkGreen,
                             shape: CircleBorder(),
                             elevation: 0,
                             constraints: BoxConstraints(

@@ -29,7 +29,7 @@ class HostHomeScreen extends StatelessWidget {
     final HostHomeBloc hostHomeBloc = BlocProvider.of<HostHomeBloc>(context);
     return Scaffold(
       extendBody: true,
-      backgroundColor: brandSecondBackground,
+      backgroundColor: ColorPalette.brandSecondBackground,
       body: BlocBuilder<HostHomeBloc, HostHomeState>(
         builder: (context, hostHomeState) {
           if (hostHomeState is Default) {

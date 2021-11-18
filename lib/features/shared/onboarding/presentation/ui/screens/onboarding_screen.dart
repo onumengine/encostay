@@ -19,7 +19,7 @@ class OnboardingScreen extends StatelessWidget {
               borderRadius: BorderRadius.all(
                 Radius.circular(28),
               ),
-              color: brandBrown,
+              color: ColorPalette.brandBrown,
             ),
             child: Center(
               child: Text(
@@ -42,7 +42,7 @@ class OnboardingScreen extends StatelessWidget {
               borderRadius: BorderRadius.all(
                 Radius.circular(28),
               ),
-              color: brandBrown,
+              color: ColorPalette.brandBrown,
             ),
             child: Center(
               child: Text(
@@ -60,7 +60,7 @@ class OnboardingScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(5),
             ),
             activeSize: Size(28, 9),
-            activeColor: brandOrange,
+            activeColor: ColorPalette.brandOrange,
           ),
           dotsFlex: 1,
           isTopSafeArea: false,

@@ -47,7 +47,7 @@ class _PaymentMethodTileState extends State<PaymentMethodTile> {
         padding: EdgeInsets.all(14) + EdgeInsets.only(right: 24),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: greyCardColor,
+          color: ColorPalette.greyCardColor,
         ),
         child: Row(
           children: <Widget>[
@@ -57,7 +57,7 @@ class _PaymentMethodTileState extends State<PaymentMethodTile> {
               padding: widget.padding ?? EdgeInsets.symmetric(vertical: 12),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(11),
-                color: brandWhite,
+                color: ColorPalette.brandWhite,
               ),
               child: SvgPicture.asset(
                 widget.iconPath,
@@ -71,7 +71,7 @@ class _PaymentMethodTileState extends State<PaymentMethodTile> {
               style: TextStyle(
                 fontWeight: FontWeight.w500,
                 height: 23 / 14,
-                color: lightTextColor,
+                color: ColorPalette.lightTextColor,
               ),
             ),
             Expanded(

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class SelectedTab extends StatefulWidget {
   final int index;
-  void Function() onTap;
+  final void Function() onTap;
 
   SelectedTab({
     required this.onTap,
@@ -23,7 +23,7 @@ class _SelectedTabState extends State<SelectedTab> {
         width: (screenSize.width / 3.35),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(17),
-          color: brandOrange,
+          color: ColorPalette.brandOrange,
           boxShadow: [
             BoxShadow(
               offset: Offset(9, 11),
@@ -38,7 +38,7 @@ class _SelectedTabState extends State<SelectedTab> {
           style: TextStyle(
             fontWeight: FontWeight.w500,
             height: 23 / 14,
-            color: brandWhite,
+            color: ColorPalette.brandWhite,
           ),
         )),
       ),

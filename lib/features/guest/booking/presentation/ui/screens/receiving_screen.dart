@@ -44,7 +44,7 @@ class _ReceivingScreenState extends State<ReceivingScreen> {
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
                 height: 34 / 24,
-                color: lightTextColor,
+                color: ColorPalette.lightTextColor,
               ),
               textAlign: TextAlign.center,
             ),
@@ -56,7 +56,7 @@ class _ReceivingScreenState extends State<ReceivingScreen> {
               style: TextStyle(
                 fontSize: 12,
                 height: 22 / 12,
-                color: paleTextColor,
+                color: ColorPalette.paleTextColor,
               ),
             ),
           ],

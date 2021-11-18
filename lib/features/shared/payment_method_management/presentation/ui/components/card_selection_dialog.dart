@@ -57,7 +57,7 @@ class CardSelectionDialog extends StatelessWidget {
                   width: 64.24,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(11),
-                    color: paleTextColor.withOpacity(0.1),
+                    color: ColorPalette.paleTextColor.withOpacity(0.1),
                   ),
                   child: Icon(Icons.add),
                 ),
@@ -74,7 +74,7 @@ class CardSelectionDialog extends StatelessWidget {
                           fontSize: 11,
                           fontWeight: FontWeight.w600,
                           height: 23 / 11,
-                          color: lightTextColor,
+                          color: ColorPalette.lightTextColor,
                         ),
                       ),
                       Text(

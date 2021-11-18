@@ -19,12 +19,12 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        backgroundColor: brandWhite,
+        backgroundColor: ColorPalette.brandWhite,
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
               automaticallyImplyLeading: true,
-              backgroundColor: brandWhite,
+              backgroundColor: ColorPalette.brandWhite,
               foregroundColor: Colors.black,
               elevation: 0,
               expandedHeight: 300,
@@ -65,7 +65,7 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
                           fontSize: 24,
                           fontWeight: FontWeight.w600,
                           height: 34 / 24,
-                          color: lightTextColor,
+                          color: ColorPalette.lightTextColor,
                         ),
                       ),
                       SizedBox(
@@ -85,7 +85,7 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
                               style: TextStyle(
                                 fontWeight: FontWeight.w500,
                                 height: 23 / 14,
-                                color: lightTextColor,
+                                color: ColorPalette.lightTextColor,
                               ),
                               children: [
                                 TextSpan(
@@ -93,7 +93,7 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
                                   style: TextStyle(
                                     fontSize: 12,
                                     height: 22 / 12,
-                                    color: paleTextColor,
+                                    color: ColorPalette.paleTextColor,
                                   ),
                                 )
                               ],
@@ -110,7 +110,7 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
                 child: Container(
                   margin: EdgeInsets.symmetric(horizontal: 24),
                   decoration: BoxDecoration(
-                    color: brandWhite,
+                    color: ColorPalette.brandWhite,
                     borderRadius: BorderRadius.circular(28.5),
                     boxShadow: [
                       BoxShadow(
@@ -126,12 +126,12 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
                     ],
                   ),
                   child: TabBar(
-                    labelColor: brandWhite,
+                    labelColor: ColorPalette.brandWhite,
                     labelStyle: TextStyle(
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
                     ),
-                    unselectedLabelColor: lightTextColor,
+                    unselectedLabelColor: ColorPalette.lightTextColor,
                     tabs: <Tab>[
                       Tab(
                         text: 'Profile',
@@ -141,7 +141,7 @@ class _OwnerProfileScreenState extends State<OwnerProfileScreen> {
                       ),
                     ],
                     indicator: BoxDecoration(
-                      color: brandOrange,
+                      color: ColorPalette.brandOrange,
                       borderRadius: BorderRadius.circular(28.5),
                     ),
                   ),

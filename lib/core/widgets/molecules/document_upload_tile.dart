@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class DocumentUploadTile extends StatefulWidget {
-  String documentName;
+  final String documentName;
 
   DocumentUploadTile({Key? key, required this.documentName}) : super(key: key);
 
@@ -38,7 +38,7 @@ class _DocumentUploadTileState extends State<DocumentUploadTile> {
               style: TextStyle(
                 fontSize: 12,
                 height: 22 / 12,
-                color: lightTextColor,
+                color: ColorPalette.lightTextColor,
               ),
             ),
             SvgPicture.asset(

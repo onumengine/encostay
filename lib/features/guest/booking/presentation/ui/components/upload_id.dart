@@ -101,7 +101,7 @@ class _UploadIDComponentState extends State<UploadIDComponent> {
                       style: TextStyle(
                         fontSize: 12,
                         height: 22 / 12,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                     disabledHint: Text(
@@ -109,7 +109,7 @@ class _UploadIDComponentState extends State<UploadIDComponent> {
                       style: TextStyle(
                         fontSize: 12,
                         height: 22 / 12,
-                        color: paleTextColor,
+                        color: ColorPalette.paleTextColor,
                       ),
                     ),
                     underline: SizedBox(
@@ -165,7 +165,7 @@ class _UploadIDComponentState extends State<UploadIDComponent> {
               showDialog(
                 context: context,
                 builder: (_) => AlertDialog(
-                  backgroundColor: brandWhite,
+                  backgroundColor: ColorPalette.brandWhite,
                   scrollable: true,
                   contentPadding:
                       EdgeInsets.symmetric(horizontal: 24, vertical: 24),
@@ -194,7 +194,7 @@ class _UploadIDComponentState extends State<UploadIDComponent> {
                           height: 73,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: brandOrange),
+                            border: Border.all(color: ColorPalette.brandOrange),
                           ),
                           child: Center(
                             child: SvgPicture.asset(
@@ -213,7 +213,7 @@ class _UploadIDComponentState extends State<UploadIDComponent> {
                             padding: EdgeInsets.all(17),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(29),
-                              color: brandBrown,
+                              color: ColorPalette.brandBrown,
                             ),
                             child: Center(
                               child: Text(
@@ -221,7 +221,7 @@ class _UploadIDComponentState extends State<UploadIDComponent> {
                                 style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   height: 23 / 14,
-                                  color: brandWhite,
+                                  color: ColorPalette.brandWhite,
                                 ),
                               ),
                             ),
@@ -238,7 +238,7 @@ class _UploadIDComponentState extends State<UploadIDComponent> {
               padding: EdgeInsets.all(17),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(29),
-                color: brandBrown,
+                color: ColorPalette.brandBrown,
               ),
               child: Center(
                 child: Text(
@@ -246,7 +246,7 @@ class _UploadIDComponentState extends State<UploadIDComponent> {
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     height: 23 / 14,
-                    color: brandWhite,
+                    color: ColorPalette.brandWhite,
                   ),
                 ),
               ),

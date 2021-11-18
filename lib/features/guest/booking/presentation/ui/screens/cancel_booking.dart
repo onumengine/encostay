@@ -18,19 +18,19 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: brandWhite,
+      backgroundColor: ColorPalette.brandWhite,
       appBar: AppBar(
         automaticallyImplyLeading: true,
         centerTitle: true,
-        backgroundColor: brandWhite,
-        foregroundColor: lightTextColor,
+        backgroundColor: ColorPalette.brandWhite,
+        foregroundColor: ColorPalette.lightTextColor,
         elevation: 0,
         title: Text('Cancel the entire booking'),
         titleTextStyle: TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.w500,
           height: 19.5 / 16,
-          color: lightTextColor,
+          color: ColorPalette.lightTextColor,
         ),
       ),
       body: Padding(
@@ -57,7 +57,7 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 22, vertical: 24),
               decoration: BoxDecoration(
-                color: brandLightGreen,
+                color: ColorPalette.brandLightGreen,
                 borderRadius: BorderRadius.circular(23),
               ),
               child: Column(
@@ -112,7 +112,8 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             border: Border.all(
-                              color: brandDarkGreen.withOpacity(0.19),
+                              color:
+                                  ColorPalette.brandDarkGreen.withOpacity(0.19),
                               width: 1,
                             ),
                           ),
@@ -136,11 +137,11 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                           'Get info',
                           style: TextStyle(
                             fontSize: 12,
-                            color: brandWhite,
+                            color: ColorPalette.brandWhite,
                           ),
                         ),
                         onTap: () {},
-                        color: brandDarkGreen,
+                        color: ColorPalette.brandDarkGreen,
                         radius: 10,
                         padding: EdgeInsets.symmetric(
                             horizontal: 21.42, vertical: 8),
@@ -154,7 +155,7 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
-                color: redBgColor,
+                color: ColorPalette.redBgColor,
               ),
               child: CustomExpansionPanel(
                 header: Text(
@@ -179,12 +180,12 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                     Navigator.of(context)
                         .pushNamed(RouteNames.CANCELLATION_SURVEY);
                   },
-                  splashColor: brandOrange,
+                  splashColor: ColorPalette.brandOrange,
                   child: Container(
                     padding: EdgeInsets.symmetric(vertical: 18),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(29),
-                      color: brandBrown,
+                      color: ColorPalette.brandBrown,
                     ),
                     child: Center(
                       child: Text(
@@ -192,7 +193,7 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
                           height: 23 / 14,
-                          color: brandWhite,
+                          color: ColorPalette.brandWhite,
                         ),
                       ),
                     ),

@@ -24,7 +24,7 @@ class ListingCard extends StatelessWidget {
               fontSize: 18,
               fontWeight: FontWeight.w500,
               height: 30 / 18,
-              color: lightTextColor,
+              color: ColorPalette.lightTextColor,
             ),
           ),
           SizedBox(height: 3),
@@ -33,7 +33,7 @@ class ListingCard extends StatelessWidget {
             style: TextStyle(
               fontSize: 12,
               height: 22 / 12,
-              color: paleTextColor,
+              color: ColorPalette.paleTextColor,
             ),
           ),
           SizedBox(height: 2),

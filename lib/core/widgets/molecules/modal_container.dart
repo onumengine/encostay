@@ -103,14 +103,14 @@ class _ModalContainerState extends State<ModalContainer> {
           SizedBox(height: widget.screenHeight / 21.37),
           BrandButton(
             height: 57,
-            color: brandOrange,
+            color: ColorPalette.brandOrange,
             child: Text(
               'Continue',
               style: TextStyle(
                 fontSize: bold18.fontSize,
                 fontWeight: bold18.fontWeight,
                 height: bold18.height,
-                color: brandWhite,
+                color: ColorPalette.brandWhite,
               ),
             ),
             onTap: () {
@@ -163,14 +163,14 @@ class _ModalContainerState extends State<ModalContainer> {
           SizedBox(height: widget.screenHeight / 21.37),
           BrandButton(
             height: 57,
-            color: brandOrange,
+            color: ColorPalette.brandOrange,
             child: Text(
               'Continue',
               style: TextStyle(
                 fontSize: bold18.fontSize,
                 fontWeight: bold18.fontWeight,
                 height: bold18.height,
-                color: brandWhite,
+                color: ColorPalette.brandWhite,
               ),
             ),
             onTap: () {
@@ -259,14 +259,14 @@ class _ModalContainerState extends State<ModalContainer> {
           SizedBox(height: widget.screenHeight / 21),
           BrandButton(
             height: 57,
-            color: brandOrange,
+            color: ColorPalette.brandOrange,
             child: Text(
               'Reset Password',
               style: TextStyle(
                 fontSize: bold18.fontSize,
                 fontWeight: bold18.fontWeight,
                 height: bold18.height,
-                color: brandWhite,
+                color: ColorPalette.brandWhite,
               ),
             ),
             onTap: () {
@@ -313,14 +313,14 @@ class _ModalContainerState extends State<ModalContainer> {
           ),
           BrandButton(
             height: 57,
-            color: brandOrange,
+            color: ColorPalette.brandOrange,
             child: Text(
               'Retry',
               style: TextStyle(
                 fontSize: bold18.fontSize,
                 fontWeight: bold18.fontWeight,
                 height: bold18.height,
-                color: brandWhite,
+                color: ColorPalette.brandWhite,
               ),
             ),
             onTap: () {
@@ -369,14 +369,14 @@ class _ModalContainerState extends State<ModalContainer> {
           ),
           BrandButton(
             height: 57,
-            color: brandOrange,
+            color: ColorPalette.brandOrange,
             child: Text(
               'Close',
               style: TextStyle(
                 fontSize: bold18.fontSize,
                 fontWeight: bold18.fontWeight,
                 height: bold18.height,
-                color: brandWhite,
+                color: ColorPalette.brandWhite,
               ),
             ),
             onTap: () {

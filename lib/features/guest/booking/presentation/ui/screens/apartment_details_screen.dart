@@ -22,7 +22,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
     Size screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: brandWhite,
+      backgroundColor: ColorPalette.brandWhite,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -40,7 +40,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
               width: 32,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(7),
-                color: brandOrange,
+                color: ColorPalette.brandOrange,
               ),
               child: Icon(
                 Icons.arrow_back,
@@ -59,7 +59,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                 height: 12.7,
               ),
               onPressed: () {},
-              fillColor: brandWhite,
+              fillColor: ColorPalette.brandWhite,
               shape: CircleBorder(),
             ),
           ),
@@ -84,8 +84,8 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                     child: IntroductionScreen(
                       dotsFlex: 2,
                       dotsDecorator: DotsDecorator(
-                        color: brandWhite,
-                        activeColor: brandWhite,
+                        color: ColorPalette.brandWhite,
+                        activeColor: ColorPalette.brandWhite,
                         activeSize: Size(16.8, 9.0),
                         activeShape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5),
@@ -176,7 +176,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                         height: 30 / 18,
-                        color: brandBrown,
+                        color: ColorPalette.brandBrown,
                       ),
                     ),
                   ),
@@ -192,7 +192,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                       children: <Widget>[
                         SvgPicture.asset(
                           VECTORS_ROOT_PATH + 'location.svg',
-                          color: brandBrown,
+                          color: ColorPalette.brandBrown,
                         ),
                         SizedBox(
                           width: 13,
@@ -232,7 +232,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                               padding: EdgeInsets.symmetric(
                                   vertical: 11, horizontal: 17),
                               decoration: BoxDecoration(
-                                color: brandWhite,
+                                color: ColorPalette.brandWhite,
                                 borderRadius: BorderRadius.circular(15),
                               ),
                               child: Column(
@@ -244,7 +244,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                                       fontSize: 12,
                                       fontWeight: FontWeight.w500,
                                       height: 20 / 12,
-                                      color: brandBrown,
+                                      color: ColorPalette.brandBrown,
                                     ),
                                   ),
                                   Text(
@@ -273,7 +273,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                               child: Container(
                                 padding: EdgeInsets.all(12),
                                 decoration: BoxDecoration(
-                                  color: brandWhite,
+                                  color: ColorPalette.brandWhite,
                                   borderRadius: BorderRadius.circular(15),
                                 ),
                                 child: Row(
@@ -299,7 +299,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                                             fontSize: 12,
                                             fontWeight: FontWeight.w500,
                                             height: 20 / 12,
-                                            color: brandBrown,
+                                            color: ColorPalette.brandBrown,
                                           ),
                                         ),
                                         Text(
@@ -355,7 +355,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                       style: TextStyle(
                         fontSize: 12,
                         height: 22 / 12,
-                        color: brandOrange,
+                        color: ColorPalette.brandOrange,
                       ),
                     ),
                   ),
@@ -375,7 +375,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                         style: TextStyle(
                           fontSize: 12,
                           height: 22 / 12,
-                          color: brandBrown,
+                          color: ColorPalette.brandBrown,
                         ),
                       ),
                       body: Column(
@@ -388,7 +388,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                                 style: TextStyle(
                                   fontSize: 12,
                                   height: 22 / 12,
-                                  color: brandBrown,
+                                  color: ColorPalette.brandBrown,
                                 ),
                               ),
                               Text(
@@ -410,7 +410,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                                 style: TextStyle(
                                   fontSize: 12,
                                   height: 22 / 12,
-                                  color: brandBrown,
+                                  color: ColorPalette.brandBrown,
                                 ),
                               ),
                               Text(
@@ -432,7 +432,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                                 style: TextStyle(
                                   fontSize: 12,
                                   height: 22 / 12,
-                                  color: brandBrown,
+                                  color: ColorPalette.brandBrown,
                                 ),
                               ),
                               Text(
@@ -454,7 +454,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                                 style: TextStyle(
                                   fontSize: 12,
                                   height: 22 / 12,
-                                  color: brandBrown,
+                                  color: ColorPalette.brandBrown,
                                 ),
                               ),
                               Text(
@@ -476,7 +476,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                                 style: TextStyle(
                                   fontSize: 12,
                                   height: 22 / 12,
-                                  color: brandBrown,
+                                  color: ColorPalette.brandBrown,
                                 ),
                               ),
                               Text(
@@ -498,7 +498,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                                 style: TextStyle(
                                   fontSize: 12,
                                   height: 22 / 12,
-                                  color: brandBrown,
+                                  color: ColorPalette.brandBrown,
                                 ),
                               ),
                               Text(
@@ -531,7 +531,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                         style: TextStyle(
                           fontSize: 12,
                           height: 22 / 12,
-                          color: brandBrown,
+                          color: ColorPalette.brandBrown,
                         ),
                       ),
                       body: SizedBox(),
@@ -547,7 +547,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
-                      color: brandBrown,
+                      color: ColorPalette.brandBrown,
                     ),
                   ),
                 ),
@@ -582,7 +582,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
-                      color: brandBrown,
+                      color: ColorPalette.brandBrown,
                     ),
                   ),
                 ),
@@ -603,7 +603,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                             style: TextStyle(
                               fontSize: 10,
                               height: 18 / 10,
-                              color: brandBrown,
+                              color: ColorPalette.brandBrown,
                             ),
                           ),
                         ],
@@ -620,7 +620,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                             style: TextStyle(
                               fontSize: 10,
                               height: 18 / 10,
-                              color: brandBrown,
+                              color: ColorPalette.brandBrown,
                             ),
                           ),
                         ],
@@ -637,7 +637,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                             style: TextStyle(
                               fontSize: 10,
                               height: 18 / 10,
-                              color: brandBrown,
+                              color: ColorPalette.brandBrown,
                             ),
                           ),
                         ],
@@ -654,7 +654,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                             style: TextStyle(
                               fontSize: 10,
                               height: 18 / 10,
-                              color: brandBrown,
+                              color: ColorPalette.brandBrown,
                             ),
                           ),
                         ],
@@ -671,7 +671,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                             style: TextStyle(
                               fontSize: 10,
                               height: 18 / 10,
-                              color: brandBrown,
+                              color: ColorPalette.brandBrown,
                             ),
                           ),
                         ],
@@ -690,7 +690,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
-                      color: brandBrown,
+                      color: ColorPalette.brandBrown,
                     ),
                   ),
                 ),
@@ -713,7 +713,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                         VECTORS_ROOT_PATH + 'location.svg',
                         width: 9.66,
                         height: 13,
-                        color: brandBrown,
+                        color: ColorPalette.brandBrown,
                       ),
                       SizedBox(
                         width: 13,
@@ -744,7 +744,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
                           height: 23 / 14,
-                          color: brandBrown,
+                          color: ColorPalette.brandBrown,
                         ),
                       ),
                       Expanded(
@@ -772,7 +772,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: brandBrown,
+                            color: ColorPalette.brandBrown,
                           ),
                         ),
                         trailing: Text(
@@ -780,7 +780,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: brandBrown,
+                            color: ColorPalette.brandBrown,
                           ),
                         ),
                       ),
@@ -792,7 +792,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: brandBrown,
+                            color: ColorPalette.brandBrown,
                           ),
                         ),
                         trailing: Text(
@@ -800,7 +800,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: brandBrown,
+                            color: ColorPalette.brandBrown,
                           ),
                         ),
                       ),
@@ -812,7 +812,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: brandBrown,
+                            color: ColorPalette.brandBrown,
                           ),
                         ),
                         trailing: Text(
@@ -820,7 +820,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: brandBrown,
+                            color: ColorPalette.brandBrown,
                           ),
                         ),
                       ),
@@ -832,7 +832,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: brandBrown,
+                            color: ColorPalette.brandBrown,
                           ),
                         ),
                         trailing: Text(
@@ -840,7 +840,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: brandBrown,
+                            color: ColorPalette.brandBrown,
                           ),
                         ),
                       ),
@@ -856,7 +856,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
-                      color: brandBrown,
+                      color: ColorPalette.brandBrown,
                     ),
                   ),
                 ),
@@ -882,7 +882,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
                       height: 23 / 14,
-                      color: brandBrown,
+                      color: ColorPalette.brandBrown,
                     ),
                   ),
                 ),
@@ -934,7 +934,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                         style: TextStyle(
                           fontSize: 12,
                           height: 22 / 12,
-                          color: brandOrange,
+                          color: ColorPalette.brandOrange,
                         ),
                       ),
                     ],
@@ -968,7 +968,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                           height: 19.5 / 16,
-                          color: brandWhite,
+                          color: ColorPalette.brandWhite,
                         ),
                       ),
                     ),
@@ -1002,7 +1002,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                           height: 19.5 / 16,
-                          color: brandWhite,
+                          color: ColorPalette.brandWhite,
                         ),
                       ),
                     ),
@@ -1036,7 +1036,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                           height: 19.5 / 16,
-                          color: brandWhite,
+                          color: ColorPalette.brandWhite,
                         ),
                       ),
                     ),
@@ -1100,7 +1100,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
               padding: EdgeInsets.only(left: 38, right: 22) +
                   EdgeInsets.symmetric(vertical: 22),
               decoration: BoxDecoration(
-                color: brandWhite,
+                color: ColorPalette.brandWhite,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(48.5),
                   topRight: Radius.circular(48.5),
@@ -1132,7 +1132,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                       padding:
                           EdgeInsets.symmetric(vertical: 17, horizontal: 24),
                       decoration: BoxDecoration(
-                        color: brandBrown,
+                        color: ColorPalette.brandBrown,
                         borderRadius: BorderRadius.circular(26.5),
                       ),
                       child: Text(
@@ -1141,7 +1141,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                           height: 19.5 / 16,
-                          color: brandWhite,
+                          color: ColorPalette.brandWhite,
                         ),
                       ),
                     ),

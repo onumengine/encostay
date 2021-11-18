@@ -44,7 +44,7 @@ const medium15 = TextStyle(
   fontWeight: FontWeight.w500,
   fontSize: 15,
   height: 1.63,
-  color: brandBrown,
+  color: ColorPalette.brandBrown,
 );
 
 const medium16 = TextStyle(
@@ -57,7 +57,7 @@ const medium18brown = TextStyle(
   fontSize: 18,
   fontWeight: FontWeight.w500,
   height: 30 / 18,
-  color: brandBrown,
+  color: ColorPalette.brandBrown,
 );
 
 const medium20 = TextStyle(
@@ -69,7 +69,7 @@ const medium20 = TextStyle(
 const normal10 = TextStyle(
   fontSize: 10,
   height: 1.8,
-  color: brandGreyAlt,
+  color: ColorPalette.brandGreyAlt,
 );
 
 const normal12 = TextStyle(
@@ -122,7 +122,7 @@ const semiBold24 = TextStyle(
 const splashTitle = TextStyle(
   fontWeight: FontWeight.w900,
   fontSize: 30,
-  color: brandBrown,
+  color: ColorPalette.brandBrown,
   height: 1.63,
 );
 
@@ -131,18 +131,18 @@ const medium18BrownDark = TextStyle(
   fontSize: 18,
   fontWeight: FontWeight.w500,
   height: 30 / 18,
-  color: brandBrownDark,
+  color: ColorPalette.brandBrownDark,
 );
 
 const instructionalTextStyleModal = TextStyle(
   fontSize: 12,
   height: 22 / 12,
-  color: instructionalTextModal,
+  color: ColorPalette.instructionalTextModal,
 );
 
 const inputTextStyle = TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   height: 23 / 14,
-  color: brandGreyAlt,
+  color: ColorPalette.brandGreyAlt,
 );

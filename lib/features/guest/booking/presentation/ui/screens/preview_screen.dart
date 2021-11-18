@@ -42,10 +42,10 @@ class _PreviewScreenState extends State<PreviewScreen> {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: brandWhite,
+      backgroundColor: ColorPalette.brandWhite,
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        backgroundColor: brandWhite,
+        backgroundColor: ColorPalette.brandWhite,
         elevation: 0,
         leading: GestureDetector(
           onTap: () {
@@ -55,7 +55,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
             (Platform.isIOS)
                 ? Icons.arrow_back_ios_rounded
                 : Icons.arrow_back_rounded,
-            color: brandBrown,
+            color: ColorPalette.brandBrown,
           )),
         ),
         actions: <Widget>[
@@ -65,7 +65,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
             },
             icon: Icon(
               Icons.close,
-              color: brandBrown,
+              color: ColorPalette.brandBrown,
             ),
           ),
         ],
@@ -166,7 +166,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                         SizedBox(height: 10),
@@ -176,16 +176,16 @@ class _PreviewScreenState extends State<PreviewScreen> {
                               await showRoundedDatePicker(
                                 context: context,
                                 styleDatePicker: MaterialRoundedDatePickerStyle(
-                                  backgroundHeader: brandOrange,
-                                  backgroundActionBar: brandOrange,
+                                  backgroundHeader: ColorPalette.brandOrange,
+                                  backgroundActionBar: ColorPalette.brandOrange,
                                   textStyleButtonPositive:
-                                      TextStyle(color: brandWhite),
+                                      TextStyle(color: ColorPalette.brandWhite),
                                   textStyleButtonNegative:
-                                      TextStyle(color: brandWhite),
+                                      TextStyle(color: ColorPalette.brandWhite),
                                   paddingMonthHeader: EdgeInsets.only(top: 12),
                                   decorationDateSelected: BoxDecoration(
                                     borderRadius: BorderRadius.circular(14),
-                                    color: brandOrange,
+                                    color: ColorPalette.brandOrange,
                                     shape: BoxShape.rectangle,
                                   ),
                                 ),
@@ -216,7 +216,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                             child: Container(
                               padding: EdgeInsets.fromLTRB(12, 6, 0, 5),
                               decoration: BoxDecoration(
-                                  color: brandWhite,
+                                  color: ColorPalette.brandWhite,
                                   borderRadius: BorderRadius.circular(10)),
                               child: Row(
                                 mainAxisAlignment:
@@ -252,7 +252,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                         SizedBox(height: 10),
@@ -262,16 +262,16 @@ class _PreviewScreenState extends State<PreviewScreen> {
                               await showRoundedDatePicker(
                                 context: context,
                                 styleDatePicker: MaterialRoundedDatePickerStyle(
-                                  backgroundHeader: brandOrange,
-                                  backgroundActionBar: brandOrange,
+                                  backgroundHeader: ColorPalette.brandOrange,
+                                  backgroundActionBar: ColorPalette.brandOrange,
                                   textStyleButtonPositive:
-                                      TextStyle(color: brandWhite),
+                                      TextStyle(color: ColorPalette.brandWhite),
                                   textStyleButtonNegative:
-                                      TextStyle(color: brandWhite),
+                                      TextStyle(color: ColorPalette.brandWhite),
                                   paddingMonthHeader: EdgeInsets.only(top: 12),
                                   decorationDateSelected: BoxDecoration(
                                     borderRadius: BorderRadius.circular(14),
-                                    color: brandOrange,
+                                    color: ColorPalette.brandOrange,
                                     shape: BoxShape.rectangle,
                                   ),
                                 ),
@@ -302,7 +302,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                             child: Container(
                               padding: EdgeInsets.fromLTRB(12, 6, 0, 5),
                               decoration: BoxDecoration(
-                                  color: brandWhite,
+                                  color: ColorPalette.brandWhite,
                                   borderRadius: BorderRadius.circular(10)),
                               child: Row(
                                 mainAxisAlignment:
@@ -338,7 +338,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                         SizedBox(height: 10),
@@ -377,7 +377,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                 padding: EdgeInsets.symmetric(vertical: 30, horizontal: 24),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: brandLight,
+                  color: ColorPalette.brandLight,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -387,7 +387,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         height: 23 / 14,
-                        color: lightTextColor,
+                        color: ColorPalette.lightTextColor,
                       ),
                     ),
                     SizedBox(height: screenSize.height / 36.9),
@@ -400,7 +400,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                         Text(
@@ -408,7 +408,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             height: 20 / 12,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                       ],
@@ -423,7 +423,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                           style: TextStyle(
                             fontSize: 12,
                             height: 22 / 12,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                         Text(
@@ -431,14 +431,14 @@ class _PreviewScreenState extends State<PreviewScreen> {
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             height: 20 / 12,
-                            color: lightTextColor,
+                            color: ColorPalette.lightTextColor,
                           ),
                         ),
                       ],
                     ),
                     SizedBox(height: screenSize.height / 34.55),
                     Divider(
-                      color: brandYellow,
+                      color: ColorPalette.brandYellow,
                       thickness: 1,
                     ),
                     SizedBox(height: screenSize.height / 36.09),
@@ -454,14 +454,14 @@ class _PreviewScreenState extends State<PreviewScreen> {
                         ),
                         PhysicalModel(
                           color: Color(0x7000000),
-                          shadowColor: brandBrown,
+                          shadowColor: ColorPalette.brandBrown,
                           elevation: 3,
                           borderRadius: BorderRadius.circular(7),
                           child: Container(
                             padding: EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 22),
                             decoration: BoxDecoration(
-                              color: brandWhite,
+                              color: ColorPalette.brandWhite,
                               borderRadius: BorderRadius.circular(7),
                             ),
                             child: Text(
@@ -490,7 +490,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                   constraints: BoxConstraints(maxWidth: screenSize.width / 2.5),
                   padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),
                   decoration: BoxDecoration(
-                    color: brandBrown,
+                    color: ColorPalette.brandBrown,
                     borderRadius: BorderRadius.circular(26.5),
                   ),
                   child: Center(
@@ -500,7 +500,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         height: 19.5 / 16,
-                        color: brandWhite,
+                        color: ColorPalette.brandWhite,
                       ),
                     ),
                   ),

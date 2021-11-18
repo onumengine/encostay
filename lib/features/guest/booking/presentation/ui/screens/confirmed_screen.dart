@@ -27,7 +27,7 @@ class ConfirmedScreen extends StatelessWidget {
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
                 height: 34 / 24,
-                color: lightTextColor,
+                color: ColorPalette.lightTextColor,
               ),
               textAlign: TextAlign.center,
             ),
@@ -39,7 +39,7 @@ class ConfirmedScreen extends StatelessWidget {
               style: TextStyle(
                 fontSize: 12,
                 height: 22 / 12,
-                color: paleTextColor,
+                color: ColorPalette.paleTextColor,
               ),
             ),
             SizedBox(
@@ -51,14 +51,14 @@ class ConfirmedScreen extends StatelessWidget {
                 style: TextStyle(
                   fontWeight: FontWeight.w500,
                   height: 23 / 14,
-                  color: brandWhite,
+                  color: ColorPalette.brandWhite,
                 ),
               ),
               onTap: () {
                 Navigator.of(context)
                     .pushNamedAndRemoveUntil(RouteNames.HOME, (route) => false);
               },
-              color: brandBrown,
+              color: ColorPalette.brandBrown,
               height: 58,
               width: 174,
             ),

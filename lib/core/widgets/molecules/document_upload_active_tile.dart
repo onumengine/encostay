@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ActiveDocumentUploadTile extends StatefulWidget {
-  String documentName;
+  final String documentName;
 
   ActiveDocumentUploadTile({Key? key, required this.documentName})
       : super(key: key);
@@ -21,7 +21,7 @@ class _ActiveDocumentUploadTileState extends State<ActiveDocumentUploadTile> {
       padding: EdgeInsets.all(24),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: brandLight,
+        color: ColorPalette.brandLight,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -32,7 +32,7 @@ class _ActiveDocumentUploadTileState extends State<ActiveDocumentUploadTile> {
             style: TextStyle(
               fontSize: 12,
               height: 22 / 12,
-              color: lightTextColor,
+              color: ColorPalette.lightTextColor,
             ),
           ),
           SvgPicture.asset(COLORED_VECTORS_PATH + 'ic_marked_dark.svg'),
