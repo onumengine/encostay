@@ -47,10 +47,10 @@ class TransactionSummaryScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                      blurRadius: 40,
-                      offset: Offset(0, 20),
-                      color:
-                          ColorPalette.hostCardShadowColor.withOpacity(0.05)),
+                    blurRadius: 40,
+                    offset: Offset(0, 20),
+                    color: ColorPalette.hostCardShadowColor.withOpacity(0.05),
+                  ),
                 ],
               ),
               child: EarningsCard(),
@@ -61,6 +61,9 @@ class TransactionSummaryScreen extends StatelessWidget {
             TransactionSummaryCard(
               title: 'Available balance',
               buttonText: 'Withdraw Funds',
+              onTap: () {
+                print('ANGEL');
+              },
             ),
             SizedBox(
               height: 17,
