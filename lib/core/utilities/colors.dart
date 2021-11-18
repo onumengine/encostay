@@ -77,4 +77,5 @@ abstract class ColorPalette {
   static const paleHostGrey = Color(0xff787878);
   static const greySubtitleColor = Color(0xffaaacae);
   static const greySubtitleColor2 = Color(0xffa4a4a4);
+  static const hostCardShadowColor = Color(0xff02202c);
 }

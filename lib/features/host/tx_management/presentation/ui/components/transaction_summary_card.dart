@@ -7,14 +7,15 @@ import 'package:flutter_svg/svg.dart';
 class TransactionSummaryCard extends StatelessWidget {
   final num totalSum, percentIncrement;
   final VoidCallback? onTap;
-  final String? buttonText;
+  final String? title, buttonText;
 
   const TransactionSummaryCard({
     Key? key,
+    this.title,
+    this.buttonText,
     this.totalSum = 2588,
     this.percentIncrement = 2.5,
     this.onTap,
-    this.buttonText,
   }) : super(key: key);
 
   @override
@@ -27,6 +28,12 @@ class TransactionSummaryCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         color: ColorPalette.brandWhite,
+        boxShadow: [
+          BoxShadow(
+              blurRadius: 40,
+              offset: Offset(0, 20),
+              color: ColorPalette.hostCardShadowColor.withOpacity(0.05)),
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,7 +43,7 @@ class TransactionSummaryCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                'Available Balance',
+                title ?? 'Available Balance',
                 style: TextStyle(
                   fontSize: 12,
                   height: 18 / 12,

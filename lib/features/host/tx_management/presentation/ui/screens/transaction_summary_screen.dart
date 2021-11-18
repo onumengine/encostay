@@ -37,25 +37,45 @@ class TransactionSummaryScreen extends StatelessWidget {
         SliverList(
           delegate: SliverChildListDelegate([
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(left: 20, bottom: 10),
               child: Divider(
                 endIndent: 20,
                 color: Colors.black,
               ),
             ),
-            EarningsCard(),
+            Container(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 40,
+                      offset: Offset(0, 20),
+                      color:
+                          ColorPalette.hostCardShadowColor.withOpacity(0.05)),
+                ],
+              ),
+              child: EarningsCard(),
+            ),
             SizedBox(
               height: 17,
             ),
-            TransactionSummaryCard(),
+            TransactionSummaryCard(
+              title: 'Available balance',
+              buttonText: 'Withdraw Funds',
+            ),
             SizedBox(
               height: 17,
             ),
-            TransactionSummaryCard(),
+            TransactionSummaryCard(
+              title: 'Total Earnings',
+              buttonText: 'View History',
+            ),
             SizedBox(
               height: 17,
             ),
-            TransactionSummaryCard(),
+            TransactionSummaryCard(
+              title: 'Total Withdrawn',
+              buttonText: 'View History',
+            ),
             SizedBox(
               height: 200,
             ),
