@@ -6,7 +6,7 @@ import 'package:encostay/core/widgets/atoms/brand_iconbutton.dart';
 import 'package:encostay/core/widgets/atoms/password_text_widget.dart';
 import 'package:encostay/core/widgets/atoms/text_widget.dart';
 import 'package:encostay/core/widgets/molecules/modal_container.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';

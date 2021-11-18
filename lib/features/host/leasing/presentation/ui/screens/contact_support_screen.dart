@@ -1,4 +1,4 @@
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/contact_support_bloc.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/events/contact_support_event.dart';

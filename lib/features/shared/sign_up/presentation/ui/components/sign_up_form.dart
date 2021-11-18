@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/text_widget.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/enums.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';

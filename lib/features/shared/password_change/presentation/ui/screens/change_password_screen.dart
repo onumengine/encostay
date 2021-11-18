@@ -1,4 +1,4 @@
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/text_widget.dart';

@@ -3,7 +3,7 @@ import 'package:encostay/core/widgets/atoms/search_box.dart';
 import 'package:encostay/core/widgets/molecules/apartment_card.dart';
 import 'package:encostay/core/widgets/organisms/custom_bottom_navbar.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/search_results_screen.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:flutter/material.dart';

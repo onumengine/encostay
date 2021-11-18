@@ -1,6 +1,6 @@
 import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/features/shared/payment_method_management/presentation/ui/components/card_selection_dialog.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

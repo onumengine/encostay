@@ -1,6 +1,6 @@
 import 'package:encostay/core/widgets/molecules/document_upload_active_tile.dart';
 import 'package:encostay/core/widgets/molecules/document_upload_tile.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

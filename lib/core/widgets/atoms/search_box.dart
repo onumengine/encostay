@@ -1,10 +1,10 @@
 import 'package:encostay/core/widgets/atoms/filters_button.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:flutter/material.dart';
 
 class SearchBox extends StatelessWidget {
   final TextEditingController? controller;
-  void Function(String)? searchFunction;
+  final void Function(String)? searchFunction;
 
   SearchBox({
     Key? key,

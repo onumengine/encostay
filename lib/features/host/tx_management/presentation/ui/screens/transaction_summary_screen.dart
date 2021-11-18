@@ -1,4 +1,4 @@
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/components/earnings_card.dart';

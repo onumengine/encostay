@@ -1,6 +1,6 @@
 import 'package:encostay/models/payment_card.dart';
 import 'package:encostay/core/widgets/molecules/payment_card_tile.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/enums.dart';
 import 'package:flutter/material.dart';
 

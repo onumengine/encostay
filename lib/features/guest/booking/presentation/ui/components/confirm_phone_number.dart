@@ -1,11 +1,10 @@
 import 'package:encostay/features/guest/booking/presentation/logic_holders/blocs/booking_bloc.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/events/booking_event.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:otp_text_field/otp_field.dart';
 
 class ConfirmPhoneNumberComponent extends StatefulWidget {
   const ConfirmPhoneNumberComponent({Key? key}) : super(key: key);

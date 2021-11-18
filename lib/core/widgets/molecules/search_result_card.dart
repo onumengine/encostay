@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/core/widgets/atoms/flat_iconbutton.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

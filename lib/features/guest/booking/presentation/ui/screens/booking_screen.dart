@@ -9,7 +9,7 @@ import 'package:encostay/features/guest/booking/presentation/ui/components/confi
 import 'package:encostay/features/guest/booking/presentation/ui/components/host_chat.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/components/review.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/components/upload_id.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

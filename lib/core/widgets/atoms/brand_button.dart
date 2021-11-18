@@ -1,4 +1,4 @@
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:flutter/material.dart';
 
 class BrandButton extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/widgets/organisms/custom_bottom_navbar.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/host_home_bloc.dart';
 import 'package:encostay/features/host/leasing/presentation/logic_holders/blocs/host_home_component_bloc.dart';

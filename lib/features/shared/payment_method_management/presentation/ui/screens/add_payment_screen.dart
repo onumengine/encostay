@@ -1,5 +1,5 @@
 import 'package:encostay/core/widgets/atoms/payment_method_tile.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/features/shared/payment_method_management/presentation/logic_holders/bloc/add_payment_bloc.dart';
 import 'package:encostay/features/shared/payment_method_management/presentation/logic_holders/state/add_payment_state.dart';

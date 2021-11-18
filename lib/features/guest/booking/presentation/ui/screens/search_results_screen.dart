@@ -1,9 +1,8 @@
 import 'dart:io';
 
 import 'package:encostay/core/widgets/atoms/filters_button.dart';
-import 'package:encostay/core/widgets/atoms/search_box.dart';
 import 'package:encostay/core/widgets/molecules/search_result_card.dart';
-import 'package:encostay/core/utilities/colors.dart';
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/widgets/organisms/custom_bottom_navbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
