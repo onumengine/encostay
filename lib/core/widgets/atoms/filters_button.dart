@@ -19,7 +19,7 @@ class FiltersButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap ??
           () {
-            Navigator.of(context).pushNamed(RouteNames.ROUTE_FILTERS);
+            Navigator.of(context).pushNamed(RouteNames.FILTERS);
           },
       child: Container(
         height: 33,

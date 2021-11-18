@@ -264,8 +264,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                         Expanded(
                           child: GestureDetector(
                             onTap: () {
-                              Navigator.of(context)
-                                  .pushNamed(RouteNames.ROUTE_OWNER);
+                              Navigator.of(context).pushNamed(RouteNames.OWNER);
                             },
                             child: PhysicalModel(
                               color: Color(0xfffff4e0),
@@ -1127,7 +1126,7 @@ class _ApartmentDetailsScreenState extends State<ApartmentDetailsScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushNamed(RouteNames.ROUTE_PREVIEW);
+                      Navigator.of(context).pushNamed(RouteNames.PREVIEW);
                     },
                     child: Container(
                       padding:

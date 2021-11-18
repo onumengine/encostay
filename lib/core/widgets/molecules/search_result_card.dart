@@ -22,7 +22,7 @@ class _SearchResultCardState extends State<SearchResultCard> {
     return GestureDetector(
       onTap: () {
         Navigator.of(context)
-            .pushReplacementNamed(RouteNames.ROUTE_APARTMENT_DETAILS);
+            .pushReplacementNamed(RouteNames.APARTMENT_DETAILS);
       },
       child: Container(
         width: double.maxFinite,

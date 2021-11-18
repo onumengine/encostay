@@ -271,7 +271,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                         ),
                         onTap: () {
                           Navigator.of(context)
-                              .pushNamed(RouteNames.ROUTE_CANCELLATION);
+                              .pushNamed(RouteNames.CANCELLATION);
                         },
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(29),
@@ -296,8 +296,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                           ),
                         ),
                         onTap: () {
-                          Navigator.of(context)
-                              .pushNamed(RouteNames.ROUTE_OWNER);
+                          Navigator.of(context).pushNamed(RouteNames.OWNER);
                         },
                         decoration: BoxDecoration(
                           color: brandBrown,

@@ -242,7 +242,7 @@ class _AddCardScreenState extends State<AddCardScreen> {
                 ),
                 onTap: () {
                   Navigator.of(context)
-                      .popUntil(ModalRoute.withName(RouteNames.ROUTE_BOOKING));
+                      .popUntil(ModalRoute.withName(RouteNames.BOOKING));
                 },
                 color: brandOrange,
               )

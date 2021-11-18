@@ -32,7 +32,7 @@ class OnboardingScreen extends StatelessWidget {
             ),
           ),
           onDone: () {
-            Navigator.of(context).pushReplacementNamed(RouteNames.ROUTE_AUTH);
+            Navigator.of(context).pushReplacementNamed(RouteNames.AUTH);
           },
           next: Container(
             height: 41,

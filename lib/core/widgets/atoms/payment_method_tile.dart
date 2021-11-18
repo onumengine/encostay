@@ -37,7 +37,7 @@ class _PaymentMethodTileState extends State<PaymentMethodTile> {
           _documentIsUploaded = !_documentIsUploaded;
         });
         if (_documentIsUploaded) {
-          Navigator.of(context).pushNamed(RouteNames.ROUTE_ADD_CARD);
+          Navigator.of(context).pushNamed(RouteNames.ADD_CARD);
         }
 
         // TODO

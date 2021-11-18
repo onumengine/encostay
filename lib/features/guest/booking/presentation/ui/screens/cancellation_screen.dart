@@ -431,7 +431,7 @@ class _CancellationScreenState extends State<CancellationScreen> {
                       child: InkResponse(
                         onTap: () {
                           Navigator.of(context)
-                              .pushNamed(RouteNames.ROUTE_CANCEL_BOOKING);
+                              .pushNamed(RouteNames.CANCEL_BOOKING);
                         },
                         splashColor: brandOrange,
                         child: Container(

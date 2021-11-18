@@ -289,7 +289,7 @@ class SignUpForm extends StatelessWidget {
               color: brandOrange,
               height: 43,
               onTap: () {
-                Navigator.of(context).pushNamed(RouteNames.ROUTE_SET_PASSWORD);
+                Navigator.of(context).pushNamed(RouteNames.SET_PASSWORD);
               },
             ),
             SizedBox(

@@ -20,7 +20,7 @@ class _ReceivingScreenState extends State<ReceivingScreen> {
     Timer(
       Duration(seconds: 2),
       () {
-        Navigator.of(context).pushReplacementNamed(RouteNames.ROUTE_CONFIRMED);
+        Navigator.of(context).pushReplacementNamed(RouteNames.CONFIRMED);
       },
     );
   }

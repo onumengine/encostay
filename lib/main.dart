@@ -60,19 +60,18 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Montserrat',
         scaffoldBackgroundColor: brandBackground,
       ),
-      initialRoute: RouteNames.ROUTE_SPLASH,
+      initialRoute: RouteNames.SPLASH,
       // onGenerateRoute: (settings) => AppRouter().onGenerateRoute(settings),
       onUnknownRoute: (settings) =>
           MaterialPageRoute(builder: (context) => SplashScreen()),
       routes: {
-        RouteNames.ROUTE_ADD_CARD: (context) => AddCardScreen(),
-        RouteNames.ROUTE_ADD_PAYMENT: (context) => BlocProvider<AddPaymentBloc>(
+        RouteNames.ADD_CARD: (context) => AddCardScreen(),
+        RouteNames.ADD_PAYMENT: (context) => BlocProvider<AddPaymentBloc>(
               create: (context) => AddPaymentBloc(),
               child: AddPaymentScreen(),
             ),
-        RouteNames.ROUTE_APARTMENT_DETAILS: (context) =>
-            ApartmentDetailsScreen(),
-        RouteNames.ROUTE_AUTH: (context) => MultiBlocProvider(
+        RouteNames.APARTMENT_DETAILS: (context) => ApartmentDetailsScreen(),
+        RouteNames.AUTH: (context) => MultiBlocProvider(
               providers: [
                 BlocProvider<SignUpBloc>(
                   create: (context) => SignUpBloc(),
@@ -80,50 +79,47 @@ class MyApp extends StatelessWidget {
               ],
               child: AuthScreen(),
             ),
-        RouteNames.ROUTE_BOOKING: (context) => BlocProvider<BookingBloc>(
+        RouteNames.BOOKING: (context) => BlocProvider<BookingBloc>(
               create: (context) => BookingBloc(
                 DefaultBookingState(progressIndex: 0),
               ),
               child: BookingScreen(),
             ),
-        RouteNames.ROUTE_CANCEL_BOOKING: (context) => CancelBookingScreen(),
-        RouteNames.ROUTE_CANCELLATION: (context) => CancellationScreen(),
-        RouteNames.ROUTE_CANCELLATION_SURVEY: (context) =>
-            CancellationSurveyScreen(),
-        RouteNames.ROUTE_CHANGE_PASSWORD: (context) =>
+        RouteNames.CANCEL_BOOKING: (context) => CancelBookingScreen(),
+        RouteNames.CANCELLATION: (context) => CancellationScreen(),
+        RouteNames.CANCELLATION_SURVEY: (context) => CancellationSurveyScreen(),
+        RouteNames.CHANGE_PASSWORD: (context) =>
             BlocProvider<ChangePasswordBloc>(
               create: (context) => ChangePasswordBloc(),
               child: ChangePasswordScreen(),
             ),
-        RouteNames.ROUTE_CONFIRMED: (context) => ConfirmedScreen(),
-        RouteNames.ROUTE_CONTACT_SUPPORT: (context) =>
+        RouteNames.CONFIRMED: (context) => ConfirmedScreen(),
+        RouteNames.CONTACT_SUPPORT: (context) =>
             BlocProvider<ContactSupportBloc>(
                 create: (context) => ContactSupportBloc(),
                 child: ContactSupportScreen()),
-        RouteNames.ROUTE_FILTERS: (context) => FiltersScreen(),
-        RouteNames.ROUTE_HOME: (context) => HomeScreen(),
-        RouteNames.ROUTE_HOST_HOME: (context) => BlocProvider<HostHomeBloc>(
+        RouteNames.FILTERS: (context) => FiltersScreen(),
+        RouteNames.HOME: (context) => HomeScreen(),
+        RouteNames.HOST_HOME: (context) => BlocProvider<HostHomeBloc>(
               create: (context) => HostHomeBloc(),
               child: HostHomeScreen(),
             ),
-        RouteNames.ROUTE_HOST_LISTINGS: (context) =>
-            BlocProvider<HostListingsBloc>(
+        RouteNames.HOST_LISTINGS: (context) => BlocProvider<HostListingsBloc>(
               create: (cotntext) => HostListingsBloc(),
               child: HostListingsScreen(),
             ),
-        RouteNames.ROUTE_ONBOARDING: (context) => OnboardingScreen(),
-        RouteNames.ROUTE_OWNER: (context) => OwnerProfileScreen(),
-        RouteNames.ROUTE_PREVIEW: (context) => PreviewScreen(),
-        RouteNames.ROUTE_RECEIVING: (context) => ReceivingScreen(),
-        RouteNames.ROUTE_SEARCH_RESULTS: (context) => SearchResultsScreen(),
-        RouteNames.ROUTE_SET_PASSWORD: (context) => BlocProvider<SignUpBloc>(
+        RouteNames.ONBOARDING: (context) => OnboardingScreen(),
+        RouteNames.OWNER: (context) => OwnerProfileScreen(),
+        RouteNames.PREVIEW: (context) => PreviewScreen(),
+        RouteNames.RECEIVING: (context) => ReceivingScreen(),
+        RouteNames.SEARCH_RESULTS: (context) => SearchResultsScreen(),
+        RouteNames.SET_PASSWORD: (context) => BlocProvider<SignUpBloc>(
               create: (context) => SignUpBloc(),
               child: SetPasswordScreen(),
             ),
-        RouteNames.ROUTE_SPLASH: (context) => SplashScreen(),
-        RouteNames.TRANSACTION_HISTORY: (context) => TransactionHistoryScreen(),
-        RouteNames.TRANSACTION_SUMMARY: (context) =>
-            BlocProvider<TransactionsBloc>(
+        RouteNames.SPLASH: (context) => SplashScreen(),
+        RouteNames.HISTORY: (context) => TransactionHistoryScreen(),
+        RouteNames.SUMMARY: (context) => BlocProvider<TransactionsBloc>(
               create: (context) => TransactionsBloc(),
               child: TransactionSummaryScreen(),
             ),

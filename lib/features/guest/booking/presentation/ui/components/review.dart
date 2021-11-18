@@ -440,7 +440,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
           SizedBox(height: 8),
           GestureDetector(
             onTap: () {
-              Navigator.of(context).pushNamed(RouteNames.ROUTE_ADD_PAYMENT);
+              Navigator.of(context).pushNamed(RouteNames.ADD_PAYMENT);
             },
             child: Container(
               padding: EdgeInsets.all(14),
@@ -593,7 +593,7 @@ class _ReviewComponentState extends State<ReviewComponent> {
             padding: EdgeInsets.symmetric(horizontal: 78),
             child: GestureDetector(
               onTap: () {
-                Navigator.of(context).pushNamed(RouteNames.ROUTE_RECEIVING);
+                Navigator.of(context).pushNamed(RouteNames.RECEIVING);
               },
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 17, horizontal: 24),

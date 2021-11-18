@@ -55,8 +55,8 @@ class ConfirmedScreen extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                Navigator.of(context).pushNamedAndRemoveUntil(
-                    RouteNames.ROUTE_HOME, (route) => false);
+                Navigator.of(context)
+                    .pushNamedAndRemoveUntil(RouteNames.HOME, (route) => false);
               },
               color: brandBrown,
               height: 58,

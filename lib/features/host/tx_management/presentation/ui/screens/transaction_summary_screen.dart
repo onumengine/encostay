@@ -73,7 +73,7 @@ class TransactionSummaryScreen extends StatelessWidget {
               title: 'Total Earnings',
               buttonText: 'View History',
               onTap: () {
-                Navigator.of(context).pushNamed(RouteNames.TRANSACTION_HISTORY);
+                Navigator.of(context).pushNamed(RouteNames.HISTORY);
               },
             ),
             SizedBox(
@@ -83,7 +83,7 @@ class TransactionSummaryScreen extends StatelessWidget {
               title: 'Total Withdrawn',
               buttonText: 'View History',
               onTap: () {
-                Navigator.of(context).pushNamed(RouteNames.TRANSACTION_HISTORY);
+                Navigator.of(context).pushNamed(RouteNames.HISTORY);
               },
             ),
             SizedBox(

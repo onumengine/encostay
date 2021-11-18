@@ -177,7 +177,7 @@ class _CancelBookingScreenState extends State<CancelBookingScreen> {
                 child: InkResponse(
                   onTap: () {
                     Navigator.of(context)
-                        .pushNamed(RouteNames.ROUTE_CANCELLATION_SURVEY);
+                        .pushNamed(RouteNames.CANCELLATION_SURVEY);
                   },
                   splashColor: brandOrange,
                   child: Container(

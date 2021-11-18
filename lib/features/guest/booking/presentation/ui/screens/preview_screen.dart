@@ -484,7 +484,7 @@ class _PreviewScreenState extends State<PreviewScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).pushNamed(RouteNames.ROUTE_BOOKING);
+                  Navigator.of(context).pushNamed(RouteNames.BOOKING);
                 },
                 child: Container(
                   constraints: BoxConstraints(maxWidth: screenSize.width / 2.5),

@@ -104,10 +104,9 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                     );
                   } else if (state is Validated) {
                     if (state.accountType == AccountType.guest) {
-                      Navigator.of(context).pushNamed(RouteNames.ROUTE_HOME);
+                      Navigator.of(context).pushNamed(RouteNames.HOME);
                     } else if (state.accountType == AccountType.host) {
-                      Navigator.of(context)
-                          .pushNamed(RouteNames.ROUTE_HOST_HOME);
+                      Navigator.of(context).pushNamed(RouteNames.HOST_HOME);
                     }
                   }
                 },
@@ -152,8 +151,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                         //         _confirmPasswordController.text,
                         //   ),
                         // );
-                        Navigator.of(context)
-                            .pushNamed(RouteNames.ROUTE_HOST_HOME);
+                        Navigator.of(context).pushNamed(RouteNames.HOST_HOME);
                       },
                       color: brandOrange,
                       height: 43,

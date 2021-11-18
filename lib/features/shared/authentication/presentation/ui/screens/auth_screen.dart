@@ -235,7 +235,7 @@ class _LoginFormState extends State<LoginForm> {
           ),
           BrandButton(
             onTap: () {
-              Navigator.of(context).pushNamed(RouteNames.ROUTE_HOME);
+              Navigator.of(context).pushNamed(RouteNames.HOME);
             },
             child: Text(
               'Login',

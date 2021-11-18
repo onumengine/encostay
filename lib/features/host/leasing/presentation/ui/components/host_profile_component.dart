@@ -57,43 +57,38 @@ class HostProfileComponent extends StatelessWidget {
                 ProfileItemTile(
                   title: 'Change Password',
                   onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(RouteNames.ROUTE_CHANGE_PASSWORD);
+                    Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
                   },
                 ),
                 ProfileItemTile(
                   title: 'Payment Method',
                   onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(RouteNames.ROUTE_ADD_PAYMENT);
+                    Navigator.of(context).pushNamed(RouteNames.ADD_PAYMENT);
                   },
                 ),
                 ProfileItemTile(
                   title: 'Transactions',
                   onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(RouteNames.TRANSACTION_SUMMARY);
+                    Navigator.of(context).pushNamed(RouteNames.SUMMARY);
                   },
                 ),
                 ProfileItemTile(
                   title: 'My Listings',
                   onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(RouteNames.ROUTE_HOST_LISTINGS);
+                    Navigator.of(context).pushNamed(RouteNames.HOST_LISTINGS);
                   },
                 ),
                 ProfileItemTile(
                   title: 'Contact Support',
                   onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(RouteNames.ROUTE_CONTACT_SUPPORT);
+                    Navigator.of(context).pushNamed(RouteNames.CONTACT_SUPPORT);
                   },
                 ),
                 ProfileItemTile(
                   title: 'Log Out',
                   onTap: () {
                     Navigator.of(context)
-                        .popUntil(ModalRoute.withName(RouteNames.ROUTE_AUTH));
+                        .popUntil(ModalRoute.withName(RouteNames.AUTH));
                   },
                 ),
               ],
