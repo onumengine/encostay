@@ -1,5 +1,6 @@
 import 'package:encostay/core/utilities/colors.dart';
 import 'package:encostay/core/utilities/constants.dart';
+import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/components/earnings_card.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/components/transaction_summary_card.dart';
 import 'package:flutter/material.dart';
@@ -71,6 +72,9 @@ class TransactionSummaryScreen extends StatelessWidget {
             TransactionSummaryCard(
               title: 'Total Earnings',
               buttonText: 'View History',
+              onTap: () {
+                Navigator.of(context).pushNamed(RouteNames.TRANSACTION_HISTORY);
+              },
             ),
             SizedBox(
               height: 17,
@@ -78,6 +82,9 @@ class TransactionSummaryScreen extends StatelessWidget {
             TransactionSummaryCard(
               title: 'Total Withdrawn',
               buttonText: 'View History',
+              onTap: () {
+                Navigator.of(context).pushNamed(RouteNames.TRANSACTION_HISTORY);
+              },
             ),
             SizedBox(
               height: 200,
