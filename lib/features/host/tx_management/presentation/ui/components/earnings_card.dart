@@ -9,9 +9,9 @@ class EarningsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
+    Size screenSize = MediaQuery.of(context).size;
     return Container(
-      width: screenWidth,
+      width: screenSize.width,
       height: 150,
       margin: EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
