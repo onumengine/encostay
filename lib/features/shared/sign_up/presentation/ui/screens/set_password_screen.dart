@@ -143,14 +143,6 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                         ),
                       ),
                       onTap: () {
-                        print('Submitted password');
-                        // BlocProvider.of<SignUpBloc>(context).add(
-                        //   SubmitPassword(
-                        //     firstPasswordEntry: _passwordController.text,
-                        //     secondPasswordEntry:
-                        //         _confirmPasswordController.text,
-                        //   ),
-                        // );
                         Navigator.of(context).pushNamed(RouteNames.HOST_HOME);
                       },
                       color: ColorPalette.brandOrange,
