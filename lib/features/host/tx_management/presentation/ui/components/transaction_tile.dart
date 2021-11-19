@@ -10,12 +10,14 @@ enum TransactionType {
 
 class TransactionTile extends StatelessWidget {
   final TransactionType transactionType;
-  late String transactionKeyword;
+  late final String transactionKeyword;
   final num amount;
-  late String iconPath;
+  late final String iconPath;
+  final VoidCallback? onTap;
 
   TransactionTile({
     Key? key,
+    this.onTap,
     this.transactionType = TransactionType.earning,
     this.amount = 50.00,
   }) : super(key: key) {
@@ -30,62 +32,71 @@ class TransactionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 19, horizontal: 16) +
-          EdgeInsets.only(left: 6),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: ColorPalette.brandWhite,
-        boxShadow: [
-          BoxShadow(
-            blurRadius: 40,
-            spreadRadius: 0,
-            offset: Offset(0, 20),
-            color: ColorPalette.hostCardShadowColor.withOpacity(0.05),
-          ),
-        ],
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          RichText(
-            text: TextSpan(
-              text: 'You $transactionKeyword',
-              style: TextStyle(
-                fontSize: 12,
-                height: 18.28 / 12,
-                letterSpacing: -0.01,
-                color: ColorPalette.greySubtitleColor,
+    return InkWell(
+      onTap: onTap ??
+          () {
+            print('TAPPED TRANSACTION TILE');
+          },
+      child: Material(
+        color: Colors.transparent,
+        child: Container(
+          padding: EdgeInsets.symmetric(vertical: 19, horizontal: 16) +
+              EdgeInsets.only(left: 6),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: ColorPalette.brandWhite,
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 40,
+                spreadRadius: 0,
+                offset: Offset(0, 20),
+                color: ColorPalette.hostCardShadowColor.withOpacity(0.05),
               ),
-              children: [
-                TextSpan(
-                  text: ' \$$amount',
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              RichText(
+                text: TextSpan(
+                  text: 'You $transactionKeyword',
                   style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w700,
-                    height: 20.46 / 15,
-                    letterSpacing: -0.3,
-                    color: ColorPalette.searchBoxBackgroundColor,
+                    fontSize: 12,
+                    height: 18.28 / 12,
+                    letterSpacing: -0.01,
+                    color: ColorPalette.greySubtitleColor,
                   ),
+                  children: [
+                    TextSpan(
+                      text: ' \$$amount',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        height: 20.46 / 15,
+                        letterSpacing: -0.3,
+                        color: ColorPalette.searchBoxBackgroundColor,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+              Expanded(
+                child: SizedBox(),
+              ),
+              Text(
+                '21:00 15 March',
+                style: TextStyle(
+                  fontSize: 12,
+                  height: 18.28 / 12,
+                  letterSpacing: -0.01,
+                  color: ColorPalette.brandGold,
+                ),
+              ),
+              SizedBox(width: 12),
+              SvgPicture.asset(iconPath),
+            ],
           ),
-          Expanded(
-            child: SizedBox(),
-          ),
-          Text(
-            '21:00 15 March',
-            style: TextStyle(
-              fontSize: 12,
-              height: 18.28 / 12,
-              letterSpacing: -0.01,
-              color: ColorPalette.brandGold,
-            ),
-          ),
-          SizedBox(width: 12),
-          SvgPicture.asset(iconPath),
-        ],
+        ),
       ),
     );
   }
