@@ -1,6 +1,7 @@
 import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/widgets/atoms/filters_button.dart';
 import 'package:encostay/core/widgets/atoms/search_box.dart';
+import 'package:encostay/features/host/tx_management/presentation/ui/components/transaction_tile.dart';
 import 'package:flutter/material.dart';
 
 class TransactionHistoryScreen extends StatelessWidget {
@@ -66,6 +67,16 @@ class TransactionHistoryScreen extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      body: ListView.separated(
+        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 29),
+        itemBuilder: (context, index) => TransactionTile(
+          transactionType: (index.isOdd)
+              ? TransactionType.withdrawal
+              : TransactionType.earning,
+        ),
+        separatorBuilder: (_, index) => SizedBox(height: 14),
+        itemCount: 10,
       ),
     );
   }
