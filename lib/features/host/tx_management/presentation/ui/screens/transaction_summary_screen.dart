@@ -63,7 +63,7 @@ class TransactionSummaryScreen extends StatelessWidget {
               title: 'Available balance',
               buttonText: 'Withdraw Funds',
               onTap: () {
-                print('ANGEL');
+                Navigator.of(context).pushNamed(RouteNames.WITHDRAW_FUNDS);
               },
             ),
             SizedBox(
@@ -73,7 +73,7 @@ class TransactionSummaryScreen extends StatelessWidget {
               title: 'Total Earnings',
               buttonText: 'View History',
               onTap: () {
-                Navigator.of(context).pushNamed(RouteNames.HISTORY);
+                Navigator.of(context).pushNamed(RouteNames.TRANSACTION_HISTORY);
               },
             ),
             SizedBox(
@@ -83,7 +83,7 @@ class TransactionSummaryScreen extends StatelessWidget {
               title: 'Total Withdrawn',
               buttonText: 'View History',
               onTap: () {
-                Navigator.of(context).pushNamed(RouteNames.HISTORY);
+                Navigator.of(context).pushNamed(RouteNames.TRANSACTION_HISTORY);
               },
             ),
             SizedBox(

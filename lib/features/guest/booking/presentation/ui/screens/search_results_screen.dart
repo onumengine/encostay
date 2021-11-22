@@ -15,9 +15,6 @@ class SearchResultsScreen extends StatefulWidget {
 }
 
 class _SearchResultsScreenState extends State<SearchResultsScreen> {
-  TextEditingController _controller = TextEditingController();
-  int _navbarIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

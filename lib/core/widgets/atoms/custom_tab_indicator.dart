@@ -50,7 +50,7 @@ class _SelectedTabState extends State<SelectedTab> {
 
 class UnselectedTab extends CustomTab {
   final int index;
-  void Function() onTap;
+  final void Function() onTap;
 
   UnselectedTab({
     required this.onTap,

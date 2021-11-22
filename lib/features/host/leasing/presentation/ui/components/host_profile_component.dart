@@ -69,7 +69,8 @@ class HostProfileComponent extends StatelessWidget {
                 ProfileItemTile(
                   title: 'Transactions',
                   onTap: () {
-                    Navigator.of(context).pushNamed(RouteNames.SUMMARY);
+                    Navigator.of(context)
+                        .pushNamed(RouteNames.TRANSACTION_SUMMARY);
                   },
                 ),
                 ProfileItemTile(

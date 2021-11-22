@@ -4,6 +4,7 @@ import 'package:encostay/features/guest/booking/presentation/logic_holders/state
 import 'package:encostay/features/host/tx_management/presentation/logic_holders/bloc/transaction_bloc.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/screens/transaction_history_screen.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/screens/transaction_summary_screen.dart';
+import 'package:encostay/features/host/tx_management/presentation/ui/screens/withdraw_funds_screen.dart';
 import 'package:encostay/features/shared/payment_method_management/presentation/ui/screens/add_card_screen.dart';
 import 'package:encostay/features/shared/payment_method_management/presentation/ui/screens/add_payment_screen.dart';
 import 'package:encostay/features/guest/booking/presentation/ui/screens/apartment_details_screen.dart';
@@ -118,11 +119,13 @@ class MyApp extends StatelessWidget {
               child: SetPasswordScreen(),
             ),
         RouteNames.SPLASH: (context) => SplashScreen(),
-        RouteNames.HISTORY: (context) => TransactionHistoryScreen(),
-        RouteNames.SUMMARY: (context) => BlocProvider<TransactionsBloc>(
+        RouteNames.TRANSACTION_HISTORY: (context) => TransactionHistoryScreen(),
+        RouteNames.TRANSACTION_SUMMARY: (context) =>
+            BlocProvider<TransactionsBloc>(
               create: (context) => TransactionsBloc(),
               child: TransactionSummaryScreen(),
             ),
+        RouteNames.WITHDRAW_FUNDS: (context) => WithdrawFundsScreen(),
       },
     );
   }

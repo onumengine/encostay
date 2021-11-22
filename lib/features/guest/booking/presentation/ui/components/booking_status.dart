@@ -1,6 +1,5 @@
 import 'package:encostay/features/guest/booking/presentation/logic_holders/blocs/booking_bloc.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/events/booking_event.dart';
-import 'package:encostay/core/widgets/molecules/booking_status_modal.dart';
 import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:flutter/material.dart';

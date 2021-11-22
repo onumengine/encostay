@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 class PasswordTextWidget extends StatefulWidget {
   final String hintText;
-  double? height;
+  final double? height;
   final GlobalKey key;
-  TextStyle? inputStyle;
+  final TextStyle? inputStyle;
   final TextEditingController controller;
 
   PasswordTextWidget({

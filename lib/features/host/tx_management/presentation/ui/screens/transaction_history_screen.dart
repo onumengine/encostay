@@ -31,7 +31,6 @@ class TransactionHistoryScreen extends StatelessWidget {
             ),
           ),
         ],
-        automaticallyImplyLeading: false,
         foregroundColor: ColorPalette.brandBrown,
         backgroundColor: Colors.transparent,
         elevation: 0,
