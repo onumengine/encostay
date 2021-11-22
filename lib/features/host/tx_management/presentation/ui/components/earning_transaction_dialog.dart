@@ -108,7 +108,7 @@ class EarningTransactionDialog extends StatelessWidget {
               height: 30 / 18,
               color: ColorPalette.lightTextColor,
             ),
-          )
+          ),
         ],
       ),
     );
