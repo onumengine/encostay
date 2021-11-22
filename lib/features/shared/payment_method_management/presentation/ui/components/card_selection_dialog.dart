@@ -1,5 +1,5 @@
 import 'package:encostay/models/payment_card.dart';
-import 'package:encostay/core/widgets/molecules/payment_card_tile.dart';
+import 'package:encostay/features/shared/payment_method_management/presentation/ui/components/selectable_card_tile.dart';
 import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/enums.dart';
 import 'package:flutter/material.dart';
@@ -30,13 +30,13 @@ class CardSelectionDialog extends StatelessWidget {
       width: 348,
       child: Column(
         children: [
-          PaymentCardTile(
+          SelectableCardTile(
             card: availableCards[0],
           ),
           SizedBox(
             height: 20,
           ),
-          PaymentCardTile(
+          SelectableCardTile(
             card: availableCards[1],
           ),
           SizedBox(height: 20),
