@@ -18,7 +18,7 @@ class BrandButton extends StatelessWidget {
     this.width,
     this.padding,
     this.decoration,
-  }) : assert(!((height != null || width != null) && padding != null));
+  });
 
   Widget build(BuildContext context) {
     return InkWell(
@@ -27,11 +27,10 @@ class BrandButton extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: Container(
-          height: this.height,
-          width: this.width,
-          padding: (this.height == null && this.width == null)
-              ? EdgeInsets.symmetric(horizontal: 16, vertical: 8)
-              : EdgeInsets.zero,
+          height: this.height ?? 43,
+          width: this.width ?? 0,
+          padding:
+              this.padding ?? EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: this.decoration ??
               BoxDecoration(
                 borderRadius: BorderRadius.all(
