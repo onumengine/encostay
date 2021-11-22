@@ -1,6 +1,8 @@
 import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/widgets/atoms/filters_button.dart';
+import 'package:encostay/features/host/tx_management/presentation/ui/components/earning_transaction_dialog.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/components/transaction_tile.dart';
+import 'package:encostay/features/host/tx_management/presentation/ui/components/withdrawal_transaction_dialog.dart';
 import 'package:flutter/material.dart';
 
 class TransactionHistoryScreen extends StatelessWidget {
@@ -73,6 +75,19 @@ class TransactionHistoryScreen extends StatelessWidget {
           transactionType: (index.isOdd)
               ? TransactionType.withdrawal
               : TransactionType.earning,
+          onTap: () {
+            showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                content: (index.isOdd)
+                    ? WithdrawalTransactionDialog()
+                    : EarningTransactionDialog(),
+              ),
+            );
+          },
         ),
         separatorBuilder: (_, index) => SizedBox(height: 14),
         itemCount: 10,
