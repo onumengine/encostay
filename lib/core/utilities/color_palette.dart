@@ -19,7 +19,7 @@ abstract class ColorPalette {
   static const brandTextInputShadow = Color(0xff939393);
   static const brandGold = Color(0xfffec630);
 
-  static const lightTextColor = Color(0xff2f2f2F);
+  static const lightTextColor = Color(0xff2f2f2f);
   static const paleTextColor = Color(0xffa1a0a6);
 
   static const redTextColor = Color(0Xffff765e);
