@@ -43,4 +43,5 @@ abstract class ColorPalette {
   static const greySubtitleColor2 = Color(0xffa4a4a4);
   static const hostCardShadowColor = Color(0xff02202c);
   static const searchBoxBackgroundColor = Color(0xff6c2c00);
+  static const textInputBackgroundColor = Color(0xfff4f2f2);
 }

@@ -9,6 +9,7 @@ class TextWidget extends StatelessWidget {
   TextStyle? inputStyle;
   TextEditingController controller;
   bool textIsObscured, autocorrectIsEnabled;
+  Color? color;
 
   TextWidget({
     required this.key,
@@ -18,6 +19,7 @@ class TextWidget extends StatelessWidget {
     this.inputStyle,
     this.textIsObscured = false,
     this.autocorrectIsEnabled = true,
+    this.color,
   });
 
   factory TextWidget.obscured({
@@ -26,6 +28,7 @@ class TextWidget extends StatelessWidget {
     required TextEditingController controller,
     double? height,
     TextStyle? inputStyle,
+    Color? color,
   }) {
     return TextWidget(
       key: key,
@@ -35,6 +38,7 @@ class TextWidget extends StatelessWidget {
       inputStyle: inputStyle,
       textIsObscured: true,
       autocorrectIsEnabled: false,
+      color: color,
     );
   }
 
@@ -42,7 +46,7 @@ class TextWidget extends StatelessWidget {
     return Container(
       height: this.height ?? 43,
       decoration: BoxDecoration(
-        color: ColorPalette.brandWhite,
+        color: color ?? ColorPalette.brandWhite,
         borderRadius: BorderRadius.all(
           Radius.circular(27.5),
         ),
