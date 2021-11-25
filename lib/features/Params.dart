@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 
 /// This class is a container for wrapping the data that will be passed into a
 /// [UseCase].
-class Params extends Equatable {
+abstract class Params extends Equatable {
   @override
   List<Object?> get props => [];
 }
