@@ -3,10 +3,14 @@ import 'dart:convert';
 import 'package:encostay/features/shared/sign_up/data/models/UserCredentialModel.dart';
 import 'package:http/http.dart';
 
-class RemoteDataSource {
+abstract class RemoteDataSource {
+  Future<UserCredentialModel> submitForm(Map<String, dynamic> formData);
+}
+
+class RemoteDataSourceImpl implements RemoteDataSource {
   final Client client;
 
-  RemoteDataSource({required this.client});
+  RemoteDataSourceImpl({required this.client});
 
   Future<UserCredentialModel> submitForm(Map<String, dynamic> formData) async {
     try {
@@ -19,6 +23,7 @@ class RemoteDataSource {
       );
       return UserCredentialModel.fromJSON(jsonDecode(response.body));
     } on Exception catch (e) {
+      print(e);
       throw e;
     }
   }
