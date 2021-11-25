@@ -121,7 +121,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                       ),
                       onTap: () {
                         BlocProvider.of<SignUpBloc>(context).add(
-                          SubmitPassword(
+                          AppendPassword(
                             firstPasswordEntry: _passwordController.text,
                             secondPasswordEntry:
                                 _confirmPasswordController.text,

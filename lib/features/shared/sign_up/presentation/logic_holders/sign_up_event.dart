@@ -6,23 +6,17 @@ abstract class SignUpEvent extends Equatable {
   List<Object?> get props => [];
 }
 
-class SubmitSignUpForm extends SignUpEvent {
-  final String firstName,
-      lastname,
-      email,
-      firstPasswordEntry,
-      secondPasswordEntry;
+class AppendUserData extends SignUpEvent {
+  final String firstName, lastname, email;
   final AccountType accountType;
   final DateTime dateOfBirth;
 
-  SubmitSignUpForm({
+  AppendUserData({
     required this.firstName,
     required this.lastname,
     required this.email,
     required this.accountType,
     required this.dateOfBirth,
-    required this.firstPasswordEntry,
-    required this.secondPasswordEntry,
   });
 
   @override
@@ -32,15 +26,13 @@ class SubmitSignUpForm extends SignUpEvent {
         email,
         accountType,
         dateOfBirth,
-        firstPasswordEntry,
-        secondPasswordEntry,
       ];
 }
 
-class SubmitPassword extends SignUpEvent {
+class AppendPassword extends SignUpEvent {
   final String firstPasswordEntry, secondPasswordEntry;
 
-  SubmitPassword({
+  AppendPassword({
     required this.firstPasswordEntry,
     required this.secondPasswordEntry,
   });
@@ -52,10 +44,10 @@ class SubmitPassword extends SignUpEvent {
       ];
 }
 
-class SelectDateOfBirth extends SignUpEvent {
+class AppendDateOfBirth extends SignUpEvent {
   final DateTime dateOfBirth;
 
-  SelectDateOfBirth(this.dateOfBirth);
+  AppendDateOfBirth(this.dateOfBirth);
 
   @override
   List<Object?> get props => [dateOfBirth];

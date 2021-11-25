@@ -181,7 +181,7 @@ class SignUpForm extends StatelessWidget {
                       ),
                     );
                     BlocProvider.of<SignUpBloc>(context)
-                        .add(SelectDateOfBirth(selectedDate!));
+                        .add(AppendDateOfBirth(selectedDate!));
                   },
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 12) +
