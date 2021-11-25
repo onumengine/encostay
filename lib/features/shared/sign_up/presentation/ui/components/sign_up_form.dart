@@ -214,7 +214,7 @@ class SignUpForm extends StatelessWidget {
                 value: _accountType,
                 onChanged: (dropdownValue) {
                   BlocProvider.of<SignUpBloc>(context)
-                      .add(SelectAccountType(dropdownValue!));
+                      .add(AppendAccountType(dropdownValue!));
                 },
                 items: <DropdownMenuItem<AccountType>>[
                   DropdownMenuItem<AccountType>(
@@ -291,6 +291,11 @@ class SignUpForm extends StatelessWidget {
               color: ColorPalette.brandOrange,
               height: 43,
               onTap: () {
+                BlocProvider.of<SignUpBloc>(context).add(AppendUserData(
+                  firstName: _firstNameController.text,
+                  lastname: _lastNameController.text,
+                  email: _emailController.text,
+                ));
                 Navigator.of(context).pushNamed(RouteNames.SET_PASSWORD);
               },
             ),

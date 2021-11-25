@@ -127,6 +127,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                                 _confirmPasswordController.text,
                           ),
                         );
+                        BlocProvider.of<SignUpBloc>(context).add(SubmitForm());
                       },
                       color: ColorPalette.brandOrange,
                       height: 43,

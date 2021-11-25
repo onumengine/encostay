@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:encostay/core/error/Failure.dart';
 import 'package:encostay/core/utilities/enums.dart';
+import 'package:encostay/features/shared/sign_up/domain/entities/UserCredentialEntity.dart';
 import 'package:encostay/features/shared/sign_up/domain/use_cases/SubmitSignupForm.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_event.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_state.dart';
@@ -21,53 +23,59 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
 
   @override
   Stream<SignUpState> mapEventToState(SignUpEvent event) async* {
-    if (event is SelectAccountType) {
+    if (event is AppendAccountType) {
       handleAccountTypeSelection(event);
-      yield SigningUp(
-        accountType: accountType!,
-        dateOfBirth: dateOfBirth!,
-      );
     } else if (event is AppendDateOfBirth) {
       handleDOBSelection(event);
-      yield SigningUp(
-        accountType: accountType!,
-        dateOfBirth: dateOfBirth!,
-      );
     } else if (event is AppendUserData) {
       yield ValidatingInput();
       Timer(Duration(milliseconds: 500), () {});
-      yield getStateFromInput(event);
     } else if (event is AppendPassword) {
       yield ValidatingInput();
+      handlePasswordSelection(event);
       Timer(Duration(milliseconds: 500), () {});
-      yield getStateFromInput(event);
+    } else if (event is SubmitForm) {
+      final result = await submitSignupForm(FormParam(data: formData));
+      yield result.fold(
+        (Failure failure) => SignUpFailed(failureMessage: 'Signup failed, bro'),
+        (UserCredentialEntity entity) => SignUpComplete(),
+      );
     }
   }
 
-  void handleAccountTypeSelection(SelectAccountType event) {
-    dateOfBirth ??= DateTime.now();
-    accountType = event.accountType;
+  void handleAccountTypeSelection(AppendAccountType event) {
+    if (event.accountType == AccountType.guest) {
+      formData['accountType'] = 'GUEST';
+    } else if (event.accountType == AccountType.host) {
+      formData['accountType'] = 'HOST';
+    }
+    print('SIGN UP FORM DATA: $formData');
   }
 
   void handleDOBSelection(AppendDateOfBirth event) {
     formData['dateOfBirth'] = event.dateOfBirth.toString();
+    print('SIGN UP FORM DATA: $formData');
   }
 
-  SignUpState getStateFromInput(SignUpEvent event) {
-    if (event is AppendPassword) {
-      if (event.firstPasswordEntry == event.secondPasswordEntry) {
-        return Validated(accountType: accountType!);
-      } else {
-        return DetectedInvalidInput();
-      }
-    } else if (event is AppendUserData) {
-      if (event.firstPasswordEntry == event.secondPasswordEntry) {
-        return Validated(accountType: event.accountType);
-      } else {
-        return DetectedInvalidInput();
-      }
-    } else {
-      return ValidatingInput();
-    }
+  void handlePasswordSelection(AppendPassword event) {
+    if (bothPasswordsMatch(event)) {
+      formData['password'] = event.secondPasswordEntry;
+    } else {}
   }
+
+  bool bothPasswordsMatch(AppendPassword event) {
+    return (event.firstPasswordEntry == event.secondPasswordEntry);
+  }
+
+  // SignUpState getStateFromInput(SignUpEvent event) {
+  //   if (event is AppendPassword) {
+  //     if (event.firstPasswordEntry == event.secondPasswordEntry) {
+  //       return Validated(accountType: accountType!);
+  //     } else {
+  //       return DetectedInvalidInput();
+  //     }
+  //   } else {
+  //     return ValidatingInput();
+  //   }
+  // }
 }
