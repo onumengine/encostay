@@ -293,7 +293,7 @@ class SignUpForm extends StatelessWidget {
               onTap: () {
                 BlocProvider.of<SignUpBloc>(context).add(AppendUserData(
                   firstName: _firstNameController.text,
-                  lastname: _lastNameController.text,
+                  lastName: _lastNameController.text,
                   email: _emailController.text,
                 ));
                 Navigator.of(context).pushNamed(RouteNames.SET_PASSWORD);

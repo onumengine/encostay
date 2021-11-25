@@ -40,18 +40,18 @@ class AppendPassword extends SignUpEvent {
 }
 
 class AppendUserData extends SignUpEvent {
-  final String firstName, lastname, email;
+  final String firstName, lastName, email;
 
   AppendUserData({
     required this.firstName,
-    required this.lastname,
+    required this.lastName,
     required this.email,
   });
 
   @override
   List<Object?> get props => [
         firstName,
-        lastname,
+        lastName,
         email,
       ];
 }

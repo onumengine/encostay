@@ -52,15 +52,23 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
     print('SIGN UP FORM DATA: $formData');
   }
 
+  void handleAppendUserData(AppendUserData event) {
+    formData['firstName'] = event.firstName;
+    formData['lastName'] = event.lastName;
+    formData['email'] = event.email;
+    print('SIGN UP FORM DATA: $formData');
+  }
+
   void handleDOBSelection(AppendDateOfBirth event) {
-    formData['dateOfBirth'] = event.dateOfBirth.toString();
+    formData['dateOfBirth'] = event.dateOfBirth.toIso8601String();
     print('SIGN UP FORM DATA: $formData');
   }
 
   void handlePasswordSelection(AppendPassword event) {
     if (bothPasswordsMatch(event)) {
       formData['password'] = event.secondPasswordEntry;
-    } else {}
+    }
+    print('SIGN UP FORM DATA: $formData');
   }
 
   bool bothPasswordsMatch(AppendPassword event) {
