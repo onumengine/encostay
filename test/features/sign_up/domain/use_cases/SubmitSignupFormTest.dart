@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:encostay/core/utilities/enums.dart';
 import 'package:encostay/features/shared/sign_up/domain/entities/UserCredentialEntity.dart';
 import 'package:encostay/features/shared/sign_up/domain/repositories/SubmitSignupFormRepo.dart';
 import 'package:encostay/features/shared/sign_up/domain/use_cases/SubmitSignupForm.dart';
@@ -16,13 +17,16 @@ void main() {
     useCase = SubmitSignupForm(repository: mockRepository!);
   });
 
-  final Map formData = <String, dynamic>{
+  final Map<String, dynamic> formData = <String, dynamic>{
     'name': 'Jane',
     'type': 'GUEST',
     'email': 'mail@jane.doe',
     'password': '123456',
   };
-  final UserCredentialEntity credential = UserCredentialEntity();
+  final UserCredentialEntity credential = UserCredentialEntity(
+    accountType: AccountType.guest,
+    userID: 'JaneDoe1234',
+  );
 
   test('should return a UserCredentialEntity', () {
     when(mockRepository?.submitForm(formData))
