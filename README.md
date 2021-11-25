@@ -4,9 +4,6 @@ Enjoy convenient stay
 <br>
 <br>
 
-# NOTICE!!
-Encostay is currently under migration to the clean architectural / Adapter pattern
-
 
 ## App Screenshots
 <br>
