@@ -17,7 +17,7 @@ class SubmitSignupForm implements UseCase<UserCredentialEntity, FormParam> {
 }
 
 class FormParam extends Params {
-  final Map data;
+  final Map<String, dynamic> data;
 
   FormParam({required this.data});
 
