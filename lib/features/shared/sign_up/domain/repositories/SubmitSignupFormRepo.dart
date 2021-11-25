@@ -3,5 +3,5 @@ import 'package:encostay/core/error/Failure.dart';
 import 'package:encostay/features/shared/sign_up/domain/entities/UserCredentialEntity.dart';
 
 abstract class SubmitSignupFormRepo {
-  Future<Either<Failure, UserCredentialEntity>> submitForm();
+  Future<Either<Failure, UserCredentialEntity>> submitForm(Map formData);
 }
