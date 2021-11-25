@@ -6,9 +6,22 @@ abstract class Failure extends Equatable {
 }
 
 class SignupFailure extends Failure {
-  final String message;
+  final String? message;
 
-  SignupFailure({required this.message});
+  SignupFailure({
+    this.message = 'There has been a sign up error',
+  });
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class ConnectionFailure extends Failure {
+  final String? message;
+
+  ConnectionFailure({
+    this.message = 'The device is not connected to the internet',
+  });
 
   @override
   List<Object?> get props => [message];
