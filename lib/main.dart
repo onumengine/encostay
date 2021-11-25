@@ -35,11 +35,13 @@ import 'package:encostay/features/shared/onboarding/presentation/ui/screens/spla
 import 'package:encostay/core/utilities/color_palette.dart';
 // import 'package:encostay/core/navigation/router.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
+import 'package:encostay/injection_container.dart' as injector;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
+  injector.init();
   runApp(MyApp());
 }
 
@@ -74,8 +76,8 @@ class MyApp extends StatelessWidget {
         RouteNames.APARTMENT_DETAILS: (context) => ApartmentDetailsScreen(),
         RouteNames.AUTH: (context) => MultiBlocProvider(
               providers: [
-                BlocProvider<SignUpBloc>(
-                  create: (context) => SignUpBloc(),
+                BlocProvider(
+                  create: (_) => injector.serviceLocator<SignUpBloc>(),
                 ),
               ],
               child: AuthScreen(),
@@ -114,8 +116,8 @@ class MyApp extends StatelessWidget {
         RouteNames.PREVIEW: (context) => PreviewScreen(),
         RouteNames.RECEIVING: (context) => ReceivingScreen(),
         RouteNames.SEARCH_RESULTS: (context) => SearchResultsScreen(),
-        RouteNames.SET_PASSWORD: (context) => BlocProvider<SignUpBloc>(
-              create: (context) => SignUpBloc(),
+        RouteNames.SET_PASSWORD: (context) => BlocProvider(
+              create: (_) => injector.serviceLocator<SignUpBloc>(),
               child: SetPasswordScreen(),
             ),
         RouteNames.SPLASH: (context) => SplashScreen(),
