@@ -7,7 +7,7 @@ abstract class SignUpState extends Equatable {
 
 class Unregistered extends SignUpState {
   final String accountType = 'GUEST';
-  final DateTime dateOfBirth = DateTime.now();
+  final String dateOfBirth = DateTime.now().toString().split(' ').elementAt(0);
 
   @override
   List<Object?> get props => [
@@ -18,13 +18,14 @@ class Unregistered extends SignUpState {
 
 class SigningUp extends SignUpState {
   late final String? accountType;
-  late final DateTime? dateOfBirth = DateTime.now();
+  late String? dateOfBirth;
 
   SigningUp({
     required Map<String, dynamic> data,
   }) {
-    this.accountType = data['accountType'] ?? null;
-    // this.dateOfBirth = data['dateOfBirth'] ?? null;
+    this.accountType = data['accountType'] ?? 'GUEST';
+    this.dateOfBirth = data['dateOfBirth'] ??
+        DateTime.now().toString().split(' ').elementAt(0);
   }
 
   @override

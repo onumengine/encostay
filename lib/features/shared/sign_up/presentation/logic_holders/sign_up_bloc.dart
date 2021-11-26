@@ -62,7 +62,8 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
   }
 
   void handleDOBSelection(AppendDateOfBirth event) {
-    formData['dateOfBirth'] = event.dateOfBirth.toIso8601String();
+    formData['dateOfBirth'] =
+        event.dateOfBirth.toString().split(' ').elementAt(0);
     print('SIGN UP FORM DATA: $formData');
   }
 

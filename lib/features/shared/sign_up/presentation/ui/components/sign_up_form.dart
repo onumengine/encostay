@@ -150,11 +150,23 @@ class SignUpForm extends StatelessWidget {
                                   .add(AppendDateOfBirth(tappedDate));
                               return isTapped;
                             },
-                            initialDate: DateTime(
-                              DateTime.now().year - 18,
-                              DateTime.now().month,
-                              DateTime.now().day,
-                            ),
+                            initialDate: state.dateOfBirth == null
+                                ? DateTime(
+                                    DateTime.now().year - 18,
+                                    DateTime.now().month,
+                                    DateTime.now().day,
+                                  )
+                                : DateTime(
+                                    int.parse(state.dateOfBirth!
+                                        .split('-')
+                                        .elementAt(0)),
+                                    int.parse(state.dateOfBirth!
+                                        .split('-')
+                                        .elementAt(1)),
+                                    int.parse(state.dateOfBirth!
+                                        .split('-')
+                                        .elementAt(2)),
+                                  ),
                             firstDate: DateTime(DateTime.now().year - 150),
                             lastDate: DateTime(
                               DateTime.now().year - 18,
