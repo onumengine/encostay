@@ -76,7 +76,7 @@ class MyApp extends StatelessWidget {
         RouteNames.APARTMENT_DETAILS: (context) => ApartmentDetailsScreen(),
         RouteNames.AUTH: (context) => MultiBlocProvider(
               providers: [
-                BlocProvider(
+                BlocProvider<SignUpBloc>(
                   create: (_) => injector.serviceLocator<SignUpBloc>(),
                 ),
               ],

@@ -34,6 +34,7 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
       yield ValidatingInput();
       handlePasswordSelection(event);
       Timer(Duration(milliseconds: 500), () {});
+      yield Unregistered();
     } else if (event is SubmitForm) {
       final result = await submitSignupForm(FormParam(data: formData));
       yield result.fold(

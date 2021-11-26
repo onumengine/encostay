@@ -115,6 +115,7 @@ class _SetPasswordScreenState extends State<SetPasswordScreen> {
                   },
                   color: ColorPalette.brandOrange,
                   height: 43,
+                  width: double.infinity,
                 ),
               ],
             ),

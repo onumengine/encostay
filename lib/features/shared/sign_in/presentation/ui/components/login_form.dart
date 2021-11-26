@@ -120,6 +120,7 @@ class _LoginFormState extends State<LoginForm> {
             ),
             color: ColorPalette.brandOrange,
             height: 43,
+            width: double.infinity,
           ),
           SizedBox(height: screenSize.height / 9.78),
           Padding(
