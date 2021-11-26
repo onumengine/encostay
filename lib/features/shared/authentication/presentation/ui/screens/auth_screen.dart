@@ -97,29 +97,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 child: TabBarView(
                   children: <Widget>[
                     LoginForm(),
-                    BlocConsumer<SignUpBloc, SignUpState>(
-                      listener: (context, state) {
-                        print(
-                            'Just called the AuthBloc\'s consumer\'s listener');
-                      },
-                      builder: (context, state) {
-                        if (state is Unregistered) {
-                          return SignUpForm(
-                            dateOfBirth: state.dateOfBirth,
-                            accountType: state.accountType,
-                          );
-                        } else if (state is SigningUp) {
-                          return SignUpForm(
-                            dateOfBirth: state.dateOfBirth,
-                            accountType: state.accountType,
-                          );
-                        } else {
-                          return Center(
-                            child: CircularProgressIndicator(),
-                          );
-                        }
-                      },
-                    ),
+                    SignUpForm(),
                   ],
                 ),
               ),
