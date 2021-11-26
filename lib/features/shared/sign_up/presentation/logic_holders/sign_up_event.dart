@@ -1,4 +1,3 @@
-import 'package:encostay/core/utilities/enums.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class SignUpEvent extends Equatable {
@@ -7,7 +6,7 @@ abstract class SignUpEvent extends Equatable {
 }
 
 class AppendAccountType extends SignUpEvent {
-  final AccountType accountType;
+  final String accountType;
 
   AppendAccountType(this.accountType);
 

@@ -1,4 +1,3 @@
-import 'package:encostay/core/utilities/enums.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class SignUpState extends Equatable {
@@ -7,7 +6,7 @@ abstract class SignUpState extends Equatable {
 }
 
 class Unregistered extends SignUpState {
-  final AccountType accountType = AccountType.guest;
+  final String accountType = 'GUEST';
   final DateTime dateOfBirth = DateTime.now();
 
   @override
@@ -18,13 +17,15 @@ class Unregistered extends SignUpState {
 }
 
 class SigningUp extends SignUpState {
-  final AccountType accountType;
-  final DateTime dateOfBirth;
+  late final String? accountType;
+  late final DateTime? dateOfBirth = DateTime.now();
 
   SigningUp({
-    required this.accountType,
-    required this.dateOfBirth,
-  });
+    required Map<String, dynamic> data,
+  }) {
+    this.accountType = data['accountType'] ?? null;
+    // this.dateOfBirth = data['dateOfBirth'] ?? null;
+  }
 
   @override
   List<Object?> get props => [
@@ -35,14 +36,14 @@ class SigningUp extends SignUpState {
 
 class ValidatingInput extends SignUpState {}
 
-class Validated extends SignUpState {
-  final AccountType accountType;
+// class Validated extends SignUpState {
+//   final AccountType accountType;
 
-  Validated({required this.accountType});
+//   Validated({required this.accountType});
 
-  @override
-  List<Object?> get props => [];
-}
+//   @override
+//   List<Object?> get props => [];
+// }
 
 class DetectedInvalidInput extends SignUpState {}
 
@@ -55,4 +56,11 @@ class SignUpFailed extends SignUpState {
   List<Object?> get props => [failureMessage];
 }
 
-class SignUpComplete extends SignUpState {}
+class SignUpComplete extends SignUpState {
+  final String accountType;
+
+  SignUpComplete({required this.accountType});
+
+  @override
+  List<Object?> get props => [accountType];
+}
