@@ -40,7 +40,9 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
       final result = await submitSignupForm(FormParam(data: formData));
       yield result.fold(
         (Failure failure) => SignUpFailed(failureMessage: 'Signup failed, bro'),
-        (UserCredentialEntity entity) => SignUpComplete(accountType: 'GUEST'),
+        (UserCredentialEntity entity) => SignUpComplete(
+          accountType: formData['accountType'],
+        ),
       );
     }
   }
