@@ -1,8 +1,10 @@
-import 'package:encostay/features/shared/sign_up/data/models/UserCredentialModel.dart';
+import 'dart:convert';
+
+import 'package:encostay/features/shared/sign_in/data/models/LoginCredentialModel.dart';
 import 'package:http/http.dart';
 
 abstract class LoginDataSource {
-  Future<UserCredentialModel> login(Map<String, String> loginData);
+  Future<LoginCredentialModel> login(Map<String, String> loginData);
 }
 
 class LoginDataSourceImpl implements LoginDataSource {
@@ -10,7 +12,18 @@ class LoginDataSourceImpl implements LoginDataSource {
 
   LoginDataSourceImpl({required this.client});
 
-  Future<UserCredentialModel> login(Map<String, String> loginData) async {
-    return UserCredentialModel(userID: 'userID', accountType: 'accountType');
+  Future<LoginCredentialModel> login(Map<String, String> loginData) async {
+    try {
+      final response = await client.post(
+        Uri.parse('http://ecostay.psms.online/v1/auth/register'),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonEncode(loginData),
+      );
+      return LoginCredentialModel.fromJSON(jsonDecode(response.body));
+    } on Exception catch (e) {
+      throw e;
+    }
   }
 }
