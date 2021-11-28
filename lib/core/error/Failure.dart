@@ -26,3 +26,14 @@ class ConnectionFailure extends Failure {
   @override
   List<Object?> get props => [message];
 }
+
+class LoginFailure extends Failure {
+  final String? message;
+
+  LoginFailure({
+    this.message = 'There has been a login error',
+  });
+
+  @override
+  List<Object?> get props => [message];
+}
