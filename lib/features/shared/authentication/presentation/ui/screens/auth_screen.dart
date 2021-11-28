@@ -3,11 +3,8 @@ import 'dart:ui';
 import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:encostay/features/shared/sign_in/presentation/ui/components/login_form.dart';
-import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
-import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_state.dart';
 import 'package:encostay/features/shared/sign_up/presentation/ui/components/sign_up_form.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AuthScreen extends StatefulWidget {
   _AuthScreenState createState() => _AuthScreenState();
