@@ -10,6 +10,7 @@ import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_event.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_state.dart';
+import 'package:encostay/injection_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
@@ -25,6 +26,7 @@ class SignUpForm extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return BlocConsumer<SignUpBloc, SignUpState>(
+      bloc: serviceLocator<SignUpBloc>(),
       listener: (context, state) {},
       builder: (context, state) {
         if (state is SigningUp) {
@@ -150,23 +152,11 @@ class SignUpForm extends StatelessWidget {
                                   .add(AppendDateOfBirth(tappedDate));
                               return isTapped;
                             },
-                            initialDate: state.dateOfBirth == null
-                                ? DateTime(
-                                    DateTime.now().year - 18,
-                                    DateTime.now().month,
-                                    DateTime.now().day,
-                                  )
-                                : DateTime(
-                                    int.parse(state.dateOfBirth!
-                                        .split('-')
-                                        .elementAt(0)),
-                                    int.parse(state.dateOfBirth!
-                                        .split('-')
-                                        .elementAt(1)),
-                                    int.parse(state.dateOfBirth!
-                                        .split('-')
-                                        .elementAt(2)),
-                                  ),
+                            initialDate: DateTime(
+                              DateTime.now().year - 18,
+                              DateTime.now().month,
+                              DateTime.now().day,
+                            ),
                             firstDate: DateTime(DateTime.now().year - 150),
                             lastDate: DateTime(
                               DateTime.now().year - 18,
@@ -309,7 +299,6 @@ class SignUpForm extends StatelessWidget {
                           email: _emailController.text,
                         ),
                       );
-                      BlocProvider.of<SignUpBloc>(context).add(SubmitForm());
                       Navigator.of(context).pushNamed(RouteNames.SET_PASSWORD);
                     },
                     color: ColorPalette.brandOrange,

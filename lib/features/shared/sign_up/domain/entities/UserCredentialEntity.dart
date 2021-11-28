@@ -1,9 +1,8 @@
-import 'package:encostay/core/utilities/enums.dart';
 import 'package:equatable/equatable.dart';
 
 class UserCredentialEntity extends Equatable {
   final String userID;
-  final AccountType accountType;
+  final String accountType;
 
   UserCredentialEntity({
     required this.userID,

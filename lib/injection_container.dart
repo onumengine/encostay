@@ -17,7 +17,7 @@ init() {
 }
 
 initFeatures() {
-  serviceLocator.registerFactory<SignUpBloc>(
+  serviceLocator.registerLazySingleton<SignUpBloc>(
     () => SignUpBloc(
       submitSignupForm: serviceLocator(),
     ),
