@@ -21,7 +21,7 @@ class EmailLoginRepoImpl implements EmailLoginRepo {
       try {
         final loginCredential = await dataSource.login(loginData);
         return Right(loginCredential);
-      } on Exception catch (e) {
+      } on Exception catch (_) {
         return Left(LoginFailure());
       }
     } else {
