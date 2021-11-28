@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:encostay/core/utilities/enums.dart';
 import 'package:encostay/features/shared/sign_up/domain/entities/UserCredentialEntity.dart';
 import 'package:encostay/features/shared/sign_up/domain/repositories/SubmitSignupFormRepo.dart';
 import 'package:encostay/features/shared/sign_up/domain/use_cases/SubmitSignupForm.dart';
@@ -24,7 +23,7 @@ void main() {
     'password': '123456',
   };
   final UserCredentialEntity credential = UserCredentialEntity(
-    accountType: AccountType.guest,
+    accountType: 'GUEST',
     userID: 'JaneDoe1234',
   );
 
