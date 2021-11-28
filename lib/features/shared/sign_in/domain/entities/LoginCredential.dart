@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-class LoginCredential extends Equatable {
+class LoginCredentialEntity extends Equatable {
   @override
   List<Object?> get props => [];
 }
