@@ -23,7 +23,6 @@ class RemoteDataSourceImpl implements RemoteDataSource {
       );
       return UserCredentialModel.fromJSON(jsonDecode(response.body));
     } on Exception catch (e) {
-      print(e);
       throw e;
     }
   }
