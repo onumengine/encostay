@@ -14,7 +14,9 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
 
   /// I'll create a temporary map to hold form data for testing purposes
   /// I'll pass the user input into across two pages
-  final Map<String, dynamic> formData = {};
+  final Map<String, dynamic> formData = {
+    'accountType': 'GUEST',
+  };
 
   SignUpBloc({
     required this.submitSignupForm,
