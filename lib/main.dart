@@ -30,6 +30,7 @@ import 'package:encostay/features/guest/booking/presentation/ui/screens/search_r
 import 'package:encostay/features/shared/password_change/presentation/logic_holders/bloc/change_password_bloc.dart';
 import 'package:encostay/features/shared/password_change/presentation/ui/screens/change_password_screen.dart';
 import 'package:encostay/features/shared/payment_method_management/presentation/logic_holders/bloc/add_payment_bloc.dart';
+import 'package:encostay/features/shared/sign_in/presentation/logic_holders/sign_in_bloc.dart';
 import 'package:encostay/features/shared/sign_up/presentation/ui/screens/set_password_screen.dart';
 import 'package:encostay/features/shared/onboarding/presentation/ui/screens/splash_screen.dart';
 import 'package:encostay/core/utilities/color_palette.dart';
@@ -78,6 +79,9 @@ class MyApp extends StatelessWidget {
               providers: [
                 BlocProvider<SignUpBloc>(
                   create: (_) => injector.serviceLocator<SignUpBloc>(),
+                ),
+                BlocProvider<SignInBloc>(
+                  create: (_) => injector.serviceLocator<SignInBloc>(),
                 ),
               ],
               child: AuthScreen(),

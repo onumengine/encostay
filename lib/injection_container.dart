@@ -1,4 +1,9 @@
 import 'package:encostay/core/network/NetworkInfo.dart';
+import 'package:encostay/features/shared/sign_in/data/data_sources/LoginDataSource.dart';
+import 'package:encostay/features/shared/sign_in/data/repositories/EmailLoginRepoImpl.dart';
+import 'package:encostay/features/shared/sign_in/domain/repositories/EmailLoginRepo.dart';
+import 'package:encostay/features/shared/sign_in/domain/use_cases/LoginWiithEmail.dart';
+import 'package:encostay/features/shared/sign_in/presentation/logic_holders/sign_in_bloc.dart';
 import 'package:encostay/features/shared/sign_up/data/data_sources/RemoteDataSource.dart';
 import 'package:encostay/features/shared/sign_up/data/repositories/SubmitSignupFormRepoImpl.dart';
 import 'package:encostay/features/shared/sign_up/domain/repositories/SubmitSignupFormRepo.dart';
@@ -22,8 +27,18 @@ initFeatures() {
       submitSignupForm: serviceLocator(),
     ),
   );
+  serviceLocator.registerFactory<SignInBloc>(
+    () => SignInBloc(
+      loginWithEmail: serviceLocator(),
+    ),
+  );
   serviceLocator.registerLazySingleton<SubmitSignupForm>(
     () => SubmitSignupForm(
+      repository: serviceLocator(),
+    ),
+  );
+  serviceLocator.registerLazySingleton<LoginWithEmail>(
+    () => LoginWithEmail(
       repository: serviceLocator(),
     ),
   );
@@ -33,8 +48,19 @@ initFeatures() {
       connectionChecker: serviceLocator(),
     ),
   );
+  serviceLocator.registerLazySingleton<EmailLoginRepo>(
+    () => EmailLoginRepoImpl(
+      dataSource: serviceLocator(),
+      networkInfo: serviceLocator(),
+    ),
+  );
   serviceLocator.registerLazySingleton<RemoteDataSource>(
     () => RemoteDataSourceImpl(
+      client: serviceLocator(),
+    ),
+  );
+  serviceLocator.registerLazySingleton<LoginDataSource>(
+    () => LoginDataSourceImpl(
       client: serviceLocator(),
     ),
   );
