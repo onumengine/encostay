@@ -34,7 +34,6 @@ import 'package:encostay/features/shared/sign_in/presentation/logic_holders/sign
 import 'package:encostay/features/shared/sign_up/presentation/ui/screens/set_password_screen.dart';
 import 'package:encostay/features/shared/onboarding/presentation/ui/screens/splash_screen.dart';
 import 'package:encostay/core/utilities/color_palette.dart';
-// import 'package:encostay/core/navigation/router.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
 import 'package:encostay/injection_container.dart' as injector;
 import 'package:flutter/material.dart';

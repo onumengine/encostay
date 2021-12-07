@@ -9,8 +9,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
   final SubmitSignupForm submitSignupForm;
-  String? accountType;
-  DateTime? dateOfBirth;
 
   /// I'll create a temporary map to hold form data for testing purposes
   /// I'll pass the user input into across two pages
