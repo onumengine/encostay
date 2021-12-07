@@ -52,7 +52,10 @@ class HostProfileComponent extends StatelessWidget {
                 ),
                 ProfileItemTile(
                   title: 'Edit Profile',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context)
+                        .pushNamed(RouteNames.EDIT_HOST_PROFILE);
+                  },
                 ),
                 ProfileItemTile(
                   title: 'Change Password',

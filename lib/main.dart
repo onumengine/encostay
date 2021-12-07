@@ -1,6 +1,8 @@
+import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/blocs/booking_bloc.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/states/booking_state.dart';
+import 'package:encostay/features/host/leasing/presentation/ui/screens/edit_host_profile_screen.dart';
 import 'package:encostay/features/host/tx_management/presentation/logic_holders/bloc/transaction_bloc.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/screens/transaction_history_screen.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/screens/transaction_summary_screen.dart';
@@ -33,7 +35,6 @@ import 'package:encostay/features/shared/payment_method_management/presentation/
 import 'package:encostay/features/shared/sign_in/presentation/logic_holders/sign_in_bloc.dart';
 import 'package:encostay/features/shared/sign_up/presentation/ui/screens/set_password_screen.dart';
 import 'package:encostay/features/shared/onboarding/presentation/ui/screens/splash_screen.dart';
-import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign_up_bloc.dart';
 import 'package:encostay/injection_container.dart' as injector;
 import 'package:flutter/material.dart';
@@ -114,6 +115,7 @@ class MyApp extends StatelessWidget {
               create: (cotntext) => HostListingsBloc(),
               child: HostListingsScreen(),
             ),
+        RouteNames.EDIT_HOST_PROFILE: (context) => EditHostProfileScreen(),
         RouteNames.ONBOARDING: (context) => OnboardingScreen(),
         RouteNames.OWNER: (context) => OwnerProfileScreen(),
         RouteNames.PREVIEW: (context) => PreviewScreen(),
