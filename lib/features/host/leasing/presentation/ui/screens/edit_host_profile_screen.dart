@@ -1,5 +1,7 @@
 import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
+import 'package:encostay/core/utilities/route_names.dart';
+import 'package:encostay/core/widgets/atoms/profile_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -14,6 +16,7 @@ class _EditHostProfileScreenState extends State<EditHostProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorPalette.brandWhite,
       appBar: AppBar(
         title: Text(
           'Edit Profile',
@@ -52,6 +55,34 @@ class _EditHostProfileScreenState extends State<EditHostProfileScreen> {
                       color: ColorPalette.lightTextColor,
                     ),
                   ),
+                ),
+                ProfileItemTile(
+                  iconPath: COLORED_VECTORS_PATH + 'ic_edit_pencil.svg',
+                  title: 'Change Password',
+                  onTap: () {
+                    Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
+                  },
+                ),
+                ProfileItemTile(
+                  iconPath: COLORED_VECTORS_PATH + 'ic_edit_pencil.svg',
+                  title: 'Change Password',
+                  onTap: () {
+                    Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
+                  },
+                ),
+                ProfileItemTile(
+                  iconPath: COLORED_VECTORS_PATH + 'ic_edit_pencil.svg',
+                  title: 'Change Password',
+                  onTap: () {
+                    Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
+                  },
+                ),
+                ProfileItemTile(
+                  iconPath: COLORED_VECTORS_PATH + 'ic_edit_pencil.svg',
+                  title: 'Change Password',
+                  onTap: () {
+                    Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
+                  },
                 ),
               ],
             ),
