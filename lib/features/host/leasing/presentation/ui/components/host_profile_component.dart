@@ -55,8 +55,7 @@ class HostProfileComponent extends StatelessWidget {
                   ProfileItemTile(
                     title: 'Edit Profile',
                     onTap: () {
-                      Navigator.of(context)
-                          .pushNamed(RouteNames.EDIT_HOST_PROFILE);
+                      Navigator.of(context).pushNamed(RouteNames.EDIT_PROFILE);
                     },
                   ),
                   ProfileItemTile(

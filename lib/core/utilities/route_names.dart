@@ -10,11 +10,11 @@ class RouteNames {
   static const CHANGE_PASSWORD = '/change_password';
   static const CONFIRMED = '/confirmed';
   static const CONTACT_SUPPORT = '/contact_suport';
+  static const EDIT_PROFILE = 'host_profile';
   static const FILTERS = '/filters';
   static const HOME = '/home';
   static const HOST_HOME = '/guest_home';
   static const HOST_LISTINGS = '/host_listings';
-  static const EDIT_HOST_PROFILE = 'host_profile';
   static const ONBOARDING = '/onboarding';
   static const OWNER = '/owner';
   static const PREVIEW = '/preview';

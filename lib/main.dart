@@ -2,7 +2,7 @@ import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/blocs/booking_bloc.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/states/booking_state.dart';
-import 'package:encostay/features/host/leasing/presentation/ui/screens/edit_host_profile_screen.dart';
+import 'package:encostay/features/shared/profile_editing/presentaion/ui/screens/edit_profile_screen.dart';
 import 'package:encostay/features/host/tx_management/presentation/logic_holders/bloc/transaction_bloc.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/screens/transaction_history_screen.dart';
 import 'package:encostay/features/host/tx_management/presentation/ui/screens/transaction_summary_screen.dart';
@@ -115,7 +115,7 @@ class MyApp extends StatelessWidget {
               create: (cotntext) => HostListingsBloc(),
               child: HostListingsScreen(),
             ),
-        RouteNames.EDIT_HOST_PROFILE: (context) => EditHostProfileScreen(),
+        RouteNames.EDIT_PROFILE: (context) => EditProfileScreen(),
         RouteNames.ONBOARDING: (context) => OnboardingScreen(),
         RouteNames.OWNER: (context) => OwnerProfileScreen(),
         RouteNames.PREVIEW: (context) => PreviewScreen(),

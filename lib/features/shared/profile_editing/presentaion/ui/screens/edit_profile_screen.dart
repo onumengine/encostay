@@ -6,14 +6,14 @@ import 'package:encostay/core/widgets/atoms/profile_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class EditHostProfileScreen extends StatefulWidget {
-  const EditHostProfileScreen({Key? key}) : super(key: key);
+class EditProfileScreen extends StatefulWidget {
+  const EditProfileScreen({Key? key}) : super(key: key);
 
   @override
-  _EditHostProfileScreenState createState() => _EditHostProfileScreenState();
+  _EditProfileScreenState createState() => _EditProfileScreenState();
 }
 
-class _EditHostProfileScreenState extends State<EditHostProfileScreen> {
+class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -60,28 +60,28 @@ class _EditHostProfileScreenState extends State<EditHostProfileScreen> {
                 ),
                 ProfileItemTile(
                   iconPath: COLORED_VECTORS_PATH + 'ic_edit_pencil.svg',
-                  title: 'Change Password',
+                  title: 'First Name',
                   onTap: () {
                     Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
                   },
                 ),
                 ProfileItemTile(
                   iconPath: COLORED_VECTORS_PATH + 'ic_edit_pencil.svg',
-                  title: 'Change Password',
+                  title: 'Last Name',
                   onTap: () {
                     Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
                   },
                 ),
                 ProfileItemTile(
                   iconPath: COLORED_VECTORS_PATH + 'ic_edit_pencil.svg',
-                  title: 'Change Password',
+                  title: 'Email',
                   onTap: () {
                     Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
                   },
                 ),
                 ProfileItemTile(
                   iconPath: COLORED_VECTORS_PATH + 'ic_edit_pencil.svg',
-                  title: 'Change Password',
+                  title: 'D.O.B',
                   onTap: () {
                     Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
                   },
@@ -101,7 +101,9 @@ class _EditHostProfileScreenState extends State<EditHostProfileScreen> {
                         height: 24.55 / 18,
                       ),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
                     width: screenSize.width,
                     color: ColorPalette.brandOrange,
                   ),
