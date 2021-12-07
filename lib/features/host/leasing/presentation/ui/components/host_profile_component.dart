@@ -10,96 +10,101 @@ class HostProfileComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverAppBar(
-          automaticallyImplyLeading: true,
-          backgroundColor: Colors.transparent,
-          foregroundColor: ColorPalette.brandBrown,
-          centerTitle: true,
-          title: Text(
-            'Profile',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-              height: 30 / 18,
+    return Container(
+      color: ColorPalette.brandWhite,
+      child: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            automaticallyImplyLeading: true,
+            backgroundColor: Colors.transparent,
+            foregroundColor: ColorPalette.brandBrown,
+            centerTitle: true,
+            title: Text(
+              'Profile',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+                height: 30 / 18,
+              ),
             ),
           ),
-        ),
-        SliverFillRemaining(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(25),
-                  child: SvgPicture.asset(
-                    VECTOR_IMAGES_PATH + 'owner.svg',
-                    height: 90,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 21),
-                  child: Text(
-                    'Robert Bowie',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                      height: 34 / 24,
-                      color: ColorPalette.lightTextColor,
+          SliverFillRemaining(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(25),
+                    child: SvgPicture.asset(
+                      VECTOR_IMAGES_PATH + 'owner.svg',
+                      height: 90,
                     ),
                   ),
-                ),
-                ProfileItemTile(
-                  title: 'Edit Profile',
-                  onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(RouteNames.EDIT_HOST_PROFILE);
-                  },
-                ),
-                ProfileItemTile(
-                  title: 'Change Password',
-                  onTap: () {
-                    Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
-                  },
-                ),
-                ProfileItemTile(
-                  title: 'Payment Method',
-                  onTap: () {
-                    Navigator.of(context).pushNamed(RouteNames.ADD_PAYMENT);
-                  },
-                ),
-                ProfileItemTile(
-                  title: 'Transactions',
-                  onTap: () {
-                    Navigator.of(context)
-                        .pushNamed(RouteNames.TRANSACTION_SUMMARY);
-                  },
-                ),
-                ProfileItemTile(
-                  title: 'My Listings',
-                  onTap: () {
-                    Navigator.of(context).pushNamed(RouteNames.HOST_LISTINGS);
-                  },
-                ),
-                ProfileItemTile(
-                  title: 'Contact Support',
-                  onTap: () {
-                    Navigator.of(context).pushNamed(RouteNames.CONTACT_SUPPORT);
-                  },
-                ),
-                ProfileItemTile(
-                  title: 'Log Out',
-                  onTap: () {
-                    Navigator.of(context)
-                        .popUntil(ModalRoute.withName(RouteNames.AUTH));
-                  },
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 21),
+                    child: Text(
+                      'Robert Bowie',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                        height: 34 / 24,
+                        color: ColorPalette.lightTextColor,
+                      ),
+                    ),
+                  ),
+                  ProfileItemTile(
+                    title: 'Edit Profile',
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(RouteNames.EDIT_HOST_PROFILE);
+                    },
+                  ),
+                  ProfileItemTile(
+                    title: 'Change Password',
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(RouteNames.CHANGE_PASSWORD);
+                    },
+                  ),
+                  ProfileItemTile(
+                    title: 'Payment Method',
+                    onTap: () {
+                      Navigator.of(context).pushNamed(RouteNames.ADD_PAYMENT);
+                    },
+                  ),
+                  ProfileItemTile(
+                    title: 'Transactions',
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(RouteNames.TRANSACTION_SUMMARY);
+                    },
+                  ),
+                  ProfileItemTile(
+                    title: 'My Listings',
+                    onTap: () {
+                      Navigator.of(context).pushNamed(RouteNames.HOST_LISTINGS);
+                    },
+                  ),
+                  ProfileItemTile(
+                    title: 'Contact Support',
+                    onTap: () {
+                      Navigator.of(context)
+                          .pushNamed(RouteNames.CONTACT_SUPPORT);
+                    },
+                  ),
+                  ProfileItemTile(
+                    title: 'Log Out',
+                    onTap: () {
+                      Navigator.of(context)
+                          .popUntil(ModalRoute.withName(RouteNames.AUTH));
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
