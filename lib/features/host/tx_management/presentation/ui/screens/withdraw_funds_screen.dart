@@ -180,7 +180,7 @@ class WithdrawFundsScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 49),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 59),
+                  padding: const EdgeInsets.symmetric(horizontal: 51),
                   child: BrandButton(
                     child: Text(
                       'Confirm Withdraw',
@@ -190,6 +190,7 @@ class WithdrawFundsScreen extends StatelessWidget {
                         color: ColorPalette.brandWhite,
                       ),
                     ),
+                    width: screenSize.width,
                     onTap: () {},
                     color: ColorPalette.brandOrange,
                     padding: EdgeInsets.symmetric(vertical: 10, horizontal: 51),
