@@ -1,6 +1,7 @@
 import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/route_names.dart';
+import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/profile_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -15,6 +16,7 @@ class EditHostProfileScreen extends StatefulWidget {
 class _EditHostProfileScreenState extends State<EditHostProfileScreen> {
   @override
   Widget build(BuildContext context) {
+    Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: ColorPalette.brandWhite,
       appBar: AppBar(
@@ -83,6 +85,26 @@ class _EditHostProfileScreenState extends State<EditHostProfileScreen> {
                   onTap: () {
                     Navigator.of(context).pushNamed(RouteNames.CHANGE_PASSWORD);
                   },
+                ),
+                SizedBox(
+                  height: screenSize.height / 18.54,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: BrandButton(
+                    child: Text(
+                      'Save',
+                      style: TextStyle(
+                        color: ColorPalette.brandWhite,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        height: 24.55 / 18,
+                      ),
+                    ),
+                    onTap: () {},
+                    width: screenSize.width,
+                    color: ColorPalette.brandOrange,
+                  ),
                 ),
               ],
             ),
