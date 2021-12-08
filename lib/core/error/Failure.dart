@@ -37,3 +37,25 @@ class LoginFailure extends Failure {
   @override
   List<Object?> get props => [message];
 }
+
+class KeyFetchingFailure extends Failure {
+  final String? message;
+
+  KeyFetchingFailure({
+    this.message = 'There was an error fetching the value from the store',
+  });
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class KeyValueStoringFailure extends Failure {
+  final String? message;
+
+  KeyValueStoringFailure({
+    this.message = 'There was an error fetching the value from the store',
+  });
+
+  @override
+  List<Object?> get props => [message];
+}
