@@ -3,6 +3,7 @@ import 'package:encostay/core/utilities/constants.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:encostay/core/widgets/atoms/brand_button.dart';
 import 'package:encostay/core/widgets/atoms/text_widget.dart';
+import 'package:encostay/core/widgets/molecules/custom_expansion_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -149,8 +150,34 @@ class WithdrawFundsScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 34,
-                  child: Divider(),
+                  height: 14,
+                ),
+                Align(
+                  alignment: AlignmentDirectional.centerStart,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20) +
+                        EdgeInsets.only(
+                            bottom: (screenSize.height / 101.5), left: 14),
+                    child: Text(
+                      'Select Card',
+                      style: TextStyle(
+                        fontSize: medium14.fontSize,
+                        fontWeight: medium14.fontWeight,
+                        height: 1.64,
+                        color: ColorPalette.brandGreyAlt,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: CustomExpansionPanel(
+                    header: Text('CARD WIDGET GOES HERE'),
+                    body: Text('CARD WIDGET LIST GOES HERE'),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
                 ),
                 Align(
                   alignment: AlignmentDirectional.centerStart,

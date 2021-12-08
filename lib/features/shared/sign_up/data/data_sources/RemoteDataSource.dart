@@ -21,6 +21,7 @@ class RemoteDataSourceImpl implements RemoteDataSource {
         },
         body: jsonEncode(formData),
       );
+      print('THE USER OBJECT IS: ${response.body}');
       return UserCredentialModel.fromJSON(jsonDecode(response.body));
     } on Exception catch (e) {
       throw e;

@@ -14,7 +14,7 @@ class KeyStoreImpl implements KeyStore {
   Future<StoreValueModel> fetchValue(String key) async {
     try {
       final storeValue = await secureStorage.read(key: key);
-      return StoreValueModel.fromString(storeValue!);
+      return StoreValueModel.fromString(key, storeValue!);
     } on Exception catch (e) {
       throw e;
     }
