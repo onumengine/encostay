@@ -2,16 +2,16 @@ import 'package:encostay/core/error/Failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:encostay/features/Params.dart';
 import 'package:encostay/features/UseCase.dart';
-import 'package:encostay/features/shared/credential_mgt/domain/entities/StoreValueEntity.dart';
-import 'package:encostay/features/shared/credential_mgt/domain/repositories/FetchValueRepo.dart';
+import 'package:encostay/features/shared/credential_mgt/domain/entities/keystore_entity.dart';
+import 'package:encostay/features/shared/credential_mgt/domain/repositories/fetch_value_repo.dart';
 
-class FetchValue implements UseCase<StoreValueEntity, KeyParam> {
+class FetchValueFromKeystore implements UseCase<KeystoreEntity, KeyParam> {
   final FetchValueRepo repository;
 
-  FetchValue({required this.repository});
+  FetchValueFromKeystore({required this.repository});
 
   @override
-  Future<Either<Failure, StoreValueEntity>> call(KeyParam params) async {
+  Future<Either<Failure, KeystoreEntity>> call(KeyParam params) async {
     return await repository.fetchValue(params.key);
   }
 }
