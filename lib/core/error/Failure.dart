@@ -5,33 +5,11 @@ abstract class Failure extends Equatable {
   List<Object?> get props => [];
 }
 
-class SignupFailure extends Failure {
-  final String? message;
-
-  SignupFailure({
-    this.message = 'There has been a sign up error',
-  });
-
-  @override
-  List<Object?> get props => [message];
-}
-
 class ConnectionFailure extends Failure {
   final String? message;
 
   ConnectionFailure({
     this.message = 'The device is not connected to the internet',
-  });
-
-  @override
-  List<Object?> get props => [message];
-}
-
-class LoginFailure extends Failure {
-  final String? message;
-
-  LoginFailure({
-    this.message = 'There has been a login error',
   });
 
   @override
@@ -54,6 +32,39 @@ class KeyValueStoringFailure extends Failure {
 
   KeyValueStoringFailure({
     this.message = 'There was an error fetching the value from the store',
+  });
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class LaunchStatusCheckFailure extends Failure {
+  final String? message;
+
+  LaunchStatusCheckFailure({
+    this.message = 'There was an error checking the app launch status',
+  });
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class LoginFailure extends Failure {
+  final String? message;
+
+  LoginFailure({
+    this.message = 'There has been a login error',
+  });
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class SignupFailure extends Failure {
+  final String? message;
+
+  SignupFailure({
+    this.message = 'There has been a sign up error',
   });
 
   @override
