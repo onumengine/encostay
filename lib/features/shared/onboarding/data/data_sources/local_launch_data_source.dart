@@ -1,15 +1,15 @@
 import 'package:encostay/features/shared/onboarding/data/models/launch_status_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-abstract class LocalDataSource {
+abstract class LocalLaunchDataSource {
   Future<LaunchStatusModel> checkLaunchStatus();
   Future<LaunchStatusModel> setLaunchStatus();
 }
 
-class LocalDataSourceImpl implements LocalDataSource {
+class LocalLaunchDataSourceImpl implements LocalLaunchDataSource {
   final SharedPreferences preferences;
 
-  LocalDataSourceImpl({required this.preferences});
+  LocalLaunchDataSourceImpl({required this.preferences});
 
   @override
   Future<LaunchStatusModel> checkLaunchStatus() async {
