@@ -38,10 +38,21 @@ class KeyValueStoringFailure extends Failure {
   List<Object?> get props => [message];
 }
 
-class LaunchStatusCheckFailure extends Failure {
+class OnboardedStatusActivationFailure extends Failure {
   final String? message;
 
-  LaunchStatusCheckFailure({
+  OnboardedStatusActivationFailure({
+    this.message = 'There was an error activating onboarded status',
+  });
+
+  @override
+  List<Object?> get props => [message];
+}
+
+class OnboardingStatusCheckFailure extends Failure {
+  final String? message;
+
+  OnboardingStatusCheckFailure({
     this.message = 'There was an error checking the app launch status',
   });
 

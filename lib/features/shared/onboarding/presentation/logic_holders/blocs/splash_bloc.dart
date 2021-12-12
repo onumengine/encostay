@@ -1,7 +1,7 @@
 import 'package:encostay/features/Params.dart';
 import 'package:encostay/features/shared/onboarding/domain/use_cases/check_onboarding_status.dart';
-import 'package:encostay/features/shared/onboarding/presentation/logic_holders/event.dart';
-import 'package:encostay/features/shared/onboarding/presentation/logic_holders/state.dart';
+import 'package:encostay/features/shared/onboarding/presentation/logic_holders/events/splash_event.dart';
+import 'package:encostay/features/shared/onboarding/presentation/logic_holders/states/splash_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SplashBloc extends Bloc<SplashEvent, SplashState> {

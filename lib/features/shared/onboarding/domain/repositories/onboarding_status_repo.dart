@@ -4,5 +4,6 @@ import 'package:encostay/features/shared/onboarding/domain/entities/onboarding_s
 
 abstract class OnboardingStatusRepo {
   Future<Either<Failure, OnboardingStatusEntity>> checkOnboardingStatus();
-  Future<Either<Failure, OnboardingStatusEntity>> activateOnboardedStatus();
+  Future<Either<Failure, OnboardingStatusEntity>> setOnboardingStatus(
+      bool value);
 }

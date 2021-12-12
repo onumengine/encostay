@@ -1,7 +1,7 @@
 import 'package:encostay/core/utilities/route_names.dart';
-import 'package:encostay/features/shared/onboarding/presentation/logic_holders/bloc.dart';
-import 'package:encostay/features/shared/onboarding/presentation/logic_holders/event.dart';
-import 'package:encostay/features/shared/onboarding/presentation/logic_holders/state.dart';
+import 'package:encostay/features/shared/onboarding/presentation/logic_holders/blocs/splash_bloc.dart';
+import 'package:encostay/features/shared/onboarding/presentation/logic_holders/events/splash_event.dart';
+import 'package:encostay/features/shared/onboarding/presentation/logic_holders/states/splash_state.dart';
 import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -68,8 +68,8 @@ class SplashScreen extends StatelessWidget {
                       ),
                       InkResponse(
                         onTap: () {
-                          Navigator.of(context)
-                              .pushNamed(RouteNames.ONBOARDING);
+                          BlocProvider.of<SplashBloc>(context)
+                              .add(CheckForFirstLaunch());
                         },
                         splashColor: ColorPalette.brandWhite,
                         child: Container(

@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class OnboardingStatusDataSource {
   OnboardingStatusModel checkOnboardingStatus();
-  Future<OnboardingStatusModel> setOnboardingStatus(String key, bool value);
+  Future<OnboardingStatusModel> setOnboardingStatus(bool value);
 }
 
 class OnboardingStatusDataSourceImpl implements OnboardingStatusDataSource {
@@ -19,16 +19,14 @@ class OnboardingStatusDataSourceImpl implements OnboardingStatusDataSource {
           ? OnboardingStatusModel(isFirstLaunch: true)
           : OnboardingStatusModel(isFirstLaunch: result);
     } catch (e) {
-      print(e);
       throw e;
     }
   }
 
   @override
-  Future<OnboardingStatusModel> setOnboardingStatus(
-      String key, bool value) async {
+  Future<OnboardingStatusModel> setOnboardingStatus(bool value) async {
     try {
-      await preferences.setBool(key, value);
+      await preferences.setBool('onboardingCompleted', value);
       return OnboardingStatusModel(isFirstLaunch: false);
     } catch (e) {
       throw e;

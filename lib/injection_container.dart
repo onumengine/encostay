@@ -3,7 +3,7 @@ import 'package:encostay/features/shared/onboarding/data/data_sources/onboarding
 import 'package:encostay/features/shared/onboarding/data/repositories/onboarding_status_repo_impl.dart';
 import 'package:encostay/features/shared/onboarding/domain/repositories/onboarding_status_repo.dart';
 import 'package:encostay/features/shared/onboarding/domain/use_cases/check_onboarding_status.dart';
-import 'package:encostay/features/shared/onboarding/presentation/logic_holders/bloc.dart';
+import 'package:encostay/features/shared/onboarding/presentation/logic_holders/blocs/splash_bloc.dart';
 import 'package:encostay/features/shared/sign_in/data/data_sources/LoginDataSource.dart';
 import 'package:encostay/features/shared/sign_in/data/repositories/EmailLoginRepoImpl.dart';
 import 'package:encostay/features/shared/sign_in/domain/repositories/EmailLoginRepo.dart';
@@ -92,7 +92,7 @@ initFeatures() {
     ),
   );
   serviceLocator.registerLazySingleton<OnboardingStatusRepo>(
-    () => OnbordingStatusRepoImpl(
+    () => OnboardingStatusRepoImpl(
       dataSource: serviceLocator(),
     ),
   );
