@@ -15,9 +15,10 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       final result = await checkFirstLaunch(NoParams());
       yield result.fold(
         (failure) => Error(),
-        (launchStatusEntity) => (launchStatusEntity.isFirstLaunch)
-            ? FirstLaunchState()
-            : NonFirstLaunchState(),
+        (onboardingStatusEntity) =>
+            (onboardingStatusEntity.isOnboardingComplete)
+                ? OnboardingCompleted()
+                : FirstLaunchState(),
       );
     }
   }

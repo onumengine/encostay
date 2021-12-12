@@ -3,6 +3,7 @@ import 'package:encostay/core/utilities/color_palette.dart';
 import 'package:encostay/core/utilities/route_names.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/blocs/booking_bloc.dart';
 import 'package:encostay/features/guest/booking/presentation/logic_holders/states/booking_state.dart';
+import 'package:encostay/features/shared/onboarding/presentation/logic_holders/blocs/onboarding_bloc.dart';
 import 'package:encostay/features/shared/onboarding/presentation/logic_holders/blocs/splash_bloc.dart';
 import 'package:encostay/features/shared/profile_editing/presentation/ui/screens/edit_profile_screen.dart';
 import 'package:encostay/features/host/tx_management/presentation/logic_holders/bloc/transaction_bloc.dart';
@@ -138,9 +139,9 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: ColorPalette.brandBackground,
       ),
       initialRoute: RouteNames.SPLASH,
-      // onGenerateRoute: (settings) => AppRouter().onGenerateRoute(settings),
-      onUnknownRoute: (settings) =>
-          MaterialPageRoute(builder: (context) => SplashScreen()),
+      onUnknownRoute: (settings) => MaterialPageRoute(
+        builder: (context) => SplashScreen(),
+      ),
       routes: {
         RouteNames.ADD_CARD: (context) => AddCardScreen(),
         RouteNames.ADD_PAYMENT: (context) => BlocProvider<AddPaymentBloc>(
@@ -189,7 +190,10 @@ class MyApp extends StatelessWidget {
               child: HostListingsScreen(),
             ),
         RouteNames.EDIT_PROFILE: (context) => EditProfileScreen(),
-        RouteNames.ONBOARDING: (context) => OnboardingScreen(),
+        RouteNames.ONBOARDING: (context) => BlocProvider(
+              create: (_) => injector.serviceLocator<OnboardingBloc>(),
+              child: OnboardingScreen(),
+            ),
         RouteNames.OWNER: (context) => OwnerProfileScreen(),
         RouteNames.PREVIEW: (context) => PreviewScreen(),
         RouteNames.RECEIVING: (context) => ReceivingScreen(),

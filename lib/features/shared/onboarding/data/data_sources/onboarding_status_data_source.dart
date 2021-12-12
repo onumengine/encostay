@@ -14,10 +14,12 @@ class OnboardingStatusDataSourceImpl implements OnboardingStatusDataSource {
   @override
   OnboardingStatusModel checkOnboardingStatus() {
     try {
-      final result = preferences.getBool('isFirstLaunch');
+      print(preferences);
+      final result = preferences.getBool('isOnboardingCompleted');
+      print(result);
       return (result == null)
-          ? OnboardingStatusModel(isFirstLaunch: true)
-          : OnboardingStatusModel(isFirstLaunch: result);
+          ? OnboardingStatusModel(isOnboardingComplete: false)
+          : OnboardingStatusModel(isOnboardingComplete: result);
     } catch (e) {
       throw e;
     }
@@ -26,8 +28,9 @@ class OnboardingStatusDataSourceImpl implements OnboardingStatusDataSource {
   @override
   Future<OnboardingStatusModel> setOnboardingStatus(bool value) async {
     try {
-      await preferences.setBool('onboardingCompleted', value);
-      return OnboardingStatusModel(isFirstLaunch: false);
+      await preferences.setBool('isOnboardingCompleted', value);
+      print(preferences.getBool('isOnboardingCompleted'));
+      return OnboardingStatusModel(isOnboardingComplete: true);
     } catch (e) {
       throw e;
     }

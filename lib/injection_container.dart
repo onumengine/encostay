@@ -3,6 +3,8 @@ import 'package:encostay/features/shared/onboarding/data/data_sources/onboarding
 import 'package:encostay/features/shared/onboarding/data/repositories/onboarding_status_repo_impl.dart';
 import 'package:encostay/features/shared/onboarding/domain/repositories/onboarding_status_repo.dart';
 import 'package:encostay/features/shared/onboarding/domain/use_cases/check_onboarding_status.dart';
+import 'package:encostay/features/shared/onboarding/domain/use_cases/set_onboarding_status.dart';
+import 'package:encostay/features/shared/onboarding/presentation/logic_holders/blocs/onboarding_bloc.dart';
 import 'package:encostay/features/shared/onboarding/presentation/logic_holders/blocs/splash_bloc.dart';
 import 'package:encostay/features/shared/sign_in/data/data_sources/LoginDataSource.dart';
 import 'package:encostay/features/shared/sign_in/data/repositories/EmailLoginRepoImpl.dart';
@@ -64,6 +66,11 @@ initFeatures() {
       checkFirstLaunch: serviceLocator(),
     ),
   );
+  serviceLocator.registerFactory<OnboardingBloc>(
+    () => OnboardingBloc(
+      setOnboardingStatus: serviceLocator(),
+    ),
+  );
   serviceLocator.registerLazySingleton<SubmitSignupForm>(
     () => SubmitSignupForm(
       repository: serviceLocator(),
@@ -76,6 +83,11 @@ initFeatures() {
   );
   serviceLocator.registerLazySingleton<CheckOnboardingStatus>(
     () => CheckOnboardingStatus(
+      repository: serviceLocator(),
+    ),
+  );
+  serviceLocator.registerLazySingleton<SetOnboardingStatus>(
+    () => SetOnboardingStatus(
       repository: serviceLocator(),
     ),
   );

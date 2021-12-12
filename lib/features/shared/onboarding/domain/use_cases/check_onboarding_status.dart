@@ -12,6 +12,6 @@ class CheckOnboardingStatus extends UseCase<OnboardingStatusEntity, NoParams> {
 
   @override
   Future<Either<Failure, OnboardingStatusEntity>> call(NoParams params) async {
-    return await repository.checkOnboardingStatus();
+    return repository.checkOnboardingStatus();
   }
 }

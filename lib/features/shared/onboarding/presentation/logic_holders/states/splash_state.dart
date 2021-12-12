@@ -9,6 +9,6 @@ class DefaultSplashState extends SplashState {}
 
 class FirstLaunchState extends SplashState {}
 
-class NonFirstLaunchState extends SplashState {}
+class OnboardingCompleted extends SplashState {}
 
 class Error extends SplashState {}

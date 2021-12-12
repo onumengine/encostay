@@ -11,11 +11,12 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return BlocConsumer<SplashBloc, SplashState>(
+      buildWhen: (previous, current) => false,
       listener: (context, state) {
         if (state is FirstLaunchState) {
-          Navigator.of(context).pushNamed(RouteNames.ONBOARDING);
-        } else if (state is NonFirstLaunchState) {
-          Navigator.of(context).pushNamed(RouteNames.AUTH);
+          Navigator.of(context).pushReplacementNamed(RouteNames.ONBOARDING);
+        } else if (state is OnboardingCompleted) {
+          Navigator.of(context).pushReplacementNamed(RouteNames.AUTH);
         }
       },
       builder: (context, state) {

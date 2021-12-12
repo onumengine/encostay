@@ -15,8 +15,8 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
       final result =
           await setOnboardingStatus(OnboardingStatusParams(value: true));
       yield result.fold(
-        (l) => OnboardingInProgress(),
-        (r) => OnboardingComplete(),
+        (failure) => OnboardingInProgress(),
+        (entity) => OnboardingComplete(),
       );
     }
   }

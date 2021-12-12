@@ -10,11 +10,9 @@ class OnboardingStatusRepoImpl implements OnboardingStatusRepo {
   OnboardingStatusRepoImpl({required this.dataSource});
 
   @override
-  Future<Either<Failure, OnboardingStatusEntity>>
-      checkOnboardingStatus() async {
+  Either<Failure, OnboardingStatusEntity> checkOnboardingStatus() {
     try {
-      final OnboardingStatusEntity result =
-          await dataSource.checkOnboardingStatus();
+      final OnboardingStatusEntity result = dataSource.checkOnboardingStatus();
       return Right(result);
     } catch (e) {
       return Left(OnboardingStatusCheckFailure());
