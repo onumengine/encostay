@@ -25,594 +25,597 @@ class _LoginFormState extends State<LoginForm> {
 
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-    return BlocConsumer<SignInBloc, SignInState>(
-      listener: (context, state) {
-        Navigator.of(context).pushNamed(RouteNames.HOME);
-      },
-      listenWhen: (oldState, newState) => newState is SignInComplete,
-      builder: (context, state) {
-        if (state is DefaultSignInState) {
-          return Container(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20) +
-                        EdgeInsets.only(bottom: (screenSize.height / 101.5)),
-                    child: Text(
-                      'Username or E-mail',
-                      style: TextStyle(
-                        fontSize: medium14.fontSize,
-                        fontWeight: medium14.fontWeight,
-                        height: 1.64,
-                      ),
-                    ),
-                  ),
-                ),
-                TextWidget(
-                  key: emailKey,
-                  hintText: 'Enter your username or E-mail',
-                  controller: emailController,
-                ),
-                SizedBox(height: (screenSize.height / 45)),
-                Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20) +
-                        EdgeInsets.only(bottom: (screenSize.height / 101.5)),
-                    child: Text(
-                      'Password',
-                      style: TextStyle(
-                        fontSize: medium14.fontSize,
-                        fontWeight: medium14.fontWeight,
-                        height: 1.64,
-                      ),
-                    ),
-                  ),
-                ),
-                PasswordTextWidget(
-                  key: passwordKey,
-                  hintText: 'Enter your password',
-                  controller: passwordController,
-                ),
-                SizedBox(
-                  height: screenSize.height / 62.46,
-                ),
-                Align(
-                  alignment: AlignmentDirectional.centerEnd,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 23),
-                    child: GestureDetector(
-                      onTap: () {
-                        showModalBottomSheet(
-                          context: context,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(25),
-                              topRight: Radius.circular(25),
-                            ),
-                          ),
-                          builder: (context) => ModalContainer(
-                            screenHeight: screenSize.height,
-                          ),
-                          isScrollControlled: true,
-                        );
-                      },
+    return Scaffold(
+      resizeToAvoidBottomInset: true,
+      body: BlocConsumer<SignInBloc, SignInState>(
+        listener: (context, state) {
+          Navigator.of(context).pushNamed(RouteNames.HOME);
+        },
+        listenWhen: (oldState, newState) => newState is SignInComplete,
+        builder: (context, state) {
+          if (state is DefaultSignInState) {
+            return Container(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Align(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20) +
+                          EdgeInsets.only(bottom: (screenSize.height / 101.5)),
                       child: Text(
-                        'Forgot Password?',
+                        'Username or E-mail',
                         style: TextStyle(
-                          fontSize: regular10.fontSize,
-                          height: regular10.height,
-                          color: ColorPalette.brandGreyAlt.withOpacity(0.8),
+                          fontSize: medium14.fontSize,
+                          fontWeight: medium14.fontWeight,
+                          height: 1.64,
                         ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: screenSize.height / 21.9,
-                ),
-                BrandButton(
-                  onTap: () {
-                    BlocProvider.of<SignInBloc>(context).add(SubmitSignInForm(
-                      email: emailController.text,
-                      password: passwordController.text,
-                    ));
-                  },
-                  child: Text(
-                    'Login',
-                    style: TextStyle(
-                      fontSize: bold18.fontSize,
-                      fontWeight: bold18.fontWeight,
-                      height: bold18.height,
-                      color: ColorPalette.brandWhite,
-                    ),
+                  TextWidget(
+                    key: emailKey,
+                    hintText: 'Enter your username or E-mail',
+                    controller: emailController,
                   ),
-                  color: ColorPalette.brandOrange,
-                  height: 43,
-                  width: double.infinity,
-                ),
-                SizedBox(height: screenSize.height / 9.78),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 57),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Flexible(
-                        flex: 1,
-                        child: Container(
-                          height: 1,
-                          color: ColorPalette.brandBrown,
-                        ),
-                      ),
-                      SizedBox(width: 17),
-                      Text(
-                        'Or login with',
-                        style: medium12,
-                      ),
-                      SizedBox(width: 17),
-                      Flexible(
-                        flex: 1,
-                        child: Container(
-                          height: 1,
-                          color: ColorPalette.brandBrown,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: (screenSize.height / 54.13)),
-                Container(
-                  height: 50,
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      BrandIconButton.svg(
-                        iconPath: COLORED_VECTORS_PATH + 'ic_google.svg',
-                        child: Text(
-                          'Google',
-                          style: TextStyle(
-                            fontSize: bold14.fontSize,
-                            fontWeight: bold14.fontWeight,
-                            height: bold14.height,
-                            color: ColorPalette.brandGreyAlt,
-                          ),
-                        ),
-                        color: ColorPalette.googleWhite,
-                        onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Google sign in initiated'),
-                            ),
-                          );
-                        },
-                        height: 36,
-                      ),
-                      SizedBox(width: 19),
-                      BrandIconButton.svg(
-                        iconPath: COLORED_VECTORS_PATH + 'ic_fb.svg',
-                        child: Text(
-                          'Facebook',
-                          style: TextStyle(
-                            fontSize: medium12.fontSize,
-                            fontWeight: medium12.fontWeight,
-                            height: medium12.height,
-                            color: ColorPalette.brandWhite,
-                          ),
-                        ),
-                        color: ColorPalette.facebookBlue,
-                        onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Google sign in initiated'),
-                            ),
-                          );
-                        },
-                        height: 36,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          );
-        } else if (state is SigningIn) {
-          return Center(
-            child: CircularProgressIndicator(),
-          );
-        } else if (state is SignInFailed) {
-          return Container(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20) +
-                        EdgeInsets.only(bottom: (screenSize.height / 101.5)),
-                    child: Text(
-                      'Username or E-mail',
-                      style: TextStyle(
-                        fontSize: medium14.fontSize,
-                        fontWeight: medium14.fontWeight,
-                        height: 1.64,
-                      ),
-                    ),
-                  ),
-                ),
-                TextWidget(
-                  key: emailKey,
-                  hintText: 'Enter your username or E-mail',
-                  controller: emailController,
-                ),
-                SizedBox(height: (screenSize.height / 45)),
-                Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20) +
-                        EdgeInsets.only(bottom: (screenSize.height / 101.5)),
-                    child: Text(
-                      'Password',
-                      style: TextStyle(
-                        fontSize: medium14.fontSize,
-                        fontWeight: medium14.fontWeight,
-                        height: 1.64,
-                      ),
-                    ),
-                  ),
-                ),
-                PasswordTextWidget(
-                  key: passwordKey,
-                  hintText: 'Enter your password',
-                  controller: passwordController,
-                ),
-                SizedBox(
-                  height: screenSize.height / 62.46,
-                ),
-                Align(
-                  alignment: AlignmentDirectional.centerEnd,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 23),
-                    child: GestureDetector(
-                      onTap: () {
-                        showModalBottomSheet(
-                          context: context,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(25),
-                              topRight: Radius.circular(25),
-                            ),
-                          ),
-                          builder: (context) => ModalContainer(
-                            screenHeight: screenSize.height,
-                          ),
-                          isScrollControlled: true,
-                        );
-                      },
+                  SizedBox(height: (screenSize.height / 45)),
+                  Align(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20) +
+                          EdgeInsets.only(bottom: (screenSize.height / 101.5)),
                       child: Text(
-                        'Forgot Password?',
+                        'Password',
                         style: TextStyle(
-                          fontSize: regular10.fontSize,
-                          height: regular10.height,
-                          color: ColorPalette.brandGreyAlt.withOpacity(0.8),
+                          fontSize: medium14.fontSize,
+                          fontWeight: medium14.fontWeight,
+                          height: 1.64,
                         ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: screenSize.height / 21.9,
-                ),
-                BrandButton(
-                  onTap: () {
-                    BlocProvider.of<SignInBloc>(context).add(SubmitSignInForm(
-                      email: emailController.text,
-                      password: passwordController.text,
-                    ));
-                  },
-                  child: Text(
-                    'Login',
-                    style: TextStyle(
-                      fontSize: bold18.fontSize,
-                      fontWeight: bold18.fontWeight,
-                      height: bold18.height,
-                      color: ColorPalette.brandWhite,
-                    ),
+                  PasswordTextWidget(
+                    key: passwordKey,
+                    hintText: 'Enter your password',
+                    controller: passwordController,
                   ),
-                  color: ColorPalette.brandOrange,
-                  height: 43,
-                  width: double.infinity,
-                ),
-                SizedBox(height: screenSize.height / 9.78),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 57),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Flexible(
-                        flex: 1,
-                        child: Container(
-                          height: 1,
-                          color: ColorPalette.brandBrown,
-                        ),
-                      ),
-                      SizedBox(width: 17),
-                      Text(
-                        'Or login with',
-                        style: medium12,
-                      ),
-                      SizedBox(width: 17),
-                      Flexible(
-                        flex: 1,
-                        child: Container(
-                          height: 1,
-                          color: ColorPalette.brandBrown,
-                        ),
-                      ),
-                    ],
+                  SizedBox(
+                    height: screenSize.height / 62.46,
                   ),
-                ),
-                SizedBox(height: (screenSize.height / 54.13)),
-                Container(
-                  height: 50,
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      BrandIconButton.svg(
-                        iconPath: COLORED_VECTORS_PATH + 'ic_google.svg',
-                        child: Text(
-                          'Google',
-                          style: TextStyle(
-                            fontSize: bold14.fontSize,
-                            fontWeight: bold14.fontWeight,
-                            height: bold14.height,
-                            color: ColorPalette.brandGreyAlt,
-                          ),
-                        ),
-                        color: ColorPalette.googleWhite,
+                  Align(
+                    alignment: AlignmentDirectional.centerEnd,
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 23),
+                      child: GestureDetector(
                         onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Google sign in initiated'),
+                          showModalBottomSheet(
+                            context: context,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(25),
+                                topRight: Radius.circular(25),
+                              ),
                             ),
+                            builder: (context) => ModalContainer(
+                              screenHeight: screenSize.height,
+                            ),
+                            isScrollControlled: true,
                           );
                         },
-                        height: 36,
-                      ),
-                      SizedBox(width: 19),
-                      BrandIconButton.svg(
-                        iconPath: COLORED_VECTORS_PATH + 'ic_fb.svg',
                         child: Text(
-                          'Facebook',
+                          'Forgot Password?',
                           style: TextStyle(
-                            fontSize: medium12.fontSize,
-                            fontWeight: medium12.fontWeight,
-                            height: medium12.height,
-                            color: ColorPalette.brandWhite,
+                            fontSize: regular10.fontSize,
+                            height: regular10.height,
+                            color: ColorPalette.brandGreyAlt.withOpacity(0.8),
                           ),
                         ),
-                        color: ColorPalette.facebookBlue,
-                        onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Google sign in initiated'),
-                            ),
-                          );
-                        },
-                        height: 36,
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          );
-        } else {
-          return Container(
-            padding: EdgeInsets.symmetric(horizontal: 25),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20) +
-                        EdgeInsets.only(bottom: (screenSize.height / 101.5)),
-                    child: Text(
-                      'Username or E-mail',
-                      style: TextStyle(
-                        fontSize: medium14.fontSize,
-                        fontWeight: medium14.fontWeight,
-                        height: 1.64,
                       ),
                     ),
                   ),
-                ),
-                TextWidget(
-                  key: emailKey,
-                  hintText: 'Enter your username or E-mail',
-                  controller: emailController,
-                ),
-                SizedBox(height: (screenSize.height / 45)),
-                Align(
-                  alignment: AlignmentDirectional.centerStart,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20) +
-                        EdgeInsets.only(bottom: (screenSize.height / 101.5)),
+                  SizedBox(
+                    height: screenSize.height / 21.9,
+                  ),
+                  BrandButton(
+                    onTap: () {
+                      BlocProvider.of<SignInBloc>(context).add(SubmitSignInForm(
+                        email: emailController.text,
+                        password: passwordController.text,
+                      ));
+                    },
                     child: Text(
-                      'Password',
+                      'Login',
                       style: TextStyle(
-                        fontSize: medium14.fontSize,
-                        fontWeight: medium14.fontWeight,
-                        height: 1.64,
+                        fontSize: bold18.fontSize,
+                        fontWeight: bold18.fontWeight,
+                        height: bold18.height,
+                        color: ColorPalette.brandWhite,
                       ),
                     ),
+                    color: ColorPalette.brandOrange,
+                    height: 43,
+                    width: double.infinity,
                   ),
-                ),
-                PasswordTextWidget(
-                  key: passwordKey,
-                  hintText: 'Enter your password',
-                  controller: passwordController,
-                ),
-                SizedBox(
-                  height: screenSize.height / 62.46,
-                ),
-                Align(
-                  alignment: AlignmentDirectional.centerEnd,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 23),
-                    child: GestureDetector(
-                      onTap: () {
-                        showModalBottomSheet(
-                          context: context,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(25),
-                              topRight: Radius.circular(25),
+                  SizedBox(height: screenSize.height / 9.78),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 57),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Flexible(
+                          flex: 1,
+                          child: Container(
+                            height: 1,
+                            color: ColorPalette.brandBrown,
+                          ),
+                        ),
+                        SizedBox(width: 17),
+                        Text(
+                          'Or login with',
+                          style: medium12,
+                        ),
+                        SizedBox(width: 17),
+                        Flexible(
+                          flex: 1,
+                          child: Container(
+                            height: 1,
+                            color: ColorPalette.brandBrown,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: (screenSize.height / 54.13)),
+                  Container(
+                    height: 50,
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        BrandIconButton.svg(
+                          iconPath: COLORED_VECTORS_PATH + 'ic_google.svg',
+                          child: Text(
+                            'Google',
+                            style: TextStyle(
+                              fontSize: bold14.fontSize,
+                              fontWeight: bold14.fontWeight,
+                              height: bold14.height,
+                              color: ColorPalette.brandGreyAlt,
                             ),
                           ),
-                          builder: (context) => ModalContainer(
-                            screenHeight: screenSize.height,
+                          color: ColorPalette.googleWhite,
+                          onTap: () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Google sign in initiated'),
+                              ),
+                            );
+                          },
+                          height: 36,
+                        ),
+                        SizedBox(width: 19),
+                        BrandIconButton.svg(
+                          iconPath: COLORED_VECTORS_PATH + 'ic_fb.svg',
+                          child: Text(
+                            'Facebook',
+                            style: TextStyle(
+                              fontSize: medium12.fontSize,
+                              fontWeight: medium12.fontWeight,
+                              height: medium12.height,
+                              color: ColorPalette.brandWhite,
+                            ),
                           ),
-                          isScrollControlled: true,
-                        );
-                      },
+                          color: ColorPalette.facebookBlue,
+                          onTap: () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Google sign in initiated'),
+                              ),
+                            );
+                          },
+                          height: 36,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            );
+          } else if (state is SigningIn) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          } else if (state is SignInFailed) {
+            return Container(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Align(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20) +
+                          EdgeInsets.only(bottom: (screenSize.height / 101.5)),
                       child: Text(
-                        'Forgot Password?',
+                        'Username or E-mail',
                         style: TextStyle(
-                          fontSize: regular10.fontSize,
-                          height: regular10.height,
-                          color: ColorPalette.brandGreyAlt.withOpacity(0.8),
+                          fontSize: medium14.fontSize,
+                          fontWeight: medium14.fontWeight,
+                          height: 1.64,
                         ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: screenSize.height / 21.9,
-                ),
-                BrandButton(
-                  onTap: () {
-                    BlocProvider.of<SignInBloc>(context).add(SubmitSignInForm(
-                      email: emailController.text,
-                      password: passwordController.text,
-                    ));
-                  },
-                  child: Text(
-                    'Login',
-                    style: TextStyle(
-                      fontSize: bold18.fontSize,
-                      fontWeight: bold18.fontWeight,
-                      height: bold18.height,
-                      color: ColorPalette.brandWhite,
+                  TextWidget(
+                    key: emailKey,
+                    hintText: 'Enter your username or E-mail',
+                    controller: emailController,
+                  ),
+                  SizedBox(height: (screenSize.height / 45)),
+                  Align(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20) +
+                          EdgeInsets.only(bottom: (screenSize.height / 101.5)),
+                      child: Text(
+                        'Password',
+                        style: TextStyle(
+                          fontSize: medium14.fontSize,
+                          fontWeight: medium14.fontWeight,
+                          height: 1.64,
+                        ),
+                      ),
                     ),
                   ),
-                  color: ColorPalette.brandOrange,
-                  height: 43,
-                  width: double.infinity,
-                ),
-                SizedBox(height: screenSize.height / 9.78),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 57),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Flexible(
-                        flex: 1,
-                        child: Container(
-                          height: 1,
-                          color: ColorPalette.brandBrown,
-                        ),
-                      ),
-                      SizedBox(width: 17),
-                      Text(
-                        'Or login with',
-                        style: medium12,
-                      ),
-                      SizedBox(width: 17),
-                      Flexible(
-                        flex: 1,
-                        child: Container(
-                          height: 1,
-                          color: ColorPalette.brandBrown,
-                        ),
-                      ),
-                    ],
+                  PasswordTextWidget(
+                    key: passwordKey,
+                    hintText: 'Enter your password',
+                    controller: passwordController,
                   ),
-                ),
-                SizedBox(height: (screenSize.height / 54.13)),
-                Container(
-                  height: 50,
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      BrandIconButton.svg(
-                        iconPath: COLORED_VECTORS_PATH + 'ic_google.svg',
-                        child: Text(
-                          'Google',
-                          style: TextStyle(
-                            fontSize: bold14.fontSize,
-                            fontWeight: bold14.fontWeight,
-                            height: bold14.height,
-                            color: ColorPalette.brandGreyAlt,
-                          ),
-                        ),
-                        color: ColorPalette.googleWhite,
+                  SizedBox(
+                    height: screenSize.height / 62.46,
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional.centerEnd,
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 23),
+                      child: GestureDetector(
                         onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Google sign in initiated'),
+                          showModalBottomSheet(
+                            context: context,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(25),
+                                topRight: Radius.circular(25),
+                              ),
                             ),
+                            builder: (context) => ModalContainer(
+                              screenHeight: screenSize.height,
+                            ),
+                            isScrollControlled: true,
                           );
                         },
-                        height: 36,
-                      ),
-                      SizedBox(width: 19),
-                      BrandIconButton.svg(
-                        iconPath: COLORED_VECTORS_PATH + 'ic_fb.svg',
                         child: Text(
-                          'Facebook',
+                          'Forgot Password?',
                           style: TextStyle(
-                            fontSize: medium12.fontSize,
-                            fontWeight: medium12.fontWeight,
-                            height: medium12.height,
-                            color: ColorPalette.brandWhite,
+                            fontSize: regular10.fontSize,
+                            height: regular10.height,
+                            color: ColorPalette.brandGreyAlt.withOpacity(0.8),
                           ),
                         ),
-                        color: ColorPalette.facebookBlue,
-                        onTap: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text('Google sign in initiated'),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: screenSize.height / 21.9,
+                  ),
+                  BrandButton(
+                    onTap: () {
+                      BlocProvider.of<SignInBloc>(context).add(SubmitSignInForm(
+                        email: emailController.text,
+                        password: passwordController.text,
+                      ));
+                    },
+                    child: Text(
+                      'Login',
+                      style: TextStyle(
+                        fontSize: bold18.fontSize,
+                        fontWeight: bold18.fontWeight,
+                        height: bold18.height,
+                        color: ColorPalette.brandWhite,
+                      ),
+                    ),
+                    color: ColorPalette.brandOrange,
+                    height: 43,
+                    width: double.infinity,
+                  ),
+                  SizedBox(height: screenSize.height / 9.78),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 57),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Flexible(
+                          flex: 1,
+                          child: Container(
+                            height: 1,
+                            color: ColorPalette.brandBrown,
+                          ),
+                        ),
+                        SizedBox(width: 17),
+                        Text(
+                          'Or login with',
+                          style: medium12,
+                        ),
+                        SizedBox(width: 17),
+                        Flexible(
+                          flex: 1,
+                          child: Container(
+                            height: 1,
+                            color: ColorPalette.brandBrown,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: (screenSize.height / 54.13)),
+                  Container(
+                    height: 50,
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        BrandIconButton.svg(
+                          iconPath: COLORED_VECTORS_PATH + 'ic_google.svg',
+                          child: Text(
+                            'Google',
+                            style: TextStyle(
+                              fontSize: bold14.fontSize,
+                              fontWeight: bold14.fontWeight,
+                              height: bold14.height,
+                              color: ColorPalette.brandGreyAlt,
                             ),
+                          ),
+                          color: ColorPalette.googleWhite,
+                          onTap: () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Google sign in initiated'),
+                              ),
+                            );
+                          },
+                          height: 36,
+                        ),
+                        SizedBox(width: 19),
+                        BrandIconButton.svg(
+                          iconPath: COLORED_VECTORS_PATH + 'ic_fb.svg',
+                          child: Text(
+                            'Facebook',
+                            style: TextStyle(
+                              fontSize: medium12.fontSize,
+                              fontWeight: medium12.fontWeight,
+                              height: medium12.height,
+                              color: ColorPalette.brandWhite,
+                            ),
+                          ),
+                          color: ColorPalette.facebookBlue,
+                          onTap: () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Google sign in initiated'),
+                              ),
+                            );
+                          },
+                          height: 36,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            );
+          } else {
+            return Container(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Align(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20) +
+                          EdgeInsets.only(bottom: (screenSize.height / 101.5)),
+                      child: Text(
+                        'Username or E-mail',
+                        style: TextStyle(
+                          fontSize: medium14.fontSize,
+                          fontWeight: medium14.fontWeight,
+                          height: 1.64,
+                        ),
+                      ),
+                    ),
+                  ),
+                  TextWidget(
+                    key: emailKey,
+                    hintText: 'Enter your username or E-mail',
+                    controller: emailController,
+                  ),
+                  SizedBox(height: (screenSize.height / 45)),
+                  Align(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20) +
+                          EdgeInsets.only(bottom: (screenSize.height / 101.5)),
+                      child: Text(
+                        'Password',
+                        style: TextStyle(
+                          fontSize: medium14.fontSize,
+                          fontWeight: medium14.fontWeight,
+                          height: 1.64,
+                        ),
+                      ),
+                    ),
+                  ),
+                  PasswordTextWidget(
+                    key: passwordKey,
+                    hintText: 'Enter your password',
+                    controller: passwordController,
+                  ),
+                  SizedBox(
+                    height: screenSize.height / 62.46,
+                  ),
+                  Align(
+                    alignment: AlignmentDirectional.centerEnd,
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 23),
+                      child: GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet(
+                            context: context,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(25),
+                                topRight: Radius.circular(25),
+                              ),
+                            ),
+                            builder: (context) => ModalContainer(
+                              screenHeight: screenSize.height,
+                            ),
+                            isScrollControlled: true,
                           );
                         },
-                        height: 36,
+                        child: Text(
+                          'Forgot Password?',
+                          style: TextStyle(
+                            fontSize: regular10.fontSize,
+                            height: regular10.height,
+                            color: ColorPalette.brandGreyAlt.withOpacity(0.8),
+                          ),
+                        ),
                       ),
-                    ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-          );
-        }
-      },
+                  SizedBox(
+                    height: screenSize.height / 21.9,
+                  ),
+                  BrandButton(
+                    onTap: () {
+                      BlocProvider.of<SignInBloc>(context).add(SubmitSignInForm(
+                        email: emailController.text,
+                        password: passwordController.text,
+                      ));
+                    },
+                    child: Text(
+                      'Login',
+                      style: TextStyle(
+                        fontSize: bold18.fontSize,
+                        fontWeight: bold18.fontWeight,
+                        height: bold18.height,
+                        color: ColorPalette.brandWhite,
+                      ),
+                    ),
+                    color: ColorPalette.brandOrange,
+                    height: 43,
+                    width: double.infinity,
+                  ),
+                  SizedBox(height: screenSize.height / 9.78),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 57),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Flexible(
+                          flex: 1,
+                          child: Container(
+                            height: 1,
+                            color: ColorPalette.brandBrown,
+                          ),
+                        ),
+                        SizedBox(width: 17),
+                        Text(
+                          'Or login with',
+                          style: medium12,
+                        ),
+                        SizedBox(width: 17),
+                        Flexible(
+                          flex: 1,
+                          child: Container(
+                            height: 1,
+                            color: ColorPalette.brandBrown,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: (screenSize.height / 54.13)),
+                  Container(
+                    height: 50,
+                    padding: const EdgeInsets.symmetric(horizontal: 25),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        BrandIconButton.svg(
+                          iconPath: COLORED_VECTORS_PATH + 'ic_google.svg',
+                          child: Text(
+                            'Google',
+                            style: TextStyle(
+                              fontSize: bold14.fontSize,
+                              fontWeight: bold14.fontWeight,
+                              height: bold14.height,
+                              color: ColorPalette.brandGreyAlt,
+                            ),
+                          ),
+                          color: ColorPalette.googleWhite,
+                          onTap: () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Google sign in initiated'),
+                              ),
+                            );
+                          },
+                          height: 36,
+                        ),
+                        SizedBox(width: 19),
+                        BrandIconButton.svg(
+                          iconPath: COLORED_VECTORS_PATH + 'ic_fb.svg',
+                          child: Text(
+                            'Facebook',
+                            style: TextStyle(
+                              fontSize: medium12.fontSize,
+                              fontWeight: medium12.fontWeight,
+                              height: medium12.height,
+                              color: ColorPalette.brandWhite,
+                            ),
+                          ),
+                          color: ColorPalette.facebookBlue,
+                          onTap: () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('Google sign in initiated'),
+                              ),
+                            );
+                          },
+                          height: 36,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            );
+          }
+        },
+      ),
     );
   }
 }

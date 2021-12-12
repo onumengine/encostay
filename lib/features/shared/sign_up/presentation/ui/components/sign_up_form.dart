@@ -14,9 +14,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 
 class SignUpForm extends StatelessWidget {
-  final TextEditingController _firstNameController = TextEditingController();
-  final TextEditingController _lastNameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
 
   SignUpForm({Key? key}) : super(key: key);
 
@@ -53,7 +53,7 @@ class SignUpForm extends StatelessWidget {
                   TextWidget(
                     key: GlobalKey<FormState>(),
                     hintText: 'Enter your first name',
-                    controller: _firstNameController,
+                    controller: firstNameController,
                   ),
                   SizedBox(height: (screenSize.height / 45)),
                   Align(
@@ -74,7 +74,7 @@ class SignUpForm extends StatelessWidget {
                   TextWidget(
                     key: GlobalKey<FormState>(),
                     hintText: 'Enter your last name',
-                    controller: _lastNameController,
+                    controller: lastNameController,
                   ),
                   SizedBox(height: (screenSize.height / 162.4)),
                   Padding(
@@ -110,7 +110,7 @@ class SignUpForm extends StatelessWidget {
                   TextWidget(
                     key: GlobalKey<FormState>(),
                     hintText: 'Enter your username or E-mail',
-                    controller: _emailController,
+                    controller: emailController,
                   ),
                   SizedBox(height: (screenSize.height / 81.2)),
                   Align(
@@ -292,9 +292,9 @@ class SignUpForm extends StatelessWidget {
                     onTap: () {
                       BlocProvider.of<SignUpBloc>(context).add(
                         AppendUserData(
-                          firstName: _firstNameController.text,
-                          lastName: _lastNameController.text,
-                          email: _emailController.text,
+                          firstName: firstNameController.text,
+                          lastName: lastNameController.text,
+                          email: emailController.text,
                         ),
                       );
                       Navigator.of(context).pushNamed(RouteNames.SET_PASSWORD);
@@ -335,7 +335,7 @@ class SignUpForm extends StatelessWidget {
                   TextWidget(
                     key: GlobalKey<FormState>(),
                     hintText: 'Enter your first name',
-                    controller: _firstNameController,
+                    controller: firstNameController,
                   ),
                   SizedBox(height: (screenSize.height / 45)),
                   Align(
@@ -356,7 +356,7 @@ class SignUpForm extends StatelessWidget {
                   TextWidget(
                     key: GlobalKey<FormState>(),
                     hintText: 'Enter your last name',
-                    controller: _lastNameController,
+                    controller: lastNameController,
                   ),
                   SizedBox(height: (screenSize.height / 162.4)),
                   Padding(
@@ -392,7 +392,7 @@ class SignUpForm extends StatelessWidget {
                   TextWidget(
                     key: GlobalKey<FormState>(),
                     hintText: 'Enter your username or E-mail',
-                    controller: _emailController,
+                    controller: emailController,
                   ),
                   SizedBox(height: (screenSize.height / 81.2)),
                   Align(
@@ -572,9 +572,9 @@ class SignUpForm extends StatelessWidget {
                     onTap: () {
                       BlocProvider.of<SignUpBloc>(context).add(
                         AppendUserData(
-                          firstName: _firstNameController.text,
-                          lastName: _lastNameController.text,
-                          email: _emailController.text,
+                          firstName: firstNameController.text,
+                          lastName: lastNameController.text,
+                          email: emailController.text,
                         ),
                       );
                       Navigator.of(context).pushNamed(RouteNames.SET_PASSWORD);

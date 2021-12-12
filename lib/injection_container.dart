@@ -1,4 +1,9 @@
 import 'package:encostay/core/network/NetworkInfo.dart';
+import 'package:encostay/features/shared/onboarding/data/data_sources/launch_data_source.dart';
+import 'package:encostay/features/shared/onboarding/data/repositories/launch_status_repo_impl.dart';
+import 'package:encostay/features/shared/onboarding/domain/repositories/launch_status_repo.dart';
+import 'package:encostay/features/shared/onboarding/domain/use_cases/check_first_launch.dart';
+import 'package:encostay/features/shared/onboarding/presentation/logic_holders/bloc.dart';
 import 'package:encostay/features/shared/sign_in/data/data_sources/LoginDataSource.dart';
 import 'package:encostay/features/shared/sign_in/data/repositories/EmailLoginRepoImpl.dart';
 import 'package:encostay/features/shared/sign_in/domain/repositories/EmailLoginRepo.dart';
@@ -12,13 +17,35 @@ import 'package:encostay/features/shared/sign_up/presentation/logic_holders/sign
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 final GetIt serviceLocator = GetIt.instance;
 
-init() {
-  initFeatures();
+init() async {
   initCore();
-  initExternal();
+  await initExternal();
+  initFeatures();
+}
+
+initCore() {
+  serviceLocator.registerLazySingleton<NetworkInfo>(
+    () => NetworkInfoImpl(
+      connectionChecker: serviceLocator(),
+    ),
+  );
+}
+
+initExternal() async {
+  serviceLocator.registerLazySingleton<InternetConnectionChecker>(
+    () => InternetConnectionChecker(),
+  );
+  serviceLocator.registerLazySingleton<Client>(
+    () => Client(),
+  );
+  final SharedPreferences? prefs = await SharedPreferences.getInstance();
+  serviceLocator.registerLazySingleton<SharedPreferences>(
+    () => prefs!,
+  );
 }
 
 initFeatures() {
@@ -32,6 +59,11 @@ initFeatures() {
       loginWithEmail: serviceLocator(),
     ),
   );
+  serviceLocator.registerFactory<SplashBloc>(
+    () => SplashBloc(
+      checkFirstLaunch: serviceLocator(),
+    ),
+  );
   serviceLocator.registerLazySingleton<SubmitSignupForm>(
     () => SubmitSignupForm(
       repository: serviceLocator(),
@@ -39,6 +71,11 @@ initFeatures() {
   );
   serviceLocator.registerLazySingleton<LoginWithEmail>(
     () => LoginWithEmail(
+      repository: serviceLocator(),
+    ),
+  );
+  serviceLocator.registerLazySingleton<CheckFirstLaunch>(
+    () => CheckFirstLaunch(
       repository: serviceLocator(),
     ),
   );
@@ -54,6 +91,11 @@ initFeatures() {
       networkInfo: serviceLocator(),
     ),
   );
+  serviceLocator.registerLazySingleton<LaunchStatusRepo>(
+    () => LaunchStatusRepoImpl(
+      dataSource: serviceLocator(),
+    ),
+  );
   serviceLocator.registerLazySingleton<RemoteDataSource>(
     () => RemoteDataSourceImpl(
       client: serviceLocator(),
@@ -64,19 +106,9 @@ initFeatures() {
       client: serviceLocator(),
     ),
   );
-}
-
-initCore() {
-  serviceLocator.registerLazySingleton<NetworkInfo>(
-    () => NetworkInfoImpl(
-      connectionChecker: serviceLocator(),
+  serviceLocator.registerLazySingleton<LaunchDataSource>(
+    () => LaunchDataSourceImpl(
+      preferences: serviceLocator(),
     ),
   );
-}
-
-initExternal() {
-  serviceLocator.registerLazySingleton<InternetConnectionChecker>(
-    () => InternetConnectionChecker(),
-  );
-  serviceLocator.registerFactory<Client>(() => Client());
 }
