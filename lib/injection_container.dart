@@ -64,6 +64,7 @@ initFeatures() {
   serviceLocator.registerFactory<SplashBloc>(
     () => SplashBloc(
       checkFirstLaunch: serviceLocator(),
+      setOnboardingStatus: serviceLocator(),
     ),
   );
   serviceLocator.registerFactory<OnboardingBloc>(

@@ -14,15 +14,15 @@ class SetOnboardingStatus
   @override
   Future<Either<Failure, OnboardingStatusEntity>> call(
       OnboardingStatusParams params) async {
-    return repository.setOnboardingStatus(params.value);
+    return repository.setOnboardingStatus(params.isOnboardingComplete);
   }
 }
 
 class OnboardingStatusParams extends Params {
-  final bool value;
+  final bool isOnboardingComplete;
 
-  OnboardingStatusParams({required this.value});
+  OnboardingStatusParams({required this.isOnboardingComplete});
 
   @override
-  List<Object?> get props => [value];
+  List<Object?> get props => [isOnboardingComplete];
 }

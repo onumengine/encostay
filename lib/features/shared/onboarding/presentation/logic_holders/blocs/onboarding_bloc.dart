@@ -12,8 +12,8 @@ class OnboardingBloc extends Bloc<OnboardingEvent, OnboardingState> {
   @override
   Stream<OnboardingState> mapEventToState(OnboardingEvent event) async* {
     if (event is CompleteOnboarding) {
-      final result =
-          await setOnboardingStatus(OnboardingStatusParams(value: true));
+      final result = await setOnboardingStatus(
+          OnboardingStatusParams(isOnboardingComplete: true));
       yield result.fold(
         (failure) => OnboardingInProgress(),
         (entity) => OnboardingComplete(),

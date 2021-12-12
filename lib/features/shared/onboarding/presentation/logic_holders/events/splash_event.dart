@@ -6,3 +6,5 @@ abstract class SplashEvent extends Equatable {
 }
 
 class CheckForFirstLaunch extends SplashEvent {}
+
+class MimicFirstLaunch extends SplashEvent {}

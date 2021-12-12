@@ -68,6 +68,10 @@ class SplashScreen extends StatelessWidget {
                         height: (screenSize.height * 0.09),
                       ),
                       InkResponse(
+                        onLongPress: () {
+                          BlocProvider.of<SplashBloc>(context)
+                              .add(MimicFirstLaunch());
+                        },
                         onTap: () {
                           BlocProvider.of<SplashBloc>(context)
                               .add(CheckForFirstLaunch());
