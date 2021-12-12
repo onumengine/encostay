@@ -1,8 +1,8 @@
 import 'package:encostay/core/network/NetworkInfo.dart';
-import 'package:encostay/features/shared/onboarding/data/data_sources/launch_data_source.dart';
-import 'package:encostay/features/shared/onboarding/data/repositories/launch_status_repo_impl.dart';
-import 'package:encostay/features/shared/onboarding/domain/repositories/launch_status_repo.dart';
-import 'package:encostay/features/shared/onboarding/domain/use_cases/check_first_launch.dart';
+import 'package:encostay/features/shared/onboarding/data/data_sources/onboarding_status_data_source.dart';
+import 'package:encostay/features/shared/onboarding/data/repositories/onboarding_status_repo_impl.dart';
+import 'package:encostay/features/shared/onboarding/domain/repositories/onboarding_status_repo.dart';
+import 'package:encostay/features/shared/onboarding/domain/use_cases/check_onboarding_status.dart';
 import 'package:encostay/features/shared/onboarding/presentation/logic_holders/bloc.dart';
 import 'package:encostay/features/shared/sign_in/data/data_sources/LoginDataSource.dart';
 import 'package:encostay/features/shared/sign_in/data/repositories/EmailLoginRepoImpl.dart';
@@ -74,8 +74,8 @@ initFeatures() {
       repository: serviceLocator(),
     ),
   );
-  serviceLocator.registerLazySingleton<CheckFirstLaunch>(
-    () => CheckFirstLaunch(
+  serviceLocator.registerLazySingleton<CheckOnboardingStatus>(
+    () => CheckOnboardingStatus(
       repository: serviceLocator(),
     ),
   );
@@ -91,8 +91,8 @@ initFeatures() {
       networkInfo: serviceLocator(),
     ),
   );
-  serviceLocator.registerLazySingleton<LaunchStatusRepo>(
-    () => LaunchStatusRepoImpl(
+  serviceLocator.registerLazySingleton<OnboardingStatusRepo>(
+    () => OnbordingStatusRepoImpl(
       dataSource: serviceLocator(),
     ),
   );
@@ -106,8 +106,8 @@ initFeatures() {
       client: serviceLocator(),
     ),
   );
-  serviceLocator.registerLazySingleton<LaunchDataSource>(
-    () => LaunchDataSourceImpl(
+  serviceLocator.registerLazySingleton<OnboardingStatusDataSource>(
+    () => OnboardingStatusDataSourceImpl(
       preferences: serviceLocator(),
     ),
   );

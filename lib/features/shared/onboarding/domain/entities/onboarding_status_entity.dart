@@ -1,9 +1,9 @@
 import 'package:equatable/equatable.dart';
 
-class LaunchStatusEntity extends Equatable {
+class OnboardingStatusEntity extends Equatable {
   final bool isFirstLaunch;
 
-  LaunchStatusEntity({required this.isFirstLaunch});
+  OnboardingStatusEntity({required this.isFirstLaunch});
 
   @override
   List<Object?> get props => [isFirstLaunch];
